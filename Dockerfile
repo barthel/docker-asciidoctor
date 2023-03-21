@@ -30,6 +30,7 @@ RUN apk --no-cache add py3-actdiag@testing \
 RUN apk --no-cache add imagemagick
 
 # Install mermaid-cli - @see: https://github.com/mermaid-js/mermaid-cli
+# Install mscgenjs-cli - @see: https://github.com/mscgenjs/mscgenjs-cli
 # @see: https://github.com/puppeteer/puppeteer/issues/379#issuecomment-437688436
 # @see: https://github.com/puppeteer/puppeteer/blob/v2.1.1/docs/api.md#environment-variables
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
@@ -50,12 +51,23 @@ RUN apk --no-cache add \
 RUN apk --no-cache --virtual yarn-dependencies add yarn \
     && yarn global add \
         --no-progress \
-        puppeteer @mermaid-js/mermaid-cli \
+        puppeteer \
+        @mermaid-js/mermaid-cli \
+        mscgenjs-cli \
     && yarn install
-RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/puppeteer-config.json
-RUN mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
-    && echo -e "#!/bin/sh\n/usr/local/bin/mmdc.node -p /usr/local/puppeteer-config.json \${@}" > /usr/local/bin/mmdc \
+# mermaid-cli
+RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
+    && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
+    && rm -f /usr/local/bin/mmdc \
+    && echo -e "#!/bin/sh\n/usr/local/bin/mmdc.node -p /usr/local/mmdc_puppeteer-config.json \${@}" > /usr/local/bin/mmdc \
     && chmod +x /usr/local/bin/mmdc
+# mscgenjs-cli
+RUN echo -e "{\n\t\"devtools\": false,\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"timeout\": 30000,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\"\n\t]\n}" > /usr/local/mscgen_js_puppeteer-config.json \
+    && mv /usr/local/bin/mscgen_js /usr/local/bin/mscgen_js.node \
+    && rm -f /usr/local/bin/mscgen_js \
+    && echo -e "#!/bin/sh\n/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/mscgen_js_puppeteer-config.json \${@}" > /usr/local/bin/mscgen_js \
+    && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
+    && chmod +x /usr/local/bin/mscgen*
 RUN apk del yarn-dependencies
 
 # Cleans up and Removes apk cache
