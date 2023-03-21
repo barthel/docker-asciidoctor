@@ -12,19 +12,7 @@ FROM uwebarthel/asciidoctor-base:${ASCIIDOCTOR_BASE_TAG}
 # @see: https://gitlab.alpinelinux.org/alpine/infra/infra/-/issues/8087
 # @see: https://github.com/alpinelinux/docker-alpine/issues/98
 RUN sed -i 's/https/http/' /etc/apk/repositories
-
-# Adds edge/testing package repo for actdiag
-RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk fix && apk update
-
-# Install blockdiag / blockdiag - @see: https://github.com/blockdiag/blockdiag
-# Install blockdiag / actdiag - @see: https://github.com/blockdiag/actdiag
-# Install blockdiag / nwdiag - @see: https://github.com/blockdiag/nwdiag
-# Install blockdiag / seqdiag - @see: https://github.com/blockdiag/seqdiag
-RUN apk --no-cache add py3-actdiag@testing \
-    py3-blockdiag@testing \
-    py3-nwdiag@testing \
-    py3-seqdiag@testing
 
 # Install imagemagick for meme - @see: https://asciidoctor.org/docs/asciidoctor-diagram/#meme
 RUN apk --no-cache add imagemagick
@@ -46,7 +34,6 @@ RUN apk --no-cache add \
         nss \
         freetype \
         harfbuzz \
-        ca-certificates \
         ttf-freefont
 RUN apk --no-cache --virtual yarn-dependencies add yarn \
     && yarn global add \
