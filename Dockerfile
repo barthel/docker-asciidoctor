@@ -14,19 +14,17 @@ FROM uwebarthel/asciidoctor-base:${ASCIIDOCTOR_BASE_TAG}
 RUN sed -i 's/https/http/' /etc/apk/repositories
 
 # Adds edge/testing package repo for actdiag
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
+RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk fix && apk update
 
 # Install blockdiag / blockdiag - @see: https://github.com/blockdiag/blockdiag
 # Install blockdiag / actdiag - @see: https://github.com/blockdiag/actdiag
 # Install blockdiag / nwdiag - @see: https://github.com/blockdiag/nwdiag
 # Install blockdiag / seqdiag - @see: https://github.com/blockdiag/seqdiag
-RUN apk --no-cache add py3-actdiag \
-    py3-blockdiag \
-    py3-nwdiag \
-    py3-seqdiag
+RUN apk --no-cache add py3-actdiag@testing \
+    py3-blockdiag@testing \
+    py3-nwdiag@testing \
+    py3-seqdiag@testing
 
 # Install imagemagick for meme - @see: https://asciidoctor.org/docs/asciidoctor-diagram/#meme
 RUN apk --no-cache add imagemagick
