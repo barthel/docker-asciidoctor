@@ -19,6 +19,7 @@ RUN apk --no-cache add imagemagick
 
 # Install mermaid-cli - @see: https://github.com/mermaid-js/mermaid-cli
 # Install mscgenjs-cli - @see: https://github.com/mscgenjs/mscgenjs-cli
+# Install bytefield-svg - @see: https://github.com/Deep-Symmetry/bytefield-svg
 # @see: https://github.com/puppeteer/puppeteer/issues/379#issuecomment-437688436
 # @see: https://github.com/puppeteer/puppeteer/blob/v2.1.1/docs/api.md#environment-variables
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
@@ -43,6 +44,7 @@ RUN apk --no-cache --virtual yarn-dependencies add yarn \
         @mermaid-js/mermaid-cli \
         mscgenjs-cli \
         bpmn-js-cmd \
+        bytefield-svg \
     && yarn install
 # mermaid-cli
 RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
