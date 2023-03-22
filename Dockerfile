@@ -24,6 +24,7 @@ RUN apk --no-cache add imagemagick
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
 ENV puppeteer_skip_download "true"
 ENV PUPPETEER_CHROMIUM_REVISION "1105481"
+# ENV CHROMIUM_PATH "$(which chromium-browser)" # will be exported by entrypoint.sh
 # @see: https://github.com/nodejs/docker-node/issues/1794
 # @see: https://github.com/nodejs/docker-node/issues/1798
 # @see: https://superuser.com/a/1058665
@@ -41,6 +42,7 @@ RUN apk --no-cache --virtual yarn-dependencies add yarn \
         puppeteer \
         @mermaid-js/mermaid-cli \
         mscgenjs-cli \
+        bpmn-js-cmd \
     && yarn install
 # mermaid-cli
 RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
