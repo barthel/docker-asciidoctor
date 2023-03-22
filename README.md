@@ -9,6 +9,7 @@ The goal of this project is to build a multi-platform (especially armv7) Docker 
 * [blockdiag/nwdiag](https://github.com/blockdiag/nwdiag)<sup>[1]</sup>
 * [blockdiag/seqdiag](https://github.com/blockdiag/seqdiag)<sup>[1]</sup>
 * [bpmn-js-cmd](https://github.com/gtudan/bpmn-js-cmd)
+* [bytefield-svg](https://github.com/Deep-Symmetry/bytefield-svg)
 * [imagemagick](https://asciidoctor.org/docs/asciidoctor-diagram/#meme) for meme
 * [mermaid](https://github.com/mermaid-js/mermaid-cli)
 * [erd-go](https://github.com/kaishuu0123/erd-go/)
