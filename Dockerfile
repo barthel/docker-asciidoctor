@@ -67,6 +67,15 @@ RUN rm -rf /var/cache/apk/* \
 # Install ASCIIToSVG
 COPY --from=a2s /go/bin/a2s /usr/local/bin/
 
+# Install barby
+RUN apk add --no-cache --virtual .rubymakedepends \
+      build-base \
+      libxml2-dev \
+      ruby-dev \
+    && gem install --no-document \
+        barby rqrcode chunky_png \
+    && apk del -r --no-cache .rubymakedepends
+
 # Install asciidoctor extensions
 # @see: https://docs.asciidoctor.org/asciidoctor/latest/extensions/
 # @see: https://github.com/asciidoctor/asciidoctor-extensions-lab
