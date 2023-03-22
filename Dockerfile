@@ -64,3 +64,9 @@ RUN rm -rf /var/cache/apk/* \
 
 # Install ASCIIToSVG
 COPY --from=a2s /go/bin/a2s /usr/local/bin/
+
+# Install asciidoctor extensions
+# @see: https://docs.asciidoctor.org/asciidoctor/latest/extensions/
+# @see: https://github.com/asciidoctor/asciidoctor-extensions-lab
+# !!! Please do not use this code in production. !!!
+RUN git clone --depth 1 https://github.com/asciidoctor/asciidoctor-extensions-lab.git /usr/local/asciidoctor-extensions

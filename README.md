@@ -7,14 +7,18 @@ The goal of this project is to build a multi platform (especially armv7) Docker 
 * [blockdiag/actdiag](https://github.com/blockdiag/actdiag)
 * [blockdiag/nwdiag](https://github.com/blockdiag/nwdiag)
 * [blockdiag/seqdiag](https://github.com/blockdiag/seqdiag)
-* [imagemagick for meme](https://asciidoctor.org/docs/asciidoctor-diagram/#meme)
+* [imagemagick](https://asciidoctor.org/docs/asciidoctor-diagram/#meme) for meme
 * [mermaid](https://github.com/mermaid-js/mermaid-cli)
 * [erd-go](https://github.com/kaishuu0123/erd-go/)
 * [mscgen_js](https://github.com/mscgenjs/mscgenjs-cli)
 
+
+* [asciidoctor-extensions](https://github.com/asciidoctor/asciidoctor-extensions-lab) available in `/usr/local/asciidoctor-extensions` and could be used like: `asciidoctor -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb ...` \
+  ⚠ Please do not use this code in production. The code is untested.
+
 ## ⚠️ Note
 
-The following diagramming tools are not installed because there is no executable file for all supported platforms:
+The following diagram tools are not installed because there is no executable file for all supported platforms:
 
 * [erd](https://github.com/BurntSushi/erd) was replaced by [erd-go](https://github.com/kaishuu0123/erd-go/)
 * [mscgen](http://www.mcternan.me.uk/mscgen/) was replaced by [mscgen_js](https://github.com/mscgenjs/mscgenjs-cli)
