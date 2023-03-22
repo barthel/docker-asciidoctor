@@ -3,6 +3,7 @@
 The goal of this project is to build a multi-platform (especially armv7) Docker image based on the original [Asciidoctor Base/Original &mdash; multi-platform Edition](https://github.com/barthel/docker-asciidoctor-base) and adding the following extra diagram tools:
 
 * [ASCIIToSVG](https://github.com/asciitosvg/asciitosvg)
+* [barby](https://github.com/toretore/barby)
 * [blockdiag/blockdiag](https://github.com/blockdiag/blockdiag)<sup>[1]</sup>
 * [blockdiag/actdiag](https://github.com/blockdiag/actdiag)<sup>[1]</sup>
 * [blockdiag/nwdiag](https://github.com/blockdiag/nwdiag)<sup>[1]</sup>
