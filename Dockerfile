@@ -38,13 +38,16 @@ COPY --from=make-builder /pikchr/pikchr /usr/local/bin/
 # @see: https://gitlab.alpinelinux.org/alpine/infra/infra/-/issues/8087
 # @see: https://github.com/alpinelinux/docker-alpine/issues/98
 RUN sed -i 's/https/http/' /etc/apk/repositories
+# Adds edge/testing package repo for svgbob
+RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk fix && apk update
 
 # Install gnuplot - @see: http://gnuplot.info/
 # Install imagemagick for meme - @see: https://asciidoctor.org/docs/asciidoctor-diagram/#meme
 RUN apk --no-cache add \
         gnuplot \
-        imagemagick
+        imagemagick \
+        svgbob@testing
 
 # Install mermaid-cli - @see: https://github.com/mermaid-js/mermaid-cli
 # Install mscgenjs-cli - @see: https://github.com/mscgenjs/mscgenjs-cli
