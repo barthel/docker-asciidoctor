@@ -68,6 +68,7 @@ RUN apk --no-cache --virtual yarn-dependencies add yarn \
         mscgenjs-cli \
         bpmn-js-cmd \
         bytefield-svg \
+        nomnoml \
     && yarn install
 # mermaid-cli
 RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
