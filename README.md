@@ -20,6 +20,7 @@ The goal of this project is to build a multi-platform (especially armv7) Docker 
 * [mermaid](https://github.com/mermaid-js/mermaid-cli)
 * [mscgen_js](https://github.com/mscgenjs/mscgenjs-cli)
 * [nomnoml](https://github.com/skanaar/nomnoml)
+* [pikchr](https://pikchr.org)
 
 
 * [asciidoctor-extensions](https://github.com/asciidoctor/asciidoctor-extensions-lab) available in `/usr/local/asciidoctor-extensions` and could be used like: `asciidoctor -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb ...` \
