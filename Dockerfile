@@ -34,8 +34,11 @@ COPY --from=dpic-builder /usr/local/bin/dpic /usr/local/bin/
 RUN sed -i 's/https/http/' /etc/apk/repositories
 RUN apk fix && apk update
 
+# Install gnuplot - @see: http://gnuplot.info/
 # Install imagemagick for meme - @see: https://asciidoctor.org/docs/asciidoctor-diagram/#meme
-RUN apk --no-cache add imagemagick
+RUN apk --no-cache add \
+        gnuplot \
+        imagemagick
 
 # Install mermaid-cli - @see: https://github.com/mermaid-js/mermaid-cli
 # Install mscgenjs-cli - @see: https://github.com/mscgenjs/mscgenjs-cli

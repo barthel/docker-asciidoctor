@@ -13,6 +13,7 @@ The goal of this project is to build a multi-platform (especially armv7) Docker 
 * [diagrams](https://diagrams.mingrammer.com/)
 * [ditaa](https://ditaa.sourceforge.net/)<sup>[1]</sup>
 * [dpic](https://gitlab.com/aplevich/dpic)
+* [gnuplot](http://gnuplot.info/)
 * [imagemagick](https://asciidoctor.org/docs/asciidoctor-diagram/#meme) for meme
 * [mermaid](https://github.com/mermaid-js/mermaid-cli)
 * [erd-go](https://github.com/kaishuu0123/erd-go/)
