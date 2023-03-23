@@ -78,6 +78,20 @@ RUN apk add --no-cache --virtual .rubymakedepends \
         barby rqrcode chunky_png \
     && apk del -r --no-cache .rubymakedepends
 
+# Install diagrams - @see: https://diagrams.mingrammer.com/docs/getting-started/installation
+RUN apk add --no-cache  \
+          python3 \
+          py3-pillow \
+          py3-setuptools \
+          py3-typed-ast \
+    && apk add --no-cache --virtual .pythonmakedepends \
+          build-base \
+          freetype-dev \
+          python3-dev \
+          py3-pip \
+    && pip3 install --no-cache-dir \
+          diagrams \
+    && apk del -r --no-cache .pythonmakedepends
 # Install asciidoctor extensions
 # @see: https://docs.asciidoctor.org/asciidoctor/latest/extensions/
 # @see: https://github.com/asciidoctor/asciidoctor-extensions-lab
