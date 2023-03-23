@@ -1,13 +1,33 @@
 ARG ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
+ARG alpine_version=3.17.2
+ARG golang_version=1.14
 # Build ASCIIToSVG - @see: https://github.com/asciitosvg/asciitosvg
-FROM golang:1.14-alpine as a2s
+FROM golang:${golang_version}-alpine as a2s-builder
 
 RUN apk add git \
     && go get github.com/asciitosvg/asciitosvg/cmd/a2s
 
 # =========================================
+# Build dpic- @see: https://gitlab.com/aplevich/dpic
+FROM alpine:${alpine_version} as dpic-builder
+
+RUN apk add --no-cache \
+        build-base \
+        make \
+        bison \
+        git \
+    && git clone https://gitlab.com/aplevich/dpic.git /dpic \
+    && cd /dpic \
+    && make PREFIX=local installdpic
+
+# =========================================
 
 FROM uwebarthel/asciidoctor-base:${ASCIIDOCTOR_BASE_TAG}
+
+# Install ASCIIToSVG
+COPY --from=a2s-builder /go/bin/a2s /usr/local/bin/
+# Install dpic
+COPY --from=dpic-builder /usr/local/bin/dpic /usr/local/bin/
 
 # @see: https://gitlab.alpinelinux.org/alpine/infra/infra/-/issues/8087
 # @see: https://github.com/alpinelinux/docker-alpine/issues/98
@@ -65,9 +85,6 @@ RUN apk del yarn-dependencies
 RUN rm -rf /var/cache/apk/* \
     && rm -rf /usr/include \
     && rm -rf /root/.node-gyp /usr/share/man /tmp/*
-
-# Install ASCIIToSVG
-COPY --from=a2s /go/bin/a2s /usr/local/bin/
 
 # Install barby
 RUN apk add --no-cache --virtual .rubymakedepends \
