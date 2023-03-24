@@ -112,17 +112,25 @@ RUN apk add --no-cache --virtual .rubymakedepends \
     && apk del -r --no-cache .rubymakedepends
 
 # Install diagrams - @see: https://diagrams.mingrammer.com/docs/getting-started/installation
+# Install symbolator - @see: https://github.com/hdl/symbolator (fork because of incompatible setup 2to3)
 RUN apk add --no-cache  \
           python3 \
           py3-pillow \
           py3-setuptools \
           py3-typed-ast \
+          py3-gobject3 \
+          py3-cairo \
+          py3-cairosvg \
     && apk add --no-cache --virtual .pythonmakedepends \
           build-base \
           freetype-dev \
           python3-dev \
+          py3-gobject3-dev \
+          py3-cairo-dev \
           py3-pip \
     && pip3 install --no-cache-dir \
+          https://github.com/hdl/pyhdlparser/tarball/master \
+          https://github.com/hdl/symbolator/tarball/master \
           diagrams \
     && apk del -r --no-cache .pythonmakedepends
 # Install asciidoctor extensions
