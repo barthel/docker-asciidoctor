@@ -24,6 +24,7 @@ The goal of this project is to build a multi-platform (especially armv7) Docker 
 * [plantuml](https://plantuml.com/)<sup>[1]</sup>
 * [state-machine-cat (smcat)](https://github.com/sverweij/state-machine-cat/)
 * [svgbob](https://github.com/ivanceras/svgbob)
+* [symbolator](https://github.com/hdl/symbolator) uses fork, because of incompatible python setup (2to3)
 
 
 * [asciidoctor-extensions](https://github.com/asciidoctor/asciidoctor-extensions-lab) available in `/usr/local/asciidoctor-extensions` and could be used like: `asciidoctor -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb ...` \
