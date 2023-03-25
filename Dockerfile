@@ -28,6 +28,8 @@ RUN git clone https://github.com/drhsqlite/pikchr.git /pikchr \
 
 FROM uwebarthel/asciidoctor-base:${ASCIIDOCTOR_BASE_TAG}
 
+ENV TMPDIR "/tmp"
+
 # Install ASCIIToSVG
 COPY --from=go-builder /go/bin/a2s /usr/local/bin/
 # Install dpic
@@ -131,8 +133,18 @@ RUN apk add --no-cache  \
     && pip3 install --no-cache-dir \
           https://github.com/hdl/pyhdlparser/tarball/master \
           https://github.com/hdl/symbolator/tarball/master \
-          diagrams \
-    && apk del -r --no-cache .pythonmakedepends
+          diagrams
+# Install syntrax - @see: https://github.com/kevinpt/syntrax.git (requires manually fix incompatible setup 2to3)
+# The setup command 'use_2to3' is not supported anymore by setuptools - @see: https://github.com/pypa/setuptools/issues/2775
+RUN git clone https://github.com/kevinpt/syntrax.git ${TMPDIR}/syntrax \
+    && sed -i 's|use_2to3 = True,||' ${TMPDIR}/syntrax/setup.py \
+    && 2to3 -w ${TMPDIR}/syntrax/setup.py \
+    && cd ${TMPDIR}/syntrax \
+    && python setup.py install \
+    && cd - \
+    && rm -rf ${TMPDIR}/synthrax
+RUN apk del -r --no-cache .pythonmakedepends
+
 # Install asciidoctor extensions
 # @see: https://docs.asciidoctor.org/asciidoctor/latest/extensions/
 # @see: https://github.com/asciidoctor/asciidoctor-extensions-lab
