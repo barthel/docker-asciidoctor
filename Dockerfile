@@ -40,17 +40,27 @@ COPY --from=make-builder /pikchr/pikchr /usr/local/bin/
 # @see: https://gitlab.alpinelinux.org/alpine/infra/infra/-/issues/8087
 # @see: https://github.com/alpinelinux/docker-alpine/issues/98
 RUN sed -i 's/https/http/' /etc/apk/repositories
-# Adds edge/testing package repo for svgbob
+# Adds edge/testing package repo for svgbob, pdf2svg
 RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk fix && apk update
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# 'Native' apk packages
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install gnuplot - @see: http://gnuplot.info/
 # Install imagemagick for meme - @see: https://asciidoctor.org/docs/asciidoctor-diagram/#meme
+# Install svgbob - @see: https://github.com/ivanceras/svgbob
+# Install tikz (texlive, pdf2svg) - @see:https://github.com/pgf-tikz/pgf
 RUN apk --no-cache add \
         gnuplot \
         imagemagick \
-        svgbob@testing
+        svgbob@testing \
+        texlive \
+        pdf2svg@testing
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# 'Node.js' packages
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install mermaid-cli - @see: https://github.com/mermaid-js/mermaid-cli
 # Install mscgenjs-cli - @see: https://github.com/mscgenjs/mscgenjs-cli
 # Install bytefield-svg - @see: https://github.com/Deep-Symmetry/bytefield-svg
@@ -74,8 +84,7 @@ RUN apk --no-cache add \
         harfbuzz \
         ttf-freefont
 RUN apk --no-cache --virtual yarn-dependencies add yarn \
-    && yarn global add \
-        --no-progress \
+    && yarn global add --no-progress --network-timeout 600000 \
         puppeteer \
         @mermaid-js/mermaid-cli \
         mscgenjs-cli \
@@ -83,7 +92,8 @@ RUN apk --no-cache --virtual yarn-dependencies add yarn \
         bytefield-svg \
         nomnoml \
         state-machine-cat \
-    && yarn install
+    && rm -f /usr/local/share/.config/yarn/global/yarn.lock \
+    && yarn install --no-lockfile --network-timeout 600000
 # mermaid-cli
 RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
     && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
@@ -99,11 +109,9 @@ RUN echo -e "{\n\t\"devtools\": false,\n\t\"headless\": true,\n\t\"executablePat
     && chmod +x /usr/local/bin/mscgen*
 RUN apk del yarn-dependencies
 
-# Cleans up and Removes apk cache
-RUN rm -rf /var/cache/apk/* \
-    && rm -rf /usr/include \
-    && rm -rf /root/.node-gyp /usr/share/man /tmp/*
-
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# 'Ruby' packages
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install barby
 RUN apk add --no-cache --virtual .rubymakedepends \
       build-base \
@@ -113,6 +121,9 @@ RUN apk add --no-cache --virtual .rubymakedepends \
         barby rqrcode chunky_png \
     && apk del -r --no-cache .rubymakedepends
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# 'Python' packages
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install diagrams - @see: https://diagrams.mingrammer.com/docs/getting-started/installation
 # Install symbolator - @see: https://github.com/hdl/symbolator (fork because of incompatible setup 2to3)
 RUN apk add --no-cache  \
@@ -145,8 +156,16 @@ RUN git clone https://github.com/kevinpt/syntrax.git ${TMPDIR}/syntrax \
     && rm -rf ${TMPDIR}/synthrax
 RUN apk del -r --no-cache .pythonmakedepends
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Asciidoc extensions
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install asciidoctor extensions
 # @see: https://docs.asciidoctor.org/asciidoctor/latest/extensions/
 # @see: https://github.com/asciidoctor/asciidoctor-extensions-lab
 # !!! Please do not use this code in production. !!!
 RUN git clone --depth 1 https://github.com/asciidoctor/asciidoctor-extensions-lab.git /usr/local/asciidoctor-extensions
+
+# Cleans up and Removes apk cache
+RUN rm -rf /var/cache/apk/* \
+    && rm -rf /usr/include \
+    && rm -rf /root/.node-gyp /usr/share/man /tmp/*
