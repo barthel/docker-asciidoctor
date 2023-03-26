@@ -17,10 +17,10 @@ RUN apk add --no-cache \
         make \
         bison \
         git
-RUN git clone https://gitlab.com/aplevich/dpic.git /dpic \
+RUN git clone --depth 1 https://gitlab.com/aplevich/dpic.git /dpic \
     && cd /dpic \
     && make PREFIX=local installdpic
-RUN git clone https://github.com/drhsqlite/pikchr.git /pikchr \
+RUN git clone --depth 1 -b "master" https://github.com/drhsqlite/pikchr.git /pikchr \
     && cd /pikchr \
     && make pikchr
 
