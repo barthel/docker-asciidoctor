@@ -4,8 +4,9 @@ ARG golang_version=1.14
 # Build ASCIIToSVG - @see: https://github.com/asciitosvg/asciitosvg
 FROM golang:${golang_version}-alpine as go-builder
 
-RUN apk add git \
+RUN apk add --no-cache git \
     && go get github.com/asciitosvg/asciitosvg/cmd/a2s
+
 
 # =========================================
 # Build dpic- @see: https://gitlab.com/aplevich/dpic
@@ -16,11 +17,11 @@ RUN apk add --no-cache \
         build-base \
         make \
         bison \
-        git
-RUN git clone --depth 1 https://gitlab.com/aplevich/dpic.git /dpic \
+        git \
+    && git clone --depth 1 https://gitlab.com/aplevich/dpic.git /dpic \
     && cd /dpic \
-    && make PREFIX=local installdpic
-RUN git clone --depth 1 -b "master" https://github.com/drhsqlite/pikchr.git /pikchr \
+    && make PREFIX=local installdpic \
+    && git clone --depth 1 -b "master" https://github.com/drhsqlite/pikchr.git /pikchr \
     && cd /pikchr \
     && make pikchr
 
@@ -76,38 +77,61 @@ ENV PUPPETEER_CHROMIUM_REVISION "1105481"
 # @see: https://github.com/nodejs/docker-node/issues/1798
 # @see: https://superuser.com/a/1058665
 # @see: https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-on-alpine
+# !!! 
+# Split into several `yarn add` and `yarn install` steps because of
+# 'There appears to be trouble with your network connection. Retrying…' issue in Circle CI
+# !!!
 RUN apk --no-cache add \
         nodejs \
         'chromium~=110.0.5481' \
         nss \
         freetype \
         harfbuzz \
-        ttf-freefont
-RUN apk --no-cache --virtual yarn-dependencies add yarn \
-    && yarn global add --no-progress --network-timeout 600000 \
+        ttf-freefont \
+    && apk --no-cache --virtual .nodejsyarndepends add yarn \
+    && echo "Install puppeteer" \
+    && yarn global add --network-timeout 3600000 \
+        puppeteer-core \
         puppeteer \
+    && find / -name yarn.lock -exec rm {} \; \
+    && yarn install --no-lockfile --network-timeout 3600000 \
+    && echo "Install mermaid" \
+    && yarn global add --network-timeout 3600000 \
         @mermaid-js/mermaid-cli \
-        mscgenjs-cli \
-        bpmn-js-cmd \
-        bytefield-svg \
-        nomnoml \
-        state-machine-cat \
-    && rm -f /usr/local/share/.config/yarn/global/yarn.lock \
-    && yarn install --no-lockfile --network-timeout 600000
-# mermaid-cli
-RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
+    && find / -name yarn.lock -exec rm {} \; \
+    && yarn install --no-lockfile --network-timeout 3600000 \
+    && echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
     && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
     && rm -f /usr/local/bin/mmdc \
     && echo -e "#!/bin/sh\n/usr/local/bin/mmdc.node -p /usr/local/mmdc_puppeteer-config.json \${@}" > /usr/local/bin/mmdc \
-    && chmod +x /usr/local/bin/mmdc
-# mscgenjs-cli
-RUN echo -e "{\n\t\"devtools\": false,\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"timeout\": 30000,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\"\n\t]\n}" > /usr/local/mscgen_js_puppeteer-config.json \
+    && chmod +x /usr/local/bin/mmdc \
+    && echo "Install mscgen" \
+    && yarn global add --network-timeout 3600000 \
+        mscgenjs-cli \
+    && find / -name yarn.lock -exec rm {} \; \
+    && yarn install --no-lockfile --network-timeout 3600000 \
+    && echo -e "{\n\t\"devtools\": false,\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"timeout\": 30000,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\"\n\t]\n}" > /usr/local/mscgen_js_puppeteer-config.json \
     && mv /usr/local/bin/mscgen_js /usr/local/bin/mscgen_js.node \
     && rm -f /usr/local/bin/mscgen_js \
     && echo -e "#!/bin/sh\n/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/mscgen_js_puppeteer-config.json \${@}" > /usr/local/bin/mscgen_js \
     && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
-    && chmod +x /usr/local/bin/mscgen*
-RUN apk del yarn-dependencies
+    && chmod +x /usr/local/bin/mscgen* \
+    && echo "Install bpmn" \
+    && yarn global add --network-timeout 3600000 \
+        bpmn-js-cmd \
+    && find / -name yarn.lock -exec rm {} \; \
+    && yarn install --no-lockfile --network-timeout 3600000 \
+    && echo "Install nomnoml" \
+    && yarn global add --network-timeout 3600000 \
+        nomnoml \
+    && find / -name yarn.lock -exec rm {} \; \
+    && yarn install --no-lockfile --network-timeout 3600000 \
+    && echo "Install state-machine-cat" \
+    && yarn global add --network-timeout 3600000 \
+        state-machine-cat \
+    && find / -name yarn.lock -exec rm {} \; \
+    && yarn install --no-lockfile --network-timeout 3600000 \
+    && apk del .nodejsyarndepends
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Ruby' packages
@@ -127,34 +151,50 @@ RUN apk add --no-cache --virtual .rubymakedepends \
 # Install diagrams - @see: https://diagrams.mingrammer.com/docs/getting-started/installation
 # Install symbolator - @see: https://github.com/hdl/symbolator (fork because of incompatible setup 2to3)
 RUN apk add --no-cache  \
-          python3 \
-          py3-pillow \
-          py3-setuptools \
-          py3-typed-ast \
-          py3-gobject3 \
-          py3-cairo \
-          py3-cairosvg \
+        python3 \
+        py3-pillow \
+        py3-setuptools \
+        py3-typed-ast \
+        py3-gobject3 \
+        py3-cairo \
+        py3-cairosvg \
     && apk add --no-cache --virtual .pythonmakedepends \
-          build-base \
-          freetype-dev \
-          python3-dev \
-          py3-gobject3-dev \
-          py3-cairo-dev \
-          py3-pip \
+        build-base \
+        freetype-dev \
+        python3-dev \
+        py3-gobject3-dev \
+        py3-cairo-dev \
+        py3-pip \
     && pip3 install --no-cache-dir \
-          https://github.com/hdl/pyhdlparser/tarball/master \
-          https://github.com/hdl/symbolator/tarball/master \
-          diagrams
+        https://github.com/hdl/pyhdlparser/tarball/master \
+        https://github.com/hdl/symbolator/tarball/master \
+        diagrams \
+    && apk del -r --no-cache .pythonmakedepends
 # Install syntrax - @see: https://github.com/kevinpt/syntrax.git (requires manually fix incompatible setup 2to3)
 # The setup command 'use_2to3' is not supported anymore by setuptools - @see: https://github.com/pypa/setuptools/issues/2775
-RUN git clone https://github.com/kevinpt/syntrax.git ${TMPDIR}/syntrax \
+RUN apk add --no-cache \
+        git \
+        python3 \
+        py3-pillow \
+        py3-setuptools \
+        py3-typed-ast \
+        py3-gobject3 \
+        py3-cairo \
+        py3-cairosvg \
+    && apk add --no-cache --virtual .pythonsyntraxdepends \
+        build-base \
+        freetype-dev \
+        python3-dev \
+        py3-gobject3-dev \
+        py3-cairo-dev \
+    && git clone https://github.com/kevinpt/syntrax.git ${TMPDIR}/syntrax \
     && sed -i 's|use_2to3 = True,||' ${TMPDIR}/syntrax/setup.py \
     && 2to3 -w ${TMPDIR}/syntrax/setup.py \
     && cd ${TMPDIR}/syntrax \
     && python setup.py install \
     && cd - \
-    && rm -rf ${TMPDIR}/synthrax
-RUN apk del -r --no-cache .pythonmakedepends
+    && rm -rf ${TMPDIR}/synthrax \
+    && apk del -r --no-cache .pythonsyntraxdepends
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Asciidoc extensions
@@ -164,8 +204,3 @@ RUN apk del -r --no-cache .pythonmakedepends
 # @see: https://github.com/asciidoctor/asciidoctor-extensions-lab
 # !!! Please do not use this code in production. !!!
 RUN git clone --depth 1 https://github.com/asciidoctor/asciidoctor-extensions-lab.git /usr/local/asciidoctor-extensions
-
-# Cleans up and Removes apk cache
-RUN rm -rf /var/cache/apk/* \
-    && rm -rf /usr/include \
-    && rm -rf /root/.node-gyp /usr/share/man /tmp/*
