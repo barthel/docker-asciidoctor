@@ -46,7 +46,6 @@ jobs:
             if [ "${CIRCLE_TAG}" != "" ]; then
               TAG_NAME+=":${CIRCLE_TAG}"
             fi
-            for i in $(seq 1 5); do \
             docker buildx build \
               --platform linux/amd64,linux/arm/v7,linux/arm64 \
               --tag ${TAG_NAME} \
@@ -55,5 +54,4 @@ jobs:
               --build-arg BUILDKIT_MULTI_PLATFORM=1 \
               --no-cache \
               --progress=plain \
-              --push . \
-            && s=0 && break || s=$? && sleep 10; done; (exit $s)
+              --push .
