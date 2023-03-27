@@ -61,6 +61,18 @@ RUN apk --no-cache add \
         pdf2svg@testing \
         git
 
+ARG umlet_version="15.1"
+# The umlet zip contains a camelcase directory :-|
+ENV UMLET_HOME="${UMLET_HOME:-/usr/local/Umlet}"
+# The umlet extension try to find 'umlet' in PATH and need the 'umlet.jar' in same directory :-|
+ENV PATH "${UMLET_HOME}:${PATH}"
+ENV UMLET_JAVA_OPTS="-Djava.awt.headless=true"
+# Umlet edownload URL uses inconsistent version formats :-|
+RUN curl -S -s -o ${TMPDIR}/umlet.zip https://www.umlet.com/download/umlet_${umlet_version//./_}/umlet-standalone-${umlet_version}.zip \
+    && unzip -d /usr/local ${TMPDIR}/umlet.zip "*.jar" "*.sh"\
+    && rm -f ${TMPDIR}/umlet.zip \
+    && ln -snf "${UMLET_HOME}/umlet.sh" "${UMLET_HOME}/umlet"
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Node.js' packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

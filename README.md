@@ -27,6 +27,7 @@ The goal of this project is to build a multi-platform (especially armv7) Docker 
 * [symbolator](https://github.com/hdl/symbolator) uses fork, because of incompatible python setup (2to3)
 * [syntrax](https://kevinpt.github.io/syntrax)
 * [tikz](https://github.com/pgf-tikz/pgf)
+* [umlet](https://www.umlet.com)
 
 
 * [asciidoctor-extensions](https://github.com/asciidoctor/asciidoctor-extensions-lab) available in `/usr/local/asciidoctor-extensions` and could be used like: `asciidoctor -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb ...` \
