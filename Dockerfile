@@ -57,6 +57,7 @@ RUN apk --no-cache add \
         imagemagick \
         svgbob@testing \
         texlive \
+        texmf-dist-latexextra \
         pdf2svg@testing \
         git
 
