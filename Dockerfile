@@ -1,11 +1,13 @@
 ARG ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
 ARG alpine_version=3.17.2
-ARG golang_version=1.14
+ARG golang_version=1.20
 # Build ASCIIToSVG - @see: https://github.com/asciitosvg/asciitosvg
 FROM golang:${golang_version}-alpine as go-builder
 
+# No branch/tag/version available; pin to the last known commit for now
+# https://github.com/asciitosvg/asciitosvg/commit/ca82a5ce41e2190a05e07af6e8b3ea4e3256a283
 RUN apk add --no-cache git \
-    && go get github.com/asciitosvg/asciitosvg/cmd/a2s
+    && go install github.com/asciitosvg/asciitosvg/cmd/a2s@ca82a5ce41e2190a05e07af6e8b3ea4e3256a283
 
 
 # =========================================
