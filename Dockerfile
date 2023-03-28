@@ -88,6 +88,11 @@ ARG bytefield_version="1.8.0"
 ARG nomnoml_version="1.5.3"
 # Install state-machine-cat (smcat) - @see: https://github.com/sverweij/state-machine-cat/
 ARG smc_version="10.1.10"
+# Install vega - @see: https://github.com/vega/vega
+ARG canvas_version="2.11.0"
+ARG vega_version="5.24.0"
+# Install vega-lite - @see: https://github.com/vega/vega-lite
+ARG vega_lite_version="5.6.0"
 # @see: https://github.com/puppeteer/puppeteer/issues/379#issuecomment-437688436
 # @see: https://github.com/puppeteer/puppeteer/blob/v2.1.1/docs/api.md#environment-variables
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
@@ -105,6 +110,7 @@ ENV puppeteer_chromium_revision "1105481"
 # Split into several `yarn add` and `yarn install` steps because of
 # 'There appears to be trouble with your network connection. Retrying…' issue in Circle CI
 # !!!
+# Most of the devel dependencies are required by canvas
 RUN apk --no-cache add \
         nodejs \
         'chromium~=110.0.5481' \
@@ -112,7 +118,16 @@ RUN apk --no-cache add \
         freetype \
         harfbuzz \
         ttf-freefont \
-    && apk --no-cache --virtual .nodejsyarndepends add yarn \
+        cairo \
+        pango \
+    && apk --no-cache --virtual .nodejsyarndepends add \
+        build-base \
+        cairo-dev \
+        pango-dev \
+        libjpeg-turbo-dev \
+        giflib-dev \
+        yarn  \
+        npm \
     && echo "Install puppeteer@${puppeteer_version}" \
     && yarn global add --network-timeout 3600000 \
         "puppeteer-core@${puppeteer_version}" \
@@ -149,6 +164,20 @@ RUN apk --no-cache add \
     && echo "Install state-machine-cat@${smc_version}" \
     && yarn global add --network-timeout 3600000 \
         "state-machine-cat@${smc_version}" \
+    && find / -name yarn.lock -exec rm {} \; \
+    && yarn install --no-lockfile --network-timeout 3600000 \
+    && echo "Install canvas@${canvas_version}" \
+    && npm install --global --build-from-source \
+        "canvas@${canvas_version}" \
+    && echo "Install vage/vega-cli@${vega_version}" \
+    && yarn global add --network-timeout 3600000 \
+        "vega@${vega_version}" \
+        "vega-cli@${vega_version}" \
+    && find / -name yarn.lock -exec rm {} \; \
+    && yarn install --no-lockfile --network-timeout 3600000 \
+    && echo "Install vega-lite@${vega_lite_version}" \
+    && yarn global add --network-timeout 3600000 \
+        "vega-lite@${vega_lite_version}" \
     && find / -name yarn.lock -exec rm {} \; \
     && yarn install --no-lockfile --network-timeout 3600000 \
     && echo "Adapt executable" \
