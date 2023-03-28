@@ -104,8 +104,8 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
 ENV puppeteer_skip_download "true"
 # Puppeteer version and Chromium version are related
 ARG puppeteer_version="19.7.5"
-ENV PUPPETEER_CHROMIUM_REVISION "1105481"
-ENV puppeteer_chromium_revision "1105481"
+ENV PUPPETEER_CHROMIUM_REVISION "1125615"
+ENV puppeteer_chromium_revision "1125615"
 # ENV CHROMIUM_PATH "$(which chromium-browser)" # will be exported by entrypoint.sh
 # @see: https://github.com/nodejs/docker-node/issues/1794
 # @see: https://github.com/nodejs/docker-node/issues/1798
@@ -118,7 +118,7 @@ ENV puppeteer_chromium_revision "1105481"
 # Most of the devel dependencies are required by canvas
 RUN apk --no-cache add \
         nodejs \
-        'chromium~=110.0.5481' \
+        'chromium~=112.0.5615' \
         nss \
         freetype \
         harfbuzz \
