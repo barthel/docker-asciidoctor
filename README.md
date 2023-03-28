@@ -29,6 +29,7 @@ The goal of this project is to build a multi-platform (especially armv7) Docker 
 * [tikz](https://github.com/pgf-tikz/pgf)
 * [umlet](https://www.umlet.com)
 * [vega](https://vega.github.io/vega) and [vega-lite](https://vega.github.io/vega-lite)
+* [wavedrom](https://wavedrom.com/)
 
 
 * [asciidoctor-extensions](https://github.com/asciidoctor/asciidoctor-extensions-lab) available in `/usr/local/asciidoctor-extensions` and could be used like: `asciidoctor -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb ...` \

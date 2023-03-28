@@ -93,6 +93,9 @@ ARG canvas_version="2.11.0"
 ARG vega_version="5.24.0"
 # Install vega-lite - @see: https://github.com/vega/vega-lite
 ARG vega_lite_version="5.6.0"
+# Install WaveDrom - @see: https://github.com/wavedrom/wavedrom, https://github.com/wavedrom/cli
+ARG wavedrom_version="3.2.0"
+ARG wavedrom_cli_version="3.1.1"
 # @see: https://github.com/puppeteer/puppeteer/issues/379#issuecomment-437688436
 # @see: https://github.com/puppeteer/puppeteer/blob/v2.1.1/docs/api.md#environment-variables
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
@@ -178,6 +181,12 @@ RUN apk --no-cache add \
     && echo "Install vega-lite@${vega_lite_version}" \
     && yarn global add --network-timeout 3600000 \
         "vega-lite@${vega_lite_version}" \
+    && find / -name yarn.lock -exec rm {} \; \
+    && yarn install --no-lockfile --network-timeout 3600000 \
+    && echo "Install wavedrom@${wavedrom_version}, wavedrom-cli@${wavedrom_cli_version}" \
+    && yarn global add --network-timeout 3600000 \
+        "wavedrom@${wavedrom_version}" \
+        "wavedrom-cli@${wavedrom_cli_version}" \
     && find / -name yarn.lock -exec rm {} \; \
     && yarn install --no-lockfile --network-timeout 3600000 \
     && echo "Adapt executable" \
