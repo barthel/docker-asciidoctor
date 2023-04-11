@@ -111,7 +111,7 @@ ENV puppeteer_chromium_revision "1125615"
 # @see: https://github.com/nodejs/docker-node/issues/1798
 # @see: https://superuser.com/a/1058665
 # @see: https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-on-alpine
-# !!! 
+# !!!
 # Split into several `yarn add` and `yarn install` steps because of
 # 'There appears to be trouble with your network connection. Retrying…' issue in Circle CI
 # !!!
@@ -133,64 +133,61 @@ RUN apk --no-cache add \
         giflib-dev \
         yarn  \
         npm \
+    && yarn config set network-timeout 3600000 --global\
+    && yarn config set non-interactive --global \
+    && yarn config set production --global \
+    && yarn config set pnp --global \
+    && yarn config set silent --global \
+    && yarn config set no-lockfile --global \
+    && yarn config set no-progress --global \
     && echo "Install puppeteer@${puppeteer_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "puppeteer-core@${puppeteer_version}" \
         "puppeteer@${puppeteer_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo "Install mermaid-cli@${mermaid_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "@mermaid-js/mermaid-cli@${mermaid_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
     && echo "Install mscgen-cli@${mscgen_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "mscgenjs-cli@${mscgen_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo -e "{\n\t\"devtools\": false,\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"timeout\": 30000,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\"\n\t]\n}" > /usr/local/mscgen_js_puppeteer-config.json \
     && echo "Install bpmn-js-cmd@${bpmn_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "bpmn-js-cmd@${bpmn_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo "Install bytefield-svg@${bytefield_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "bytefield-svg@${bytefield_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo "Install nomnoml@${nomnoml_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "nomnoml@${nomnoml_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo "Install state-machine-cat@${smc_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "state-machine-cat@${smc_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo "Install canvas@${canvas_version}" \
     && npm install --global --build-from-source \
         "canvas@${canvas_version}" \
     && echo "Install vage/vega-cli@${vega_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "vega@${vega_version}" \
         "vega-cli@${vega_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo "Install vega-lite@${vega_lite_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "vega-lite@${vega_lite_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo "Install wavedrom@${wavedrom_version}, wavedrom-cli@${wavedrom_cli_version}" \
-    && yarn global add --network-timeout 3600000 \
+    && yarn global add \
         "wavedrom@${wavedrom_version}" \
         "wavedrom-cli@${wavedrom_cli_version}" \
-    && find / -name yarn.lock -exec rm {} \; \
-    && yarn install --no-lockfile --network-timeout 3600000 \
+    && yarn install --no-lockfile \
     && echo "Adapt executable" \
     && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
     && rm -f /usr/local/bin/mmdc \
@@ -201,6 +198,7 @@ RUN apk --no-cache add \
     && echo -e "#!/bin/sh\n/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/mscgen_js_puppeteer-config.json \${@}" > /usr/local/bin/mscgen_js \
     && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
     && chmod +x /usr/local/bin/mscgen* \
+    && rm -rf ${TMPDIR}/yarn* \
     && apk del .nodejsyarndepends
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -259,14 +257,14 @@ RUN apk add --no-cache \
         py3-gobject3-dev \
         py3-cairo-dev \
         py3-pip \
-    && git clone https://github.com/kevinpt/syntrax.git ${TMPDIR}/syntrax \
+    && git clone --depth 1 https://github.com/kevinpt/syntrax.git ${TMPDIR}/syntrax \
     && sed -i 's|use_2to3 = True,||' ${TMPDIR}/syntrax/setup.py \
     && 2to3 --no-diffs -p -e -W -n -w ${TMPDIR}/syntrax \
     && sed -i 's|import collections|import collections.abc|' ${TMPDIR}/syntrax/syntrax.py \
     && sed -i 's|collections.Sequence|collections.abc.Sequence|g' ${TMPDIR}/syntrax/syntrax.py \
     && pip3 install --no-cache-dir \
         ${TMPDIR}/syntrax \
-    && rm -rf ${TMPDIR}/synthrax \
+    && rm -rf ${TMPDIR}/syntrax \
     && apk del -r --no-cache .pythonsyntraxdepends
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
