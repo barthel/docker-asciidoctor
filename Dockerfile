@@ -98,6 +98,8 @@ ARG vega_lite_version="5.6.0"
 # Install WaveDrom - @see: https://github.com/wavedrom/wavedrom, https://github.com/wavedrom/cli
 ARG wavedrom_version="3.2.0"
 ARG wavedrom_cli_version="3.1.1"
+# Install inliner - @see: https://github.com/barthel/inliner
+ARG inliner_version="1.14.0"
 # @see: https://github.com/puppeteer/puppeteer/issues/379#issuecomment-437688436
 # @see: https://github.com/puppeteer/puppeteer/blob/v2.1.1/docs/api.md#environment-variables
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
@@ -188,6 +190,10 @@ RUN apk --no-cache add \
         "wavedrom@${wavedrom_version}" \
         "wavedrom-cli@${wavedrom_cli_version}" \
     && yarn install --no-lockfile \
+    && echo "Install inliner@${inliner_version}" \
+    && yarn global add \
+        "inliner@https://github.com/barthel/inliner" \
+    && yarn install --no-lockfile \
     && echo "Adapt executable" \
     && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
     && rm -f /usr/local/bin/mmdc \
@@ -218,6 +224,12 @@ RUN apk add --no-cache --virtual .rubymakedepends \
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install diagrams - @see: https://diagrams.mingrammer.com/docs/getting-started/installation
 # Install symbolator - @see: https://github.com/hdl/symbolator (fork because of incompatible setup 2to3)
+# Install htlmark - @see: https://github.com/BitLooter/htmlark
+ARG htmlark_version="1.0.0"
+ARG requests_version="2.28.2"
+ARG beautifulsoup4_version="4.12.0"
+ARG lxml_version="4.9.2"
+ARG html5lib_version="1.1"
 RUN apk add --no-cache  \
         python3 \
         py3-pillow \
@@ -226,8 +238,12 @@ RUN apk add --no-cache  \
         py3-gobject3 \
         py3-cairo \
         py3-cairosvg \
+        libxml2 \
+        libxslt \
     && apk add --no-cache --virtual .pythonmakedepends \
         build-base \
+        libxml2-dev \
+        libxslt-dev \
         freetype-dev \
         python3-dev \
         py3-gobject3-dev \
@@ -237,6 +253,11 @@ RUN apk add --no-cache  \
         https://github.com/hdl/pyhdlparser/tarball/master \
         https://github.com/hdl/symbolator/tarball/master \
         diagrams \
+        "beautifulsoup4==${beautifulsoup4_version}" \
+        "requests==${requests_version}" \
+        "lxml==${lxml_version}" \
+        "html5lib==${html5lib_version}" \
+        "htmlark==${htmlark_version}" \
     && apk del -r --no-cache .pythonmakedepends
 # Install syntrax - @see: https://github.com/kevinpt/syntrax.git (requires manually fix incompatible setup 2to3)
 # The setup command 'use_2to3' is not supported anymore by setuptools - @see: https://github.com/pypa/setuptools/issues/2775

@@ -31,7 +31,13 @@ The goal of this project is to build a multi-platform (especially armv7) Docker 
 * [vega](https://vega.github.io/vega) and [vega-lite](https://vega.github.io/vega-lite)
 * [wavedrom](https://wavedrom.com/)
 
-
+Additional non-diagram tools:
+* [htmlark](https://github.com/BitLooter/htmlark)  
+  > Embed images, CSS, and JavaScript into an HTML file. Through the magic of data URIs, HTMLArk can save these external dependencies inline right in the HTML. \
+  > &mdash;David Powell, https://github.com/BitLooter/htmlark
+* [inliner](https://github.com/barthel/inliner) fork of https://github.com/remy/inliner
+  > Turns your web page to a single HTML file with everything inlined - perfect for appcache manifests on mobile devices that you want to reduce those http requests.
+  > &mdash;Remy Sharp, https://github.com/remy/inliner
 * [asciidoctor-extensions](https://github.com/asciidoctor/asciidoctor-extensions-lab) available in `/usr/local/asciidoctor-extensions` and could be used like: `asciidoctor -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb ...` \
   ⚠ Please do not use this code in production. The code is untested.
 
