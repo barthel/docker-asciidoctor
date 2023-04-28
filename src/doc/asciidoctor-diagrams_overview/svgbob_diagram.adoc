@@ -1,0 +1,26 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-svgbob]]
+== Svgbob
+
+[quote, Jovansonlee Cesar, https://github.com/ivanceras/svgbob/]
+____
+Svgbob can create a nice graphical representation of your text diagrams.
+____
+
+=== Internal diagram source
+
+[svgbob, "smcat-internal-example-diagram", svg]
+----
+    E +-------------------------*--+     E |                         o
+    D |-------------------*--*--|--*     D |                   o  o  |  o
+    C |-------------*--*  |  |  |  |     C |             o  o  |  |  |  |
+    B |-------*--*  |  |  |  |  |  |     B |       o  o  |  |  |  |  |  |
+    A +-*--*--+--+--+--+--+--+--+--+     A +-o--o--|--|--|--|--|--|--|--|
+        5 10 15 20 25 30 35 40 45 50         5 10 15 20 25 30 35 40 45 50
+----
+
+=== External diagram source file
+
+svgbob::{imagesdir}/asciidoctor-diagrams_overview/uml/svgbob.bob[format="svg"]

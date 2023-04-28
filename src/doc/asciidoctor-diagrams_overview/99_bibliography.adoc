@@ -1,0 +1,9 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-bibliography]]
+[bibliography]
+== Bibliography
+
+- [[[DIAG]]] Asciidoctor Project (en): _Asciidoctor Diagram_. https://asciidoctor.org/docs/asciidoctor-diagram/ (Retrieved March 29, 2020)
+

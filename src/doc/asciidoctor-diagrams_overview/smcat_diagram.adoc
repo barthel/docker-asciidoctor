@@ -1,0 +1,36 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-smcat]]
+== state-machine-cat (smcat)
+
+[quote, Sander Verweij, https://github.com/sverweij/state-machine-cat]
+____
+*State Machine cat*
+
+write beautiful state charts
+____
+
+=== Internal diagram source
+
+[smcat, "smcat-internal-example-diagram", svg]
+----
+initial,
+doing: entry/ write unit test
+       do/ write code
+       exit/ ...,
+# smcat recognizes initial
+# and final states by name
+# and renders them appropriately
+final;
+
+initial      => "on backlog" : item adds most value;
+"on backlog" => doing        : working on it;
+doing        => testing      : built & unit tested;
+testing      => "on backlog" : test not ok;
+testing      => final        : test ok;
+----
+
+=== External diagram source file
+
+smcat::{imagesdir}/asciidoctor-diagrams_overview/uml/smcat.smcat[format="svg"]

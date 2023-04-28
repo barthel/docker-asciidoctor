@@ -1,0 +1,122 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-barcode]]
+== Barcodes
+
+[quote, Asciidoctor Diagrams, https://docs.asciidoctor.org/diagram-extension/latest/#barcode]
+____
+The barcode extension provides barcode rendering. Barcode macros can be specified using blocks, inline macros or block macros.
+____
+
+
+// @see: https://docs.asciidoctor.org/diagram-extension/latest/#barcode_attributes
+=== bookland (ISBN)
+// @see: https://www.activebarcode.de/codes/isbn
+[bookland, format=svg]
+----
+9783826690211
+----
+
+=== codabar
+// @see: https://www.activebarcode.de/codes/codabar
+[codabar, format=svg]
+----
+A967072A
+----
+
+=== code25
+// @see: https://www.activebarcode.de/codes/code25
+[code25, format=svg]
+----
+967072
+----
+
+=== code25iata
+// @see: https://www.activebarcode.de/codes/code25
+[code25iata, format=svg]
+----
+967072
+----
+
+=== code25interleaved
+// @see: https://www.activebarcode.de/codes/code25interleaved
+[code25interleaved, format=svg]
+----
+96657072
+----
+
+=== code39
+// @see: https://www.activebarcode.de/codes/code39
+[code39, format=svg]
+----
+BAR57072
+----
+
+=== code93
+// @see: https://www.activebarcode.de/codes/code93
+[code93, format=svg]
+----
+Code93 Ext
+----
+
+=== code128
+// @see: https://www.activebarcode.de/codes/code128
+[code128, format=svg]
+----
+Barcode507072
+----
+
+=== code128a
+// @see: https://www.activebarcode.de/codes/code128
+[code128a, format=svg]
+----
+BARCODE
+----
+
+=== code128b
+// @see: https://www.activebarcode.de/codes/code128
+[code128b, format=svg]
+----
+Barcode
+----
+
+=== code128c
+// @see: https://www.activebarcode.de/codes/code128
+[code128c, format=svg]
+----
+507072
+----
+
+=== ean8
+// @see: https://www.activebarcode.de/codes/ean8
+[ean8, format=svg]
+----
+4017072
+----
+
+=== ean13
+// @see: https://www.activebarcode.de/codes/ean13
+[ean13, format=svg]
+----
+407007196707
+----
+
+=== gs1_128
+// @see: https://www.activebarcode.de/codes/eanucc128
+
+No valid data because of <FNC1>.
+
+=== qrcode
+// @see: https://www.activebarcode.de/codes/qrcode
+[qrcode, format=svg,xdim=4,ydim=4]
+----
+https://www.iteratec.com
+----
+
+=== upca
+// @see: https://www.activebarcode.de/codes/upca_upce
+[upca, format=svg]
+----
+12360105707
+----

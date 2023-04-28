@@ -10,7 +10,21 @@ workflows:
           context:
             - "github"
             - "Docker Hub"
-
+      - example-build:
+          requires:
+            - build
+          context:
+            - "github"
+            - "Docker Hub"
+      - example-deploy:
+          requires:
+            - build
+            - example-build
+          context:
+            - "github"
+          filters:
+            branches:
+              only: main
 commands:
   setup:
     steps:
@@ -31,13 +45,14 @@ commands:
             docker buildx create --name multi-arch-builder
             docker buildx use multi-arch-builder
             docker buildx inspect --bootstrap
-      - checkout
 
 jobs:
   build:
-    machine: true
+    machine:
+      image: ubuntu-2204:2023.02.1
     steps:
       - setup
+      - checkout
       - run:
           name: Build docker image
           command: |
@@ -55,3 +70,109 @@ jobs:
               --no-cache \
               --progress=plain \
               --push .
+  example-build:
+    machine:
+      image: ubuntu-2204:2023.02.1
+    steps:
+      - checkout
+      - run:
+          name: Delete and create dist directory
+          command: |
+            rm -rf .examples
+            mkdir -p .examples/dist/css
+            ls -al .
+      - run:
+          name: Pull docker image
+          command: |
+            echo "${DOCKER_PASS}" | docker login -u "${DOCKER_USER}" --password-stdin
+            docker pull ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest}
+      - run:
+          name: Generate HTML
+          command: |
+            docker run --rm \
+              -v $(pwd)/src/doc:/documents/ \
+              -v $(pwd)/.examples/dist:/dist \
+              ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest} \
+                asciidoctor \
+                  -b html5 \
+                  -D "/dist" \
+                  -r asciidoctor-diagram \
+                  -r asciidoctor-mathematical \
+                  -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb \
+                  -a projectVersion="${CIRCLE_TAG:-${CIRCLE_SHA1:0:8}}" \
+                  -a revisionDate="${REVISION_DATE}" \
+                  /documents/asciidoctor-diagram_overview.adoc
+      - run:
+          name: Inline HTML
+          command: |
+            docker run --rm \
+              -v $(pwd)/.examples/dist:/dist \
+              -it \
+              ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest} \
+                inliner \
+                  --nocompress \
+                  --preserve-comments \
+                  --inlinemin \
+                  --videos \
+                  /dist/asciidoctor-diagram_overview.html \
+                  2>/dev/null \
+                  1> .examples/dist/asciidoctor-diagram_overview_inlined.html
+      - run:
+          name: Generate PDF
+          command: |
+            docker run --rm \
+              -v $(pwd)/src/doc:/documents/ \
+              -v $(pwd)/.examples/dist:/dist \
+              ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest} \
+                asciidoctor-pdf \
+                  -D "/dist" \
+                  -r asciidoctor-diagram \
+                  -r asciidoctor-mathematical \
+                  -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb \
+                  -a projectVersion="${CIRCLE_TAG:-${CIRCLE_SHA1:0:8}}" \
+                  -a revisionDate="${REVISION_DATE}" \
+                  /documents/asciidoctor-diagram_overview.adoc
+      - run:
+          name: Generate index.html
+          command: |
+            docker run --rm \
+              -v $(pwd)/src/doc:/documents/ \
+              -v $(pwd)/.examples/dist:/dist \
+              ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest} \
+                asciidoctor \
+                  -b html5 \
+                  -D "/dist" \
+                  -r asciidoctor-diagram \
+                  -r asciidoctor-mathematical \
+                  -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb \
+                  -a projectVersion="${CIRCLE_TAG:-${CIRCLE_SHA1:0:8}}" \
+                  -a revisionDate="${REVISION_DATE}" \
+                  /documents/index.adoc
+      - persist_to_workspace:
+          root: .examples
+          paths: dist
+  example-deploy:
+    docker:
+      - image: node:lts
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .examples
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@5.0.0
+            git config user.email "circle-ci@users.noreply.github.com"
+            git config user.name "circle-ci"
+      - add_ssh_keys:
+          fingerprints:
+            - "44:0d:4e:92:0b:49:7d:99:c0:ad:c3:6b:f4:d4:db:67"
+      - run:
+          name: Deploy example to gh-pages branch
+          command: |
+            gh-pages \
+            --message "[skip ci] Updated by ${CIRCLE_BUILD_URL}" \
+            -d .examples/dist
+          environment:
+            CACHE_DIR: /tmp
+            NODE_DEBUG: gh-pages

@@ -1,0 +1,35 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-gnuplot]]
+== Gnuplot
+
+[quote, Gnuplot, http://gnuplot.info/]
+____
+Gnuplot is a portable command-line driven graphing utility originally created to allow scientists and students to visualize mathematical functions and data interactively, but has grown to support many non-interactive uses such as web scripting.
+____
+
+=== Internal diagram source
+
+[gnuplot, "gnuplot-internal-example-diagram", svg]
+----
+set key fixed left top vertical Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid
+unset parametric
+set samples 50, 50
+set title "Simple Plots"
+set title  font ",20" textcolor lt -1 norotate
+set xrange [ * : * ] noreverse writeback
+set x2range [ * : * ] noreverse writeback
+set yrange [ * : * ] noreverse writeback
+set y2range [ * : * ] noreverse writeback
+set zrange [ * : * ] noreverse writeback
+set cbrange [ * : * ] noreverse writeback
+set rrange [ * : * ] noreverse writeback
+set colorbox vertical origin screen 0.9, 0.2 size screen 0.05, 0.6 front  noinvert bdefault
+NO_ANIMATION = 1
+plot [-10:10] sin(x),atan(x),cos(atan(x))
+----
+
+=== External diagram source file
+
+gnuplot::{imagesdir}/asciidoctor-diagrams_overview/uml/gnuplot.dat[format="svg"]

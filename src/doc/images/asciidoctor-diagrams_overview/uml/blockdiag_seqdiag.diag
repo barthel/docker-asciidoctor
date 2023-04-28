@@ -1,0 +1,4 @@
+seqdiag {
+   A -> B -> C;
+        B -> D;
+}

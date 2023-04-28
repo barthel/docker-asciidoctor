@@ -1,0 +1,19 @@
+// This config is included in Asciidoc files when they are rendered as
+// standalone document instead of a larger compound document.
+
+ifndef::_config_included[]
+include::./_config.adoc[]
+:imagesdir: ../../images
+endif::[]
+
+// this config should be import only once
+ifndef::_standalone_config_included[]
+// do not insert CSS
+:stylesheet!:
+// add links to external CSS files in HTML header
+:linkcss:
+
+:numbered:
+
+:_standalone_config_included:
+endif::[]

@@ -1,0 +1,26 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-syntrax]]
+== Syntrax
+
+[quote, Kevin Thibedeau, https://kevinpt.github.io/syntrax]
+____
+Syntrax is a railroad diagram generator. It creates a visual illustration of the grammar used for programming languages.
+____
+
+=== Internal diagram source
+
+[syntrax, "syntrax-internal-example-diagram", svg]
+----
+indentstack(10,
+  line(opt('-'), choice('0', line('1-9', loop(None, '0-9'))),
+    opt('.', loop('0-9', None))),
+
+  line(opt(choice('e', 'E'), choice(None, '+', '-'), loop('0-9', None)))
+)
+----
+
+=== External diagram source file
+
+syntrax::{imagesdir}/asciidoctor-diagrams_overview/uml/syntrax.vhdl[format="svg"]

@@ -1,6 +1,10 @@
 # Asciidoctor &mdash; multi platform Edition
 
-The goal of this project is to build a multi-platform (especially armv7) Docker image based on the original [Asciidoctor Base/Original &mdash; multi-platform Edition](https://github.com/barthel/docker-asciidoctor-base) and adding the following extra diagram tools:
+The goal of this project is to build a multi-platform (especially armv7) Docker image based on the original [Asciidoctor Base/Original &mdash; multi-platform Edition](https://github.com/barthel/docker-asciidoctor-base) and adding all extra diagram tools supported by [Asciidoctor Diagram](https://docs.asciidoctor.org/diagram-extension/latest/).
+
+An overview of all supported diagram types, generated as HTML and as PDF, can be found here: https://barthel.github.io/docker-asciidoctor/
+
+The following additional diagramming tools are installed:
 
 * [ASCIIToSVG](https://github.com/asciitosvg/asciitosvg)
 * [barby](https://github.com/toretore/barby)
@@ -48,6 +52,50 @@ The following diagram tools are not installed because there is no executable fil
 * [erd](https://github.com/BurntSushi/erd) was replaced by [erd-go](https://github.com/kaishuu0123/erd-go/)
 * [mscgen](http://www.mcternan.me.uk/mscgen/) was replaced by [mscgen_js](https://github.com/mscgenjs/mscgenjs-cli)
 * [shaape](https://github.com/christiangoltz/shaape)
+
+## Usage
+
+Generate HTML document:
+```bash
+docker run --rm \
+  -v $(pwd)/src/doc:/documents/ \
+  -v $(pwd)/dist:/dist \
+  docker.io/uwebarthel/asciidoctor:latest \
+    asciidoctor \
+      -b html5 \
+      -D "/dist" \
+      -r asciidoctor-diagram \
+      -r asciidoctor-mathematical \
+      -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb \
+      /documents/asciidoctor-diagram_overview.adoc
+```
+
+Generate inlined HTML document via `inliner` based on generated HTML document:
+```bash
+docker run --rm -it \
+  -v $(pwd)/dist:/dist \
+  docker.io/uwebarthel/asciidoctor:latest \
+    inliner \
+      --nocompress \
+      --preserve-comments \
+      --inlinemin \
+      --videos \
+      /dist/asciidoctor-diagrams_overview.html 2>/dev/null 1> dist/asciidoctor-diagrams_overview_inlined.html
+```
+
+Generate PDF document:
+```bash
+docker run --rm \
+  -v $(pwd)/src/doc:/documents/ \
+  -v $(pwd)/dist:/dist \
+  docker.io/uwebarthel/asciidoctor:latest \
+    asciidoctor-pdf \
+      -D "/dist" \
+      -r asciidoctor-diagram \
+      -r asciidoctor-mathematical \
+      -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb \
+      /documents/asciidoctor-diagram_overview.adoc
+```
 
 Docker Hub: https://hub.docker.com/r/uwebarthel/asciidoctor
 

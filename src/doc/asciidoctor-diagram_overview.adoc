@@ -1,0 +1,29 @@
+// tag::title[]
+:maintitle: pass:q[*Asciidoctor* Diagram]
+:subtitle: Supported Diagram Types
+include::./_config.adoc[]
+// BEWARE of the syntax: [.maintitle]#...#: [.subtitle]#...# for use in HTML
+= [.maintitle]#{maintitle}#: [.subtitle]#{subtitle}#
+// end::title[]
+{author}
+
+// start: preambel / preface
+// tag::abstract[]
+[abstract]
+--
+This document describes and shows all diagram types provided by Asciidoctor Diagram.
+--
+// end: preamble / preface
+// end::abstract[]
+<<<
+
+// numbering from here on
+:numbered:
+
+include::asciidoctor-diagrams_overview/01_introduction_and_goals.adoc[]
+
+<<<
+include::asciidoctor-diagrams_overview/*_diagram.adoc[]
+
+<<<
+include::asciidoctor-diagrams_overview/99_bibliography.adoc[]

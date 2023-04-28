@@ -1,0 +1,31 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+:diagrams-output-format: svg
+
+[[section-dpic-python]]
+== Dpic
+
+[quote, J. D. Aplevich, https://gitlab.com/aplevich/dpic]
+____
+Dpic is an implementation of the pic "little language" for creating line
+drawings and illustrations for documents, web pages, and other uses.
+____
+
+=== Internal diagram source
+
+[dpic, "dpic-internal-example-diagram", svg]
+----
+.PS
+  arrow "u" above
+S: circle rad 10/72.27  # 10 pt
+  line right 0.35
+G: box "G(s)"
+  arrow "y" above
+  line -> down G.ht from last arrow then left last arrow.c.x-S.x then to S.s
+  "-" below rjust
+# Do not use .PE because the Asciidoctor extension appends once at any time
+----
+
+=== External diagram source file
+
+dpic::{imagesdir}/asciidoctor-diagrams_overview/uml/dpic.pic[format="svg"]

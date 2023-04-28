@@ -1,0 +1,41 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-umlet]]
+== UMLet
+
+[quote, The UMLet Team, https://www.umlet.com]
+____
+UMLet is a free, open-source UML tool with a simple user interface: draw UML diagrams fast, create sequence and activity diagrams from plain text, share via exports to eps, pdf, jpg, svg, and clipboard, and develop new, custom UML elements.
+____
+
+=== Internal diagram source
+
+IMPORTANT: The `umlet` backend currently does not support internal diagram sources.
+
+// [umlet, "umlet-internal-example-diagram", svg]
+// ----
+//
+// <?xml version="1.0" encoding="UTF-8"?>
+// <umlet_diagram>
+//     <element>
+//         <type>com.umlet.element.base.SequenceDiagram</type>
+//         <coordinates>
+//             <x>10</x>
+//             <y>10</y>
+//             <w>202</w>
+//             <h>140</h>
+//         </coordinates>
+//         <panel_attributes>Client|Server
+// 1-&gt;&gt;&gt;2:call(self,param)
+// 2.&gt;1:number
+// 2-&gt;1:receive(num)</panel_attributes>
+//         <additional_attributes></additional_attributes>
+//     </element>
+// </umlet_diagram>
+//
+// ----
+
+=== External diagram source file
+
+umlet::{imagesdir}/asciidoctor-diagrams_overview/uml/umlet.uxf[format="svg"]

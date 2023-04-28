@@ -1,0 +1,96 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-plantuml-chapter]]
+== PlantUML
+
+[quote, PlantUML, https://plantuml.com/]
+____
+_PlantUML_ is a component that allows to quickly write :
+
+* Sequence diagram
+* Usecase diagram
+* Class diagram
+* Activity diagram (here is the legacy syntax)
+* Component diagram
+* State diagram
+* Object diagram
+* Deployment diagram
+* Timing diagram
+
+The following non-UML diagrams are also supported:
+
+* Network
+* Wireframe graphical interface
+* Archimate diagram
+* Specification and Description Language (SDL)
+* Ditaa diagram
+* Gantt diagram
+* MindMap diagram
+* Work Breakdown Structure diagram
+* Mathematic with AsciiMath or JLaTeXMath notation
+* Entity Relationship diagram
+
+Diagrams are defined using a simple and intuitive language.
+____
+
+[[section-plantuml]]
+=== PlantUML
+
+==== Internal diagram source
+
+[plantuml, "plantuml_plantuml-internal-example-diagram", svg]
+----
+@startuml
+   actor Foo1
+   boundary Foo2
+   control Foo3
+   entity Foo4
+   database Foo5
+   collections Foo6
+   Foo1 -> Foo2 : To boundary
+   Foo1 -> Foo3 : To control
+   Foo1 -> Foo4 : To entity
+   Foo1 -> Foo5 : To database
+   Foo1 -> Foo6 : To collections
+legend
+<size:8> Rendered with Plantuml Version %version() </size>
+end legend
+@enduml
+----
+
+==== External diagram source file
+
+plantuml::{imagesdir}/asciidoctor-diagrams_overview/uml/plantuml_plantuml.puml[format="svg"]
+
+[[section-salt]]
+=== Salt
+
+[quote, PlantUML, https://plantuml.com/salt]
+____
+_Salt_ is a subproject included in PlantUML that may help you to design graphical interface.
+____
+
+==== Internal diagram source
+
+[plantuml, "plantuml_salt-internal-example-diagram", svg]
+----
+@startuml
+salt
+{
+  Just plain text
+  [This is my button]
+  ()  Unchecked radio
+  (X) Checked radio
+  []  Unchecked box
+  [X] Checked box
+  "Enter text here   "
+  ^This is a droplist^
+}
+@enduml
+----
+
+==== External diagram source file
+
+plantuml::{imagesdir}/asciidoctor-diagrams_overview/uml/plantuml_salt.puml[format="svg"]
+
