@@ -1,0 +1,50 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-erd]]
+== ERD
+
+[quote, erd, https://github.com/kaishuu0123/erd-go]
+____
+Translates a plain text description of a relational database schema to a graphical entity-relationship diagram.
+____
+
+=== Internal diagram source
+
+[erd, "erd-internal-example-diagram", svg]
+----
+# Entities are declared in '[' ... ']'. All attributes after the entity header
+# up until the end of the file (or the next entity declaration) correspond
+# to this entity.
+
+# red #fcecec
+# blue #ececfc
+
+[Person] {bgcolor: "#fcecec"}
+*name
+height
+weight
++birth_location_id
+
+[Location] {bgcolor: "#ececfc"}
+*id
+city
+state
+country
+
+# Each relationship must be between exactly two entities, which need not
+# be distinct. Each entity in the relationship has exactly one of four
+# possible cardinalities:
+#
+# Cardinality    Syntax
+# 0 or 1         0/?
+# exactly 1      1
+# 0 or more      *
+# 1 or more      +
+Person *--1 Location
+
+----
+
+=== External diagram source file
+
+erd::{imagesdir}/asciidoctor-diagrams_overview/uml/erd.er[format="svg"]

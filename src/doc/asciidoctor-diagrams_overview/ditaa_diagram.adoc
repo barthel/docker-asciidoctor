@@ -1,0 +1,29 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-ditaa]]
+== Ditaa
+
+[quote, ditaa, http://ditaa.sourceforge.net/]
+____
+Ditaa is a small command-line utility written in Java, that can convert diagrams drawn using ascii art into proper bitmap graphics.
+____
+
+=== Internal diagram source
+
+[ditaa, "ditaa-internal-example-diagram", svg]
+----
+    +--------+   +-------+    +-------+
+    |        | --+ ditaa +--> |       |
+    |  Text  |   +-------+    |diagram|
+    |Document|   |!magic!|    |       |
+    |     {d}|   |       |    |       |
+    +---+----+   +-------+    +-------+
+        :                         ^
+        |       Lots of work      |
+        +-------------------------+
+----
+
+=== External diagram source file
+
+ditaa::{imagesdir}/asciidoctor-diagrams_overview/uml/ditaa.ditaa[format="svg"]

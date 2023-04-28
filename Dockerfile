@@ -296,3 +296,7 @@ RUN apk add --no-cache \
 # @see: https://github.com/asciidoctor/asciidoctor-extensions-lab
 # !!! Please do not use this code in production. !!!
 RUN git clone --depth 1 https://github.com/asciidoctor/asciidoctor-extensions-lab.git /usr/local/asciidoctor-extensions
+
+COPY ./entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT [ "/bin/sh", "/entrypoint.sh" ]

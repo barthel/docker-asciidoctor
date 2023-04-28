@@ -1,0 +1,29 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-ascii2svg]]
+== ASCIIToSVG
+
+[quote, ASCIIToSVG, https://github.com/asciitosvg/asciitosvg]
+____
+ASCIIToSVG parses ASCII art diagrams, attempting to convert them to an aesthetically pleasing SVG output.
+____
+
+=== Internal diagram source
+
+[a2s, "ascii2svg-internal-example-diagram", svg]
+----
+ .-------------------------.
+ |                         |
+ | .---.-. .-----. .-----. |
+ | | .-. | +-->  | |  <--| |
+ | | '-' | |  <--| +-->  | |
+ | '---'-' '-----' '-----' |
+ |  ascii     2      svg   |
+ |                         |
+ '-------------------------'
+----
+
+=== External diagram source file
+
+a2s::{imagesdir}/asciidoctor-diagrams_overview/uml/ascii2svg.a2s[format="svg"]

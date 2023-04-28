@@ -1,0 +1,27 @@
+/-------------------------------------------------------------------------------------------------\
+|                  External and internal quality goals and their quality metrics                  |
+\+-----------------------------------+---------------------------------+--------------------------/
+ |                                   |                                 |
+ |    /----------------\             |    /-----------------\          |    /--------------\
+ +--->+  Functionality |             +--->+   Portability   |          +--->+ Reliability  |
+ |    \+---------------/             |    \+----------------/          |    \+-------------/
+ |     |                             |     |                           |     |
+ |     +-* Suitability               |     +-* Adaptability            |     +-* Maturity
+ |     +-* Accuracy                  |     +-* Installability          |     +-* Fault tolerance
+ |     +-* Interoperability          |     +-* Co-existence            |     +-* Recoverability
+ |     +-* Security                  |     +-* Replaceability          |
+ |                                   |                                 |
+ |    /------------\                 |    /-----------------\          |    /-------------\
+ \--->+ Efficiency |                 \--->+ Maintainability |          \--->+  Usability  |
+      \+-----------/                      \+----------------/               \+------------/
+       |                                   |                                 |
+       +-* Time behaviour                  +-* Analyzability                 +-* Understandability
+       +-* Resource utilization            +-* Changeability                 +-* Learnability
+                                           +-* Stability                     +-* Operability
+                                           +-* Testability                   +-* Attractiveness
+
++-- Legend =----------------------------+
+| /---------------\                     |
+| | Quality goal  |   +-*Quality metric |
+| \---------------/                     |
++---------------------------------------+

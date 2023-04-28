@@ -1,0 +1,7 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-introduction-and-goals]]
+== Introduction and goals
+
+This document should give an overview over all supported diagram types provided by Asciidoctor Diagram^<<DIAG>>^.

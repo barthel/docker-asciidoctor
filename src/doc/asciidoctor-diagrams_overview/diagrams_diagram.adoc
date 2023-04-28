@@ -1,0 +1,38 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+:diagrams-output-format: svg
+// Use PNG in HTML instead due to issue:
+// @see: https://github.com/mingrammer/diagrams/issues/866
+ifdef::backend-html5[]
+:diagrams-output-format: png
+endif::[]
+
+[[section-diagrams-python]]
+== Diagrams as (Python) Code
+
+[quote, Diagrams, https://diagrams.mingrammer.com/]
+____
+*Diagrams* -- Diagram as Code
+
+Diagrams lets you draw the cloud system architecture in Python code.
+
+It was born for prototyping a new system architecture without any design tools. You can also describe or visualize the existing system architecture as well.
+
+____
+
+=== Internal diagram source
+
+[diagrams, "diagrams-internal-example-diagram", {diagrams-output-format}]
+----
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+
+with Diagram("Web Service", show=False):
+    ELB("lb") >> EC2("web") >> RDS("userdb")
+----
+
+=== External diagram source file
+
+diagrams::{imagesdir}/asciidoctor-diagrams_overview/uml/diagrams-diagram.py[format="{diagrams-output-format}"]

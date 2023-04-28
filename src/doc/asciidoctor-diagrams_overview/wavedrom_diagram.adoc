@@ -1,0 +1,27 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-wavedrom]]
+== WaveDrom
+
+[quote, WaveDrom , https://wavedrom.com/]
+____
+WaveDrom draws your Timing Diagram or Waveform from simple textual description.
+____
+
+=== Internal diagram source
+
+[wavedrom, "wavedrom-internal-example-diagram", svg]
+----
+{signal: [
+  {name: 'clk', wave: 'p.....|...'},
+  {name: 'dat', wave: 'x.345x|=.x', data: ['head', 'body', 'tail', 'data']},
+  {name: 'req', wave: '0.1..0|1.0'},
+  {},
+  {name: 'ack', wave: '1.....|01.'}
+]}
+----
+
+=== External diagram source file
+
+wavedrom::{imagesdir}/asciidoctor-diagrams_overview/uml/wavedrom.wvd[format="svg"]

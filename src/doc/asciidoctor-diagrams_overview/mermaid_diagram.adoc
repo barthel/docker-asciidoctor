@@ -1,0 +1,21 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-mermaid]]
+== mermaid
+
+=== Internal diagram source
+
+[mermaid, "mermaid-internal-example-diagram", svg]
+----
+flowchart TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+----
+
+=== External diagram source file
+
+mermaid::{imagesdir}/asciidoctor-diagrams_overview/uml/mermaid.mmd[format="svg"]

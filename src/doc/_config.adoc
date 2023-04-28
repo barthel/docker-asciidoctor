@@ -1,0 +1,68 @@
+// This config is defines default values for Asciidoctor documents and included in Asciidoctor files.
+
+// this config should be import only once
+ifndef::_config_included[]
+// do not use a version label like "v."
+:version-label: version:
+// revision number of this document is the artifact version
+:revnumber: {projectVersion}
+:revisionNumber: {projectVersion}
+
+:icons: font
+:icon-set: fas
+
+:author-separator: pass:q[ · ]
+:heart: pass:m[icon:heart[1x]]
+:brought-to-you: brought to you with {heart} by
+:author: {brought-to-you} barthel
+
+:doctype: book
+:experimental:
+
+:toc-title: Table of Content
+:preface-title:
+
+// enable table-of-contents after the preamble
+:toc: preamble
+
+// config for HTML generation
+ifdef::backend-html5[]
+// 'move' toc on the left site in HTML
+:toc: left
+:toc-position: left
+// customize HTML, CSS etc. for dedicated documents
+:docinfo: shared,private
+endif::[]
+
+:sectanchors:
+
+:caution-caption: Caution
+:important-caption: Important
+:note-caption: Note
+:tip-caption: Tip
+:warning-caption: Warning
+
+:appendix-caption: Appendix
+:example-caption: Example
+:figure-caption: Figure
+:table-caption: Table
+
+// Does not work at the moment.
+:chapter-label:
+
+:preface-title:
+:preface-label:
+
+// where are images located?
+:imagesdir: ./images
+
+// Uses media: screen instead of media: print to hide URLs
+:media: screen
+
+:last-update-label: {revisionNumber} -
+
+:footnotes-title: __________
+
+// This flag signals if this config section was already included.
+:_config_included:
+endif::[]

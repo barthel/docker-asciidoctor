@@ -1,0 +1,9 @@
+ifndef::_preview_config_included[]
+ifndef::_config_included[]
+include::./_config.adoc[]
+:imagesdir: ../images
+
+endif::[]
+
+:_preview_config_included:
+endif::[]

@@ -1,0 +1,30 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-nomnoml]]
+== Nomnoml
+
+[quote, Daniel Kallin, https://github.com/skanaar/nomnoml]
+____
+Nomnoml is a tool for drawing UML diagrams based on a simple syntax. It tries to keep its syntax visually as close as possible to the generated UML diagram without resorting to ASCII drawings.
+____
+
+=== Internal diagram source
+
+[nomnoml, "nomnoml-internal-example-diagram", svg]
+----
+#background: #ffffff
+[Pirate|
+  [a]--[b]
+  [a]-:>[c]
+]
+[<abstract>Marauder]<:--[Pirate]
+[Pirate] - 0..7[<hello>Arrrrrr]
+[<database>db]->[Pirate]
+[db]->[rum]
+[Pirate]-> *[rum]
+----
+
+=== External diagram source file
+
+nomnoml::{imagesdir}/asciidoctor-diagrams_overview/uml/nomnoml.nomnoml[format="svg"]

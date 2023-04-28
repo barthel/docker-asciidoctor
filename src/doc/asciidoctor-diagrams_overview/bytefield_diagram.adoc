@@ -1,0 +1,26 @@
+// Adds configuration for easier preview.
+include::../_preview_config.adoc[]
+
+[[section-bytefield]]
+== Bytefield
+
+[quote, bytefield, https://github.com/Deep-Symmetry/bytefield-svg]
+____
+Generating byte field diagrams.
+____
+
+=== Internal diagram source
+
+[bytefield, "bytefield-internal-example-diagram", svg]
+----
+(draw-column-headers)
+(draw-box "Address" {:span 4})
+(draw-box "Size" {:span 2})
+(draw-box 0 {:span 2})
+(draw-gap "Payload")
+(draw-bottom)
+----
+
+=== External diagram source file
+
+bytefield::{imagesdir}/asciidoctor-diagrams_overview/uml/bytefield.edn[format="svg"]

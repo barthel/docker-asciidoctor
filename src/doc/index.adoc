@@ -1,0 +1,17 @@
+// tag::title[]
+:maintitle: pass:q[*Asciidoctor* Diagram]
+:subtitle: Supported Diagram Types
+include::./_config.adoc[]
+// BEWARE of the syntax: [.maintitle]#...#: [.subtitle]#...# for use in HTML
+= [.maintitle]#{maintitle}#: [.subtitle]#{subtitle}#
+{author};
+
+'''
+
+include::asciidoctor-diagram_overview.adoc[tag=title,leveloffset=+3]
+include::asciidoctor-diagram_overview.adoc[tag=abstract,leveloffset=+3]
+icon:globe[] xref:asciidoctor-diagram_overview.adoc#[]{nbsp} -- {nbsp}icon:globe[] link:asciidoctor-diagram_overview_inlined.html[]
+
+icon:file-pdf-o[] link:asciidoctor-diagram_overview.pdf[]
+
+'''
