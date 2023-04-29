@@ -6,31 +6,31 @@
 <text fill='#2d3436' font-family='Sans-Serif' font-size='15.00' text-anchor='middle' x='205.5' y='-9'>Web Service</text>
 
 <g class='node' id='node1'>
-<title>dda4dea124d5465ab6465a5ad2db5589</title>
+<title>1fd00dcd4a054c5bbe3ba5db60c2a3df</title>
 <image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/aws/network/elastic-load-balancing.png' preserveAspectRatio='xMinYMin meet' width='101px' x='0' y='-144'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='50.5' y='-28.6'>lb</text>
 </g>
 
 <g class='node' id='node2'>
-<title>20407b60c2664bb59ec3db426fcadb7e</title>
+<title>db1d73968626449a94f43a5d3c3b5ee9</title>
 <image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/aws/compute/ec2.png' preserveAspectRatio='xMinYMin meet' width='101px' x='155' y='-144'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='205.5' y='-28.6'>web</text>
 </g>
 
 <g class='edge' id='edge1'>
-<title>dda4dea124d5465ab6465a5ad2db5589&#45;&gt;20407b60c2664bb59ec3db426fcadb7e</title>
+<title>1fd00dcd4a054c5bbe3ba5db60c2a3df&#45;&gt;db1d73968626449a94f43a5d3c3b5ee9</title>
 <path d='M100.82,-93.5C100.82,-93.5 143.65,-93.5 143.65,-93.5' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='143.65,-97 153.65,-93.5 143.65,-90 143.65,-97' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node3'>
-<title>75b9a02a775b49f7ad7c12f297555253</title>
+<title>eb1f6757b3d5440fba65776b111aad13</title>
 <image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/aws/database/rds.png' preserveAspectRatio='xMinYMin meet' width='101px' x='310' y='-144'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='360.5' y='-28.6'>userdb</text>
 </g>
 
 <g class='edge' id='edge2'>
-<title>20407b60c2664bb59ec3db426fcadb7e&#45;&gt;75b9a02a775b49f7ad7c12f297555253</title>
+<title>db1d73968626449a94f43a5d3c3b5ee9&#45;&gt;eb1f6757b3d5440fba65776b111aad13</title>
 <path d='M255.82,-93.5C255.82,-93.5 298.65,-93.5 298.65,-93.5' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='298.65,-97 308.65,-93.5 298.65,-90 298.65,-97' stroke='#7b8894'/>
 </g>
