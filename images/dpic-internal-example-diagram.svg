@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg fill='none' font-size='11pt' height='77.6px' preserveAspectRatio='xMidYMid meet' xml:space='preserve' stroke='black' stroke-miterlimit='10' stroke-width='1.066667' style='shape-rendering:geometricPrecision; text-rendering:geometricPrecision;
+ image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd' text-anchor='middle' viewBox='0 0 231.36704 77.6' width='231.36704px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g>
+<polygon fill='black' points='39.466667,22.133333 49.066667,24.533333
+39.466667,26.933333' stroke-width='0'/>
+<line x1='1.066667' x2='46.867677' y1='24.533333' y2='24.533333'/>
+<text fill='black' font-size='11pt' stroke-width='0.2pt' x='23.967172' y='21.866667'>u</text>
+<circle cx='62.350187' cy='24.533333' r='13.28352'/>
+<line x1='75.633707' x2='109.233707' y1='24.533333' y2='24.533333'/>
+<rect height='48' width='72' x='109.233707' y='0.533333'/>
+<text fill='black' font-size='11pt' stroke-width='0.2pt' x='145.233707' y='29.373333'>G(s)</text>
+<polygon fill='black' points='219.633707,22.133333 229.233707,24.533333
+219.633707,26.933333' stroke-width='0'/>
+<line x1='181.233707' x2='227.034717' y1='24.533333' y2='24.533333'/>
+<text fill='black' font-size='11pt' stroke-width='0.2pt' x='204.134212' y='21.866667'>y</text>
+<polygon fill='black' points='59.950187,47.416853 62.350187,37.816853
+64.750187,47.416853' stroke-width='0'/>
+<polyline points='205.233707,24.533333 205.233707,72.533333
+62.350187,72.533333
+62.350187,40.015843'/>
+<text fill='black' font-size='11pt' stroke-width='0.266667' text-anchor='end' x='59.68352' y='50.16352'>-</text>
+</g></svg>

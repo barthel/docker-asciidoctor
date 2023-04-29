@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"><svg xmlns:inkspace='http://www.inkscape.org/namespaces/inkscape' preserveAspectRatio='xMidYMid meet' viewBox='0 0 256 400' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+  <defs id='defs_block'>
+    <filter inkspace:collect='always' height='1.504' id='filter_blur' width='1.1575' x='-0.07875' y='-0.252'>
+      <feGaussianBlur inkspace:collect='always' id='feGaussianBlur3780' stdDeviation='4.2'/>
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc>rackdiag {
+   8U;
+
+   1: UPS [2U];
+   3: DB Server
+   4: Web Server
+   5: Web Server
+   6: Web Server
+   7: Load Balancer
+   8: L3 Switch
+}</desc>
+  <rect fill='rgb(0,0,0)' height='320' style='filter:url(#filter_blur)' width='128' x='67' y='46'/>
+  <rect fill='white' height='320' stroke='rgb(0,0,0)' width='128' x='64' y='40'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='53.0' y='346'>1</text>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='53.0' y='306'>2</text>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='53.0' y='266'>3</text>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='53.0' y='226'>4</text>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='53.0' y='186'>5</text>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='53.0' y='146'>6</text>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='53.0' y='106'>7</text>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='53.0' y='66'>8</text>
+  <rect fill='rgb(255,255,255)' height='80' stroke='rgb(0,0,0)' width='128' x='64' y='280'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='18' x='128.0' y='319'>UPS</text>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='24' x='128.0' y='332'>[2U]</text>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='64' y='240'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='54' x='128.0' y='266'>DB Server</text>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='64' y='200'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='60' x='128.0' y='226'>Web Server</text>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='64' y='160'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='60' x='128.0' y='186'>Web Server</text>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='64' y='120'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='60' x='128.0' y='146'>Web Server</text>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='64' y='80'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='78' x='128.0' y='106'>Load Balancer</text>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='64' y='40'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='54' x='128.0' y='66'>L3 Switch</text>
+</svg>

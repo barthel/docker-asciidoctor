@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"><svg xmlns:inkspace='http://www.inkscape.org/namespaces/inkscape' preserveAspectRatio='xMidYMid meet' viewBox='0 0 448 440' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+  <defs id='defs_block'>
+    <filter inkspace:collect='always' height='1.504' id='filter_blur' width='1.1575' x='-0.07875' y='-0.252'>
+      <feGaussianBlur inkspace:collect='always' id='feGaussianBlur3780' stdDeviation='4.2'/>
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc>actdiag {
+   A -&gt; B -&gt; C -&gt; D;
+
+  lane foo {
+    A; B;
+  }
+  lane bar {
+    C; D;
+  }
+}</desc>
+  <rect fill='rgb(0,0,0)' height='40' stroke='rgb(0,0,0)' style='filter:url(#filter_blur);opacity:0.7;fill-opacity:1' width='128' x='67' y='126'/>
+  <rect fill='rgb(0,0,0)' height='40' stroke='rgb(0,0,0)' style='filter:url(#filter_blur);opacity:0.7;fill-opacity:1' width='128' x='67' y='206'/>
+  <rect fill='rgb(0,0,0)' height='40' stroke='rgb(0,0,0)' style='filter:url(#filter_blur);opacity:0.7;fill-opacity:1' width='128' x='259' y='286'/>
+  <rect fill='rgb(0,0,0)' height='40' stroke='rgb(0,0,0)' style='filter:url(#filter_blur);opacity:0.7;fill-opacity:1' width='128' x='259' y='366'/>
+  <rect fill='#ffff99' height='62' stroke='#ffff99' width='192' x='32' y='38'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='18' x='128.0' y='75'>foo</text>
+  <rect fill='#ffff99' height='62' stroke='#ffff99' width='192' x='224' y='38'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='18' x='320.0' y='75'>bar</text>
+  <rect fill='none' height='382' stroke='gray' width='384' x='32' y='38'/>
+  <path d='M 32 100 L 416 100' fill='none' stroke='gray'/>
+  <path d='M 224 38 L 224 420' fill='none' stroke='gray'/>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='64' y='120'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='128.0' y='146'>A</text>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='64' y='200'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='128.0' y='226'>B</text>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='256' y='280'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='320.0' y='306'>C</text>
+  <rect fill='rgb(255,255,255)' height='40' stroke='rgb(0,0,0)' width='128' x='256' y='360'/>
+  <text fill='rgb(0,0,0)' font-family='sans-serif' font-size='11' font-style='normal' font-weight='normal' text-anchor='middle' textLength='6' x='320.0' y='386'>D</text>
+  <path d='M 128 160 L 128 192' fill='none' stroke='rgb(0,0,0)'/>
+  <polygon fill='rgb(0,0,0)' points='128,199 124,192 132,192 128,199' stroke='rgb(0,0,0)'/>
+  <path d='M 128 240 L 128 260' fill='none' stroke='rgb(0,0,0)'/>
+  <path d='M 128 260 L 320 260' fill='none' stroke='rgb(0,0,0)'/>
+  <path d='M 320 260 L 320 272' fill='none' stroke='rgb(0,0,0)'/>
+  <polygon fill='rgb(0,0,0)' points='320,279 316,272 324,272 320,279' stroke='rgb(0,0,0)'/>
+  <path d='M 320 320 L 320 352' fill='none' stroke='rgb(0,0,0)'/>
+  <polygon fill='rgb(0,0,0)' points='320,359 316,352 324,352 320,359' stroke='rgb(0,0,0)'/>
+</svg>

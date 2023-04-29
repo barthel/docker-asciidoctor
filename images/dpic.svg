@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg fill='none' font-size='11pt' height='81.12px' preserveAspectRatio='xMidYMid meet' xml:space='preserve' stroke='black' stroke-miterlimit='10' stroke-width='1.066667' style='shape-rendering:geometricPrecision; text-rendering:geometricPrecision;
+ image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd' text-anchor='middle' viewBox='0 0 140.866667 81.12' width='140.866667px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g>
+\psset{linewidth=0.8pt}%
+\psset{noCurrentPoint}%
+\psset{arrowsize=1.1pt 4,arrowlength=1.64,arrowinset=0}%
+<line x1='15.733333' x2='15.733333' y1='76.533333' y2='52.533333'/>
+<circle cx='15.733333' cy='40.533333' r='12'/>
+<line x1='15.733333' x2='15.733333' y1='28.533333' y2='4.533333'/>
+<text fill='black' font-size='11pt' stroke-width='0.266667' text-anchor='end' x='13.066667' y='64.88'>$ -$</text>
+<text fill='black' font-size='11pt' stroke-width='0.266667' text-anchor='end' x='1.066667' y='45.373333'>$ v_s$</text>
+<text fill='black' font-size='11pt' stroke-width='0.266667' text-anchor='end' x='13.066667' y='25.866667'>$ +$</text>
+<polyline points='15.733333,4.533333 39.733333,4.533333
+41.733333,0.533333
+45.733333,8.533333
+49.733333,0.533333
+53.733333,8.533333
+57.733333,0.533333
+61.733333,8.533333
+63.733333,4.533333
+87.733333,4.533333'/>
+<text fill='black' font-size='11pt' stroke-width='0.266667' x='51.733333' y='20.88'>$ R$</text>
+<circle cx='87.733333' cy='4.533333' fill='black' r='1.92'/>
+<line x1='87.733333' x2='87.733333' y1='4.533333' y2='38.133333'/>
+<line x1='79.733333' x2='95.733333' y1='38.133333' y2='38.133333'/>
+<line x1='79.733333' x2='95.733333' y1='42.933333' y2='42.933333'/>
+<line x1='87.733333' x2='87.733333' y1='42.933333' y2='76.533333'/>
+<text fill='black' font-size='11pt' stroke-width='0.266667' text-anchor='end' x='85.066667' y='35.466667'>$ +$</text>
+<text fill='black' font-size='11pt' stroke-width='0.266667' text-anchor='end' x='77.066667' y='45.373333'>$ v$</text>
+<text fill='black' font-size='11pt' stroke-width='0.266667' text-anchor='end' x='85.066667' y='55.28'>$ -$</text>
+<text fill='black' font-size='11pt' stroke-width='0.266667' text-anchor='start' x='98.4' y='45.373333'>$ C$</text>
+<circle cx='87.733333' cy='76.533333' fill='black' r='1.92'/>
+<line x1='87.733333' x2='135.733333' y1='4.533333' y2='4.533333'/>
+<line x1='135.733333' x2='135.733333' y1='4.533333' y2='28.533333'/>
+<line x1='135.733333' x2='135.2' y1='28.533333' y2='28.533333'/>
+<path d='M 135.733333,28.533333
+ A 3 3 0 1 1 135.733333,34.533333'/>
+<line x1='135.733333' x2='135.2' y1='34.533333' y2='34.533333'/>
+<path d='M 135.733333,34.533333
+ A 3 3 0 0 1 135.733333,40.533333'/>
+<line x1='135.733333' x2='135.2' y1='40.533333' y2='40.533333'/>
+<path d='M 135.733333,40.533333
+ A 3 3 0 1 1 135.733333,46.533333'/>
+<line x1='135.733333' x2='135.2' y1='46.533333' y2='46.533333'/>
+<path d='M 135.733333,46.533333
+ A 3 3 0 0 1 135.733333,52.533333'/>
+<line x1='135.733333' x2='135.2' y1='52.533333' y2='52.533333'/>
+<line x1='135.733333' x2='135.733333' y1='52.533333' y2='76.533333'/>
+<text fill='black' font-size='11pt' stroke-width='0.266667' text-anchor='end' x='132.533333' y='45.373333'>$ L$</text>
+<polygon fill='black' points='138.133333,14.133333 135.733333,23.733333
+133.333333,14.133333' stroke-width='0'/>
+<line x1='135.733333' x2='135.733333' y1='21.534344' y2='14.133333'/>
+<text fill='black' font-size='11pt' stroke-width='0.2pt' text-anchor='start' x='138.4' y='22.673838'>$ i$</text>
+<line x1='135.733333' x2='15.733333' y1='76.533333' y2='76.533333'/>
+</g></svg>

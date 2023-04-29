@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg height='120px' preserveAspectRatio='none' version='1.1' viewBox='0 0 132 120' width='132px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<title>Barcode</title>
+<g id='canvas'>
+<rect fill='#fff' height='120px' width='132px' x='0' y='0'/>
+<g fill='#000' id='barcode'>
+<rect height='100px' width='2px' x='10' y='10'/>
+<rect height='100px' width='1px' x='13' y='10'/>
+<rect height='100px' width='1px' x='16' y='10'/>
+<rect height='100px' width='1px' x='21' y='10'/>
+<rect height='100px' width='1px' x='25' y='10'/>
+<rect height='100px' width='2px' x='27' y='10'/>
+<rect height='100px' width='1px' x='32' y='10'/>
+<rect height='100px' width='1px' x='35' y='10'/>
+<rect height='100px' width='2px' x='37' y='10'/>
+<rect height='100px' width='1px' x='43' y='10'/>
+<rect height='100px' width='1px' x='46' y='10'/>
+<rect height='100px' width='4px' x='49' y='10'/>
+<rect height='100px' width='1px' x='54' y='10'/>
+<rect height='100px' width='1px' x='59' y='10'/>
+<rect height='100px' width='2px' x='61' y='10'/>
+<rect height='100px' width='1px' x='65' y='10'/>
+<rect height='100px' width='4px' x='69' y='10'/>
+<rect height='100px' width='1px' x='74' y='10'/>
+<rect height='100px' width='1px' x='76' y='10'/>
+<rect height='100px' width='1px' x='81' y='10'/>
+<rect height='100px' width='2px' x='84' y='10'/>
+<rect height='100px' width='1px' x='87' y='10'/>
+<rect height='100px' width='2px' x='89' y='10'/>
+<rect height='100px' width='1px' x='93' y='10'/>
+<rect height='100px' width='1px' x='98' y='10'/>
+<rect height='100px' width='2px' x='102' y='10'/>
+<rect height='100px' width='1px' x='106' y='10'/>
+<rect height='100px' width='2px' x='109' y='10'/>
+<rect height='100px' width='3px' x='114' y='10'/>
+<rect height='100px' width='1px' x='118' y='10'/>
+<rect height='100px' width='2px' x='120' y='10'/>
+
+</g></g>
+</svg>

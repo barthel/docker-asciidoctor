@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='864pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 1180.00 864.00' width='1180pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(144 720)'>
+<title>Stateful Architecture</title>
+<polygon fill='white' points='-144,144 -144,-720 1036,-720 1036,144 -144,144' stroke='none'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='15.00' text-anchor='middle' x='446' y='-9'>Stateful Architecture</text>
+<g class='cluster' id='clust1'>
+<title>cluster_Apps</title>
+<path d='M20,-33C20,-33 578,-33 578,-33 584,-33 590,-39 590,-45 590,-45 590,-556 590,-556 590,-562 584,-568 578,-568 578,-568 20,-568 20,-568 14,-568 8,-562 8,-556 8,-556 8,-45 8,-45 8,-39 14,-33 20,-33' fill='#e5f5fd' stroke='#aeb6be'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='12.00' text-anchor='middle' x='31' y='-554.4'>Apps</text>
+</g>
+
+<g class='node' id='node1'>
+<title>2a4570e34bc1434f9bf6c99e18d569e0</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/compute/pod.png' preserveAspectRatio='xMinYMin meet' width='101px' x='171' y='-160.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='221.5' y='-45.1'>pod</text>
+</g>
+
+<g class='node' id='node2'>
+<title>ff1e583fcadd462e964c24e623b299d6</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/compute/sts.png' preserveAspectRatio='xMinYMin meet' width='101px' x='326' y='-307.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='376.5' y='-192.1'>sts</text>
+</g>
+
+<g class='edge' id='edge1'>
+<title>2a4570e34bc1434f9bf6c99e18d569e0&#45;&gt;ff1e583fcadd462e964c24e623b299d6</title>
+<path d='M222,-178.28C222,-193.39 222,-205 222,-205 222,-205 281.23,-205 326.34,-205' fill='none' stroke='#7b8894'/>
+</g>
+
+<g class='node' id='node3'>
+<title>a8631ddb0bcf460cb2c6eff07e2d7465</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/storage/pvc.png' preserveAspectRatio='xMinYMin meet' width='101px' x='481' y='-160.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='531.5' y='-45.1'>pvc</text>
+</g>
+
+<g class='edge' id='edge4'>
+<title>2a4570e34bc1434f9bf6c99e18d569e0&#45;&gt;a8631ddb0bcf460cb2c6eff07e2d7465</title>
+<path d='M272,-110C272,-110 469.51,-110 469.51,-110' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='469.51,-113.5 479.51,-110 469.51,-106.5 469.51,-113.5' stroke='#7b8894'/>
+</g>
+
+<g class='edge' id='edge2'>
+<title>ff1e583fcadd462e964c24e623b299d6&#45;&gt;a8631ddb0bcf460cb2c6eff07e2d7465</title>
+<path d='M426.99,-205C472.39,-205 532,-205 532,-205 532,-205 532,-193.39 532,-178.28' fill='none' stroke='#7b8894'/>
+</g>
+
+<g class='node' id='node6'>
+<title>9e0c34f944bb450a8c4f2c3d2b2adc11</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/storage/pvc.png' preserveAspectRatio='xMinYMin meet' width='101px' x='481' y='-340.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='531.5' y='-225.1'>pvc</text>
+</g>
+
+<g class='edge' id='edge6'>
+<title>ff1e583fcadd462e964c24e623b299d6&#45;&gt;9e0c34f944bb450a8c4f2c3d2b2adc11</title>
+<path d='M426.82,-273.5C444.24,-273.5 463.75,-273.5 481.16,-273.5' fill='none' stroke='#7b8894'/>
+</g>
+
+<g class='node' id='node8'>
+<title>730e5f37994f4796bbe310acc3dd0d45</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/storage/pvc.png' preserveAspectRatio='xMinYMin meet' width='101px' x='481' y='-520.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='531.5' y='-405.1'>pvc</text>
+</g>
+
+<g class='edge' id='edge10'>
+<title>ff1e583fcadd462e964c24e623b299d6&#45;&gt;730e5f37994f4796bbe310acc3dd0d45</title>
+<path d='M394,-325.27C394,-387.58 394,-470 394,-470 394,-470 441.84,-470 481.08,-470' fill='none' stroke='#7b8894'/>
+</g>
+
+<g class='node' id='node9'>
+<title>35292a2075fd4d4897e95841b8df5fc0</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/storage/pv.png' preserveAspectRatio='xMinYMin meet' width='101px' x='636' y='-340.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='686.5' y='-225.1'>pv</text>
+</g>
+
+<g class='edge' id='edge13'>
+<title>a8631ddb0bcf460cb2c6eff07e2d7465&#45;&gt;35292a2075fd4d4897e95841b8df5fc0</title>
+<path d='M593.5,-110C593.5,-110 687,-110 687,-110 687,-110 687,-170.77 687,-221.69' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='593.5,-106.5 583.5,-110 593.5,-113.5 593.5,-106.5' stroke='#7b8894'/>
+</g>
+
+<g class='node' id='node4'>
+<title>453dd422c5c0490b934472c3e0aa097a</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/network/svc.png' preserveAspectRatio='xMinYMin meet' width='101px' x='16' y='-340.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='66.5' y='-225.1'>svc</text>
+</g>
+
+<g class='edge' id='edge3'>
+<title>453dd422c5c0490b934472c3e0aa097a&#45;&gt;2a4570e34bc1434f9bf6c99e18d569e0</title>
+<path d='M67,-221.69C67,-170.77 67,-110 67,-110 67,-110 159.82,-110 159.82,-110' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='159.82,-113.5 169.82,-110 159.82,-106.5 159.82,-113.5' stroke='#7b8894'/>
+</g>
+
+<g class='node' id='node5'>
+<title>f4a80c63b66e40ae9ffaa68c705e0d46</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/compute/pod.png' preserveAspectRatio='xMinYMin meet' width='101px' x='171' y='-340.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='221.5' y='-225.1'>pod</text>
+</g>
+
+<g class='edge' id='edge7'>
+<title>453dd422c5c0490b934472c3e0aa097a&#45;&gt;f4a80c63b66e40ae9ffaa68c705e0d46</title>
+<path d='M116.82,-290C116.82,-290 159.65,-290 159.65,-290' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='159.65,-293.5 169.65,-290 159.65,-286.5 159.65,-293.5' stroke='#7b8894'/>
+</g>
+
+<g class='node' id='node7'>
+<title>edd1cc91a7d645749677f94a3f984fd8</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/compute/pod.png' preserveAspectRatio='xMinYMin meet' width='101px' x='171' y='-520.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='221.5' y='-405.1'>pod</text>
+</g>
+
+<g class='edge' id='edge11'>
+<title>453dd422c5c0490b934472c3e0aa097a&#45;&gt;edd1cc91a7d645749677f94a3f984fd8</title>
+<path d='M67,-358.31C67,-409.23 67,-470 67,-470 67,-470 159.82,-470 159.82,-470' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='159.82,-473.5 169.82,-470 159.82,-466.5 159.82,-473.5' stroke='#7b8894'/>
+</g>
+
+<g class='edge' id='edge5'>
+<title>f4a80c63b66e40ae9ffaa68c705e0d46&#45;&gt;ff1e583fcadd462e964c24e623b299d6</title>
+<path d='M271.82,-273.5C289.24,-273.5 308.75,-273.5 326.16,-273.5' fill='none' stroke='#7b8894'/>
+</g>
+
+<g class='edge' id='edge8'>
+<title>f4a80c63b66e40ae9ffaa68c705e0d46&#45;&gt;9e0c34f944bb450a8c4f2c3d2b2adc11</title>
+<path d='M272,-342C272,-342 469.51,-342 469.51,-342' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='469.51,-345.5 479.51,-342 469.51,-338.5 469.51,-345.5' stroke='#7b8894'/>
+</g>
+
+<g class='edge' id='edge14'>
+<title>9e0c34f944bb450a8c4f2c3d2b2adc11&#45;&gt;35292a2075fd4d4897e95841b8df5fc0</title>
+<path d='M593.34,-290C593.34,-290 636.16,-290 636.16,-290' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='593.34,-286.5 583.34,-290 593.34,-293.5 593.34,-286.5' stroke='#7b8894'/>
+</g>
+
+<g class='edge' id='edge9'>
+<title>edd1cc91a7d645749677f94a3f984fd8&#45;&gt;ff1e583fcadd462e964c24e623b299d6</title>
+<path d='M271.89,-435.75C311.49,-435.75 360,-435.75 360,-435.75 360,-435.75 360,-375.8 360,-325.34' fill='none' stroke='#7b8894'/>
+</g>
+
+<g class='edge' id='edge12'>
+<title>edd1cc91a7d645749677f94a3f984fd8&#45;&gt;730e5f37994f4796bbe310acc3dd0d45</title>
+<path d='M272,-504.25C272,-504.25 469.51,-504.25 469.51,-504.25' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='469.51,-507.75 479.51,-504.25 469.51,-500.75 469.51,-507.75' stroke='#7b8894'/>
+</g>
+
+<g class='edge' id='edge15'>
+<title>730e5f37994f4796bbe310acc3dd0d45&#45;&gt;35292a2075fd4d4897e95841b8df5fc0</title>
+<path d='M593.5,-470C593.5,-470 687,-470 687,-470 687,-470 687,-409.23 687,-358.31' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='593.5,-466.5 583.5,-470 593.5,-473.5 593.5,-466.5' stroke='#7b8894'/>
+</g>
+
+<g class='node' id='node10'>
+<title>ed96cd3dbefe4a8590130929e38ca74f</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/k8s/storage/sc.png' preserveAspectRatio='xMinYMin meet' width='101px' x='791' y='-340.5'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='841.5' y='-225.1'>sc</text>
+</g>
+
+<g class='edge' id='edge16'>
+<title>35292a2075fd4d4897e95841b8df5fc0&#45;&gt;ed96cd3dbefe4a8590130929e38ca74f</title>
+<path d='M748.34,-290C748.34,-290 791.16,-290 791.16,-290' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='748.34,-286.5 738.34,-290 748.34,-293.5 748.34,-286.5' stroke='#7b8894'/>
+</g>
+</g>
+</svg>

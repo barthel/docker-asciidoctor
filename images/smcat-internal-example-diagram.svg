@@ -1,0 +1,119 @@
+<svg height='112' preserveAspectRatio='xMidYMid meet' viewBox='0 0 592 112' width='592' xmlns='http://www.w3.org/2000/svg'>
+    <style>
+        line, path, circle, rect, polygon{stroke:black;stroke-width:2;stroke-opacity:1;fill-opacity:1;stroke-linecap:round;stroke-linejoin:miter;}text{font-family:Iosevka Fixed, monospace;font-size:14px;}rect.backdrop{stroke:none;fill:white;}.broken{stroke-dasharray:8;}.filled{fill:black;}.bg_filled{fill:white;}.nofill{fill:white;}.end_marked_arrow{marker-end:url(#arrow);}.start_marked_arrow{marker-start:url(#arrow);}.end_marked_diamond{marker-end:url(#diamond);}.start_marked_diamond{marker-start:url(#diamond);}.end_marked_circle{marker-end:url(#circle);}.start_marked_circle{marker-start:url(#circle);}.end_marked_open_circle{marker-end:url(#open_circle);}.start_marked_open_circle{marker-start:url(#open_circle);}.end_marked_big_open_circle{marker-end:url(#big_open_circle);}.start_marked_big_open_circle{marker-start:url(#big_open_circle);}
+        
+        
+    </style>
+    <defs>
+        <marker id='arrow' markerHeight='7' markerWidth='7' orient='auto-start-reverse' refX='4' refY='2' viewBox='-2 -2 8 8'>
+            <polygon points='0,0 0,4 4,2 0,0'/>
+        </marker>
+        <marker id='diamond' markerHeight='7' markerWidth='7' orient='auto-start-reverse' refX='4' refY='2' viewBox='-2 -2 8 8'>
+            <polygon points='0,2 2,0 4,2 2,4 0,2'/>
+        </marker>
+        <marker id='circle' markerHeight='7' markerWidth='7' orient='auto-start-reverse' refX='4' refY='4' viewBox='0 0 8 8'>
+            <circle class='filled' cx='4' cy='4' r='2'/>
+        </marker>
+        <marker id='open_circle' markerHeight='7' markerWidth='7' orient='auto-start-reverse' refX='4' refY='4' viewBox='0 0 8 8'>
+            <circle class='bg_filled' cx='4' cy='4' r='2'/>
+        </marker>
+        <marker id='big_open_circle' markerHeight='7' markerWidth='7' orient='auto-start-reverse' refX='4' refY='4' viewBox='0 0 8 8'>
+            <circle class='bg_filled' cx='4' cy='4' r='3'/>
+        </marker>
+    </defs>
+    <rect class='backdrop' height='112' width='592' x='0' y='0'/>
+    <text x='34' y='12'>E</text>
+    <text x='34' y='28'>D</text>
+    <text x='34' y='44'>C</text>
+    <text x='34' y='60'>B</text>
+    <text x='34' y='76'>A</text>
+    <circle class='filled' cx='260' cy='8' r='3'/>
+    <circle class='filled' cx='212' cy='24' r='3'/>
+    <line class='solid' x1='216' x2='232' y1='24' y2='24'/>
+    <circle class='filled' cx='236' cy='24' r='3'/>
+    <line class='solid' x1='240' x2='280' y1='24' y2='24'/>
+    <circle class='filled' cx='284' cy='24' r='3'/>
+    <circle class='filled' cx='164' cy='40' r='3'/>
+    <line class='solid' x1='168' x2='184' y1='40' y2='40'/>
+    <circle class='filled' cx='188' cy='40' r='3'/>
+    <circle class='filled' cx='116' cy='56' r='3'/>
+    <line class='solid' x1='120' x2='136' y1='56' y2='56'/>
+    <circle class='filled' cx='140' cy='56' r='3'/>
+    <circle class='filled' cx='68' cy='72' r='3'/>
+    <line class='solid' x1='72' x2='88' y1='72' y2='72'/>
+    <circle class='filled' cx='92' cy='72' r='3'/>
+    <text x='66' y='92'>5</text>
+    <text x='82' y='92'>10</text>
+    <text x='106' y='92'>15</text>
+    <text x='130' y='92'>20</text>
+    <text x='154' y='92'>25</text>
+    <text x='178' y='92'>30</text>
+    <text x='202' y='92'>35</text>
+    <text x='226' y='92'>40</text>
+    <text x='250' y='92'>45</text>
+    <text x='274' y='92'>50</text>
+    <text x='330' y='12'>E</text>
+    <text x='330' y='28'>D</text>
+    <text x='330' y='44'>C</text>
+    <text x='330' y='60'>B</text>
+    <text x='330' y='76'>A</text>
+    <circle class='nofill' cx='556' cy='8' r='3'/>
+    <line class='solid' x1='556' x2='556' y1='12' y2='80'/>
+    <circle class='nofill' cx='508' cy='24' r='3'/>
+    <line class='solid' x1='508' x2='508' y1='28' y2='80'/>
+    <circle class='nofill' cx='532' cy='24' r='3'/>
+    <line class='solid' x1='532' x2='532' y1='28' y2='80'/>
+    <circle class='nofill' cx='580' cy='24' r='3'/>
+    <circle class='nofill' cx='460' cy='40' r='3'/>
+    <line class='solid' x1='460' x2='460' y1='44' y2='80'/>
+    <circle class='nofill' cx='484' cy='40' r='3'/>
+    <line class='solid' x1='484' x2='484' y1='44' y2='80'/>
+    <circle class='nofill' cx='412' cy='56' r='3'/>
+    <line class='solid' x1='412' x2='412' y1='60' y2='80'/>
+    <circle class='nofill' cx='436' cy='56' r='3'/>
+    <line class='solid' x1='436' x2='436' y1='60' y2='80'/>
+    <circle class='nofill' cx='364' cy='72' r='3'/>
+    <line class='solid' x1='368' x2='384' y1='72' y2='72'/>
+    <circle class='nofill' cx='388' cy='72' r='3'/>
+    <text x='362' y='92'>5</text>
+    <text x='378' y='92'>10</text>
+    <text x='402' y='92'>15</text>
+    <text x='426' y='92'>20</text>
+    <text x='450' y='92'>25</text>
+    <text x='474' y='92'>30</text>
+    <text x='498' y='92'>35</text>
+    <text x='522' y='92'>40</text>
+    <text x='546' y='92'>45</text>
+    <text x='570' y='92'>50</text>
+    <g>
+        <line class='solid' x1='52' x2='256' y1='8' y2='8'/>
+        <line class='solid' x1='52' x2='52' y1='8' y2='72'/>
+        <line class='solid' x1='52' x2='208' y1='24' y2='24'/>
+        <line class='solid' x1='52' x2='160' y1='40' y2='40'/>
+        <line class='solid' x1='52' x2='112' y1='56' y2='56'/>
+        <line class='solid' x1='52' x2='64' y1='72' y2='72'/>
+    </g>
+    <g>
+        <line class='solid' x1='260' x2='260' y1='12' y2='72'/>
+        <line class='solid' x1='188' x2='188' y1='44' y2='72'/>
+        <line class='solid' x1='96' x2='284' y1='72' y2='72'/>
+        <line class='solid' x1='116' x2='116' y1='64' y2='72'/>
+        <line class='solid' x1='140' x2='140' y1='64' y2='72'/>
+        <line class='solid' x1='212' x2='212' y1='28' y2='72'/>
+        <line class='solid' x1='236' x2='236' y1='28' y2='72'/>
+        <line class='solid' x1='284' x2='284' y1='28' y2='72'/>
+        <line class='solid' x1='164' x2='164' y1='44' y2='72'/>
+    </g>
+    <g>
+        <line class='solid' x1='264' x2='284' y1='8' y2='8'/>
+        <line class='solid' x1='284' x2='284' y1='8' y2='16'/>
+    </g>
+    <g>
+        <line class='solid' x1='348' x2='348' y1='0' y2='72'/>
+        <line class='solid' x1='348' x2='360' y1='72' y2='72'/>
+    </g>
+    <g>
+        <line class='solid' x1='580' x2='580' y1='28' y2='80'/>
+        <line class='solid' x1='392' x2='580' y1='72' y2='72'/>
+    </g>
+</svg>

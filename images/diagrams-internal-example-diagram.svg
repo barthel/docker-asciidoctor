@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='450pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 699.00 450.00' width='699pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(144 306)'>
+<title>Web Service</title>
+<polygon fill='white' points='-144,144 -144,-306 555,-306 555,144 -144,144' stroke='none'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='15.00' text-anchor='middle' x='205.5' y='-9'>Web Service</text>
+
+<g class='node' id='node1'>
+<title>f98edeaccbed4e6d8e9c93b643ed9b9e</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/aws/network/elastic-load-balancing.png' preserveAspectRatio='xMinYMin meet' width='101px' x='0' y='-144'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='50.5' y='-28.6'>lb</text>
+</g>
+
+<g class='node' id='node2'>
+<title>4745527569de4132bdc3e85ec63e1941</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/aws/compute/ec2.png' preserveAspectRatio='xMinYMin meet' width='101px' x='155' y='-144'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='205.5' y='-28.6'>web</text>
+</g>
+
+<g class='edge' id='edge1'>
+<title>f98edeaccbed4e6d8e9c93b643ed9b9e&#45;&gt;4745527569de4132bdc3e85ec63e1941</title>
+<path d='M100.82,-93.5C100.82,-93.5 143.65,-93.5 143.65,-93.5' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='143.65,-97 153.65,-93.5 143.65,-90 143.65,-97' stroke='#7b8894'/>
+</g>
+
+<g class='node' id='node3'>
+<title>fd761310787b45a7876235c17cb1428c</title>
+<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/aws/database/rds.png' preserveAspectRatio='xMinYMin meet' width='101px' x='310' y='-144'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='360.5' y='-28.6'>userdb</text>
+</g>
+
+<g class='edge' id='edge2'>
+<title>4745527569de4132bdc3e85ec63e1941&#45;&gt;fd761310787b45a7876235c17cb1428c</title>
+<path d='M255.82,-93.5C255.82,-93.5 298.65,-93.5 298.65,-93.5' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='298.65,-97 308.65,-93.5 298.65,-90 298.65,-97' stroke='#7b8894'/>
+</g>
+</g>
+</svg>

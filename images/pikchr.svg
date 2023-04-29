@@ -1,0 +1,93 @@
+<svg class='pikchr' preserveAspectRatio='xMidYMid meet' viewBox='0 0 508.32 436.32' xmlns='http://www.w3.org/2000/svg'>
+<path d='M2.16,110.16L506.16,110.16L506.16,2.16L2.16,2.16Z' style='fill:rgb(172,201,227);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M2.16,218.16L506.16,218.16L506.16,110.16L2.16,110.16Z' style='fill:rgb(197,216,239);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M2.16,326.16L506.16,326.16L506.16,218.16L2.16,218.16Z' style='fill:rgb(172,201,227);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M2.16,434.16L506.16,434.16L506.16,326.16L2.16,326.16Z' style='fill:rgb(197,216,239);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M30.96,110.16L30.96,2.16' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' transform='rotate(-90 30.96,56.16)' x='30.96' y='44.46'>Alan</text>
+<path d='M30.96,218.16L30.96,110.16' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' transform='rotate(-90 30.96,164.16)' x='30.96' y='152.46'>Betty</text>
+<path d='M30.96,326.16L30.96,218.16' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' transform='rotate(-90 30.96,272.16)' x='30.96' y='260.46'>Charlie</text>
+<path d='M30.96,434.16L30.96,326.16' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' transform='rotate(-90 30.96,380.16)' x='30.96' y='368.46'>Darlene</text>
+<circle cx='59.76' cy='30.96' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='59.76' y='30.96'>1</text>
+<polygon points='110.16,30.96 98.64,35.28 98.64,26.64' style='fill:rgb(0,0,0)'/>
+<path d='M74.16,30.96L104.4,30.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<circle cx='124.56' cy='30.96' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='124.56' y='30.96'>2</text>
+<polygon points='412.56,30.96 401.04,35.28 401.04,26.64' style='fill:rgb(0,0,0)'/>
+<path d='M138.96,30.96L406.8,30.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<ellipse cx='448.56' cy='30.96' rx='36' ry='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='448.56' y='30.96'>future</text>
+<circle cx='174.96' cy='74.16' r='14.4' style='fill:rgb(192,192,192);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='174.96' y='74.16'>3</text>
+<polygon points='161.477,69.1038 149.173,69.1038 152.207,61.0139' style='fill:rgb(0,0,0)'/>
+<path d='M73.2431,36.0162L156.084,67.0814' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' transform='rotate(20.55604522 117.36,52.56)' x='117.36' y='64.26'>fork!</text>
+<circle cx='59.76' cy='138.96' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='59.76' y='138.96'>1</text>
+<polygon points='110.16,138.96 98.64,143.28 98.64,134.64' style='fill:rgb(0,0,0)'/>
+<path d='M74.16,138.96L104.4,138.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<circle cx='124.56' cy='138.96' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='124.56' y='138.96'>2</text>
+<polygon points='412.56,138.96 401.04,143.28 401.04,134.64' style='fill:rgb(0,0,0)'/>
+<path d='M138.96,138.96L406.8,138.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<ellipse cx='448.56' cy='138.96' rx='36' ry='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='448.56' y='138.96'>future</text>
+<circle cx='174.96' cy='182.16' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='174.96' y='182.16'>3</text>
+<polygon points='225.36,182.16 213.84,186.48 213.84,177.84' style='fill:rgb(0,0,0)'/>
+<path d='M189.36,182.16L219.6,182.16' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<circle cx='239.76' cy='182.16' r='14.4' style='fill:rgb(192,192,192);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='239.76' y='182.16'>4</text>
+<polygon points='161.477,177.104 149.173,177.104 152.207,169.014' style='fill:rgb(0,0,0)'/>
+<path d='M73.2431,144.016L156.084,175.081' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<circle cx='59.76' cy='246.96' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='59.76' y='246.96'>1</text>
+<polygon points='110.16,246.96 98.64,251.28 98.64,242.64' style='fill:rgb(0,0,0)'/>
+<path d='M74.16,246.96L104.4,246.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<circle cx='124.56' cy='246.96' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='124.56' y='246.96'>2</text>
+<polygon points='254.16,246.96 242.64,251.28 242.64,242.64' style='fill:rgb(0,0,0)'/>
+<path d='M138.96,246.96L248.4,246.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='196.56' y='235.26'>goes</text>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='196.56' y='258.66'>offline</text>
+<circle cx='268.56' cy='246.96' r='14.4' style='fill:rgb(192,192,192);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='268.56' y='246.96'>5</text>
+<polygon points='412.56,246.96 401.04,251.28 401.04,242.64' style='fill:rgb(0,0,0)'/>
+<path d='M282.96,246.96L406.8,246.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='347.76' y='235.26'>back online</text>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='347.76' y='258.66'>pushes 5</text>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='347.76' y='278.82'>pulls 3 &amp; 4</text>
+<ellipse cx='448.56' cy='246.96' rx='36' ry='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='448.56' y='246.96'>future</text>
+<circle cx='59.76' cy='354.96' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='59.76' y='354.96'>1</text>
+<polygon points='110.16,354.96 98.64,359.28 98.64,350.64' style='fill:rgb(0,0,0)'/>
+<path d='M74.16,354.96L104.4,354.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<circle cx='124.56' cy='354.96' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='124.56' y='354.96'>2</text>
+<polygon points='254.16,354.96 242.64,359.28 242.64,350.64' style='fill:rgb(0,0,0)'/>
+<path d='M138.96,354.96L248.4,354.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<circle cx='268.56' cy='354.96' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='268.56' y='354.96'>5</text>
+<polygon points='318.96,354.96 307.44,359.28 307.44,350.64' style='fill:rgb(0,0,0)'/>
+<path d='M282.96,354.96L313.2,354.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<circle cx='333.36' cy='354.96' r='14.4' style='fill:rgb(192,192,192);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='333.36' y='354.96'>6</text>
+<polygon points='412.56,354.96 401.04,359.28 401.04,350.64' style='fill:rgb(0,0,0)'/>
+<path d='M347.76,354.96L406.8,354.96' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<ellipse cx='448.56' cy='354.96' rx='36' ry='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='448.56' y='354.96'>future</text>
+<circle cx='174.96' cy='398.16' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='174.96' y='398.16'>3</text>
+<polygon points='225.36,398.16 213.84,402.48 213.84,393.84' style='fill:rgb(0,0,0)'/>
+<path d='M189.36,398.16L219.6,398.16' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<circle cx='239.76' cy='398.16' r='14.4' style='fill:rgb(255,255,255);stroke-width:2.25;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' text-anchor='middle' x='239.76' y='398.16'>4</text>
+<polygon points='161.477,393.104 149.173,393.104 152.207,385.014' style='fill:rgb(0,0,0)'/>
+<path d='M73.2431,360.016L156.084,391.081' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+</svg>
+

@@ -1,0 +1,53 @@
+<svg class='pikchr' height='453' preserveAspectRatio='xMidYMid meet' viewBox='0 0 490.32 605.52' width='367' xmlns='http://www.w3.org/2000/svg'>
+<path d='M2.16,293.76L236.16,293.76L236.16,2.16L2.16,2.16Z' style='fill:rgb(216,236,208);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M2.16,603.36L236.16,603.36L236.16,311.76L2.16,311.76Z' style='fill:rgb(208,236,232);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M254.16,347.76L488.16,347.76L488.16,2.16L254.16,2.16Z' style='fill:rgb(232,216,208);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M254.16,603.36L488.16,603.36L488.16,394.56L254.16,394.56Z' style='fill:rgb(224,236,200);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M38.16,92.16L200.16,92.16L200.16,38.16L38.16,38.16Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='119.16' y='65.16'>Interface</text>
+<polygon points='119.16,120.96 114.84,109.44 123.48,109.44' style='fill:rgb(0,0,0)'/>
+<path d='M119.16,92.16L119.16,115.2' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M38.16,174.96L200.16,174.96L200.16,120.96L38.16,120.96Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='119.16' y='135.209'>SQL Command</text>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='119.16' y='160.711'>Processor</text>
+<polygon points='119.16,203.76 114.84,192.24 123.48,192.24' style='fill:rgb(0,0,0)'/>
+<path d='M119.16,174.96L119.16,198' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M38.16,257.76L200.16,257.76L200.16,203.76L38.16,203.76Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='119.16' y='230.76'>Virtual Machine</text>
+<polygon points='119.16,347.76 114.84,336.24 123.48,336.24' style='fill:rgb(0,0,0)'/>
+<path d='M119.16,257.76L119.16,342' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M38.16,401.76L200.16,401.76L200.16,347.76L38.16,347.76Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='119.16' y='374.76'>B-Tree</text>
+<polygon points='119.16,430.56 114.84,419.04 123.48,419.04' style='fill:rgb(0,0,0)'/>
+<path d='M119.16,401.76L119.16,424.8' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M38.16,484.56L200.16,484.56L200.16,430.56L38.16,430.56Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='119.16' y='457.56'>Pager</text>
+<polygon points='119.16,513.36 114.84,501.84 123.48,501.84' style='fill:rgb(0,0,0)'/>
+<path d='M119.16,484.56L119.16,507.6' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M38.16,567.36L200.16,567.36L200.16,513.36L38.16,513.36Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='119.16' y='540.36'>OS Interface</text>
+<path d='M290.16,92.16L452.16,92.16L452.16,38.16L290.16,38.16Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='371.16' y='65.16'>Tokenizer</text>
+<polygon points='371.16,120.96 366.84,109.44 375.48,109.44' style='fill:rgb(0,0,0)'/>
+<path d='M371.16,92.16L371.16,115.2' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M290.16,174.96L452.16,174.96L452.16,120.96L290.16,120.96Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='371.16' y='147.96'>Parser</text>
+<polygon points='371.16,203.76 366.84,192.24 375.48,192.24' style='fill:rgb(0,0,0)'/>
+<path d='M371.16,174.96L371.16,198' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<path d='M290.16,311.76L452.16,311.76L452.16,203.76L290.16,203.76Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='371.16' y='245.009'>Code</text>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='371.16' y='270.511'>Generator</text>
+<path d='M290.16,484.56L452.16,484.56L452.16,430.56L290.16,430.56Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='371.16' y='457.56'>Utilities</text>
+<path d='M290.16,567.36L452.16,567.36L452.16,513.36L290.16,513.36Z' style='fill:rgb(255,255,255);stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' text-anchor='middle' x='371.16' y='540.36'>Test Code</text>
+<polygon points='290.16,78.66 281.572,87.4699 277.897,79.6505' style='fill:rgb(0,0,0)'/>
+<path d='M200.16,120.96L284.947,81.1101' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<polygon points='200.16,174.96 212.033,178.185 206.985,185.197' style='fill:rgb(0,0,0)'/>
+<path d='M290.16,239.76L204.834,178.326' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' font-style='italic' text-anchor='middle' transform='rotate(-90 20.16,147.96)' x='20.16' y='147.96'>Core</text>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' font-style='italic' text-anchor='middle' transform='rotate(-90 20.16,457.56)' x='20.16' y='457.56'>Backend</text>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' font-style='italic' text-anchor='middle' transform='rotate(-90 470.16,174.96)' x='470.16' y='174.96'>SQL Compiler</text>
+<text dominant-baseline='central' fill='rgb(0,0,0)' font-size='110%' font-style='italic' text-anchor='middle' transform='rotate(-90 470.16,498.96)' x='470.16' y='498.96'>Accessories</text>
+</svg>
+
