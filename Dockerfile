@@ -1,8 +1,8 @@
 ARG ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
-ARG alpine_version=3.17.2
+ARG alpine_version=3.18
 ARG golang_version=1.20
 # Build ASCIIToSVG - @see: https://github.com/asciitosvg/asciitosvg
-FROM golang:${golang_version}-alpine as go-builder
+FROM golang:${golang_version}-alpine${alpine_version} as go-builder
 
 # No branch/tag/version available; pin to the last known commit for now
 # https://github.com/asciitosvg/asciitosvg/commit/ca82a5ce41e2190a05e07af6e8b3ea4e3256a283
@@ -19,17 +19,17 @@ RUN apk add --no-cache \
         build-base \
         make \
         bison \
-        git \
-    && git clone --depth 1 https://gitlab.com/aplevich/dpic.git /dpic \
+        git
+RUN git clone --depth 1 https://gitlab.com/aplevich/dpic.git /dpic \
     && cd /dpic \
-    && make PREFIX=local installdpic \
-    && git clone --depth 1 -b "master" https://github.com/drhsqlite/pikchr.git /pikchr \
+    && make PREFIX=local installdpic
+RUN git clone --depth 1 -b "master" https://github.com/drhsqlite/pikchr.git /pikchr \
     && cd /pikchr \
     && make pikchr
 
 # =========================================
 
-FROM uwebarthel/asciidoctor-base:${ASCIIDOCTOR_BASE_TAG}
+FROM uwebarthel/asciidoctor-base:${ASCIIDOCTOR_BASE_TAG} as asciidoctor-builder
 
 ENV TMPDIR "/tmp"
 
@@ -45,7 +45,8 @@ COPY --from=make-builder /pikchr/pikchr /usr/local/bin/
 RUN sed -i 's/https/http/' /etc/apk/repositories
 # Adds edge/testing package repo for svgbob, pdf2svg
 RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
-RUN apk fix && apk update
+RUN cat /etc/alpine-release \
+    && apk fix && apk update
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Native' apk packages
