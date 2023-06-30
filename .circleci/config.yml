@@ -60,6 +60,8 @@ jobs:
             TAG_NAME="${DOCKER_USER}/asciidoctor"
             if [ "${CIRCLE_TAG}" != "" ]; then
               TAG_NAME+=":${CIRCLE_TAG}"
+            else
+              TAG_NAME+=":latest"
             fi
             docker buildx build \
               --platform linux/amd64,linux/arm/v7,linux/arm64 \
