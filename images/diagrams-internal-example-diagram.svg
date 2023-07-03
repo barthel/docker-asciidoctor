@@ -1,38 +1,38 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='450pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 699.00 450.00' width='699pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
-<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(144 306)'>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='451pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 698.40 450.80' width='698pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(144 306.8)'>
 <title>Web Service</title>
-<polygon fill='white' points='-144,144 -144,-306 555,-306 555,144 -144,144' stroke='none'/>
-<text fill='#2d3436' font-family='Sans-Serif' font-size='15.00' text-anchor='middle' x='205.5' y='-9'>Web Service</text>
+<polygon fill='white' points='-144,144 -144,-306.8 554.4,-306.8 554.4,144 -144,144' stroke='none'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='15.00' text-anchor='middle' x='205.2' y='-7.75'>Web Service</text>
 
 <g class='node' id='node1'>
-<title>734bfd9b695c409e943f3e6362cea9da</title>
-<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/aws/network/elastic-load-balancing.png' preserveAspectRatio='xMinYMin meet' width='101px' x='0' y='-144'/>
-<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='50.5' y='-28.6'>lb</text>
+<title>26e6bf95c396419f9a3b4d1c5079094d</title>
+<image height='100.8px' xlink:href='/usr/lib/python3.11/site-packages/resources/aws/network/elastic-load-balancing.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='-2.84217e-14' y='-144.8'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='50.4' y='-30.15'>lb</text>
 </g>
 
 <g class='node' id='node2'>
-<title>01475efe88674a1cb0512531ae3cb82e</title>
-<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/aws/compute/ec2.png' preserveAspectRatio='xMinYMin meet' width='101px' x='155' y='-144'/>
-<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='205.5' y='-28.6'>web</text>
+<title>d6dfda1d66464d11b26ba0e9b67cc062</title>
+<image height='100.8px' xlink:href='/usr/lib/python3.11/site-packages/resources/aws/compute/ec2.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='154.8' y='-144.8'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='205.2' y='-30.15'>web</text>
 </g>
 
 <g class='edge' id='edge1'>
-<title>734bfd9b695c409e943f3e6362cea9da&#45;&gt;01475efe88674a1cb0512531ae3cb82e</title>
-<path d='M100.82,-93.5C100.82,-93.5 143.65,-93.5 143.65,-93.5' fill='none' stroke='#7b8894'/>
-<polygon fill='#7b8894' points='143.65,-97 153.65,-93.5 143.65,-90 143.65,-97' stroke='#7b8894'/>
+<title>26e6bf95c396419f9a3b4d1c5079094d&#45;&gt;d6dfda1d66464d11b26ba0e9b67cc062</title>
+<path d='M100.66,-94.4C100.66,-94.4 143.93,-94.4 143.93,-94.4' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='143.93,-97.9 153.93,-94.4 143.93,-90.9 143.93,-97.9' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node3'>
-<title>d2a32a7a69fb43e69fe461424d03395c</title>
-<image height='101px' xlink:href='/usr/lib/python3.10/site-packages/resources/aws/database/rds.png' preserveAspectRatio='xMinYMin meet' width='101px' x='310' y='-144'/>
-<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='360.5' y='-28.6'>userdb</text>
+<title>2e3d967762794847a002251818bcd4c5</title>
+<image height='100.8px' xlink:href='/usr/lib/python3.11/site-packages/resources/aws/database/rds.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='309.6' y='-144.8'/>
+<text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='360' y='-30.15'>userdb</text>
 </g>
 
 <g class='edge' id='edge2'>
-<title>01475efe88674a1cb0512531ae3cb82e&#45;&gt;d2a32a7a69fb43e69fe461424d03395c</title>
-<path d='M255.82,-93.5C255.82,-93.5 298.65,-93.5 298.65,-93.5' fill='none' stroke='#7b8894'/>
-<polygon fill='#7b8894' points='298.65,-97 308.65,-93.5 298.65,-90 298.65,-97' stroke='#7b8894'/>
+<title>d6dfda1d66464d11b26ba0e9b67cc062&#45;&gt;2e3d967762794847a002251818bcd4c5</title>
+<path d='M255.46,-94.4C255.46,-94.4 298.73,-94.4 298.73,-94.4' fill='none' stroke='#7b8894'/>
+<polygon fill='#7b8894' points='298.73,-97.9 308.73,-94.4 298.73,-90.9 298.73,-97.9' stroke='#7b8894'/>
 </g>
 </g>
 </svg>

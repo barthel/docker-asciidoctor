@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="generator" content="Asciidoctor 2.0.20">
 <meta name="author" content="brought to you with  by barthel">
 <title>Asciidoctor Diagram: Supported Diagram Types</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -209,13 +209,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -394,7 +391,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -443,7 +440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1><span class="maintitle"><strong>Asciidoctor</strong> Diagram</span>: <span class="subtitle">Supported Diagram Types</span></h1>
 <div class="details">
 <span id="author" class="author">brought to you with <span class="icon"><i class="fa fa-heart fa-1x"></i></span> by barthel</span><br>
-<span id="revnumber">version: f758b0be</span>
+<span id="revnumber">version: 3f41f7f1</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Content</div>
@@ -1091,7 +1088,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h3 id="_internal_diagram_source_8"><a class="anchor" href="#_internal_diagram_source_8"></a>7.1. Internal diagram source</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/diagrams-internal-example-diagram.png" alt="diagrams internal example diagram" width="932" height="600">
+<img src="./images/diagrams-internal-example-diagram.png" alt="diagrams internal example diagram" width="931" height="601">
 </div>
 </div>
 </div>
@@ -1099,7 +1096,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h3 id="_external_diagram_source_file_8"><a class="anchor" href="#_external_diagram_source_file_8"></a>7.2. External diagram source file</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/diagrams-diagram.png" alt="Diagram" width="1573" height="1152">
+<img src="./images/diagrams-diagram.png" alt="Diagram" width="1572" height="1153">
 </div>
 </div>
 </div>
@@ -1121,17 +1118,54 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_internal_diagram_source_9"><a class="anchor" href="#_internal_diagram_source_9"></a>8.1. Internal diagram source</h3>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/ditaa-internal-example-diagram.svg" alt="ditaa internal example diagram" width="430" height="182">
+<pre>Failed to generate image: Error processing request {:url=&gt;"/ditaa", :body=&gt;"    +--------+   +-------+    +-------+\n    |        | --+ ditaa +--&gt; |       |\n    |  Text  |   +-------+    |diagram|\n    |Document|   |!magic!|    |       |\n    |     {d}|   |       |    |       |\n    +---+----+   +-------+    +-------+\n        :                         ^\n        |       Lots of work      |\n        +-------------------------+", :headers=&gt;{"Accept"=&gt;"image/svg+xml", "X-Options"=&gt;""}}
+Encoding of input is UTF-8
+    +--------+   +-------+    +-------+
+    |        | --+ ditaa +--&gt; |       |
+    |  Text  |   +-------+    |diagram|
+    |Document|   |!magic!|    |       |
+    |     {d}|   |       |    |       |
+    +---+----+   +-------+    +-------+
+        :                         ^
+        |       Lots of work      |
+        +-------------------------+</pre>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_external_diagram_source_file_9"><a class="anchor" href="#_external_diagram_source_file_9"></a>8.2. External diagram source file</h3>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/ditaa.svg" alt="Diagram" width="1030" height="434">
+<pre>Failed to generate image: Broken pipe
+/-------------------------------------------------------------------------------------------------\
+|                  External and internal quality goals and their quality metrics                  |
+\+-----------------------------------+---------------------------------+--------------------------/
+ |                                   |                                 |
+ |    /----------------\             |    /-----------------\          |    /--------------\
+ +---&gt;+  Functionality |             +---&gt;+   Portability   |          +---&gt;+ Reliability  |
+ |    \+---------------/             |    \+----------------/          |    \+-------------/
+ |     |                             |     |                           |     |
+ |     +-* Suitability               |     +-* Adaptability            |     +-* Maturity
+ |     +-* Accuracy                  |     +-* Installability          |     +-* Fault tolerance
+ |     +-* Interoperability          |     +-* Co-existence            |     +-* Recoverability
+ |     +-* Security                  |     +-* Replaceability          |
+ |                                   |                                 |
+ |    /------------\                 |    /-----------------\          |    /-------------\
+ \---&gt;+ Efficiency |                 \---&gt;+ Maintainability |          \---&gt;+  Usability  |
+      \+-----------/                      \+----------------/               \+------------/
+       |                                   |                                 |
+       +-* Time behaviour                  +-* Analyzability                 +-* Understandability
+       +-* Resource utilization            +-* Changeability                 +-* Learnability
+                                           +-* Stability                     +-* Operability
+                                           +-* Testability                   +-* Attractiveness
+
++-- Legend =----------------------------+
+| /---------------\                     |
+| | Quality goal  |   +-*Quality metric |
+| \---------------/                     |
++---------------------------------------+</pre>
 </div>
 </div>
 </div>
@@ -1188,7 +1222,7 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <h3 id="_internal_diagram_source_11"><a class="anchor" href="#_internal_diagram_source_11"></a>10.1. Internal diagram source</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/erd-internal-example-diagram.svg" alt="erd internal example diagram" width="469" height="178">
+<img src="./images/erd-internal-example-diagram.svg" alt="erd internal example diagram" width="469" height="184">
 </div>
 </div>
 </div>
@@ -1196,7 +1230,7 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <h3 id="_external_diagram_source_file_11"><a class="anchor" href="#_external_diagram_source_file_11"></a>10.2. External diagram source file</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/erd.svg" alt="Diagram" width="1343" height="953">
+<img src="./images/erd.svg" alt="Diagram" width="1337" height="980">
 </div>
 </div>
 </div>
@@ -1252,7 +1286,7 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <h3 id="_internal_diagram_source_13"><a class="anchor" href="#_internal_diagram_source_13"></a>12.1. Internal diagram source</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/graphviz-internal-example-diagram.svg" alt="graphviz internal example diagram" width="485" height="250">
+<img src="./images/graphviz-internal-example-diagram.svg" alt="graphviz internal example diagram" width="510" height="250">
 </div>
 </div>
 </div>
@@ -1260,7 +1294,7 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <h3 id="_external_diagram_source_file_13"><a class="anchor" href="#_external_diagram_source_file_13"></a>12.2. External diagram source file</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/graphviz.svg" alt="Diagram" width="835" height="458">
+<img src="./images/graphviz.svg" alt="Diagram" width="827" height="489">
 </div>
 </div>
 </div>
@@ -1269,9 +1303,11 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <div class="sect1">
 <h2 id="section-meme"><a class="anchor" href="#section-meme"></a>13. meme</h2>
 <div class="sectionbody">
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/diag-e9eba9acf8bc78a6328472ab862ab247.png" alt="Diagram" width="500" height="575">
+<pre>Failed to generate image: magick failed: convert: unable to read font `Impact' @ warning/annotate.c/RenderType/1014.
+convert: unable to read font `Impact' @ error/annotate.c/RenderFreetype/1636.
+convert: no images defined `/tmp/meme20230703-1-l2p97q.png' @ error/convert.c/ConvertImageCommand/3342.</pre>
 </div>
 </div>
 </div>
@@ -1482,17 +1518,53 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <h3 id="section-plantuml"><a class="anchor" href="#section-plantuml"></a>18.1. PlantUML</h3>
 <div class="sect3">
 <h4 id="_internal_diagram_source_18"><a class="anchor" href="#_internal_diagram_source_18"></a>18.1.1. Internal diagram source</h4>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/plantuml_plantuml-internal-example-diagram.svg" alt="plantuml plantuml internal example diagram" width="375" height="375">
+<pre>Failed to generate image: Broken pipe
+@startuml
+   actor Foo1
+   boundary Foo2
+   control Foo3
+   entity Foo4
+   database Foo5
+   collections Foo6
+   Foo1 -&gt; Foo2 : To boundary
+   Foo1 -&gt; Foo3 : To control
+   Foo1 -&gt; Foo4 : To entity
+   Foo1 -&gt; Foo5 : To database
+   Foo1 -&gt; Foo6 : To collections
+legend
+&lt;size:8&gt; Rendered with Plantuml Version %version() &lt;/size&gt;
+end legend
+@enduml</pre>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_external_diagram_source_file_18"><a class="anchor" href="#_external_diagram_source_file_18"></a>18.1.2. External diagram source file</h4>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/plantuml_plantuml.svg" alt="Diagram" width="534" height="314">
+<pre>Failed to generate image: Broken pipe
+@startuml
+start
+if (condition A) then (yes)
+  :Text 1;
+elseif (condition B) then (yes)
+  :Text 2;
+  stop
+elseif (condition C) then (yes)
+  :Text 3;
+elseif (condition D) then (yes)
+  :Text 4;
+else (nothing)
+  :Text else;
+endif
+stop
+
+legend
+&lt;size:8&gt; Rendered with Plantuml Version %version() &lt;/size&gt;
+end legend
+@enduml</pre>
 </div>
 </div>
 </div>
@@ -1512,17 +1584,45 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 </div>
 <div class="sect3">
 <h4 id="_internal_diagram_source_19"><a class="anchor" href="#_internal_diagram_source_19"></a>18.2.1. Internal diagram source</h4>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/plantuml_salt-internal-example-diagram.svg" alt="plantuml salt internal example diagram" width="180" height="152">
+<pre>Failed to generate image: Broken pipe
+@startuml
+salt
+{
+  Just plain text
+  [This is my button]
+  ()  Unchecked radio
+  (X) Checked radio
+  []  Unchecked box
+  [X] Checked box
+  "Enter text here   "
+  ^This is a droplist^
+}
+@enduml</pre>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_external_diagram_source_file_19"><a class="anchor" href="#_external_diagram_source_file_19"></a>18.2.2. External diagram source file</h4>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/plantuml_salt.svg" alt="Diagram" width="282" height="140">
+<pre>Failed to generate image: Broken pipe
+@startuml
+salt
+{+
+{* File | Edit | Source | Refactor
+ Refactor | New | Open File | - | Close | Close All }
+{/ General | Fullscreen | Behavior | Saving }
+{
+	{ Open image in: | ^Smart Mode^ }
+	[X] Smooth images when zoomed
+	[X] Confirm image deletion
+	[ ] Show hidden images
+}
+[Close]
+}
+@enduml</pre>
 </div>
 </div>
 </div>
@@ -1550,7 +1650,7 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <h3 id="_internal_diagram_source_20"><a class="anchor" href="#_internal_diagram_source_20"></a>19.1. Internal diagram source</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/smcat-internal-example-diagram.svg" alt="smcat internal example diagram" width="340" height="476">
+<img src="./images/smcat-internal-example-diagram.svg" alt="smcat internal example diagram" width="336" height="498">
 </div>
 </div>
 </div>
@@ -1558,7 +1658,7 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <h3 id="_external_diagram_source_file_20"><a class="anchor" href="#_external_diagram_source_file_20"></a>19.2. External diagram source file</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/smcat.svg" alt="Diagram" width="494" height="581">
+<img src="./images/smcat.svg" alt="Diagram" width="493" height="609">
 </div>
 </div>
 </div>
@@ -1848,8 +1948,8 @@ The <code>umlet</code> backend currently does not support internal diagram sourc
 </div>
 <div id="footer">
 <div id="footer-text">
-version: f758b0be<br>
-f758b0be - 2023-04-30 07:58:35 UTC
+version: 3f41f7f1<br>
+3f41f7f1 - 2023-07-03 05:37:59 UTC
 </div>
 </div>
 </body>
