@@ -55,6 +55,7 @@ jobs:
       - checkout
       - run:
           name: Build docker image
+          no_output_timeout: 1h
           command: |
             echo "${DOCKER_PASS}" | docker login -u "${DOCKER_USER}" --password-stdin
             TAG_NAME="${DOCKER_USER}/asciidoctor"
@@ -64,7 +65,7 @@ jobs:
               TAG_NAME+=":latest"
             fi
             docker buildx build \
-              --platform linux/amd64,linux/arm/v7,linux/arm64 \
+              --platform linux/amd64,linux/arm64 \
               --tag ${TAG_NAME} \
               --build-arg CIRCLE_TAG=${CIRCLE_TAG:-latest} \
               --build-arg ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest} \
@@ -90,6 +91,7 @@ jobs:
             docker pull ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest}
       - run:
           name: Generate HTML
+          no_output_timeout: 1h
           command: |
             docker run --rm \
               -v $(pwd)/src/doc:/documents/ \
@@ -106,6 +108,7 @@ jobs:
                   /documents/asciidoctor-diagram_overview.adoc
       - run:
           name: Inline HTML
+          no_output_timeout: 1h
           command: |
             docker run --rm \
               -v $(pwd)/.examples/dist:/dist \
@@ -121,6 +124,7 @@ jobs:
                   1> .examples/dist/asciidoctor-diagram_overview_inlined.html
       - run:
           name: Generate PDF
+          no_output_timeout: 1h
           command: |
             docker run --rm \
               -v $(pwd)/src/doc:/documents/ \
@@ -136,6 +140,7 @@ jobs:
                   /documents/asciidoctor-diagram_overview.adoc
       - run:
           name: Generate index.html
+          no_output_timeout: 1h
           command: |
             docker run --rm \
               -v $(pwd)/src/doc:/documents/ \

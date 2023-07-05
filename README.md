@@ -1,10 +1,16 @@
 # Asciidoctor &mdash; multi platform Edition
 
-The goal of this project is to build a multi-platform (especially armv7) Docker image based on the original [Asciidoctor Base/Original &mdash; multi-platform Edition](https://github.com/barthel/docker-asciidoctor-base) and adding all extra diagram tools supported by [Asciidoctor Diagram](https://docs.asciidoctor.org/diagram-extension/latest/).
+The goal of this project is to build a multi-platform (arm64, amd64) Docker image based on the original [Asciidoctor Base/Original &mdash; multi-platform Edition](https://github.com/barthel/docker-asciidoctor-base) and adding all extra diagram tools supported by [Asciidoctor Diagram](https://docs.asciidoctor.org/diagram-extension/latest/).
 
 An overview of all supported diagram types, generated as HTML and as PDF, can be found here: https://barthel.github.io/docker-asciidoctor/
 
-The following additional diagramming tools are installed:
+## ⚠️ Note
+
+Unfortunately, it is not possible to provide **`armv7`** version greater than [1.46](https://github.com/barthel/docker-asciidoctor/releases/tag/1.46.0) anymore because updated Java-based tools no longer use Java 8 and there is no Java runtime environment greater than version 8 on Alpine Linux **`armv7`**.
+
+## Additional diagram tools
+
+The following additional diagram tools are installed:
 
 * [ASCIIToSVG](https://github.com/asciitosvg/asciitosvg)
 * [barby](https://github.com/toretore/barby)
