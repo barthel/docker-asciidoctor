@@ -440,7 +440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1><span class="maintitle"><strong>Asciidoctor</strong> Diagram</span>: <span class="subtitle">Supported Diagram Types</span></h1>
 <div class="details">
 <span id="author" class="author">brought to you with <span class="icon"><i class="fa fa-heart fa-1x"></i></span> by barthel</span><br>
-<span id="revnumber">version: f9e9bcec</span>
+<span id="revnumber">version: 7eaca317</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Content</div>
@@ -655,17 +655,35 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_internal_diagram_source"><a class="anchor" href="#_internal_diagram_source"></a>2.1. Internal diagram source</h3>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/ascii2svg-internal-example-diagram.svg" alt="ascii2svg internal example diagram" width="261" height="160">
+<pre>Failed to generate image: Could not find the 'a2s' executable in PATH; add it to the PATH or specify its location using the 'a2s' document attribute
+ .-------------------------.
+ |                         |
+ | .---.-. .-----. .-----. |
+ | | .-. | +--&gt;  | |  &lt;--| |
+ | | '-' | |  &lt;--| +--&gt;  | |
+ | '---'-' '-----' '-----' |
+ |  ascii     2      svg   |
+ |                         |
+ '-------------------------'</pre>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_external_diagram_source_file"><a class="anchor" href="#_external_diagram_source_file"></a>2.2. External diagram source file</h3>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/ascii2svg.svg" alt="Diagram" width="360" height="160">
+<pre>Failed to generate image: Could not find the 'a2s' executable in PATH; add it to the PATH or specify its location using the 'a2s' document attribute
+    +--------+   +-------+    +-------+
+    |        | --+  a2s  +--&gt; |       |
+    |  Text  |   +-------+    |diagram|
+    |Document|   |       |    |       |
+    |        |   | magic |    |       |
+    +---+----+   +-------+    +-------+
+        :                         ^
+        |      Lots of work       |
+        +-------------------------+</pre>
 </div>
 </div>
 </div>
@@ -1268,9 +1286,9 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Failed to generate image: magick failed: convert: unable to read font `Impact' @ warning/annotate.c/RenderType/1014.
-convert: unable to read font `Impact' @ error/annotate.c/RenderFreetype/1636.
-convert: no images defined `/tmp/meme20230705-1-7gadms.png' @ error/convert.c/ConvertImageCommand/3342.</pre>
+<pre>Failed to generate image: magick failed: convert: unable to read font `Impact' @ warning/annotate.c/RenderType/1018.
+convert: unable to read font `Impact' @ error/annotate.c/RenderFreetype/1640.
+convert: no images defined `/tmp/meme20230803-1-7wbqgw.png' @ error/convert.c/ConvertImageCommand/3354.</pre>
 </div>
 </div>
 </div>
@@ -1847,8 +1865,8 @@ The <code>umlet</code> backend currently does not support internal diagram sourc
 </div>
 <div id="footer">
 <div id="footer-text">
-version: f9e9bcec<br>
-f9e9bcec - 2023-07-05 11:24:16 UTC
+version: 7eaca317<br>
+7eaca317 - 2023-08-03 17:32:03 UTC
 </div>
 </div>
 </body>
