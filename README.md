@@ -12,6 +12,7 @@ Unfortunately, it is not possible to provide **`armv7`** version greater than [1
 
 The following additional diagram tools are installed:
 
+* [ASCIIToSVG](https://github.com/asciitosvg/asciitosvg)<sup>[1]</sup>
 * [barby](https://github.com/toretore/barby)
 * [blockdiag/blockdiag](https://github.com/blockdiag/blockdiag)<sup>[1]</sup>
 * [blockdiag/actdiag](https://github.com/blockdiag/actdiag)<sup>[1]</sup>
