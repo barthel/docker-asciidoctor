@@ -1,0 +1,35 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='160px' preserveAspectRatio='xMidYMid meet' version='1.1' viewBox='0 0 360 160' width='360px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+  <defs>
+    <filter height='150%' id='dsFilter' width='150%'>
+      <feOffset dx='2' dy='2' in='SourceGraphic' result='offOut'/>
+      <feColorMatrix in='offOut' result='matrixOut' type='matrix' values='0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0'/>
+      <feGaussianBlur in='matrixOut' result='blurOut' stdDeviation='3'/>
+      <feBlend in='SourceGraphic' in2='blurOut' mode='normal'/>
+    </filter>
+    <marker id='iPointer' markerHeight='15' markerUnits='strokeWidth' markerWidth='8' orient='auto' refX='5' refY='5' viewBox='0 0 10 10'>
+      <path d='M 10 0 L 10 10 L 0 5 z'/>
+    </marker>
+    <marker id='Pointer' markerHeight='15' markerUnits='strokeWidth' markerWidth='8' orient='auto' refX='5' refY='5' viewBox='0 0 10 10'>
+      <path d='M 0 0 L 10 5 L 0 10 z'/>
+    </marker>
+  </defs>
+  <g fill='none' filter='url(#dsFilter)' id='closed' stroke='#000' stroke-width='2'>
+    <path d='M 40.5 8 L 49.5 8 L 58.5 8 L 67.5 8 L 76.5 8 L 85.5 8 L 94.5 8 L 103.5 8 L 112.5 8 L 121.5 8 L 121.5 24 L 121.5 40 L 121.5 56 L 121.5 72 L 121.5 88 L 112.5 88 L 103.5 88 L 94.5 88 L 85.5 88 L 76.5 88 L 67.5 88 L 58.5 88 L 49.5 88 L 40.5 88 L 40.5 72 L 40.5 56 L 40.5 40 L 40.5 24 Z' fill='#fff' filter='url(#dsFilter)' id='closed1'/>
+    <path d='M 157.5 8 L 166.5 8 L 175.5 8 L 184.5 8 L 193.5 8 L 202.5 8 L 211.5 8 L 220.5 8 L 229.5 8 L 229.5 24 L 229.5 40 L 220.5 40 L 211.5 40 L 202.5 40 L 193.5 40 L 184.5 40 L 175.5 40 L 166.5 40 L 157.5 40 L 157.5 24 Z' fill='#fff' filter='url(#dsFilter)' id='closed4'/>
+    <path d='M 274.5 8 L 283.5 8 L 292.5 8 L 301.5 8 L 310.5 8 L 319.5 8 L 328.5 8 L 337.5 8 L 346.5 8 L 346.5 24 L 346.5 40 L 346.5 56 L 346.5 72 L 346.5 88 L 337.5 88 L 328.5 88 L 319.5 88 L 310.5 88 L 301.5 88 L 292.5 88 L 283.5 88 L 274.5 88 L 274.5 72 L 274.5 56 L 274.5 40 L 274.5 24 Z' fill='#fff' filter='url(#dsFilter)' id='closed5'/>
+  </g>
+  <g fill='none' id='lines' stroke='#000' stroke-width='2'>
+    <path d='M 40.5 8 L 49.5 8 L 58.5 8 L 67.5 8 L 76.5 8 L 85.5 8 L 94.5 8 L 103.5 8 L 112.5 8 L 121.5 8 L 121.5 24 L 121.5 40 L 121.5 56 L 121.5 72 L 121.5 88 L 112.5 88 L 103.5 88 L 94.5 88 L 85.5 88 L 76.5 88 L 76.5 104 L 76.5 120 L 76.5 136 L 85.5 136 L 94.5 136 L 103.5 136 L 112.5 136 L 121.5 136 L 130.5 136 L 139.5 136 L 148.5 136 L 157.5 136 L 166.5 136 L 175.5 136 L 184.5 136 L 193.5 136 L 202.5 136 L 211.5 136 L 220.5 136 L 229.5 136 L 238.5 136 L 247.5 136 L 256.5 136 L 265.5 136 L 274.5 136 L 283.5 136 L 292.5 136 L 301.5 136 L 310.5 136 L 310.5 120 L 310.5 104 ' id='open0' marker-end='url(#Pointer)' stroke-dasharray='5 5'/>
+    <path d='M 157.5 8 L 166.5 8 L 175.5 8 L 184.5 8 L 193.5 8 L 202.5 8 L 211.5 8 L 220.5 8 L 229.5 8 L 229.5 24 L 229.5 40 L 220.5 40 L 211.5 40 L 202.5 40 L 193.5 40 L 184.5 40 L 175.5 40 L 166.5 40 L 157.5 40 L 157.5 56 L 157.5 72 L 157.5 88 L 166.5 88 L 175.5 88 L 184.5 88 L 193.5 88 L 202.5 88 L 211.5 88 L 220.5 88 L 229.5 88 L 229.5 72 L 229.5 56 ' id='open2'/>
+    <path d='M 157.5 8 L 166.5 8 L 175.5 8 L 184.5 8 L 193.5 8 L 202.5 8 L 211.5 8 L 220.5 8 L 229.5 8 L 229.5 24 L 238.5 24 L 247.5 24 L 256.5 24 ' id='open3' marker-end='url(#Pointer)'/>
+    <path d='M 157.5 24 L 148.5 24 L 139.5 24 ' id='open6'/>
+  </g>
+  <g id='text' stroke='none' style='font-family:Consolas,Monaco,Anonymous Pro,Anonymous,Bitstream Sans Mono,monospace;font-size:15.2px'>
+    <text fill='#000' id='obj7' x='184.5' y='24'>a2s</text>
+    <text fill='#000' id='obj8' x='67.5' y='40'>Text</text>
+    <text fill='#000' id='obj9' x='283.5' y='40'>diagram</text>
+    <text fill='#000' id='obj10' x='49.5' y='56'>Document</text>
+    <text fill='#000' id='obj11' x='175.5' y='72'>magic</text>
+    <text fill='#000' id='obj12' x='139.5' y='120'>Lots of work</text>
+  </g>
+</svg>
