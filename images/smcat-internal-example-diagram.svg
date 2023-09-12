@@ -1,69 +1,83 @@
 <svg class='svgbob' height='112' preserveAspectRatio='xMidYMid meet' viewBox='0 0 592 112' width='592' xmlns='http://www.w3.org/2000/svg'>
-  <style>
-    .svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
-    stroke: black;
-    stroke-width: 2;
-    stroke-opacity: 1;
-    fill-opacity: 1;
-    stroke-linecap: round;
-    stroke-linejoin: miter;
+  <style>.svgbob line, .svgbob path, .svgbob circle, .svgbob rect, .svgbob polygon {
+  stroke: black;
+  stroke-width: 2;
+  stroke-opacity: 1;
+  fill-opacity: 1;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
 }
+
 .svgbob text {
-    white-space: pre;
-    fill: black;
-    font-family: Iosevka Fixed, monospace;
-    font-size: 14px;
+  white-space: pre;
+  fill: black;
+  font-family: Iosevka Fixed, monospace;
+  font-size: 14px;
 }
+
 .svgbob rect.backdrop {
-    stroke: none;
-    fill: white;
+  stroke: none;
+  fill: white;
 }
+
 .svgbob .broken {
-    stroke-dasharray: 8;
+  stroke-dasharray: 8;
 }
+
 .svgbob .filled {
-    fill: black;
+  fill: black;
 }
+
 .svgbob .bg_filled {
-    fill: white;
-    stroke-width: 1;
+  fill: white;
+  stroke-width: 1;
 }
+
 .svgbob .nofill {
-    fill: white;
+  fill: white;
 }
+
 .svgbob .end_marked_arrow {
-    marker-end: url(#arrow);
+  marker-end: url(#arrow);
 }
+
 .svgbob .start_marked_arrow {
-    marker-start: url(#arrow);
+  marker-start: url(#arrow);
 }
+
 .svgbob .end_marked_diamond {
-    marker-end: url(#diamond);
+  marker-end: url(#diamond);
 }
+
 .svgbob .start_marked_diamond {
-    marker-start: url(#diamond);
+  marker-start: url(#diamond);
 }
+
 .svgbob .end_marked_circle {
-    marker-end: url(#circle);
+  marker-end: url(#circle);
 }
+
 .svgbob .start_marked_circle {
-    marker-start: url(#circle);
+  marker-start: url(#circle);
 }
+
 .svgbob .end_marked_open_circle {
-    marker-end: url(#open_circle);
+  marker-end: url(#open_circle);
 }
+
 .svgbob .start_marked_open_circle {
-    marker-start: url(#open_circle);
+  marker-start: url(#open_circle);
 }
+
 .svgbob .end_marked_big_open_circle {
-    marker-end: url(#big_open_circle);
+  marker-end: url(#big_open_circle);
 }
+
 .svgbob .start_marked_big_open_circle {
-    marker-start: url(#big_open_circle);
+  marker-start: url(#big_open_circle);
 }
-    
-    
-  </style>
+
+</style>
   <defs>
     <marker id='arrow' markerHeight='7' markerWidth='7' orient='auto-start-reverse' refX='4' refY='2' viewBox='-2 -2 8 8'>
       <polygon points='0,0 0,4 4,2 0,0'/>
