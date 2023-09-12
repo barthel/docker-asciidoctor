@@ -50,6 +50,8 @@ Additional non-diagram tools:
   > &mdash;Remy Sharp, https://github.com/remy/inliner
 * [asciidoctor-extensions](https://github.com/asciidoctor/asciidoctor-extensions-lab) available in `/usr/local/asciidoctor-extensions` and could be used like: `asciidoctor -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb ...` \
   ⚠ Please do not use this code in production. The code is untested.
+* [asciidoctor-multipage](https://github.com/owenh000/asciidoctor-multipage)
+  > It extends the stock HTML converter to generate multiple HTML pages from a single, large source document.
 
 ## ⚠️ Note
 
