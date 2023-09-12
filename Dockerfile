@@ -201,12 +201,14 @@ RUN apk --no-cache add \
 # 'Ruby' packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install barby
+# Install asciidoctor-multipage
 RUN apk add --no-cache --virtual .rubymakedepends \
       build-base \
       libxml2-dev \
       ruby-dev \
     && gem install --no-document \
         barby rqrcode chunky_png \
+        asciidoctor-multipage \
     && apk del -r --no-cache .rubymakedepends
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
