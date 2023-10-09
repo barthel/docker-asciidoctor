@@ -96,8 +96,8 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
 ENV puppeteer_skip_download "true"
 # Puppeteer version and Chromium version are related
 ARG puppeteer_version="19.7.5"
-ENV PUPPETEER_CHROMIUM_REVISION "1155790"
-ENV puppeteer_chromium_revision "1155790"
+ENV PUPPETEER_CHROMIUM_REVISION "1175938"
+ENV puppeteer_chromium_revision "1175938"
 # ENV CHROMIUM_PATH "$(which chromium-browser)" # will be exported by entrypoint.sh
 # @see: https://github.com/nodejs/docker-node/issues/1794
 # @see: https://github.com/nodejs/docker-node/issues/1798
@@ -110,7 +110,7 @@ ENV puppeteer_chromium_revision "1155790"
 # Most of the devel dependencies are required by canvas
 RUN apk --no-cache add \
         nodejs \
-        'chromium~=115.0.5790' \
+        'chromium~=117.0.5938' \
         nss \
         freetype \
         harfbuzz \
@@ -200,8 +200,9 @@ RUN apk --no-cache add \
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Ruby' packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Install barby
-# Install asciidoctor-multipage
+# Install barby - @see: https://github.com/toretore/barby
+# Install asciidoctor-multipage - @see: https://github.com/owenh000/asciidoctor-multipage
+# Install asciidoctor-lists - @see: https://github.com/Alwinator/asciidoctor-lists
 RUN apk add --no-cache --virtual .rubymakedepends \
       build-base \
       libxml2-dev \
@@ -209,6 +210,7 @@ RUN apk add --no-cache --virtual .rubymakedepends \
     && gem install --no-document \
         barby rqrcode chunky_png \
         asciidoctor-multipage \
+        asciidoctor-lists \
     && apk del -r --no-cache .rubymakedepends
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

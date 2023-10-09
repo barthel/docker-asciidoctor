@@ -52,6 +52,8 @@ Additional non-diagram tools:
   ⚠ Please do not use this code in production. The code is untested.
 * [asciidoctor-multipage](https://github.com/owenh000/asciidoctor-multipage)
   > It extends the stock HTML converter to generate multiple HTML pages from a single, large source document.
+* [asciidoctor-lists](https://github.com/Alwinator/asciidoctor-lists)
+  > An asciidoctor extension that adds a list of figures, a list of tables, or a list of anything you want.
 
 ## ⚠️ Note
 
