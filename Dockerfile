@@ -1,5 +1,5 @@
 ARG ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
-ARG alpine_version=3.18
+ARG alpine_version=3.19
 
 # =========================================
 # Build dpic- @see: https://gitlab.com/aplevich/dpic
