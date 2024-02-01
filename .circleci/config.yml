@@ -59,16 +59,17 @@ jobs:
           command: |
             echo "${DOCKER_PASS}" | docker login -u "${DOCKER_USER}" --password-stdin
             TAG_NAME="${DOCKER_USER}/asciidoctor"
+            TAG="--tag ${TAG_NAME}:latest"
+            ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
             if [ "${CIRCLE_TAG}" != "" ]; then
-              TAG_NAME+=":${CIRCLE_TAG}"
-            else
-              TAG_NAME+=":latest"
+              TAG="--tag ${TAG_NAME}:${CIRCLE_TAG} --tag ${TAG_NAME}:${CIRCLE_TAG%%.*} --tag ${TAG_NAME}:${CIRCLE_TAG%.*}"
+              ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG%.*}
             fi
             docker buildx build \
               --platform linux/amd64,linux/arm64 \
-              --tag ${TAG_NAME} \
+              ${TAG} \
               --build-arg CIRCLE_TAG=${CIRCLE_TAG:-latest} \
-              --build-arg ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest} \
+              --build-arg ASCIIDOCTOR_BASE_TAG=${ASCIIDOCTOR_BASE_TAG} \
               --build-arg BUILDKIT_MULTI_PLATFORM=1 \
               --no-cache \
               --progress=plain \
