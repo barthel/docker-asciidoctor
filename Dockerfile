@@ -20,7 +20,7 @@ RUN apk add --no-cache \
 
 # =========================================
 
-FROM uwebarthel/asciidoctor-base:${ASCIIDOCTOR_BASE_TAG} as asciidoctor-builder
+FROM asciidoctor/docker-asciidoctor:${ASCIIDOCTOR_BASE_TAG} as asciidoctor-builder
 
 ENV TMPDIR "/tmp"
 
@@ -96,9 +96,9 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
 ENV puppeteer_skip_download "true"
 # Puppeteer version and Chromium version are related
 ARG puppeteer_version="19.7.5"
-# Chromium version 120.0.6099.216-r0
-ENV PUPPETEER_CHROMIUM_REVISION "1206099"
-ENV puppeteer_chromium_revision "1206099"
+# Chromium version 121.0.6167.85-r0
+ENV PUPPETEER_CHROMIUM_REVISION "1216167"
+ENV puppeteer_chromium_revision "1216167"
 # ENV CHROMIUM_PATH "$(which chromium-browser)" # will be exported by entrypoint.sh
 # @see: https://github.com/nodejs/docker-node/issues/1794
 # @see: https://github.com/nodejs/docker-node/issues/1798
@@ -111,7 +111,7 @@ ENV puppeteer_chromium_revision "1206099"
 # Most of the devel dependencies are required by canvas
 RUN apk --no-cache add \
         nodejs \
-        'chromium~=120.0.6099' \
+        'chromium~=121.0.6167' \
         nss \
         freetype \
         harfbuzz \

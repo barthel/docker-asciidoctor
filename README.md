@@ -1,10 +1,12 @@
 # Asciidoctor &mdash; multi platform Edition
 
-The goal of this project is to build a multi-platform (arm64, amd64) Docker image based on the original [Asciidoctor Base/Original &mdash; multi-platform Edition](https://github.com/barthel/docker-asciidoctor-base) and adding all extra diagram tools supported by [Asciidoctor Diagram](https://docs.asciidoctor.org/diagram-extension/latest/).
+The goal of this project is to build a multi-platform (arm64, amd64) Docker image based on the original [Asciidoctor Docker image](https://github.com/asciidoctor/docker-asciidoctor) and adding all extra diagram tools supported by [Asciidoctor Diagram](https://docs.asciidoctor.org/diagram-extension/latest/).
 
 An overview of all supported diagram types, generated as HTML and as PDF, can be found here: https://barthel.github.io/docker-asciidoctor/
 
 ## ⚠️ Note
+
+The original [Asciidoctor Docker image](https://github.com/asciidoctor/docker-asciidoctor) is delivered from version [*1.63.0*](https://github.com/asciidoctor/docker-asciidoctor/releases/tag/1.63.0) as a multi platform container with `amd64` and `arm64`.
 
 Unfortunately, it is not possible to provide **`armv7`** version greater than [1.46](https://github.com/barthel/docker-asciidoctor/releases/tag/1.46.0) anymore because updated Java-based tools no longer use Java 8 and there is no Java runtime environment greater than version 8 on Alpine Linux **`armv7`**.
 
@@ -60,7 +62,7 @@ Additional non-diagram tools:
 The following diagram tools are not installed because there is no executable file for all supported platforms:
 
 * [erd](https://github.com/BurntSushi/erd) was replaced by [erd-go](https://github.com/kaishuu0123/erd-go/)
-* [mscgen](http://www.mcternan.me.uk/mscgen/) was replaced by [mscgen_js](https://github.com/mscgenjs/mscgenjs-cli)
+* [mscgen](http://www.mcternan.me.uk/mscgen/) (has been replaced by [mscgen_js](https://github.com/mscgenjs/mscgenjs-cli), but is currently not maintained)
 * [shaape](https://github.com/christiangoltz/shaape)
 
 ## Usage
