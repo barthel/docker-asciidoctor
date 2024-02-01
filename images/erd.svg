@@ -1,268 +1,294 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='737pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 1005.95 737.40' width='1006pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
-<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(14.4 723)'>
-<polygon fill='white' points='-14.4,14.4 -14.4,-723 991.55,-723 991.55,14.4 -14.4,14.4' stroke='none'/>
-<text font-family='Times,serif' font-size='20.00' text-anchor='start' x='8' y='-685.6'>nfldb Entity&#45;Relationship diagram (condensed)</text>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='734pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 951.20 733.61' width='951pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(14.4 719.21)'>
+<polygon fill='white' points='-14.4,14.4 -14.4,-719.21 936.8,-719.21 936.8,14.4 -14.4,14.4' stroke='none'/>
+<text font-family='Times,serif' font-size='20.00' text-anchor='start' x='8' y='-681.81'>nfldb Entity&#45;Relationship diagram (condensed)</text>
 
 <g class='node' id='node1'>
 <title>player</title>
-<path d='M451.41,-286.05C451.41,-286.05 581.24,-286.05 581.24,-286.05 587.24,-286.05 593.24,-292.05 593.24,-298.05 593.24,-298.05 593.24,-401.95 593.24,-401.95 593.24,-407.95 587.24,-413.95 581.24,-413.95 581.24,-413.95 451.41,-413.95 451.41,-413.95 445.41,-413.95 439.41,-407.95 439.41,-401.95 439.41,-401.95 439.41,-298.05 439.41,-298.05 439.41,-292.05 445.41,-286.05 451.41,-286.05' fill='#d0e0d0' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='473.95' y='-398.05'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
-<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='518.95' y='-398.05'>player</text>
-<polyline fill='none' points='439.41,-389.5 593.24,-389.5' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='448.45' y='-371'>*player_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='509.95' y='-371'> varchar, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='448.45' y='-352.75'>full_name</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='506.95' y='-352.75'> varchar, null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='448.45' y='-334.5'>team</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='478.45' y='-334.5'> varchar, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='448.45' y='-316.25'>position</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='496.45' y='-316.25'> player_pos, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='448.45' y='-298'>status</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='484.45' y='-298'> player_status, not null</text>
+<path d='M420.29,-286.42C420.29,-286.42 540.37,-286.42 540.37,-286.42 546.37,-286.42 552.37,-292.42 552.37,-298.42 552.37,-298.42 552.37,-401.58 552.37,-401.58 552.37,-407.58 546.37,-413.58 540.37,-413.58 540.37,-413.58 420.29,-413.58 420.29,-413.58 414.29,-413.58 408.29,-407.58 408.29,-401.58 408.29,-401.58 408.29,-298.42 408.29,-298.42 408.29,-292.42 414.29,-286.42 420.29,-286.42' fill='#d0e0d0' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='441.7' y='-397.68'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
+<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='479.2' y='-397.68'>player</text>
+<polyline fill='none' points='408.29,-389.88 552.37,-389.88' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='417.33' y='-371.38'>*player_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='467.58' y='-371.38'> varchar, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='417.33' y='-353.13'>full_name</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='464.58' y='-353.13'> varchar, null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='417.33' y='-334.88'>team</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='439.83' y='-334.88'> varchar, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='417.33' y='-316.63'>position</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='454.83' y='-316.63'> player_pos, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='417.33' y='-298.38'>status</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='443.58' y='-298.38'> player_status, not null</text>
 </g>
 
 <g class='node' id='node2'>
 <title>team</title>
-<path d='M845.07,-274.3C845.07,-274.3 965.15,-274.3 965.15,-274.3 971.15,-274.3 977.15,-280.3 977.15,-286.3 977.15,-286.3 977.15,-353.7 977.15,-353.7 977.15,-359.7 971.15,-365.7 965.15,-365.7 965.15,-365.7 845.07,-365.7 845.07,-365.7 839.07,-365.7 833.07,-359.7 833.07,-353.7 833.07,-353.7 833.07,-286.3 833.07,-286.3 833.07,-280.3 839.07,-274.3 845.07,-274.3' fill='#d0e0d0' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='866.49' y='-349.8'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
-<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='911.49' y='-349.8'>team</text>
-<polyline fill='none' points='833.07,-341.25 977.15,-341.25' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='842.11' y='-323.25'>*team_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='895.36' y='-323.25'> varchar, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='842.11' y='-305'>city</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='863.86' y='-305'> varchar, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='842.11' y='-286.75'>name</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='875.11' y='-286.75'> varchar, not null</text>
+<path d='M790.32,-274.68C790.32,-274.68 910.4,-274.68 910.4,-274.68 916.4,-274.68 922.4,-280.68 922.4,-286.68 922.4,-286.68 922.4,-353.32 922.4,-353.32 922.4,-359.32 916.4,-365.32 910.4,-365.32 910.4,-365.32 790.32,-365.32 790.32,-365.32 784.32,-365.32 778.32,-359.32 778.32,-353.32 778.32,-353.32 778.32,-286.68 778.32,-286.68 778.32,-280.68 784.32,-274.68 790.32,-274.68' fill='#d0e0d0' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='815.49' y='-349.42'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
+<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='852.99' y='-349.42'>team</text>
+<polyline fill='none' points='778.32,-341.62 922.4,-341.62' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='787.36' y='-323.62'>*team_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='830.86' y='-323.62'> varchar, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='787.36' y='-305.37'>city</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='804.61' y='-305.37'> varchar, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='787.36' y='-287.12'>name</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='812.86' y='-287.12'> varchar, not null</text>
 </g>
 
 <g class='edge' id='edge1'>
 <title>player&#45;&#45;team</title>
-<path d='M601.56,-343.47C669.39,-338.21 763.87,-330.88 829.12,-325.82' fill='none' stroke='black'/>
-<polygon fill='black' points='601.79,-343.45 592.51,-340.11 597.31,-343.8 592.82,-344.14 592.82,-344.14 592.82,-344.14 597.31,-343.8 593.13,-348.18 601.79,-343.45 601.79,-343.45' stroke='black'/>
-<polyline fill='none' points='833.37,-325.49 828.88,-325.83' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='813.66' y='-312.88'>1</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='596.03' y='-348.2'>0..N</text>
+<path d='M562.04,-343.42C623.47,-338.41 707.62,-331.55 768.97,-326.55' fill='none' stroke='black'/>
+<polygon fill='black' points='562.03,-343.42 552.73,-340.12 557.21,-343.81 553.39,-344.13 553.39,-344.13 553.39,-344.13 557.21,-343.81 553.39,-348.19 562.03,-343.42' stroke='black'/>
+<polyline fill='none' points='777.85,-325.83 773.36,-326.19' stroke='black'/>
+<polygon fill='black' points='772.1,-321.78 772.83,-330.75 771.04,-330.9 770.31,-321.93 772.1,-321.78' stroke='black'/>
+<polyline fill='none' points='773.36,-326.19 768.88,-326.56' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='758.86' y='-313.29'>1</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='558.21' y='-348.17'>0..N</text>
 </g>
 
 <g class='node' id='node3'>
 <title>play_player</title>
-<path d='M645.99,-167.05C645.99,-167.05 784.07,-167.05 784.07,-167.05 790.07,-167.05 796.07,-173.05 796.07,-179.05 796.07,-179.05 796.07,-282.95 796.07,-282.95 796.07,-288.95 790.07,-294.95 784.07,-294.95 784.07,-294.95 645.99,-294.95 645.99,-294.95 639.99,-294.95 633.99,-288.95 633.99,-282.95 633.99,-282.95 633.99,-179.05 633.99,-179.05 633.99,-173.05 639.99,-167.05 645.99,-167.05' fill='#ececfc' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='655.41' y='-279.05'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
-<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='700.41' y='-279.05'>play_player</text>
-<polyline fill='none' points='633.99,-270.5 796.07,-270.5' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='643.03' y='-252'>*+gsis_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='699.28' y='-252'> gameid, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='643.03' y='-233.75'>*+drive_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='706.78' y='-233.75'> usmallint, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='643.03' y='-215.5'>*+play_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='701.53' y='-215.5'> usmallint, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='643.03' y='-197.25'>*+player_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='714.28' y='-197.25'> varchar, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='643.03' y='-179'>team</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='673.03' y='-179'> varchar, not null</text>
+<path d='M603.99,-167.42C603.99,-167.42 729.32,-167.42 729.32,-167.42 735.32,-167.42 741.32,-173.42 741.32,-179.42 741.32,-179.42 741.32,-282.58 741.32,-282.58 741.32,-288.58 735.32,-294.58 729.32,-294.58 729.32,-294.58 603.99,-294.58 603.99,-294.58 597.99,-294.58 591.99,-288.58 591.99,-282.58 591.99,-282.58 591.99,-179.42 591.99,-179.42 591.99,-173.42 597.99,-167.42 603.99,-167.42' fill='#ececfc' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='610.78' y='-278.68'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
+<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='648.28' y='-278.68'>play_player</text>
+<polyline fill='none' points='591.99,-270.88 741.32,-270.88' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='601.03' y='-252.38'>*+gsis_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='646.78' y='-252.38'> gameid, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='601.03' y='-234.13'>*+drive_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='652.78' y='-234.13'> usmallint, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='601.03' y='-215.88'>*+play_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='649.03' y='-215.88'> usmallint, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='601.03' y='-197.63'>*+player_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='658.03' y='-197.63'> varchar, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='601.03' y='-179.38'>team</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='623.53' y='-179.38'> varchar, not null</text>
 </g>
 
 <g class='edge' id='edge2'>
 <title>player&#45;&#45;play_player</title>
-<path d='M596.88,-301.87C606.65,-295.96 616.67,-289.9 626.55,-283.93' fill='none' stroke='black'/>
-<polyline fill='none' points='593.1,-304.16 596.95,-301.83' stroke='black'/>
-<polygon fill='black' points='626.36,-284.04 636.16,-282.84 630.21,-281.71 634.06,-279.38 634.06,-279.38 634.06,-279.38 630.21,-281.71 631.96,-275.91 626.36,-284.04 626.36,-284.04' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='603.31' y='-274.84'>0..N</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='607.34' y='-300.15'>1</text>
+<path d='M560.38,-298.96C568.19,-293.92 576.12,-288.81 583.94,-283.75' fill='none' stroke='black'/>
+<polyline fill='none' points='552.86,-303.82 556.64,-301.38' stroke='black'/>
+<polygon fill='black' points='559.83,-304.67 554.95,-297.11 556.46,-296.14 561.35,-303.7 559.83,-304.67' stroke='black'/>
+<polyline fill='none' points='556.64,-301.38 560.42,-298.94' stroke='black'/>
+<polygon fill='black' points='583.89,-283.79 593.65,-282.31 587.95,-281.17 591.17,-279.09 591.17,-279.09 591.17,-279.09 587.95,-281.17 589.25,-275.5 583.89,-283.79' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='563.23' y='-274.72'>0..N</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='567.85' y='-299.28'>1</text>
 </g>
 
 <g class='edge' id='edge13'>
 <title>play_player&#45;&#45;team</title>
-<path d='M804.17,-272.71C812.5,-276.65 820.89,-280.62 829.07,-284.49' fill='none' stroke='black'/>
-<polygon fill='black' points='804.2,-272.72 797.8,-265.21 800.13,-270.8 796.07,-268.87 796.07,-268.87 796.07,-268.87 800.13,-270.8 794.33,-272.53 804.2,-272.72 804.2,-272.72' stroke='black'/>
-<polyline fill='none' points='833.07,-286.38 829.01,-284.46' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='819.6' y='-266.96'>1</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='793.03' y='-279.75'>0..N</text>
+<path d='M749.76,-271.22C756.5,-274.52 763.31,-277.85 770.03,-281.14' fill='none' stroke='black'/>
+<polygon fill='black' points='749.95,-271.31 743.64,-263.71 745.6,-269.18 742.16,-267.49 742.16,-267.49 742.16,-267.49 745.6,-269.18 740.08,-270.98 749.95,-271.31' stroke='black'/>
+<polyline fill='none' points='777.87,-284.98 773.83,-283.01' stroke='black'/>
+<polygon fill='black' points='775,-278.57 771.04,-286.65 769.43,-285.86 773.39,-277.78 775,-278.57' stroke='black'/>
+<polyline fill='none' points='773.83,-283.01 769.79,-281.03' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='765.36' y='-265.43'>1</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='740.58' y='-278.21'>0..N</text>
 </g>
 
 <g class='node' id='node4'>
 <title>game</title>
-<path d='M12,-50.43C12,-50.43 182.33,-50.43 182.33,-50.43 188.33,-50.43 194.33,-56.43 194.33,-62.43 194.33,-62.43 194.33,-257.57 194.33,-257.57 194.33,-263.57 188.33,-269.57 182.33,-269.57 182.33,-269.57 12,-269.57 12,-269.57 6,-269.57 0,-263.57 0,-257.57 0,-257.57 0,-62.43 0,-62.43 0,-56.43 6,-50.43 12,-50.43' fill='#ececfc' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='56.66' y='-253.67'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
-<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='101.66' y='-253.67'>game</text>
-<polyline fill='none' points='0,-245.12 194.33,-245.12' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-227.12'>*gsis_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='55.54' y='-227.12'> gameid, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-208.87'>start_time</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='69.79' y='-208.87'> utctime, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-190.62'>week</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='40.54' y='-190.62'> usmallint, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-172.37'>season_year</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='83.29' y='-172.37'> usmallint, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-154.12'>season_type</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='81.79' y='-154.12'> season_phase, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-135.87'>finished</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='56.29' y='-135.87'> boolean, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-117.62'>home_team</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='78.04' y='-117.62'> varchar, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-99.37'>home_score</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='81.04' y='-99.37'> usmallint, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-81.12'>away_team</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='77.29' y='-81.12'> varchar, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-62.87'>away_score</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='80.29' y='-62.87'> usmallint, not null</text>
+<path d='M12,-50.8C12,-50.8 167.33,-50.8 167.33,-50.8 173.33,-50.8 179.33,-56.8 179.33,-62.8 179.33,-62.8 179.33,-257.2 179.33,-257.2 179.33,-263.2 173.33,-269.2 167.33,-269.2 167.33,-269.2 12,-269.2 12,-269.2 6,-269.2 0,-263.2 0,-257.2 0,-257.2 0,-62.8 0,-62.8 0,-56.8 6,-50.8 12,-50.8' fill='#ececfc' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='52.92' y='-253.3'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
+<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='90.42' y='-253.3'>game</text>
+<polyline fill='none' points='0,-245.5 179.33,-245.5' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-227.5'>*gsis_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='48.04' y='-227.5'> gameid, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-209.25'>start_time</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='54.79' y='-209.25'> utctime, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-191'>week</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='34.54' y='-191'> usmallint, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-172.75'>season_year</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='66.79' y='-172.75'> usmallint, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-154.5'>season_type</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='66.79' y='-154.5'> season_phase, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-136.25'>finished</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='46.54' y='-136.25'> boolean, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-118'>home_team</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='63.79' y='-118'> varchar, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-99.75'>home_score</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='66.04' y='-99.75'> usmallint, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-81.5'>away_team</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='63.04' y='-81.5'> varchar, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='9.04' y='-63.25'>away_score</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='65.29' y='-63.25'> usmallint, not null</text>
 </g>
 
 <g class='edge' id='edge3'>
 <title>game&#45;&#45;team</title>
-<path d='M202.35,-108.96C237.03,-96.17 276.41,-86 313.99,-86 313.99,-86 313.99,-86 716.03,-86 809.8,-86 864.67,-201.58 889,-270.28' fill='none' stroke='black'/>
-<polygon fill='black' points='202.52,-108.9 192.67,-108.3 198.32,-110.49 194.11,-112.09 194.11,-112.09 194.11,-112.09 198.32,-110.49 195.54,-115.88 202.52,-108.9 202.52,-108.9' stroke='black'/>
-<polyline fill='none' points='890.41,-274.33 888.93,-270.08' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='499.83' y='-88.85'>home</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='890.62' y='-252.49'>1</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='199.01' y='-111.32'>0..N</text>
+<path d='M188.09,-108.64C220.14,-96 256.53,-86 291.5,-86 291.5,-86 291.5,-86 667.66,-86 758.35,-86 810.31,-197.02 833.87,-266.12' fill='none' stroke='black'/>
+<polygon fill='black' points='188.26,-108.57 178.39,-108.21 183.78,-110.4 180.23,-111.84 180.23,-111.84 180.23,-111.84 183.78,-110.4 181.44,-115.72 188.26,-108.57' stroke='black'/>
+<polyline fill='none' points='836.6,-274.33 835.18,-270.06' stroke='black'/>
+<polygon fill='black' points='839.17,-267.78 830.63,-270.62 830.06,-268.92 838.6,-266.07 839.17,-267.78' stroke='black'/>
+<polyline fill='none' points='835.18,-270.06 833.76,-265.79' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='467.2' y='-88.85'>home</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='837.83' y='-252.56'>1</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='186.84' y='-110.9'>0..N</text>
 </g>
 
 <g class='edge' id='edge4'>
 <title>game&#45;&#45;team</title>
-<path d='M200.18,-45.1C233.2,-19.61 272.19,0 313.99,0 313.99,0 313.99,0 716.03,0 839.89,0 883.78,-180.37 897.97,-270.28' fill='none' stroke='black'/>
-<polygon fill='black' points='200.28,-45.03 190.71,-47.45 196.75,-47.83 193.23,-50.62 193.23,-50.62 193.23,-50.62 196.75,-47.83 195.75,-53.8 200.28,-45.03 200.28,-45.03' stroke='black'/>
-<polyline fill='none' points='898.62,-274.49 897.93,-270.04' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='500.2' y='-2.85'>away</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='901.96' y='-253.67'>1</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='198.37' y='-44.32'>0..N</text>
+<path d='M184.88,-44.58C215.44,-19.35 251.81,0 291.5,0 291.5,0 291.5,0 667.66,0 788.38,0 829.88,-174.34 843.34,-265.66' fill='none' stroke='black'/>
+<polygon fill='black' points='185.16,-44.35 175.68,-47.11 181.48,-47.49 178.56,-49.97 178.56,-49.97 178.56,-49.97 181.48,-47.49 180.93,-53.27 185.16,-44.35' stroke='black'/>
+<polyline fill='none' points='844.59,-274.49 843.96,-270.04' stroke='black'/>
+<polygon fill='black' points='848.29,-268.51 839.38,-269.78 839.13,-267.99 848.04,-266.73 848.29,-268.51' stroke='black'/>
+<polyline fill='none' points='843.96,-270.04 843.33,-265.58' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='467.58' y='-2.85'>away</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='848.89' y='-253.76'>1</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='185.36' y='-43.49'>0..N</text>
 </g>
 
 <g class='edge' id='edge7'>
 <title>game&#45;&#45;play_player</title>
-<path d='M198.45,-170.62C302.82,-181.82 470.96,-200.26 615.99,-218 619.02,-218.37 622.11,-218.75 625.22,-219.14' fill='none' stroke='black'/>
-<polyline fill='none' points='194.15,-170.16 198.62,-170.64' stroke='black'/>
-<polygon fill='black' points='625.13,-219.13 633.55,-224.28 629.59,-219.7 634.06,-220.26 634.06,-220.26 634.06,-220.26 629.59,-219.7 634.57,-216.24 625.13,-219.13 625.13,-219.13' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='607.36' y='-204.61'>0..N</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='204.56' y='-177'>1</text>
+<path d='M188.46,-171.68C286.11,-183.41 440.48,-202.11 573.99,-219 576.77,-219.35 579.59,-219.71 582.44,-220.07' fill='none' stroke='black'/>
+<polyline fill='none' points='179.77,-170.64 184.24,-171.18' stroke='black'/>
+<polygon fill='black' points='184.6,-175.75 185.67,-166.82 187.46,-167.03 186.39,-175.97 184.6,-175.75' stroke='black'/>
+<polyline fill='none' points='184.24,-171.18 188.71,-171.72' stroke='black'/>
+<polygon fill='black' points='582.36,-220.06 590.77,-225.23 587.16,-220.68 590.96,-221.17 590.96,-221.17 590.96,-221.17 587.16,-220.68 591.8,-217.19 582.36,-220.06' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='567.19' y='-205.57'>0..N</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='190.79' y='-177.66'>1</text>
 </g>
 
 <g class='node' id='node5'>
 <title>drive</title>
-<path d='M243.33,-322.68C243.33,-322.68 386.66,-322.68 386.66,-322.68 392.66,-322.68 398.66,-328.68 398.66,-334.68 398.66,-334.68 398.66,-493.32 398.66,-493.32 398.66,-499.32 392.66,-505.32 386.66,-505.32 386.66,-505.32 243.33,-505.32 243.33,-505.32 237.33,-505.32 231.33,-499.32 231.33,-493.32 231.33,-493.32 231.33,-334.68 231.33,-334.68 231.33,-328.68 237.33,-322.68 243.33,-322.68' fill='#ececfc' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='276.37' y='-489.42'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
-<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='321.37' y='-489.42'>drive</text>
-<polyline fill='none' points='231.33,-480.87 398.66,-480.87' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='240.37' y='-462.87'>*+gsis_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='296.62' y='-462.87'> gameid, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='240.37' y='-444.62'>*drive_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='294.37' y='-444.62'> usmallint, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='240.37' y='-426.37'>start_field</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='301.12' y='-426.37'> field_pos, null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='240.37' y='-408.12'>start_time</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='301.12' y='-408.12'> game_time, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='240.37' y='-389.87'>end_field</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='294.37' y='-389.87'> field_pos, null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='240.37' y='-371.62'>end_time</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='294.37' y='-371.62'> game_time, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='240.37' y='-353.37'>pos_team</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='297.37' y='-353.37'> varchar, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='240.37' y='-335.12'>pos_time</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='293.62' y='-335.12'> pos_period, null</text>
+<path d='M228.33,-323.05C228.33,-323.05 356.66,-323.05 356.66,-323.05 362.66,-323.05 368.66,-329.05 368.66,-335.05 368.66,-335.05 368.66,-492.95 368.66,-492.95 368.66,-498.95 362.66,-504.95 356.66,-504.95 356.66,-504.95 228.33,-504.95 228.33,-504.95 222.33,-504.95 216.33,-498.95 216.33,-492.95 216.33,-492.95 216.33,-335.05 216.33,-335.05 216.33,-329.05 222.33,-323.05 228.33,-323.05' fill='#ececfc' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='257.62' y='-489.05'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
+<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='295.12' y='-489.05'>drive</text>
+<polyline fill='none' points='216.33,-481.25 368.66,-481.25' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='225.37' y='-462.75'>*+gsis_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='271.12' y='-462.75'> gameid, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='225.37' y='-444.5'>*drive_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='270.37' y='-444.5'> usmallint, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='225.37' y='-426.25'>start_field</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='271.87' y='-426.25'> field_pos, null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='225.37' y='-408'>start_time</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='271.12' y='-408'> game_time, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='225.37' y='-389.75'>end_field</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='269.62' y='-389.75'> field_pos, null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='225.37' y='-371.5'>end_time</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='268.87' y='-371.5'> game_time, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='225.37' y='-353.25'>pos_team</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='270.37' y='-353.25'> varchar, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='225.37' y='-335'>pos_time</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='268.12' y='-335'> pos_period, null</text>
 </g>
 
 <g class='edge' id='edge5'>
 <title>game&#45;&#45;drive</title>
-<path d='M194.09,-272.89C206.37,-287.34 218.86,-302.04 230.91,-316.22' fill='none' stroke='black'/>
-<polyline fill='none' points='191.26,-269.56 194.18,-272.99' stroke='black'/>
-<polygon fill='black' points='230.59,-315.84 233.33,-325.32 233.5,-319.27 236.42,-322.7 236.42,-322.7 236.42,-322.7 233.5,-319.27 239.5,-320.08 230.59,-315.84 230.59,-315.84' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='221.05' y='-300.62'>0..N</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='190.13' y='-283.1'>1</text>
+<path d='M182.56,-276.23C192.96,-289.38 203.49,-302.69 213.68,-315.58' fill='none' stroke='black'/>
+<polyline fill='none' points='177.29,-269.56 180.08,-273.09' stroke='black'/>
+<polygon fill='black' points='177.11,-276.59 184.17,-271.01 185.29,-272.42 178.23,-278 177.11,-276.59' stroke='black'/>
+<polyline fill='none' points='180.08,-273.09 182.87,-276.62' stroke='black'/>
+<polygon fill='black' points='213.52,-315.38 215.92,-324.95 216.52,-319.17 218.89,-322.18 218.89,-322.18 218.89,-322.18 216.52,-319.17 222.28,-319.93 213.52,-315.38' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='206.82' y='-300.54'>0..N</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='176.28' y='-283.18'>1</text>
 </g>
 
 <g class='node' id='node6'>
 <title>play</title>
-<path d='M447.66,-450.68C447.66,-450.68 584.99,-450.68 584.99,-450.68 590.99,-450.68 596.99,-456.68 596.99,-462.68 596.99,-462.68 596.99,-621.32 596.99,-621.32 596.99,-627.32 590.99,-633.32 584.99,-633.32 584.99,-633.32 447.66,-633.32 447.66,-633.32 441.66,-633.32 435.66,-627.32 435.66,-621.32 435.66,-621.32 435.66,-462.68 435.66,-462.68 435.66,-456.68 441.66,-450.68 447.66,-450.68' fill='#ececfc' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='480.33' y='-617.42'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
-<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='525.33' y='-617.42'>play</text>
-<polyline fill='none' points='435.66,-608.87 596.99,-608.87' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='444.7' y='-590.87'>*+gsis_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='500.95' y='-590.87'> gameid, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='444.7' y='-572.62'>*+drive_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='508.45' y='-572.62'> usmallint, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='444.7' y='-554.37'>*play_id</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='493.45' y='-554.37'> usmallint, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='444.7' y='-536.12'>time</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='470.95' y='-536.12'> game_time, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='444.7' y='-517.87'>pos_team</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='501.7' y='-517.87'> varchar, not null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='444.7' y='-499.62'>yardline</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='494.2' y='-499.62'> field_pos, null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='444.7' y='-481.37'>down</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='477.7' y='-481.37'> smallint, null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='444.7' y='-463.12'>yards_to_go</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='517.45' y='-463.12'> smallint, null</text>
+<path d='M417.66,-451.05C417.66,-451.05 542.99,-451.05 542.99,-451.05 548.99,-451.05 554.99,-457.05 554.99,-463.05 554.99,-463.05 554.99,-620.95 554.99,-620.95 554.99,-626.95 548.99,-632.95 542.99,-632.95 542.99,-632.95 417.66,-632.95 417.66,-632.95 411.66,-632.95 405.66,-626.95 405.66,-620.95 405.66,-620.95 405.66,-463.05 405.66,-463.05 405.66,-457.05 411.66,-451.05 417.66,-451.05' fill='#ececfc' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='448.08' y='-617.05'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
+<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='485.58' y='-617.05'>play</text>
+<polyline fill='none' points='405.66,-609.25 554.99,-609.25' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='414.7' y='-590.75'>*+gsis_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='460.45' y='-590.75'> gameid, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='414.7' y='-572.5'>*+drive_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='466.45' y='-572.5'> usmallint, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='414.7' y='-554.25'>*play_id</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='455.95' y='-554.25'> usmallint, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='414.7' y='-536'>time</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='434.95' y='-536'> game_time, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='414.7' y='-517.75'>pos_team</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='459.7' y='-517.75'> varchar, not null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='414.7' y='-499.5'>yardline</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='452.95' y='-499.5'> field_pos, null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='414.7' y='-481.25'>down</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='441.7' y='-481.25'> smallint, null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='414.7' y='-463'>yards_to_go</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='473.2' y='-463'> smallint, null</text>
 </g>
 
 <g class='edge' id='edge6'>
 <title>game&#45;&#45;play</title>
-<path d='M187.33,-273.09C189.87,-278.02 192.22,-283 194.33,-288 235.67,-385.79 152.88,-452.47 231.33,-524 283.11,-571.21 364.68,-571.63 427.15,-562.62' fill='none' stroke='black'/>
-<polyline fill='none' points='185.35,-269.32 187.44,-273.3' stroke='black'/>
-<polygon fill='black' points='426.93,-562.66 436.44,-565.3 431.38,-561.97 435.83,-561.29 435.83,-561.29 435.83,-561.29 431.38,-561.97 435.21,-557.29 426.93,-562.66 426.93,-562.66' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='406.54' y='-549.9'>0..N</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='180.25' y='-282.99'>1</text>
+<path d='M174.87,-277.64C176.45,-281.08 177.95,-284.54 179.33,-288 218.65,-386.15 138.49,-451.44 216.33,-523 263.76,-566.6 338.51,-568.01 396.22,-560.43' fill='none' stroke='black'/>
+<polyline fill='none' points='171.01,-269.62 172.96,-273.68' stroke='black'/>
+<polygon fill='black' points='169.3,-276.44 177.41,-272.54 178.19,-274.16 170.08,-278.06 169.3,-276.44' stroke='black'/>
+<polyline fill='none' points='172.96,-273.68 174.91,-277.73' stroke='black'/>
+<polygon fill='black' points='396.08,-560.45 405.56,-563.2 400.87,-559.78 404.66,-559.24 404.66,-559.24 404.66,-559.24 400.87,-559.78 404.43,-555.18 396.08,-560.45' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='378.38' y='-547.56'>0..N</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='166.04' y='-283.24'>1</text>
 </g>
 
 <g class='edge' id='edge8'>
 <title>drive&#45;&#45;team</title>
-<path d='M339.36,-513.59C356.86,-564.39 386.53,-621.71 435.66,-652 496.7,-689.63 530.6,-679.1 596.99,-652 731.88,-596.94 832.58,-447.28 877.78,-369.08' fill='none' stroke='black'/>
-<polygon fill='black' points='339.4,-513.71 340.39,-503.89 337.97,-509.44 336.54,-505.17 336.54,-505.17 336.54,-505.17 337.97,-509.44 332.7,-506.46 339.4,-513.71 339.4,-513.71' stroke='black'/>
-<polyline fill='none' points='879.9,-365.41 877.65,-369.31' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='860.27' y='-369.61'>1</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='319.58' y='-518.4'>0..N</text>
+<path d='M314.24,-514.19C330.24,-564.43 358.04,-620.85 405.66,-651 461.74,-686.5 493.87,-676.86 554.99,-651 683.98,-596.43 778.43,-451.98 822.19,-373.15' fill='none' stroke='black'/>
+<polygon fill='black' points='314.22,-514.14 315.45,-504.35 312.8,-509.52 311.68,-505.86 311.68,-505.86 311.68,-505.86 312.8,-509.52 307.71,-506.73 314.22,-514.14' stroke='black'/>
+<polyline fill='none' points='826.27,-365.73 824.1,-369.68' stroke='black'/>
+<polygon fill='black' points='819.73,-368.3 827.61,-372.63 826.75,-374.21 818.86,-369.88 819.73,-368.3' stroke='black'/>
+<polyline fill='none' points='824.1,-369.68 821.94,-373.62' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='807.56' y='-370.24'>1</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='296.35' y='-518.34'>0..N</text>
 </g>
 
 <g class='edge' id='edge10'>
 <title>drive&#45;&#45;play_player</title>
-<path d='M375.39,-320C392.45,-299.83 412.74,-280.77 435.66,-268 493.39,-235.85 568.02,-227.37 625.48,-226.51' fill='none' stroke='black'/>
-<polyline fill='none' points='372.89,-322.98 375.78,-319.53' stroke='black'/>
-<polygon fill='black' points='625.19,-226.51 634.22,-230.49 629.69,-226.47 634.19,-226.44 634.19,-226.44 634.19,-226.44 629.69,-226.47 634.15,-222.39 625.19,-226.51 625.19,-226.51' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='606.09' y='-212.75'>0..N</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='386.25' y='-313.11'>1</text>
+<path d='M351.76,-315.91C367.07,-297.33 385.13,-279.99 405.66,-268 458.98,-236.87 528.64,-228.32 582.43,-227.17' fill='none' stroke='black'/>
+<polyline fill='none' points='346.25,-322.8 349.06,-319.28' stroke='black'/>
+<polygon fill='black' points='353.14,-321.39 346.11,-315.77 347.23,-314.36 354.26,-319.99 353.14,-321.39' stroke='black'/>
+<polyline fill='none' points='349.06,-319.28 351.87,-315.77' stroke='black'/>
+<polygon fill='black' points='582.27,-227.17 591.32,-231.1 587.1,-227.11 590.93,-227.05 590.93,-227.05 590.93,-227.05 587.1,-227.11 591.21,-223 582.27,-227.17' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='565.71' y='-213.44'>0..N</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='360.24' y='-312.56'>1</text>
 </g>
 
 <g class='edge' id='edge9'>
 <title>drive&#45;&#45;play</title>
-<path d='M402.27,-469.4C410.88,-474.93 419.62,-480.54 428.23,-486.07' fill='none' stroke='black'/>
-<polyline fill='none' points='398.51,-466.99 402.3,-469.42' stroke='black'/>
-<polygon fill='black' points='428.18,-486.04 433.57,-494.31 431.97,-488.47 435.76,-490.91 435.76,-490.91 435.76,-490.91 431.97,-488.47 437.95,-487.5 428.18,-486.04 428.18,-486.04' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='415.32' y='-470.36'>0..N</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='402.45' y='-478.99'>1</text>
+<path d='M376.41,-471.11C383.48,-475.98 390.63,-480.91 397.69,-485.77' fill='none' stroke='black'/>
+<polyline fill='none' points='369.08,-466.06 372.79,-468.62' stroke='black'/>
+<polygon fill='black' points='370.97,-472.83 376.08,-465.42 377.56,-466.44 372.46,-473.85 370.97,-472.83' stroke='black'/>
+<polyline fill='none' points='372.79,-468.62 376.49,-471.17' stroke='black'/>
+<polygon fill='black' points='397.63,-485.73 402.74,-494.17 401.61,-488.47 404.76,-490.64 404.76,-490.64 404.76,-490.64 401.61,-488.47 407.34,-487.5 397.63,-485.73' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='387.65' y='-470.23'>0..N</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='373.24' y='-478.3'>1</text>
 </g>
 
 <g class='edge' id='edge11'>
 <title>play&#45;&#45;team</title>
-<path d='M603.97,-492.27C671.69,-453.4 764.84,-399.94 829.33,-362.92' fill='none' stroke='black'/>
-<polygon fill='black' points='604.34,-492.06 594.51,-493.03 600.43,-494.3 596.53,-496.54 596.53,-496.54 596.53,-496.54 600.43,-494.3 598.55,-500.05 604.34,-492.06 604.34,-492.06' stroke='black'/>
-<polyline fill='none' points='833.15,-360.73 829.24,-362.97' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='811.41' y='-355.78'>1</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='601.77' y='-492.94'>0..N</text>
+<path d='M563.09,-492.68C624.98,-455.35 709.47,-404.38 770.61,-367.5' fill='none' stroke='black'/>
+<polygon fill='black' points='563.35,-492.52 553.55,-493.7 559.21,-495.02 555.93,-497 555.93,-497 555.93,-497 559.21,-495.02 557.74,-500.64 563.35,-492.52' stroke='black'/>
+<polyline fill='none' points='777.95,-363.08 774.09,-365.4' stroke='black'/>
+<polygon fill='black' points='771,-362.01 775.65,-369.72 774.11,-370.65 769.46,-362.94 771,-362.01' stroke='black'/>
+<polyline fill='none' points='774.09,-365.4 770.24,-367.73' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='756.95' y='-358.52'>1</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='562.86' y='-493.35'>0..N</text>
 </g>
 
 <g class='edge' id='edge12'>
 <title>play&#45;&#45;play_player</title>
-<path d='M586.76,-447.37C590.27,-442.2 593.7,-437.06 596.99,-432 624.36,-389.96 652.72,-341.39 674.67,-302.53' fill='none' stroke='black'/>
-<polyline fill='none' points='584.32,-450.95 586.85,-447.23' stroke='black'/>
-<polygon fill='black' points='674.56,-302.74 682.5,-296.88 676.77,-298.82 678.98,-294.89 678.98,-294.89 678.98,-294.89 676.77,-298.82 675.45,-292.91 674.56,-302.74 674.56,-302.74' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='650.42' y='-299.24'>0..N</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='597.05' y='-439.43'>1</text>
+<path d='M548.22,-442.96C550.53,-439.28 552.79,-435.61 554.99,-432 580.61,-389.91 607.31,-341.56 628.06,-302.83' fill='none' stroke='black'/>
+<polyline fill='none' points='543.43,-450.55 545.83,-446.75' stroke='black'/>
+<polygon fill='black' points='550.12,-448.39 542.51,-443.59 543.47,-442.06 551.08,-446.87 550.12,-448.39' stroke='black'/>
+<polyline fill='none' points='545.83,-446.75 548.23,-442.94' stroke='black'/>
+<polygon fill='black' points='628,-302.95 635.81,-296.93 630.28,-298.69 632.08,-295.31 632.08,-295.31 632.08,-295.31 630.28,-298.69 628.67,-293.11 628,-302.95' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='606.29' y='-299.41'>0..N</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='556.64' y='-438.46'>1</text>
 </g>
 
 <g class='node' id='node7'>
 <title>meta</title>
-<path d='M20.25,-306.18C20.25,-306.18 174.08,-306.18 174.08,-306.18 180.08,-306.18 186.08,-312.18 186.08,-318.18 186.08,-318.18 186.08,-403.82 186.08,-403.82 186.08,-409.82 180.08,-415.82 174.08,-415.82 174.08,-415.82 20.25,-415.82 20.25,-415.82 14.25,-415.82 8.25,-409.82 8.25,-403.82 8.25,-403.82 8.25,-318.18 8.25,-318.18 8.25,-312.18 14.25,-306.18 20.25,-306.18' fill='#fcecec' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='58.54' y='-399.92'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
-<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='103.54' y='-399.92'>meta</text>
-<polyline fill='none' points='8.25,-391.37 186.08,-391.37' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='17.29' y='-373.37'>version</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='61.54' y='-373.37'> smallint, null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='17.29' y='-355.12'>season_type</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='90.04' y='-355.12'> season_phase, null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='17.29' y='-336.87'>season_year</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='91.54' y='-336.87'> usmallint, null</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='17.29' y='-318.62'>week</text>
-<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='48.79' y='-318.62'> usmallint, null</text>
+<path d='M20.25,-306.55C20.25,-306.55 159.08,-306.55 159.08,-306.55 165.08,-306.55 171.08,-312.55 171.08,-318.55 171.08,-318.55 171.08,-403.45 171.08,-403.45 171.08,-409.45 165.08,-415.45 159.08,-415.45 159.08,-415.45 20.25,-415.45 20.25,-415.45 14.25,-415.45 8.25,-409.45 8.25,-403.45 8.25,-403.45 8.25,-318.55 8.25,-318.55 8.25,-312.55 14.25,-306.55 20.25,-306.55' fill='#fcecec' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='start' x='54.79' y='-399.55'> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text>
+<text font-family='Helvetica bold' font-size='14.00' font-weight='bold' text-anchor='start' x='92.29' y='-399.55'>meta</text>
+<polyline fill='none' points='8.25,-391.75 171.08,-391.75' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='17.29' y='-373.75'>version</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='51.79' y='-373.75'> smallint, null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='17.29' y='-355.5'>season_type</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='75.04' y='-355.5'> season_phase, null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='17.29' y='-337.25'>season_year</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='75.04' y='-337.25'> usmallint, null</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='17.29' y='-319'>week</text>
+<text fill='#999999' font-family='Arial Italic' font-size='10.00' text-anchor='start' x='42.79' y='-319'> usmallint, null</text>
 </g>
 </g>
 </svg>
