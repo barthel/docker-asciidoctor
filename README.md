@@ -30,7 +30,7 @@ The following additional diagram tools are installed:
 * [graphviz](https://graphviz.gitlab.io/)<sup>[1]</sup>
 * [imagemagick](https://asciidoctor.org/docs/asciidoctor-diagram/#meme) for meme
 * [mermaid](https://github.com/mermaid-js/mermaid-cli)
-* [mscgen_js](https://github.com/mscgenjs/mscgenjs-cli)
+<!-- * [mscgen_js](https://github.com/mscgenjs/mscgenjs-cli) -->
 * [nomnoml](https://github.com/skanaar/nomnoml)
 * [pikchr](https://pikchr.org)
 * [plantuml](https://plantuml.com/)<sup>[1]</sup>

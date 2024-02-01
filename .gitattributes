@@ -1,0 +1,1 @@
+*.bob -text -merge -diff working-tree-encoding=UTF-16 eol=LF

@@ -143,11 +143,6 @@ RUN apk --no-cache add \
         "@mermaid-js/mermaid-cli@${mermaid_version}" \
     && yarn install --no-lockfile \
     && echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
-    && echo "Install mscgen-cli@${mscgen_version}" \
-    && yarn global add \
-        "mscgenjs-cli@${mscgen_version}" \
-    && yarn install --no-lockfile \
-    && echo -e "{\n\t\"devtools\": false,\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"timeout\": 30000,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\"\n\t]\n}" > /usr/local/mscgen_js_puppeteer-config.json \
     && echo "Install bpmn-js-cmd@${bpmn_version}" \
     && yarn global add \
         "bpmn-js-cmd@${bpmn_version}" \
@@ -189,14 +184,26 @@ RUN apk --no-cache add \
     && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
     && rm -f /usr/local/bin/mmdc \
     && echo -e "#!/bin/sh\n/usr/local/bin/mmdc.node --puppeteerConfigFile /usr/local/mmdc_puppeteer-config.json \${@}" > /usr/local/bin/mmdc \
-    && chmod +x /usr/local/bin/mmdc \
-    && mv /usr/local/bin/mscgen_js /usr/local/bin/mscgen_js.node \
-    && rm -f /usr/local/bin/mscgen_js \
-    && echo -e "#!/bin/sh\n/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/mscgen_js_puppeteer-config.json \${@}" > /usr/local/bin/mscgen_js \
-    && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
-    && chmod +x /usr/local/bin/mscgen* \
-    && rm -rf ${TMPDIR}/yarn* \
-    && apk del .nodejsyarndepends
+    && chmod +x /usr/local/bin/mmdc
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# mscgenjs-cli is not compatible with node anymore
+# https://github.com/barthel/docker-asciidoctor/issues/2
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+#    && mv /usr/local/bin/mscgen_js /usr/local/bin/mscgen_js.node \
+#    && rm -f /usr/local/bin/mscgen_js \
+#    && echo -e "#!/bin/sh\n/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/mscgen_js_puppeteer-config.json \${@}" > /usr/local/bin/mscgen_js \
+#    && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
+#    && chmod +x /usr/local/bin/mscgen* \
+#    && rm -rf ${TMPDIR}/yarn* \
+#    && apk del .nodejsyarndepends
+#    && echo "Install mscgen-cli@${mscgen_version}" \
+#    && yarn global add \
+#        "mscgenjs-cli@${mscgen_version}" \
+#    && yarn install --no-lockfile \
+#    && echo -e "{\n\t\"devtools\": false,\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"timeout\": 30000,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\"\n\t]\n}" > /usr/local/mscgen_js_puppeteer-config.json \
+#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Ruby' packages
@@ -244,7 +251,7 @@ RUN apk add --no-cache  \
         py3-gobject3-dev \
         py3-cairo-dev \
         py3-pip \
-    && pip3 install --no-cache-dir \
+    && pip3 install --no-cache-dir --break-system-packages \
         https://github.com/hdl/pyhdlparser/tarball/master \
         https://github.com/hdl/symbolator/tarball/master \
         diagrams \
@@ -278,7 +285,7 @@ RUN apk add --no-cache \
     && 2to3 --no-diffs -p -e -W -n -w ${TMPDIR}/syntrax \
     && sed -i 's|import collections|import collections.abc|' ${TMPDIR}/syntrax/syntrax.py \
     && sed -i 's|collections.Sequence|collections.abc.Sequence|g' ${TMPDIR}/syntrax/syntrax.py \
-    && pip3 install --no-cache-dir \
+    && pip3 install --no-cache-dir --break-system-packages \
         ${TMPDIR}/syntrax \
     && rm -rf ${TMPDIR}/syntrax \
     && apk del -r --no-cache .pythonsyntraxdepends

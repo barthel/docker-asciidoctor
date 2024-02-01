@@ -11,6 +11,9 @@ ____
 
 === Internal diagram source
 
+IMPORTANT: The `mscgen` backend is currently not supported.
+
+////
 [msc, "mscgen-internal-example-diagram", svg]
 ----
 msc {
@@ -24,7 +27,10 @@ msc {
    A -> B;
 }
 ----
+////
 
 === External diagram source file
 
-msc::{imagesdir}/asciidoctor-diagrams_overview/uml/mscgen.msc[format="svg"]
+IMPORTANT: The `mscgen` backend is currently not supported.
+
+// msc::{imagesdir}/asciidoctor-diagrams_overview/uml/mscgen.msc[format="svg"]
