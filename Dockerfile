@@ -213,17 +213,22 @@ RUN apk --no-cache add \
 # 'Ruby' packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install barby - @see: https://github.com/toretore/barby
+# (Re)Install nogokiri - @see: https://nokogiri.org/tutorials/installing_nokogiri.html#other-installation-scenarios
 # Install asciidoctor-multipage - @see: https://github.com/owenh000/asciidoctor-multipage
 # Install asciidoctor-lists - @see: https://github.com/Alwinator/asciidoctor-lists
 RUN apk add --no-cache --virtual .rubymakedepends \
       build-base \
       libxml2-dev \
+      libxslt-dev \
       ruby-dev \
     && gem install --no-document \
         barby rqrcode chunky_png \
         asciidoctor-multipage \
         asciidoctor-lists \
-    && apk del -r --no-cache .rubymakedepends
+    && apk del -r --no-cache .rubymakedepends \
+    # @see: https://github.com/asciidoctor/docker-asciidoctor/issues/430
+    # @see: https://github.com/asciidoctor/docker-asciidoctor/blob/d16e85e04c46ed02414565aa26b67a809f4c64c1/Dockerfile#L139
+    && if [[ ${TARGETARCH} == arm64 ]]; then gem uninstall nokogiri -v '> 1.14'; fi
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Python' packages
