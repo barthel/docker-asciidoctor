@@ -34,6 +34,7 @@ COPY --from=make-builder /pikchr/pikchr /usr/local/bin/
 RUN sed -i 's/https/http/' /etc/apk/repositories
 # Adds edge/testing package repo for svgbob, pdf2svg
 RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+RUN echo "@319 https://dl-cdn.alpinelinux.org/alpine/v3.19/main" >> /etc/apk/repositories
 RUN cat /etc/alpine-release \
     && apk fix && apk update
 
@@ -243,6 +244,7 @@ RUN apk add --no-cache  \
         py3-gobject3 \
         py3-cairo \
         py3-cairosvg \
+        py3-lxml@319 \
         libxml2 \
         libxslt \
     && apk add --no-cache --virtual .pythonmakedepends \
@@ -260,7 +262,6 @@ RUN apk add --no-cache  \
         diagrams \
         "beautifulsoup4==${beautifulsoup4_version}" \
         "requests==${requests_version}" \
-        "lxml==${lxml_version}" \
         "html5lib==${html5lib_version}" \
         "htmlark==${htmlark_version}" \
     && apk del -r --no-cache .pythonmakedepends
