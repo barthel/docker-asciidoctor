@@ -41,13 +41,11 @@ RUN cat /etc/alpine-release \
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Native' apk packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Install gnuplot - @see: http://gnuplot.info/
 # Install imagemagick for meme - @see: https://asciidoctor.org/docs/asciidoctor-diagram/#meme
 # Install svgbob - @see: https://github.com/ivanceras/svgbob
 # Install tikz (texlive, pdf2svg) - @see: https://github.com/pgf-tikz/pgf
 # install MS core font package (non free fonts) - @see: https://wiki.alpinelinux.org/wiki/Fonts#Non-free_fonts
 RUN apk --no-cache add \
-        gnuplot \
         imagemagick \
         svgbob@testing \
         texlive \
@@ -212,7 +210,6 @@ RUN apk --no-cache add \
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Ruby' packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Install barby - @see: https://github.com/toretore/barby
 # (Re)Install nogokiri - @see: https://nokogiri.org/tutorials/installing_nokogiri.html#other-installation-scenarios
 # Install asciidoctor-multipage - @see: https://github.com/owenh000/asciidoctor-multipage
 # Install asciidoctor-lists - @see: https://github.com/Alwinator/asciidoctor-lists
@@ -222,7 +219,6 @@ RUN apk add --no-cache --virtual .rubymakedepends \
       libxslt-dev \
       ruby-dev \
     && gem install --no-document \
-        barby rqrcode chunky_png \
         asciidoctor-multipage \
         asciidoctor-lists \
     && apk del -r --no-cache .rubymakedepends \

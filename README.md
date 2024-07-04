@@ -15,7 +15,7 @@ Unfortunately, it is not possible to provide **`armv7`** version greater than [1
 The following additional diagram tools are installed:
 
 * [ASCIIToSVG](https://github.com/asciitosvg/asciitosvg)<sup>[1]</sup>
-* [barby](https://github.com/toretore/barby)
+* [barby](https://github.com/toretore/barby)<sup>[1]</sup>
 * [blockdiag/blockdiag](https://github.com/blockdiag/blockdiag)<sup>[1]</sup>
 * [blockdiag/actdiag](https://github.com/blockdiag/actdiag)<sup>[1]</sup>
 * [blockdiag/nwdiag](https://github.com/blockdiag/nwdiag)<sup>[1]</sup>
@@ -26,7 +26,7 @@ The following additional diagram tools are installed:
 * [ditaa](https://ditaa.sourceforge.net/)<sup>[1]</sup>
 * [dpic](https://gitlab.com/aplevich/dpic)
 * [erd-go](https://github.com/kaishuu0123/erd-go/)
-* [gnuplot](http://gnuplot.info/)
+* [gnuplot](http://gnuplot.info/)<sup>[1]</sup>
 * [graphviz](https://graphviz.gitlab.io/)<sup>[1]</sup>
 * [imagemagick](https://asciidoctor.org/docs/asciidoctor-diagram/#meme) for meme
 * [mermaid](https://github.com/mermaid-js/mermaid-cli)
