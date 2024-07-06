@@ -4,7 +4,7 @@ ARG alpine_version=3.19
 # =========================================
 # Build dpic- @see: https://gitlab.com/aplevich/dpic
 # Build pikchr - @see: https://github.com/drhsqlite/pikchr
-FROM alpine:${alpine_version} as make-builder
+FROM alpine:${alpine_version} AS make-builder
 
 RUN apk add --no-cache \
         build-base \
@@ -20,9 +20,9 @@ RUN apk add --no-cache \
 
 # =========================================
 
-FROM asciidoctor/docker-asciidoctor:${ASCIIDOCTOR_BASE_TAG} as asciidoctor-builder
+FROM asciidoctor/docker-asciidoctor:${ASCIIDOCTOR_BASE_TAG} AS asciidoctor-builder
 
-ENV TMPDIR "/tmp"
+ENV TMPDIR="/tmp"
 
 # Install dpic
 COPY --from=make-builder /usr/local/bin/dpic /usr/local/bin/
@@ -48,8 +48,7 @@ RUN cat /etc/alpine-release \
 RUN apk --no-cache add \
         imagemagick \
         svgbob@testing \
-        texlive \
-        texmf-dist-latexextra \
+        texlive texmf-dist-latex texmf-dist-latexextra texmf-dist-lang \
         pdf2svg@testing \
         git \
         msttcorefonts-installer \
@@ -59,7 +58,7 @@ ARG umlet_version="15.1"
 # The umlet zip contains a camelcase directory :-|
 ENV UMLET_HOME="${UMLET_HOME:-/usr/local/Umlet}"
 # The umlet extension try to find 'umlet' in PATH and need the 'umlet.jar' in same directory :-|
-ENV PATH "${UMLET_HOME}:${PATH}"
+ENV PATH="${UMLET_HOME:-/usr/local/Umlet}:${PATH}"
 ENV UMLET_JAVA_OPTS="-Djava.awt.headless=true"
 # Umlet download URL uses inconsistent version formats :-|
 RUN curl -S -s -o ${TMPDIR}/umlet.zip https://www.umlet.com/download/umlet_${umlet_version//./_}/umlet-standalone-${umlet_version}.zip \
@@ -94,13 +93,13 @@ ARG wavedrom_cli_version="3.1.1"
 ARG inliner_version="1.14.0"
 # @see: https://github.com/puppeteer/puppeteer/issues/379#issuecomment-437688436
 # @see: https://github.com/puppeteer/puppeteer/blob/v2.1.1/docs/api.md#environment-variables
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD "true"
-ENV puppeteer_skip_download "true"
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
+ENV puppeteer_skip_download="true"
 # Puppeteer version and Chromium version are related
 ARG puppeteer_version="19.7.5"
 # Chromium version 126.0.6478.126-r0
-ENV PUPPETEER_CHROMIUM_REVISION "1266478"
-ENV puppeteer_chromium_revision "1266478"
+ENV PUPPETEER_CHROMIUM_REVISION="1266478"
+ENV puppeteer_chromium_revision="1266478"
 # ENV CHROMIUM_PATH "$(which chromium-browser)" # will be exported by entrypoint.sh
 # @see: https://github.com/nodejs/docker-node/issues/1794
 # @see: https://github.com/nodejs/docker-node/issues/1798
