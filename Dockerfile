@@ -70,7 +70,7 @@ RUN curl -S -s -o ${TMPDIR}/umlet.zip https://www.umlet.com/download/umlet_${uml
 # 'Node.js' packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install mermaid-cli - @see: https://github.com/mermaid-js/mermaid-cli
-ARG mermaid_version="10.0.2"
+ARG mermaid_version="10.9.1"
 # Install mscgenjs-cli - @see: https://github.com/mscgenjs/mscgenjs-cli
 ARG mscgen_version="6.0.0"
 # Install bpmn-js-cmd - @see: https://github.com/gtudan/bpmn-js-cmd
