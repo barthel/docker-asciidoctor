@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1><span class="maintitle"><strong>Asciidoctor</strong> Diagram</span>: <span class="subtitle">Supported Diagram Types</span></h1>
 <div class="details">
 <span id="author" class="author">brought to you with <span class="icon"><i class="fa fa-heart fa-1x"></i></span> by barthel</span><br>
-<span id="revnumber">version: 25b88df9</span>
+<span id="revnumber">version: 54271bdc</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Content</div>
@@ -1277,11 +1277,58 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <div class="sect1">
 <h2 id="section-mermaid"><a class="anchor" href="#section-mermaid"></a>14. mermaid</h2>
 <div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>I had a forward slash defined in the label of a diagram node.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>graph LR
+    M[Main\n/]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This could be rendered successfully by other mermaid engines, like the one that renders the preview in the vscode plugin. But caused <code>mmdc</code> to crash with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Error: Evaluation failed: Error: Diagram error not found.
+    at pptr://__puppeteer_evaluation_script__:45:17
+    at ExecutionContext._ExecutionContext_evaluate (...)
+    at process.processTicksAndRejections (...)
+    at async ExecutionContext.evaluate (...)
+    at async CDPJSHandle.evaluate (...)
+    at async CDPElementHandle.$eval (...)
+    at async renderMermaid (...)
+    at async parseMMD (...)
+    at async run (...)
+    at async cli (...)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>However, as soon as I add double quotes</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>graph LR
+    M["Main\n/"]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>everything works fine. So this is rather an issue to handle in <code>mermaid-js/mermaid-cli</code> (if at all).</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; gibso (@github)<br>
+<cite>https://github.com/barthel/docker-asciidoctor/pull/3</cite>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_internal_diagram_source_14"><a class="anchor" href="#_internal_diagram_source_14"></a>14.1. Internal diagram source</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./images/mermaid-internal-example-diagram.svg" alt="mermaid internal example diagram" width="307" height="454">
+<img src="./images/mermaid-internal-example-diagram.svg" alt="mermaid internal example diagram" width="310" height="454">
 </div>
 </div>
 </div>
@@ -1860,8 +1907,8 @@ The <code>umlet</code> backend currently does not support internal diagram sourc
 </div>
 <div id="footer">
 <div id="footer-text">
-version: 25b88df9<br>
-25b88df9 - 2024-07-06 16:45:44 UTC
+version: 54271bdc<br>
+54271bdc - 2024-08-07 06:58:50 UTC
 </div>
 </div>
 </body>

@@ -1,4 +1,4 @@
-<svg class='pikchr' preserveAspectRatio='xMidYMid meet' viewBox='0 0 508.32 436.32' xmlns='http://www.w3.org/2000/svg'>
+<svg class='pikchr' preserveAspectRatio='xMidYMid meet' style='font-size:initial;' viewBox='0 0 508.32 436.32' xmlns='http://www.w3.org/2000/svg'>
 <path d='M2.16,110.16L506.16,110.16L506.16,2.16L2.16,2.16Z' style='fill:rgb(172,201,227);stroke-width:2.16;stroke:rgb(0,0,0);'/>
 <path d='M2.16,218.16L506.16,218.16L506.16,110.16L2.16,110.16Z' style='fill:rgb(197,216,239);stroke-width:2.16;stroke:rgb(0,0,0);'/>
 <path d='M2.16,326.16L506.16,326.16L506.16,218.16L2.16,218.16Z' style='fill:rgb(172,201,227);stroke-width:2.16;stroke:rgb(0,0,0);'/>
@@ -90,4 +90,3 @@
 <polygon points='161.477,393.104 149.173,393.104 152.207,385.014' style='fill:rgb(0,0,0)'/>
 <path d='M73.2431,360.016L156.084,391.081' style='fill:none;stroke-width:2.16;stroke:rgb(0,0,0);'/>
 </svg>
-
