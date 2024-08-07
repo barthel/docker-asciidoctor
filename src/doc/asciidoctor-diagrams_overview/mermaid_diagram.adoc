@@ -4,6 +4,41 @@ include::../_preview_config.adoc[]
 [[section-mermaid]]
 == mermaid
 
+[quote, gibso (@github), https://github.com/barthel/docker-asciidoctor/pull/3]
+____
+I had a forward slash defined in the label of a diagram node.
+
+```
+graph LR
+    M[Main\n/]
+```
+
+This could be rendered successfully by other mermaid engines, like the one that renders the preview in the vscode plugin. But caused `mmdc` to crash with
+
+```
+Error: Evaluation failed: Error: Diagram error not found.
+    at pptr://__puppeteer_evaluation_script__:45:17
+    at ExecutionContext._ExecutionContext_evaluate (...)
+    at process.processTicksAndRejections (...)
+    at async ExecutionContext.evaluate (...)
+    at async CDPJSHandle.evaluate (...)
+    at async CDPElementHandle.$eval (...)
+    at async renderMermaid (...)
+    at async parseMMD (...)
+    at async run (...)
+    at async cli (...)
+```
+
+However, as soon as I add double quotes
+
+```
+graph LR
+    M["Main\n/"]
+```
+
+everything works fine. So this is rather an issue to handle in `mermaid-js/mermaid-cli` (if at all).
+____
+
 === Internal diagram source
 
 [mermaid, "mermaid-internal-example-diagram", svg]
