@@ -1,5 +1,5 @@
 ARG ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
-ARG alpine_version=3.19
+ARG alpine_version=3.20
 
 # =========================================
 # Build dpic- @see: https://gitlab.com/aplevich/dpic
@@ -96,10 +96,10 @@ ARG inliner_version="1.14.0"
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 ENV puppeteer_skip_download="true"
 # Puppeteer version and Chromium version are related
-ARG puppeteer_version="19.7.5"
-# Chromium version 127.0.6533.88-r0
-ENV PUPPETEER_CHROMIUM_REVISION="1276533"
-ENV puppeteer_chromium_revision="1276533"
+ARG puppeteer_version="23.3.0"
+# Chromium version 128.0.6613.119-r0
+ENV PUPPETEER_CHROMIUM_REVISION="1286613"
+ENV puppeteer_chromium_revision="1286613"
 # ENV CHROMIUM_PATH "$(which chromium-browser)" # will be exported by entrypoint.sh
 # @see: https://github.com/nodejs/docker-node/issues/1794
 # @see: https://github.com/nodejs/docker-node/issues/1798
@@ -112,7 +112,7 @@ ENV puppeteer_chromium_revision="1276533"
 # Most of the devel dependencies are required by canvas
 RUN apk --no-cache add \
         nodejs \
-        'chromium~=127.0.6533' \
+        'chromium~=128.0.6613' \
         nss \
         freetype \
         harfbuzz \

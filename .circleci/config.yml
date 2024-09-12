@@ -73,7 +73,7 @@ jobs:
             TAG="--tag ${TAG_NAME}:latest"
             ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
             if [ "${CIRCLE_TAG}" != "" ]; then
-              TAG="--tag ${TAG_NAME}:${CIRCLE_TAG} --tag ${TAG_NAME}:${CIRCLE_TAG%%.*} --tag ${TAG_NAME}:${CIRCLE_TAG%.*}"
+              TAG="--tag ${TAG_NAME}:${CIRCLE_TAG} --tag ${TAG_NAME}:${CIRCLE_TAG%%.*} --tag ${TAG_NAME}:${CIRCLE_TAG%.*} --tag stable"
               ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG%.*}
             fi
             docker buildx build \
@@ -98,34 +98,45 @@ jobs:
           name: Test docker image (<< parameters.platform >>)
           no_output_timeout: 1h
           command: |
+            echo "${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest}"
             mkdir -p /documents/doc
+            asciidoctor --version
             inliner --help
   example-build:
-    machine:
-      image: ubuntu-2204:current
-    resource_class: large
+    docker:
+      - image: cimg/base:current
     steps:
+      - setup_remote_docker
       - checkout
       - run:
           name: Delete and create dist directory
           command: |
+            ls -al $(pwd)
             rm -rf .examples
             mkdir -p .examples/dist/css
-            ls -al .
       - run:
           name: Pull docker image
           command: |
+            echo "${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest}"
             echo "${DOCKER_PASS}" | docker login -u "${DOCKER_USER}" --password-stdin
             docker pull ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest}
+            docker run --init --rm \
+              -v $(pwd)/src/doc:/documents \
+              -v $(pwd)/.examples/dist:/dist \
+              ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest} \
+                sh -c "asciidoctor --version && ls -al /documents/"
       - run:
           name: Generate HTML
           no_output_timeout: 1h
           command: |
-            docker run --rm \
-              -v $(pwd)/src/doc:/documents/ \
+            echo "${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest}"
+            docker run --init --rm \
+              -v $(pwd)/src/doc:/documents \
               -v $(pwd)/.examples/dist:/dist \
               ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest} \
                 asciidoctor \
+                  --trace \
+                  --verbose \
                   -b html5 \
                   -D "/dist" \
                   -r asciidoctor-diagram \
@@ -138,7 +149,7 @@ jobs:
           name: Inline HTML
           no_output_timeout: 1h
           command: |
-            docker run --rm \
+            docker run --init --rm \
               -v $(pwd)/.examples/dist:/dist \
               -it \
               ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest} \
@@ -154,11 +165,13 @@ jobs:
           name: Generate PDF
           no_output_timeout: 1h
           command: |
-            docker run --rm \
+            docker run --init --rm \
               -v $(pwd)/src/doc:/documents/ \
               -v $(pwd)/.examples/dist:/dist \
               ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest} \
                 asciidoctor-pdf \
+                  --trace \
+                  --verbose \
                   -D "/dist" \
                   -r asciidoctor-diagram \
                   -r asciidoctor-mathematical \
@@ -170,11 +183,13 @@ jobs:
           name: Generate index.html
           no_output_timeout: 1h
           command: |
-            docker run --rm \
+            docker run --init --rm \
               -v $(pwd)/src/doc:/documents/ \
               -v $(pwd)/.examples/dist:/dist \
               ${DOCKER_USER}/asciidoctor:${CIRCLE_TAG:-latest} \
                 asciidoctor \
+                  --trace \
+                  --verbose \
                   -b html5 \
                   -D "/dist" \
                   -r asciidoctor-diagram \
@@ -185,11 +200,12 @@ jobs:
                   /documents/index.adoc
       - persist_to_workspace:
           root: .examples
-          paths: dist
+          paths: ["dist"]
   example-deploy:
     docker:
       - image: node:lts
     steps:
+      - setup_remote_docker
       - checkout
       - attach_workspace:
           at: .examples
