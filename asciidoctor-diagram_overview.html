@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1><span class="maintitle"><strong>Asciidoctor</strong> Diagram</span>: <span class="subtitle">Supported Diagram Types</span></h1>
 <div class="details">
 <span id="author" class="author">brought to you with <span class="icon"><i class="fa fa-heart fa-1x"></i></span> by barthel</span><br>
-<span id="revnumber">version: 859e590d</span>
+<span id="revnumber">version: a4d169d5</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Content</div>
@@ -1020,9 +1020,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="listingblock">
 <div class="content">
 <pre>Failed to generate image: bpmn-js failed: Failed to render diagram
- Error: Tried to use PUPPETEER_CHROMIUM_REVISION env variable to launch browser but did not find executable at: /usr/local/share/.config/yarn/global/node_modules/bpmn-js-cmd/node_modules/puppeteer/.local-chromium/linux-1286613/chrome-linux/chrome
-    at ChromeLauncher.launch (/usr/local/share/.config/yarn/global/node_modules/bpmn-js-cmd/node_modules/puppeteer/lib/cjs/puppeteer/node/Launcher.js:80:27)
-    at async renderDiagram (/usr/local/share/.config/yarn/global/node_modules/bpmn-js-cmd/index.js:46:19)
+ Error: Failed to launch the browser process! spawn /root/.cache/puppeteer/chrome/linux-128.0.6613.119/chrome-linux64/chrome ENOENT
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+    at ChildProcess.onClose (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
+    at ChildProcess.emit (node:events:519:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:292:12)
+    at onErrorNT (node:internal/child_process:484:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"&gt;
@@ -1180,9 +1187,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="listingblock">
 <div class="content">
 <pre>Failed to generate image: bpmn-js failed: Failed to render diagram
- Error: Tried to use PUPPETEER_CHROMIUM_REVISION env variable to launch browser but did not find executable at: /usr/local/share/.config/yarn/global/node_modules/bpmn-js-cmd/node_modules/puppeteer/.local-chromium/linux-1286613/chrome-linux/chrome
-    at ChromeLauncher.launch (/usr/local/share/.config/yarn/global/node_modules/bpmn-js-cmd/node_modules/puppeteer/lib/cjs/puppeteer/node/Launcher.js:80:27)
-    at async renderDiagram (/usr/local/share/.config/yarn/global/node_modules/bpmn-js-cmd/index.js:46:19)
+ Error: Failed to launch the browser process! spawn /root/.cache/puppeteer/chrome/linux-128.0.6613.119/chrome-linux64/chrome ENOENT
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+    at ChildProcess.onClose (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
+    at ChildProcess.emit (node:events:519:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:292:12)
+    at onErrorNT (node:internal/child_process:484:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 &lt;?xml version="1.0" standalone="yes"?&gt;
 &lt;semantic:definitions id="_1275940932088" targetNamespace="http://www.trisotech.com/definitions/_1275940932088" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL"&gt;
@@ -2485,8 +2499,8 @@ The <code>umlet</code> backend currently does not support internal diagram sourc
 </div>
 <div id="footer">
 <div id="footer-text">
-version: 859e590d<br>
-859e590d - 2024-09-13 17:26:32 UTC
+version: a4d169d5<br>
+a4d169d5 - 2024-09-13 21:14:59 UTC
 </div>
 </div>
 </body>
