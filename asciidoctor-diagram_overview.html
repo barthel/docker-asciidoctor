@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1><span class="maintitle"><strong>Asciidoctor</strong> Diagram</span>: <span class="subtitle">Supported Diagram Types</span></h1>
 <div class="details">
 <span id="author" class="author">brought to you with <span class="icon"><i class="fa fa-heart fa-1x"></i></span> by barthel</span><br>
-<span id="revnumber">version: 0a22d672</span>
+<span id="revnumber">version: 91c1c2c6</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Content</div>
@@ -1867,7 +1867,16 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 <h3 id="_internal_diagram_source_14"><a class="anchor" href="#_internal_diagram_source_14"></a>14.1. Internal diagram source</h3>
 <div class="listingblock">
 <div class="content">
-<pre>Failed to generate image: mmdc failed: Generating single mermaid chart
+<pre>Failed to generate image: mmdc failed:
+SyntaxError: Unexpected token 'e', ..."adless": new,
+	"exec"... is not valid JSON
+    at JSON.parse (&lt;anonymous&gt;)
+    at cli (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:180:59)
+    at file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/cli.js:6:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)
+
 
 flowchart TD
     A[Christmas] --&gt;|Get money| B(Go shopping)
@@ -1882,7 +1891,16 @@ flowchart TD
 <h3 id="_external_diagram_source_file_14"><a class="anchor" href="#_external_diagram_source_file_14"></a>14.2. External diagram source file</h3>
 <div class="listingblock">
 <div class="content">
-<pre>Failed to generate image: mmdc failed: Generating single mermaid chart
+<pre>Failed to generate image: mmdc failed:
+SyntaxError: Unexpected token 'e', ..."adless": new,
+	"exec"... is not valid JSON
+    at JSON.parse (&lt;anonymous&gt;)
+    at cli (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:180:59)
+    at file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/cli.js:6:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)
+
 
 sequenceDiagram
     Alice -&gt;&gt; Bob: Hello Bob, how are you?
@@ -2463,8 +2481,8 @@ The <code>umlet</code> backend currently does not support internal diagram sourc
 </div>
 <div id="footer">
 <div id="footer-text">
-version: 0a22d672<br>
-0a22d672 - 2024-09-13 12:17:37 UTC
+version: 91c1c2c6<br>
+91c1c2c6 - 2024-09-13 16:07:24 UTC
 </div>
 </div>
 </body>
