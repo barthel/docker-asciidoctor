@@ -74,7 +74,9 @@ ARG mermaid_version="10.9.1"
 # Install mscgenjs-cli - @see: https://github.com/mscgenjs/mscgenjs-cli
 ARG mscgen_version="6.0.0"
 # Install bpmn-js-cmd - @see: https://github.com/gtudan/bpmn-js-cmd
-ARG bpmn_version="0.4.0"
+ARG bpmn_js_cmd_version="0.4.0"
+# Install bpmn-js - @see: https://github.com/bpmn-io/bpmn-js
+ARG bpmn_js_version="17.11.0"
 # Install bytefield-svg - @see: https://github.com/Deep-Symmetry/bytefield-svg
 ARG bytefield_version="1.8.0"
 # Install nomnoml - @see: https://github.com/skanaar/nomnoml
@@ -95,11 +97,15 @@ ARG inliner_version="1.14.0"
 # @see: https://github.com/puppeteer/puppeteer/blob/v2.1.1/docs/api.md#environment-variables
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 ENV puppeteer_skip_download="true"
+ENV PUPPETEER_PRODUCT="chrome"
 # Puppeteer version and Chromium version are related
 ARG puppeteer_version="23.3.0"
 # Chromium version 128.0.6613.119-r0
 ENV PUPPETEER_CHROMIUM_REVISION="1286613"
 ENV puppeteer_chromium_revision="1286613"
+
+RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": \"new\",\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--disable-gpu\",\n\t\t\"--disable-setuid-sandbox\",\n\t\t\"--timeout 60000\"\n\t]\n}" > /usr/local/puppeteer-config.json
+
 # ENV CHROMIUM_PATH "$(which chromium-browser)" # will be exported by entrypoint.sh
 # @see: https://github.com/nodejs/docker-node/issues/1794
 # @see: https://github.com/nodejs/docker-node/issues/1798
@@ -143,10 +149,9 @@ RUN apk --no-cache add \
     && yarn global add \
         "@mermaid-js/mermaid-cli@${mermaid_version}" \
     && yarn install --no-lockfile \
-    && echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--timeout 30000\"\n\t]\n}" > /usr/local/mmdc_puppeteer-config.json \
-    && echo "Install bpmn-js-cmd@${bpmn_version}" \
+    && echo "Install bpmn-js-cmd@${bpmn_js_cmd_version}" \
     && yarn global add \
-        "bpmn-js-cmd@${bpmn_version}" \
+        "bpmn-js-cmd@${bpmn_js_cmd_version}" \
     && yarn install --no-lockfile \
     && echo "Install bytefield-svg@${bytefield_version}" \
     && yarn global add \
@@ -181,31 +186,30 @@ RUN apk --no-cache add \
     && yarn global add \
         "inliner@https://github.com/barthel/inliner" \
     && yarn install --no-lockfile \
-    && echo "Adapt executable" \
-    && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
-    && rm -f /usr/local/bin/mmdc \
-    && echo -e "#!/bin/sh\n/usr/local/bin/mmdc.node --puppeteerConfigFile /usr/local/mmdc_puppeteer-config.json \${@}" > /usr/local/bin/mmdc \
-    && chmod +x /usr/local/bin/mmdc
+    && rm -rf ${TMPDIR}/yarn* \
+    && apk del .nodejsyarndepends
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # mscgenjs-cli is not compatible with node anymore
 # https://github.com/barthel/docker-asciidoctor/issues/2
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-#    && mv /usr/local/bin/mscgen_js /usr/local/bin/mscgen_js.node \
-#    && rm -f /usr/local/bin/mscgen_js \
-#    && echo -e "#!/bin/sh\n/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/mscgen_js_puppeteer-config.json \${@}" > /usr/local/bin/mscgen_js \
-#    && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
-#    && chmod +x /usr/local/bin/mscgen* \
-#    && rm -rf ${TMPDIR}/yarn* \
-#    && apk del .nodejsyarndepends
 #    && echo "Install mscgen-cli@${mscgen_version}" \
 #    && yarn global add \
 #        "mscgenjs-cli@${mscgen_version}" \
 #    && yarn install --no-lockfile \
-#    && echo -e "{\n\t\"devtools\": false,\n\t\"headless\": true,\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"timeout\": 30000,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\"\n\t]\n}" > /usr/local/mscgen_js_puppeteer-config.json \
+#    && mv /usr/local/bin/mscgen_js /usr/local/bin/mscgen_js.node \
+#    && rm -f /usr/local/bin/mscgen_js \
+#    && echo -e "#!/bin/sh\n/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/puppeteer-config.json \${@}" > /usr/local/bin/mscgen_js \
+#    && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
+#    && chmod +x /usr/local/bin/mscgen* \
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
+RUN echo "Adapt executable" \
+    && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
+    && rm -f /usr/local/bin/mmdc \
+    && echo -e "#!/bin/sh\n/usr/local/bin/mmdc.node --puppeteerConfigFile /usr/local/puppeteer-config.json \${@}" > /usr/local/bin/mmdc \
+    && chmod +x /usr/local/bin/mmdc \
+    && sed -i "s/args: \['--no-sandbox'\]/args: ['--no-sandbox', '--disable-gpu']/" /usr/local/share/.config/yarn/global/node_modules/.bin/bpmn-js
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Ruby' packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
