@@ -22,6 +22,10 @@ RUN apk add --no-cache \
 
 FROM asciidoctor/docker-asciidoctor:${ASCIIDOCTOR_BASE_TAG} AS asciidoctor-builder
 
+ARG TARGETARCH
+# Print the architecture
+RUN echo "Building for architecture: $TARGETARCH"
+
 ENV TMPDIR="/tmp"
 
 # Install dpic
@@ -75,8 +79,6 @@ ARG mermaid_version="10.9.1"
 ARG mscgen_version="6.0.0"
 # Install bpmn-js-cmd - @see: https://github.com/gtudan/bpmn-js-cmd
 ARG bpmn_js_cmd_version="0.4.0"
-# Install bpmn-js - @see: https://github.com/bpmn-io/bpmn-js
-ARG bpmn_js_version="17.11.0"
 # Install bytefield-svg - @see: https://github.com/Deep-Symmetry/bytefield-svg
 ARG bytefield_version="1.8.0"
 # Install nomnoml - @see: https://github.com/skanaar/nomnoml
@@ -93,20 +95,33 @@ ARG wavedrom_version="3.2.0"
 ARG wavedrom_cli_version="3.1.1"
 # Install inliner - @see: https://github.com/barthel/inliner
 ARG inliner_version="1.14.0"
-# @see: https://github.com/puppeteer/puppeteer/issues/379#issuecomment-437688436
-# @see: https://github.com/puppeteer/puppeteer/blob/v2.1.1/docs/api.md#environment-variables
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
-ENV puppeteer_skip_download="true"
-ENV PUPPETEER_PRODUCT="chrome"
 # Puppeteer version and Chromium version are related
 ARG puppeteer_version="23.3.0"
-# Chromium version 128.0.6613.119-r0
-ENV PUPPETEER_CHROMIUM_REVISION="1286613"
-ENV puppeteer_chromium_revision="1286613"
+# @see: https://pptr.dev/api/puppeteer.configuration
+# @see: https://github.com/puppeteer/puppeteer/issues/379#issuecomment-437688436
+# @see: https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.configuration.md
+ENV PUPPETEER_PRODUCT="chrome"
+ENV PUPPETEER_BROWSER="chrome"
+ENV PUPPETEER_SKIP_DOWNLOAD="true"
+ENV PUPPETEER_CHROME_SKIP_DOWNLOAD="true"
+# backward compatibility
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
+ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-browser"
+ENV CHROMIUM_PATH="/usr/bin/chromium-browser"
+ENV PUPPETEER_ARGS='"--no-sandbox", "--allow-insecure-localhost", "--disable-gpu", "--disable-setuid-sandbox"'
 
-RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": \"new\",\n\t\"executablePath\": \"$(which chromium-browser)\",\n\t\"ignoreHTTPSErrors\": true,\n\t\"args\": [\n\t\t\"--no-sandbox\",\n\t\t\"--allow-insecure-localhost\",\n\t\t\"--disable-gpu\",\n\t\t\"--disable-setuid-sandbox\",\n\t\t\"--timeout 60000\"\n\t]\n}" > /usr/local/puppeteer-config.json
+RUN cat <<EOF > /usr/local/puppeteer-config.json
+{
+    "product": "${PUPPETEER_PRODUCT}",
+    "skipDownload": ${PUPPETEER_SKIP_DOWNLOAD},
+    "headless": "new",
+    "ignoreHTTPSErrors": true,
+    "args": [${PUPPETEER_ARGS}],
+    "dumpio": true,
+    "executablePath": "${CHROMIUM_PATH}"
+}
+EOF
 
-# ENV CHROMIUM_PATH "$(which chromium-browser)" # will be exported by entrypoint.sh
 # @see: https://github.com/nodejs/docker-node/issues/1794
 # @see: https://github.com/nodejs/docker-node/issues/1798
 # @see: https://superuser.com/a/1058665
@@ -118,7 +133,7 @@ RUN echo -e "{\n\t\"product\": \"chrome\",\n\t\"headless\": \"new\",\n\t\"execut
 # Most of the devel dependencies are required by canvas
 RUN apk --no-cache add \
         nodejs \
-        'chromium~=128.0.6613' \
+        chromium \
         nss \
         freetype \
         harfbuzz \
@@ -142,7 +157,6 @@ RUN apk --no-cache add \
     && yarn config set no-progress --global \
     && echo "Install puppeteer@${puppeteer_version}" \
     && yarn global add \
-        "puppeteer-core@${puppeteer_version}" \
         "puppeteer@${puppeteer_version}" \
     && yarn install --no-lockfile \
     && echo "Install mermaid-cli@${mermaid_version}" \
@@ -187,7 +201,24 @@ RUN apk --no-cache add \
         "inliner@https://github.com/barthel/inliner" \
     && yarn install --no-lockfile \
     && rm -rf ${TMPDIR}/yarn* \
-    && apk del .nodejsyarndepends
+    && apk del .nodejsyarndepends \
+    && echo "Adapt executable:" \
+    && echo "\tmmdc" \
+    && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
+    && rm -f /usr/local/bin/mmdc \
+    && { \
+        echo '#!/bin/sh'; \
+        echo ''; \
+        echo '/usr/local/bin/mmdc.node --puppeteerConfigFile /usr/local/puppeteer-config.json ${@}'; \
+    } > /usr/local/bin/mmdc \
+    && chmod +x /usr/local/bin/mmdc \
+    && echo "\tbpmn-js" \
+    && _bpmn=$(readlink -f /usr/local/bin/bpmn-js) \
+    && sed -i "s|args: \['--no-sandbox'\],|args: \[${PUPPETEER_ARGS}\],|" "${_bpmn}" \
+    && sed -i "/args:.*,/a\\            dumpio: true," "${_bpmn}" \
+    && sed -i "/dumpio: true,/a\\            headless: \"new\"," "${_bpmn}" \
+    && sed -i "/dumpio: true,/a\\            product: \"${PUPPETEER_PRODUCT}\"," "${_bpmn}" \
+    && sed -i "/dumpio: true,/a\\            skipDownload: ${PUPPETEER_SKIP_DOWNLOAD}," "${_bpmn}"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # mscgenjs-cli is not compatible with node anymore
 # https://github.com/barthel/docker-asciidoctor/issues/2
@@ -198,18 +229,14 @@ RUN apk --no-cache add \
 #        "mscgenjs-cli@${mscgen_version}" \
 #    && yarn install --no-lockfile \
 #    && mv /usr/local/bin/mscgen_js /usr/local/bin/mscgen_js.node \
-#    && rm -f /usr/local/bin/mscgen_js \
+#    && rm -f /usr/local/bin/mscgen_js
+#
 #    && echo -e "#!/bin/sh\n/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/puppeteer-config.json \${@}" > /usr/local/bin/mscgen_js \
 #    && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
 #    && chmod +x /usr/local/bin/mscgen* \
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-RUN echo "Adapt executable" \
-    && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
-    && rm -f /usr/local/bin/mmdc \
-    && echo -e "#!/bin/sh\n/usr/local/bin/mmdc.node --puppeteerConfigFile /usr/local/puppeteer-config.json \${@}" > /usr/local/bin/mmdc \
-    && chmod +x /usr/local/bin/mmdc \
-    && sed -i "s/args: \['--no-sandbox'\]/args: ['--no-sandbox', '--disable-gpu']/" /usr/local/share/.config/yarn/global/node_modules/.bin/bpmn-js
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Ruby' packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -227,7 +254,7 @@ RUN apk add --no-cache --virtual .rubymakedepends \
     && apk del -r --no-cache .rubymakedepends \
     # @see: https://github.com/asciidoctor/docker-asciidoctor/issues/430
     # @see: https://github.com/asciidoctor/docker-asciidoctor/blob/d16e85e04c46ed02414565aa26b67a809f4c64c1/Dockerfile#L139
-    && if [[ ${TARGETARCH} == arm64 ]]; then gem uninstall nokogiri -v '> 1.14'; fi
+    && if [ "$TARGETARCH" = "arm64" ]; then gem uninstall nokogiri -v '> 1.14'; fi
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Python' packages

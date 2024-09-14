@@ -5,7 +5,6 @@
 export PROJECT_VERSION=${PROJECT_VERSION:-"LATEST"}
 export REVISION_DATE=${REVISION_DATE:-$(date +"%d. %B %Y")}
 
-export CHROMIUM_PATH="$(which chromium-browser)"
-export PUPPETEER_EXECUTABLE_PATH="${CHROMIUM_PATH}"
-
+# CHROMIUM_PATH will export by Dockerfile
+PUPPETEER_CHROMIUM_REVISION="$(${CHROMIUM_PATH} --version | awk '{print $2}' | sed -E 's/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1\3/')"
 exec "${@}"
