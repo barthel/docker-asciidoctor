@@ -6,31 +6,31 @@
 <text fill='#2d3436' font-family='Sans-Serif' font-size='15.00' text-anchor='middle' x='205.2' y='-7.75'>Web Service</text>
 
 <g class='node' id='node1'>
-<title>1f21e42978e9454aae987da3e21a40f0</title>
+<title>26ebb3c273584d629b96ff32461c516e</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/aws/network/elastic-load-balancing.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='-2.84217e-14' y='-144.8'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='50.4' y='-30.15'>lb</text>
 </g>
 
 <g class='node' id='node2'>
-<title>46588485188a4a449778a97181529980</title>
+<title>bc0c7e21d35f4a41a33d259d45312df8</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/aws/compute/ec2.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='154.8' y='-144.8'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='205.2' y='-30.15'>web</text>
 </g>
 
 <g class='edge' id='edge1'>
-<title>1f21e42978e9454aae987da3e21a40f0&#45;&gt;46588485188a4a449778a97181529980</title>
+<title>26ebb3c273584d629b96ff32461c516e&#45;&gt;bc0c7e21d35f4a41a33d259d45312df8</title>
 <path d='M100.66,-94.4C100.66,-94.4 143.41,-94.4 143.41,-94.4' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='143.41,-97.9 153.41,-94.4 143.41,-90.9 143.41,-97.9' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node3'>
-<title>e0f08a1effd149d7ae9c4311bd0038e6</title>
+<title>42c2cb486d6342b7891ebaea23bd8410</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/aws/database/rds.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='309.6' y='-144.8'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='360' y='-30.15'>userdb</text>
 </g>
 
 <g class='edge' id='edge2'>
-<title>46588485188a4a449778a97181529980&#45;&gt;e0f08a1effd149d7ae9c4311bd0038e6</title>
+<title>bc0c7e21d35f4a41a33d259d45312df8&#45;&gt;42c2cb486d6342b7891ebaea23bd8410</title>
 <path d='M255.46,-94.4C255.46,-94.4 298.21,-94.4 298.21,-94.4' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='298.21,-97.9 308.21,-94.4 298.21,-90.9 298.21,-97.9' stroke='#7b8894'/>
 </g>
