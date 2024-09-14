@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1><span class="maintitle"><strong>Asciidoctor</strong> Diagram</span>: <span class="subtitle">Supported Diagram Types</span></h1>
 <div class="details">
 <span id="author" class="author">brought to you with <span class="icon"><i class="fa fa-heart fa-1x"></i></span> by barthel</span><br>
-<span id="revnumber">version: a4d169d5</span>
+<span id="revnumber">version: 0ab569ca</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Content</div>
@@ -1020,16 +1020,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="listingblock">
 <div class="content">
 <pre>Failed to generate image: bpmn-js failed: Failed to render diagram
- Error: Failed to launch the browser process! spawn /root/.cache/puppeteer/chrome/linux-128.0.6613.119/chrome-linux64/chrome ENOENT
-
-
-TROUBLESHOOTING: https://pptr.dev/troubleshooting
-
-    at ChildProcess.onClose (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
-    at ChildProcess.emit (node:events:519:28)
-    at ChildProcess._handle.onexit (node:internal/child_process:292:12)
-    at onErrorNT (node:internal/child_process:484:16)
-    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+ Error: net::ERR_FILE_NOT_FOUND at file:///usr/local/share/.config/yarn/global/node_modules/.bin/index.html
+    at navigate (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:183:27)
+    at async Deferred.race (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:36:20)
+    at async CdpFrame.goto (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:149:25)
+    at async CdpPage.goto (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:567:20)
+    at async renderDiagram (/usr/local/share/.config/yarn/global/node_modules/.bin/bpmn-js:59:9)
 
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"&gt;
@@ -1187,16 +1183,12 @@ TROUBLESHOOTING: https://pptr.dev/troubleshooting
 <div class="listingblock">
 <div class="content">
 <pre>Failed to generate image: bpmn-js failed: Failed to render diagram
- Error: Failed to launch the browser process! spawn /root/.cache/puppeteer/chrome/linux-128.0.6613.119/chrome-linux64/chrome ENOENT
-
-
-TROUBLESHOOTING: https://pptr.dev/troubleshooting
-
-    at ChildProcess.onClose (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/node_modules/@puppeteer/browsers/lib/cjs/launch.js:312:24)
-    at ChildProcess.emit (node:events:519:28)
-    at ChildProcess._handle.onexit (node:internal/child_process:292:12)
-    at onErrorNT (node:internal/child_process:484:16)
-    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+ Error: net::ERR_FILE_NOT_FOUND at file:///usr/local/share/.config/yarn/global/node_modules/.bin/index.html
+    at navigate (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:183:27)
+    at async Deferred.race (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:36:20)
+    at async CdpFrame.goto (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:149:25)
+    at async CdpPage.goto (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:567:20)
+    at async renderDiagram (/usr/local/share/.config/yarn/global/node_modules/.bin/bpmn-js:59:9)
 
 &lt;?xml version="1.0" standalone="yes"?&gt;
 &lt;semantic:definitions id="_1275940932088" targetNamespace="http://www.trisotech.com/definitions/_1275940932088" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL"&gt;
@@ -1879,56 +1871,17 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 </div>
 <div class="sect2">
 <h3 id="_internal_diagram_source_14"><a class="anchor" href="#_internal_diagram_source_14"></a>14.1. Internal diagram source</h3>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>Failed to generate image: mmdc failed:
-Error: Could not find Chromium (rev. 1108766). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: /root/.cache/puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/node_modules/puppeteer-core/lib/esm/puppeteer/node/ProductLauncher.js:263:27)
-    at ChromeLauncher.executablePath (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/node_modules/puppeteer-core/lib/esm/puppeteer/node/ChromeLauncher.js:176:25)
-    at ChromeLauncher.computeLaunchArguments (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/node_modules/puppeteer-core/lib/esm/puppeteer/node/ChromeLauncher.js:93:37)
-    at async ChromeLauncher.launch (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/node_modules/puppeteer-core/lib/esm/puppeteer/node/ProductLauncher.js:57:28)
-    at async run (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:416:19)
-    at async cli (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:192:3)
-
-
-flowchart TD
-    A[Christmas] --&gt;|Get money| B(Go shopping)
-    B --&gt; C{Let me think}
-    C --&gt;|One| D[Laptop]
-    C --&gt;|Two| E[iPhone]
-    C --&gt;|Three| F[fa:fa-car Car]</pre>
+<img src="./images/mermaid-internal-example-diagram.svg" alt="mermaid internal example diagram" width="310" height="454">
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_external_diagram_source_file_14"><a class="anchor" href="#_external_diagram_source_file_14"></a>14.2. External diagram source file</h3>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>Failed to generate image: mmdc failed:
-Error: Could not find Chromium (rev. 1108766). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npm install`) or
- 2. your cache path is incorrectly configured (which is: /root/.cache/puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/node_modules/puppeteer-core/lib/esm/puppeteer/node/ProductLauncher.js:263:27)
-    at ChromeLauncher.executablePath (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/node_modules/puppeteer-core/lib/esm/puppeteer/node/ChromeLauncher.js:176:25)
-    at ChromeLauncher.computeLaunchArguments (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/node_modules/puppeteer-core/lib/esm/puppeteer/node/ChromeLauncher.js:93:37)
-    at async ChromeLauncher.launch (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/node_modules/puppeteer-core/lib/esm/puppeteer/node/ProductLauncher.js:57:28)
-    at async run (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:416:19)
-    at async cli (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:192:3)
-
-
-sequenceDiagram
-    Alice -&gt;&gt; Bob: Hello Bob, how are you?
-    Bob--&gt;&gt;John: How about you John?
-    Bob--x Alice: I am good thanks!
-    Bob-x John: I am good thanks!
-    Note right of John: Bob thinks a long&lt;br/&gt;long time, so long&lt;br/&gt;that the text does&lt;br/&gt;not fit on a row.
-
-    Bob--&gt;Alice: Checking with John...
-    Alice-&gt;John: Yes... John, how are you?</pre>
+<img src="./images/mermaid.svg" alt="Diagram" width="840" height="563">
 </div>
 </div>
 </div>
@@ -2499,8 +2452,8 @@ The <code>umlet</code> backend currently does not support internal diagram sourc
 </div>
 <div id="footer">
 <div id="footer-text">
-version: a4d169d5<br>
-a4d169d5 - 2024-09-13 21:14:59 UTC
+version: 0ab569ca<br>
+0ab569ca - 2024-09-14 07:40:33 UTC
 </div>
 </div>
 </body>
