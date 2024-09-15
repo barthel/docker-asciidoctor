@@ -76,7 +76,7 @@ jobs:
             TAG="--tag ${TAG_NAME}:latest"
             ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
             if [ "${CIRCLE_TAG}" != "" ]; then
-              TAG="--tag ${TAG_NAME}:${CIRCLE_TAG} --tag ${TAG_NAME}:${CIRCLE_TAG%%.*} --tag ${TAG_NAME}:${CIRCLE_TAG%.*} --tag stable"
+              TAG="--tag ${TAG_NAME}:${CIRCLE_TAG} --tag ${TAG_NAME}:${CIRCLE_TAG%%.*} --tag ${TAG_NAME}:${CIRCLE_TAG%.*} --tag ${TAG_NAME}:stable"
               ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG%.*}
             fi
             docker buildx build \
