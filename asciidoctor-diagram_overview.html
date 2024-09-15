@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1><span class="maintitle"><strong>Asciidoctor</strong> Diagram</span>: <span class="subtitle">Supported Diagram Types</span></h1>
 <div class="details">
 <span id="author" class="author">brought to you with <span class="icon"><i class="fa fa-heart fa-1x"></i></span> by barthel</span><br>
-<span id="revnumber">version: 454ebbaa</span>
+<span id="revnumber">version: 82cb8bde</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Content</div>
@@ -1326,50 +1326,17 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 </div>
 <div class="sect2">
 <h3 id="_internal_diagram_source_14"><a class="anchor" href="#_internal_diagram_source_14"></a>14.1. Internal diagram source</h3>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>Failed to generate image: mmdc failed:
-SyntaxError: No number after minus sign in JSON at position 121
-    at JSON.parse (&lt;anonymous&gt;)
-    at cli (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:180:59)
-    at file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/cli.js:6:1
-    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
-    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
-    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)
-
-
-flowchart TD
-    A[Christmas] --&gt;|Get money| B(Go shopping)
-    B --&gt; C{Let me think}
-    C --&gt;|One| D[Laptop]
-    C --&gt;|Two| E[iPhone]
-    C --&gt;|Three| F[fa:fa-car Car]</pre>
+<img src="./images/mermaid-internal-example-diagram.svg" alt="mermaid internal example diagram" width="310" height="454">
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_external_diagram_source_file_14"><a class="anchor" href="#_external_diagram_source_file_14"></a>14.2. External diagram source file</h3>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>Failed to generate image: mmdc failed:
-SyntaxError: No number after minus sign in JSON at position 121
-    at JSON.parse (&lt;anonymous&gt;)
-    at cli (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:180:59)
-    at file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/cli.js:6:1
-    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
-    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
-    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)
-
-
-sequenceDiagram
-    Alice -&gt;&gt; Bob: Hello Bob, how are you?
-    Bob--&gt;&gt;John: How about you John?
-    Bob--x Alice: I am good thanks!
-    Bob-x John: I am good thanks!
-    Note right of John: Bob thinks a long&lt;br/&gt;long time, so long&lt;br/&gt;that the text does&lt;br/&gt;not fit on a row.
-
-    Bob--&gt;Alice: Checking with John...
-    Alice-&gt;John: Yes... John, how are you?</pre>
+<img src="./images/mermaid.svg" alt="Diagram" width="840" height="563">
 </div>
 </div>
 </div>
@@ -1940,8 +1907,8 @@ The <code>umlet</code> backend currently does not support internal diagram sourc
 </div>
 <div id="footer">
 <div id="footer-text">
-version: 454ebbaa<br>
-454ebbaa - 2024-09-15 12:18:59 UTC
+version: 82cb8bde<br>
+82cb8bde - 2024-09-15 15:30:42 UTC
 </div>
 </div>
 </body>
