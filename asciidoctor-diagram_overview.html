@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1><span class="maintitle"><strong>Asciidoctor</strong> Diagram</span>: <span class="subtitle">Supported Diagram Types</span></h1>
 <div class="details">
 <span id="author" class="author">brought to you with <span class="icon"><i class="fa fa-heart fa-1x"></i></span> by barthel</span><br>
-<span id="revnumber">version: 4191defd</span>
+<span id="revnumber">version: 454ebbaa</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Content</div>
@@ -1017,562 +1017,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="_internal_diagram_source_6"><a class="anchor" href="#_internal_diagram_source_6"></a>5.1. Internal diagram source</h3>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>Failed to generate image: bpmn-js failed: Failed to render diagram
- Error: net::ERR_FILE_NOT_FOUND at file:///usr/local/share/.config/yarn/global/node_modules/.bin/index.html
-    at navigate (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:183:27)
-    at async Deferred.race (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:36:20)
-    at async CdpFrame.goto (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:149:25)
-    at async CdpPage.goto (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:567:20)
-    at async renderDiagram (/usr/local/share/.config/yarn/global/node_modules/.bin/bpmn-js:59:9)
-
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd"&gt;
-  &lt;collaboration id="sid-c0e745ff-361e-4afb-8c8d-2a1fc32b1424"&gt;
-    &lt;participant id="sid-87F4C1D6-25E1-4A45-9DA7-AD945993D06F" name="Customer" processRef="sid-C3803939-0872-457F-8336-EAE484DC4A04" /&gt;
-  &lt;/collaboration&gt;
-  &lt;process id="sid-C3803939-0872-457F-8336-EAE484DC4A04" name="Customer" processType="None" isClosed="false" isExecutable="false"&gt;
-    &lt;extensionElements /&gt;
-    &lt;laneSet id="sid-b167d0d7-e761-4636-9200-76b7f0e8e83a"&gt;
-      &lt;lane id="sid-57E4FE0D-18E4-478D-BC5D-B15164E93254"&gt;
-        &lt;flowNodeRef&gt;sid-52EB1772-F36E-433E-8F5B-D5DFD26E6F26&lt;/flowNodeRef&gt;
-        &lt;flowNodeRef&gt;sid-E49425CF-8287-4798-B622-D2A7D78EF00B&lt;/flowNodeRef&gt;
-        &lt;flowNodeRef&gt;sid-D7F237E8-56D0-4283-A3CE-4F0EFE446138&lt;/flowNodeRef&gt;
-        &lt;flowNodeRef&gt;sid-E433566C-2289-4BEB-A19C-1697048900D2&lt;/flowNodeRef&gt;
-        &lt;flowNodeRef&gt;sid-5134932A-1863-4FFA-BB3C-A4B4078B11A9&lt;/flowNodeRef&gt;
-        &lt;flowNodeRef&gt;SCAN_OK&lt;/flowNodeRef&gt;
-      &lt;/lane&gt;
-    &lt;/laneSet&gt;
-    &lt;task id="sid-52EB1772-F36E-433E-8F5B-D5DFD26E6F26" name="Scan QR code"&gt;
-      &lt;incoming&gt;sid-4DC479E5-5C20-4948-BCFC-9EC5E2F66D8D&lt;/incoming&gt;
-      &lt;outgoing&gt;sid-EE8A7BA0-5D66-4F8B-80E3-CC2751B3856A&lt;/outgoing&gt;
-    &lt;/task&gt;
-    &lt;task id="sid-E49425CF-8287-4798-B622-D2A7D78EF00B" name="Open product information in mobile  app"&gt;
-      &lt;incoming&gt;sid-8B820AF5-DC5C-4618-B854-E08B71FB55CB&lt;/incoming&gt;
-      &lt;outgoing&gt;sid-57EB1F24-BD94-479A-BF1F-57F1EAA19C6C&lt;/outgoing&gt;
-    &lt;/task&gt;
-    &lt;startEvent id="sid-D7F237E8-56D0-4283-A3CE-4F0EFE446138" name="Notices&amp;#10;QR code"&gt;
-      &lt;outgoing&gt;sid-7B791A11-2F2E-4D80-AFB3-91A02CF2B4FD&lt;/outgoing&gt;
-    &lt;/startEvent&gt;
-    &lt;endEvent id="sid-E433566C-2289-4BEB-A19C-1697048900D2" name="Is informed"&gt;
-      &lt;incoming&gt;sid-57EB1F24-BD94-479A-BF1F-57F1EAA19C6C&lt;/incoming&gt;
-    &lt;/endEvent&gt;
-    &lt;exclusiveGateway id="sid-5134932A-1863-4FFA-BB3C-A4B4078B11A9"&gt;
-      &lt;incoming&gt;sid-7B791A11-2F2E-4D80-AFB3-91A02CF2B4FD&lt;/incoming&gt;
-      &lt;incoming&gt;sid-337A23B9-A923-4CCE-B613-3E247B773CCE&lt;/incoming&gt;
-      &lt;outgoing&gt;sid-4DC479E5-5C20-4948-BCFC-9EC5E2F66D8D&lt;/outgoing&gt;
-    &lt;/exclusiveGateway&gt;
-    &lt;exclusiveGateway id="SCAN_OK" name="Scan successful?&amp;#10;"&gt;
-      &lt;incoming&gt;sid-EE8A7BA0-5D66-4F8B-80E3-CC2751B3856A&lt;/incoming&gt;
-      &lt;outgoing&gt;sid-8B820AF5-DC5C-4618-B854-E08B71FB55CB&lt;/outgoing&gt;
-      &lt;outgoing&gt;sid-337A23B9-A923-4CCE-B613-3E247B773CCE&lt;/outgoing&gt;
-    &lt;/exclusiveGateway&gt;
-    &lt;sequenceFlow id="sid-337A23B9-A923-4CCE-B613-3E247B773CCE" name="Yes" sourceRef="SCAN_OK" targetRef="sid-5134932A-1863-4FFA-BB3C-A4B4078B11A9" /&gt;
-    &lt;sequenceFlow id="sid-4DC479E5-5C20-4948-BCFC-9EC5E2F66D8D" sourceRef="sid-5134932A-1863-4FFA-BB3C-A4B4078B11A9" targetRef="sid-52EB1772-F36E-433E-8F5B-D5DFD26E6F26" /&gt;
-    &lt;sequenceFlow id="sid-8B820AF5-DC5C-4618-B854-E08B71FB55CB" name="No" sourceRef="SCAN_OK" targetRef="sid-E49425CF-8287-4798-B622-D2A7D78EF00B" /&gt;
-    &lt;sequenceFlow id="sid-57EB1F24-BD94-479A-BF1F-57F1EAA19C6C" sourceRef="sid-E49425CF-8287-4798-B622-D2A7D78EF00B" targetRef="sid-E433566C-2289-4BEB-A19C-1697048900D2" /&gt;
-    &lt;sequenceFlow id="sid-EE8A7BA0-5D66-4F8B-80E3-CC2751B3856A" sourceRef="sid-52EB1772-F36E-433E-8F5B-D5DFD26E6F26" targetRef="SCAN_OK" /&gt;
-    &lt;sequenceFlow id="sid-7B791A11-2F2E-4D80-AFB3-91A02CF2B4FD" sourceRef="sid-D7F237E8-56D0-4283-A3CE-4F0EFE446138" targetRef="sid-5134932A-1863-4FFA-BB3C-A4B4078B11A9" /&gt;
-  &lt;/process&gt;
-  &lt;bpmndi:BPMNDiagram id="sid-74620812-92c4-44e5-949c-aa47393d3830"&gt;
-    &lt;bpmndi:BPMNPlane id="sid-cdcae759-2af7-4a6d-bd02-53f3352a731d" bpmnElement="sid-c0e745ff-361e-4afb-8c8d-2a1fc32b1424"&gt;
-      &lt;bpmndi:BPMNShape id="sid-87F4C1D6-25E1-4A45-9DA7-AD945993D06F_gui" bpmnElement="sid-87F4C1D6-25E1-4A45-9DA7-AD945993D06F" isHorizontal="true"&gt;
-        &lt;omgdc:Bounds x="83" y="105" width="933" height="250" /&gt;
-        &lt;bpmndi:BPMNLabel labelStyle="sid-84cb49fd-2f7c-44fb-8950-83c3fa153d3b"&gt;
-          &lt;omgdc:Bounds x="47.49999999999999" y="170.42857360839844" width="12.000000000000014" height="59.142852783203125" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNShape&gt;
-      &lt;bpmndi:BPMNShape id="sid-57E4FE0D-18E4-478D-BC5D-B15164E93254_gui" bpmnElement="sid-57E4FE0D-18E4-478D-BC5D-B15164E93254" isHorizontal="true"&gt;
-        &lt;omgdc:Bounds x="113" y="105" width="903" height="250" /&gt;
-      &lt;/bpmndi:BPMNShape&gt;
-      &lt;bpmndi:BPMNShape id="sid-52EB1772-F36E-433E-8F5B-D5DFD26E6F26_gui" bpmnElement="sid-52EB1772-F36E-433E-8F5B-D5DFD26E6F26"&gt;
-        &lt;omgdc:Bounds x="393" y="170" width="100" height="80" /&gt;
-        &lt;bpmndi:BPMNLabel labelStyle="sid-84cb49fd-2f7c-44fb-8950-83c3fa153d3b"&gt;
-          &lt;omgdc:Bounds x="360.5" y="172" width="84" height="12" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNShape&gt;
-      &lt;bpmndi:BPMNShape id="sid-E49425CF-8287-4798-B622-D2A7D78EF00B_gui" bpmnElement="sid-E49425CF-8287-4798-B622-D2A7D78EF00B"&gt;
-        &lt;omgdc:Bounds x="728" y="170" width="100" height="80" /&gt;
-        &lt;bpmndi:BPMNLabel labelStyle="sid-84cb49fd-2f7c-44fb-8950-83c3fa153d3b"&gt;
-          &lt;omgdc:Bounds x="695.9285736083984" y="162" width="83.14285278320312" height="36" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNShape&gt;
-      &lt;bpmndi:BPMNEdge id="sid-EE8A7BA0-5D66-4F8B-80E3-CC2751B3856A_gui" bpmnElement="sid-EE8A7BA0-5D66-4F8B-80E3-CC2751B3856A"&gt;
-        &lt;omgdi:waypoint x="493" y="210" /&gt;
-        &lt;omgdi:waypoint x="585" y="210" /&gt;
-        &lt;bpmndi:BPMNLabel&gt;
-          &lt;omgdc:Bounds x="494" y="185" width="90" height="20" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNEdge&gt;
-      &lt;bpmndi:BPMNEdge id="sid-8B820AF5-DC5C-4618-B854-E08B71FB55CB_gui" bpmnElement="sid-8B820AF5-DC5C-4618-B854-E08B71FB55CB"&gt;
-        &lt;omgdi:waypoint x="635" y="210" /&gt;
-        &lt;omgdi:waypoint x="728" y="210" /&gt;
-        &lt;bpmndi:BPMNLabel labelStyle="sid-e0502d32-f8d1-41cf-9c4a-cbb49fecf581"&gt;
-          &lt;omgdc:Bounds x="642" y="185" width="16" height="12" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNEdge&gt;
-      &lt;bpmndi:BPMNEdge id="sid-7B791A11-2F2E-4D80-AFB3-91A02CF2B4FD_gui" bpmnElement="sid-7B791A11-2F2E-4D80-AFB3-91A02CF2B4FD"&gt;
-        &lt;omgdi:waypoint x="223" y="210" /&gt;
-        &lt;omgdi:waypoint x="275" y="210" /&gt;
-        &lt;bpmndi:BPMNLabel&gt;
-          &lt;omgdc:Bounds x="204" y="185" width="90" height="20" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNEdge&gt;
-      &lt;bpmndi:BPMNEdge id="sid-4DC479E5-5C20-4948-BCFC-9EC5E2F66D8D_gui" bpmnElement="sid-4DC479E5-5C20-4948-BCFC-9EC5E2F66D8D"&gt;
-        &lt;omgdi:waypoint x="325" y="210" /&gt;
-        &lt;omgdi:waypoint x="393" y="210" /&gt;
-        &lt;bpmndi:BPMNLabel&gt;
-          &lt;omgdc:Bounds x="314" y="185" width="90" height="20" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNEdge&gt;
-      &lt;bpmndi:BPMNEdge id="sid-57EB1F24-BD94-479A-BF1F-57F1EAA19C6C_gui" bpmnElement="sid-57EB1F24-BD94-479A-BF1F-57F1EAA19C6C"&gt;
-        &lt;omgdi:waypoint x="828" y="210" /&gt;
-        &lt;omgdi:waypoint x="901" y="210" /&gt;
-        &lt;bpmndi:BPMNLabel&gt;
-          &lt;omgdc:Bounds x="820" y="185" width="90" height="20" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNEdge&gt;
-      &lt;bpmndi:BPMNEdge id="sid-337A23B9-A923-4CCE-B613-3E247B773CCE_gui" bpmnElement="sid-337A23B9-A923-4CCE-B613-3E247B773CCE"&gt;
-        &lt;omgdi:waypoint x="611" y="234" /&gt;
-        &lt;omgdi:waypoint x="610.5" y="299" /&gt;
-        &lt;omgdi:waypoint x="300.5" y="299" /&gt;
-        &lt;omgdi:waypoint x="301" y="234" /&gt;
-        &lt;bpmndi:BPMNLabel labelStyle="sid-e0502d32-f8d1-41cf-9c4a-cbb49fecf581"&gt;
-          &lt;omgdc:Bounds x="585" y="236" width="21" height="12" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNEdge&gt;
-      &lt;bpmndi:BPMNShape id="StartEvent_0l6sgn0_di" bpmnElement="sid-D7F237E8-56D0-4283-A3CE-4F0EFE446138"&gt;
-        &lt;omgdc:Bounds x="187" y="192" width="36" height="36" /&gt;
-        &lt;bpmndi:BPMNLabel&gt;
-          &lt;omgdc:Bounds x="182" y="229" width="46" height="24" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNShape&gt;
-      &lt;bpmndi:BPMNShape id="EndEvent_0xwuvv5_di" bpmnElement="sid-E433566C-2289-4BEB-A19C-1697048900D2"&gt;
-        &lt;omgdc:Bounds x="901" y="192" width="36" height="36" /&gt;
-        &lt;bpmndi:BPMNLabel&gt;
-          &lt;omgdc:Bounds x="892" y="231" width="56" height="12" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNShape&gt;
-      &lt;bpmndi:BPMNShape id="ExclusiveGateway_1g0eih2_di" bpmnElement="sid-5134932A-1863-4FFA-BB3C-A4B4078B11A9" isMarkerVisible="true"&gt;
-        &lt;omgdc:Bounds x="275" y="185" width="50" height="50" /&gt;
-        &lt;bpmndi:BPMNLabel&gt;
-          &lt;omgdc:Bounds x="210" y="160" width="90" height="12" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNShape&gt;
-      &lt;bpmndi:BPMNShape id="ExclusiveGateway_0vci1x5_di" bpmnElement="SCAN_OK" isMarkerVisible="true"&gt;
-        &lt;omgdc:Bounds x="585" y="185" width="50" height="50" /&gt;
-        &lt;bpmndi:BPMNLabel&gt;
-          &lt;omgdc:Bounds x="568" y="157" width="88" height="24" /&gt;
-        &lt;/bpmndi:BPMNLabel&gt;
-      &lt;/bpmndi:BPMNShape&gt;
-    &lt;/bpmndi:BPMNPlane&gt;
-    &lt;bpmndi:BPMNLabelStyle id="sid-e0502d32-f8d1-41cf-9c4a-cbb49fecf581"&gt;
-      &lt;omgdc:Font name="Arial" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" /&gt;
-    &lt;/bpmndi:BPMNLabelStyle&gt;
-    &lt;bpmndi:BPMNLabelStyle id="sid-84cb49fd-2f7c-44fb-8950-83c3fa153d3b"&gt;
-      &lt;omgdc:Font name="Arial" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" /&gt;
-    &lt;/bpmndi:BPMNLabelStyle&gt;
-  &lt;/bpmndi:BPMNDiagram&gt;
-&lt;/definitions&gt;</pre>
+<img src="./images/bpmn-internal-example-diagram.svg" alt="bpmn internal example diagram" width="945" height="262">
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_external_diagram_source_file_6"><a class="anchor" href="#_external_diagram_source_file_6"></a>5.2. External diagram source file</h3>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>Failed to generate image: bpmn-js failed: Failed to render diagram
- Error: net::ERR_FILE_NOT_FOUND at file:///usr/local/share/.config/yarn/global/node_modules/.bin/index.html
-    at navigate (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:183:27)
-    at async Deferred.race (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/util/Deferred.js:36:20)
-    at async CdpFrame.goto (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/Frame.js:149:25)
-    at async CdpPage.goto (/usr/local/share/.config/yarn/global/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:567:20)
-    at async renderDiagram (/usr/local/share/.config/yarn/global/node_modules/.bin/bpmn-js:59:9)
-
-&lt;?xml version="1.0" standalone="yes"?&gt;
-&lt;semantic:definitions id="_1275940932088" targetNamespace="http://www.trisotech.com/definitions/_1275940932088" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL"&gt;
-    &lt;semantic:message id="_1275940932310"/&gt;
-    &lt;semantic:message id="_1275940932433"/&gt;
-    &lt;semantic:process isExecutable="false" id="_6-1"&gt;
-        &lt;semantic:laneSet id="ls_6-438"&gt;
-            &lt;semantic:lane name="clerk" id="_6-650"&gt;
-                &lt;semantic:flowNodeRef&gt;_6-450&lt;/semantic:flowNodeRef&gt;
-                &lt;semantic:flowNodeRef&gt;_6-652&lt;/semantic:flowNodeRef&gt;
-                &lt;semantic:flowNodeRef&gt;_6-674&lt;/semantic:flowNodeRef&gt;
-                &lt;semantic:flowNodeRef&gt;_6-695&lt;/semantic:flowNodeRef&gt;
-            &lt;/semantic:lane&gt;
-            &lt;semantic:lane name="pizza chef" id="_6-446"&gt;
-                &lt;semantic:flowNodeRef&gt;_6-463&lt;/semantic:flowNodeRef&gt;
-            &lt;/semantic:lane&gt;
-            &lt;semantic:lane name="delivery boy" id="_6-448"&gt;
-                &lt;semantic:flowNodeRef&gt;_6-514&lt;/semantic:flowNodeRef&gt;
-                &lt;semantic:flowNodeRef&gt;_6-565&lt;/semantic:flowNodeRef&gt;
-                &lt;semantic:flowNodeRef&gt;_6-616&lt;/semantic:flowNodeRef&gt;
-            &lt;/semantic:lane&gt;
-        &lt;/semantic:laneSet&gt;
-        &lt;semantic:startEvent name="Order received" id="_6-450"&gt;
-            &lt;semantic:outgoing&gt;_6-630&lt;/semantic:outgoing&gt;
-            &lt;semantic:messageEventDefinition messageRef="_1275940932310"/&gt;
-        &lt;/semantic:startEvent&gt;
-        &lt;semantic:parallelGateway gatewayDirection="Unspecified" name="" id="_6-652"&gt;
-            &lt;semantic:incoming&gt;_6-630&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-691&lt;/semantic:outgoing&gt;
-            &lt;semantic:outgoing&gt;_6-693&lt;/semantic:outgoing&gt;
-        &lt;/semantic:parallelGateway&gt;
-        &lt;semantic:intermediateCatchEvent parallelMultiple="false" name="&amp;#8222;where is my pizza?&amp;#8220;" id="_6-674"&gt;
-            &lt;semantic:incoming&gt;_6-691&lt;/semantic:incoming&gt;
-            &lt;semantic:incoming&gt;_6-746&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-748&lt;/semantic:outgoing&gt;
-            &lt;semantic:messageEventDefinition messageRef="_1275940932433"/&gt;
-        &lt;/semantic:intermediateCatchEvent&gt;
-        &lt;semantic:task completionQuantity="1" isForCompensation="false" startQuantity="1" name="Calm customer" id="_6-695"&gt;
-            &lt;semantic:incoming&gt;_6-748&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-746&lt;/semantic:outgoing&gt;
-        &lt;/semantic:task&gt;
-        &lt;semantic:task completionQuantity="1" isForCompensation="false" startQuantity="1" name="Bake the pizza" id="_6-463"&gt;
-            &lt;semantic:incoming&gt;_6-693&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-632&lt;/semantic:outgoing&gt;
-        &lt;/semantic:task&gt;
-        &lt;semantic:task completionQuantity="1" isForCompensation="false" startQuantity="1" name="Deliver the pizza" id="_6-514"&gt;
-            &lt;semantic:incoming&gt;_6-632&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-634&lt;/semantic:outgoing&gt;
-        &lt;/semantic:task&gt;
-        &lt;semantic:task completionQuantity="1" isForCompensation="false" startQuantity="1" name="Receive payment" id="_6-565"&gt;
-            &lt;semantic:incoming&gt;_6-634&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-636&lt;/semantic:outgoing&gt;
-        &lt;/semantic:task&gt;
-        &lt;semantic:endEvent name="" id="_6-616"&gt;
-            &lt;semantic:incoming&gt;_6-636&lt;/semantic:incoming&gt;
-            &lt;semantic:terminateEventDefinition/&gt;
-        &lt;/semantic:endEvent&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-450" targetRef="_6-652" name="" id="_6-630"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-463" targetRef="_6-514" name="" id="_6-632"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-514" targetRef="_6-565" name="" id="_6-634"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-565" targetRef="_6-616" name="" id="_6-636"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-652" targetRef="_6-674" name="" id="_6-691"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-652" targetRef="_6-463" name="" id="_6-693"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-695" targetRef="_6-674" name="" id="_6-746"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-674" targetRef="_6-695" name="" id="_6-748"/&gt;
-    &lt;/semantic:process&gt;
-    &lt;semantic:message id="_1275940932198"/&gt;
-    &lt;semantic:process isExecutable="false" id="_6-2"&gt;
-        &lt;semantic:startEvent name="Hungry for pizza" id="_6-61"&gt;
-            &lt;semantic:outgoing&gt;_6-125&lt;/semantic:outgoing&gt;
-        &lt;/semantic:startEvent&gt;
-        &lt;semantic:task completionQuantity="1" isForCompensation="false" startQuantity="1" name="Select a pizza" id="_6-74"&gt;
-            &lt;semantic:incoming&gt;_6-125&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-178&lt;/semantic:outgoing&gt;
-        &lt;/semantic:task&gt;
-        &lt;semantic:task completionQuantity="1" isForCompensation="false" startQuantity="1" name="Order a pizza" id="_6-127"&gt;
-            &lt;semantic:incoming&gt;_6-178&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-420&lt;/semantic:outgoing&gt;
-        &lt;/semantic:task&gt;
-        &lt;semantic:eventBasedGateway eventGatewayType="Exclusive" instantiate="false" gatewayDirection="Unspecified" name="" id="_6-180"&gt;
-            &lt;semantic:incoming&gt;_6-420&lt;/semantic:incoming&gt;
-            &lt;semantic:incoming&gt;_6-430&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-422&lt;/semantic:outgoing&gt;
-            &lt;semantic:outgoing&gt;_6-424&lt;/semantic:outgoing&gt;
-        &lt;/semantic:eventBasedGateway&gt;
-        &lt;semantic:intermediateCatchEvent parallelMultiple="false" name="pizza received" id="_6-202"&gt;
-            &lt;semantic:incoming&gt;_6-422&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-428&lt;/semantic:outgoing&gt;
-            &lt;semantic:messageEventDefinition messageRef="_1275940932198"/&gt;
-        &lt;/semantic:intermediateCatchEvent&gt;
-        &lt;semantic:intermediateCatchEvent parallelMultiple="false" name="60 minutes" id="_6-219"&gt;
-            &lt;semantic:incoming&gt;_6-424&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-426&lt;/semantic:outgoing&gt;
-            &lt;semantic:timerEventDefinition&gt;
-                &lt;semantic:timeDate/&gt;
-            &lt;/semantic:timerEventDefinition&gt;
-        &lt;/semantic:intermediateCatchEvent&gt;
-        &lt;semantic:task completionQuantity="1" isForCompensation="false" startQuantity="1" name="Ask for the pizza" id="_6-236"&gt;
-            &lt;semantic:incoming&gt;_6-426&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-430&lt;/semantic:outgoing&gt;
-        &lt;/semantic:task&gt;
-        &lt;semantic:task completionQuantity="1" isForCompensation="false" startQuantity="1" name="Pay the pizza" id="_6-304"&gt;
-            &lt;semantic:incoming&gt;_6-428&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-434&lt;/semantic:outgoing&gt;
-        &lt;/semantic:task&gt;
-        &lt;semantic:task completionQuantity="1" isForCompensation="false" startQuantity="1" name="Eat the pizza" id="_6-355"&gt;
-            &lt;semantic:incoming&gt;_6-434&lt;/semantic:incoming&gt;
-            &lt;semantic:outgoing&gt;_6-436&lt;/semantic:outgoing&gt;
-        &lt;/semantic:task&gt;
-        &lt;semantic:endEvent name="Hunger satisfied" id="_6-406"&gt;
-            &lt;semantic:incoming&gt;_6-436&lt;/semantic:incoming&gt;
-        &lt;/semantic:endEvent&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-61" targetRef="_6-74" name="" id="_6-125"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-74" targetRef="_6-127" name="" id="_6-178"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-127" targetRef="_6-180" name="" id="_6-420"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-180" targetRef="_6-202" name="" id="_6-422"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-180" targetRef="_6-219" name="" id="_6-424"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-219" targetRef="_6-236" name="" id="_6-426"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-202" targetRef="_6-304" name="" id="_6-428"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-236" targetRef="_6-180" name="" id="_6-430"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-304" targetRef="_6-355" name="" id="_6-434"/&gt;
-        &lt;semantic:sequenceFlow sourceRef="_6-355" targetRef="_6-406" name="" id="_6-436"/&gt;
-    &lt;/semantic:process&gt;
-    &lt;semantic:collaboration id="C1275940932557"&gt;
-        &lt;semantic:participant name="Pizza Customer" processRef="_6-2" id="_6-53"/&gt;
-        &lt;semantic:participant name="Pizza vendor" processRef="_6-1" id="_6-438"/&gt;
-        &lt;semantic:messageFlow name="pizza order" sourceRef="_6-127" targetRef="_6-450" id="_6-638"/&gt;
-        &lt;semantic:messageFlow name="" sourceRef="_6-236" targetRef="_6-674" id="_6-642"/&gt;
-        &lt;semantic:messageFlow name="receipt" sourceRef="_6-565" targetRef="_6-304" id="_6-646"/&gt;
-        &lt;semantic:messageFlow name="money" sourceRef="_6-304" targetRef="_6-565" id="_6-648"/&gt;
-        &lt;semantic:messageFlow name="pizza" sourceRef="_6-514" targetRef="_6-202" id="_6-640"/&gt;
-        &lt;semantic:messageFlow name="" sourceRef="_6-695" targetRef="_6-236" id="_6-750"/&gt;
-    &lt;/semantic:collaboration&gt;
-    &lt;bpmndi:BPMNDiagram documentation="" id="Trisotech.Visio-_6" name="Untitled Diagram" resolution="96.00000267028808"&gt;
-        &lt;bpmndi:BPMNPlane bpmnElement="C1275940932557"&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-53" isHorizontal="true" id="Trisotech.Visio__6-53"&gt;
-                &lt;dc:Bounds height="294.0" width="1044.0" x="12.0" y="12.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-438" isHorizontal="true" id="Trisotech.Visio__6-438"&gt;
-                &lt;dc:Bounds height="337.0" width="905.0" x="12.0" y="372.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-650" isHorizontal="true" id="Trisotech.Visio__6__6-650"&gt;
-                &lt;dc:Bounds height="114.0" width="875.0" x="42.0" y="372.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-446" isHorizontal="true" id="Trisotech.Visio__6__6-446"&gt;
-                &lt;dc:Bounds height="114.0" width="875.0" x="42.0" y="486.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-448" isHorizontal="true" id="Trisotech.Visio__6__6-448"&gt;
-                &lt;dc:Bounds height="109.0" width="875.0" x="42.0" y="600.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-450" id="Trisotech.Visio__6__6-450"&gt;
-                &lt;dc:Bounds height="30.0" width="30.0" x="79.0" y="405.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-652" id="Trisotech.Visio__6__6-652"&gt;
-                &lt;dc:Bounds height="42.0" width="42.0" x="140.0" y="399.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-674" id="Trisotech.Visio__6__6-674"&gt;
-                &lt;dc:Bounds height="32.0" width="32.0" x="218.0" y="404.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-695" id="Trisotech.Visio__6__6-695"&gt;
-                &lt;dc:Bounds height="68.0" width="83.0" x="286.0" y="386.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-463" id="Trisotech.Visio__6__6-463"&gt;
-                &lt;dc:Bounds height="68.0" width="83.0" x="252.0" y="521.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-514" id="Trisotech.Visio__6__6-514"&gt;
-                &lt;dc:Bounds height="68.0" width="83.0" x="464.0" y="629.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-565" id="Trisotech.Visio__6__6-565"&gt;
-                &lt;dc:Bounds height="68.0" width="83.0" x="603.0" y="629.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-616" id="Trisotech.Visio__6__6-616"&gt;
-                &lt;dc:Bounds height="32.0" width="32.0" x="722.0" y="647.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-61" id="Trisotech.Visio__6__6-61"&gt;
-                &lt;dc:Bounds height="30.0" width="30.0" x="66.0" y="96.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-74" id="Trisotech.Visio__6__6-74"&gt;
-                &lt;dc:Bounds height="68.0" width="83.0" x="145.0" y="77.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-127" id="Trisotech.Visio__6__6-127"&gt;
-                &lt;dc:Bounds height="68.0" width="83.0" x="265.0" y="77.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-180" id="Trisotech.Visio__6__6-180"&gt;
-                &lt;dc:Bounds height="42.0" width="42.0" x="378.0" y="90.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-202" id="Trisotech.Visio__6__6-202"&gt;
-                &lt;dc:Bounds height="32.0" width="32.0" x="647.0" y="95.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-219" id="Trisotech.Visio__6__6-219"&gt;
-                &lt;dc:Bounds height="32.0" width="32.0" x="448.0" y="184.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-236" id="Trisotech.Visio__6__6-236"&gt;
-                &lt;dc:Bounds height="68.0" width="83.0" x="517.0" y="166.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-304" id="Trisotech.Visio__6__6-304"&gt;
-                &lt;dc:Bounds height="68.0" width="83.0" x="726.0" y="77.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-355" id="Trisotech.Visio__6__6-355"&gt;
-                &lt;dc:Bounds height="68.0" width="83.0" x="834.0" y="77.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNShape bpmnElement="_6-406" id="Trisotech.Visio__6__6-406"&gt;
-                &lt;dc:Bounds height="32.0" width="32.0" x="956.0" y="95.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNShape&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-640" messageVisibleKind="initiating" id="Trisotech.Visio__6__6-640"&gt;
-                &lt;di:waypoint x="506.0" y="629.0"/&gt;
-                &lt;di:waypoint x="506.0" y="384.0"/&gt;
-                &lt;di:waypoint x="663.0" y="384.0"/&gt;
-                &lt;di:waypoint x="663.0" y="127.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-630" id="Trisotech.Visio__6__6-630"&gt;
-                &lt;di:waypoint x="109.0" y="420.0"/&gt;
-                &lt;di:waypoint x="140.0" y="420.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-691" id="Trisotech.Visio__6__6-691"&gt;
-                &lt;di:waypoint x="182.0" y="420.0"/&gt;
-                &lt;di:waypoint x="200.0" y="420.0"/&gt;
-                &lt;di:waypoint x="218.0" y="420.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-648" messageVisibleKind="initiating" id="Trisotech.Visio__6__6-648"&gt;
-                &lt;di:waypoint x="754.0" y="145.0"/&gt;
-                &lt;di:waypoint x="754.0" y="408.0"/&gt;
-                &lt;di:waypoint x="630.0" y="408.0"/&gt;
-                &lt;di:waypoint x="631.0" y="629.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-422" id="Trisotech.Visio__6__6-422"&gt;
-                &lt;di:waypoint x="420.0" y="111.0"/&gt;
-                &lt;di:waypoint x="438.0" y="111.0"/&gt;
-                &lt;di:waypoint x="647.0" y="111.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-646" messageVisibleKind="non_initiating" id="Trisotech.Visio__6__6-646"&gt;
-                &lt;di:waypoint x="658.0" y="629.0"/&gt;
-                &lt;di:waypoint x="658.0" y="432.0"/&gt;
-                &lt;di:waypoint x="782.0" y="432.0"/&gt;
-                &lt;di:waypoint x="782.0" y="145.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-428" id="Trisotech.Visio__6__6-428"&gt;
-                &lt;di:waypoint x="679.0" y="111.0"/&gt;
-                &lt;di:waypoint x="726.0" y="111.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-748" id="Trisotech.Visio__6__6-748"&gt;
-                &lt;di:waypoint x="250.0" y="420.0"/&gt;
-                &lt;di:waypoint x="268.0" y="420.0"/&gt;
-                &lt;di:waypoint x="286.0" y="420.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-420" id="Trisotech.Visio__6__6-420"&gt;
-                &lt;di:waypoint x="348.0" y="111.0"/&gt;
-                &lt;di:waypoint x="366.0" y="111.0"/&gt;
-                &lt;di:waypoint x="378.0" y="111.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-636" id="Trisotech.Visio__6__6-636"&gt;
-                &lt;di:waypoint x="686.0" y="663.0"/&gt;
-                &lt;di:waypoint x="704.0" y="663.0"/&gt;
-                &lt;di:waypoint x="722.0" y="663.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-750" id="Trisotech.Visio__6__6-750"&gt;
-                &lt;di:waypoint x="328.0" y="386.0"/&gt;
-                &lt;di:waypoint x="328.0" y="348.0"/&gt;
-                &lt;di:waypoint x="572.0" y="348.0"/&gt;
-                &lt;di:waypoint x="572.0" y="234.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-436" id="Trisotech.Visio__6__6-436"&gt;
-                &lt;di:waypoint x="918.0" y="111.0"/&gt;
-                &lt;di:waypoint x="936.0" y="111.0"/&gt;
-                &lt;di:waypoint x="956.0" y="111.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-632" id="Trisotech.Visio__6__6-632"&gt;
-                &lt;di:waypoint x="335.0" y="555.0"/&gt;
-                &lt;di:waypoint x="353.0" y="555.0"/&gt;
-                &lt;di:waypoint x="353.0" y="663.0"/&gt;
-                &lt;di:waypoint x="464.0" y="663.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-634" id="Trisotech.Visio__6__6-634"&gt;
-                &lt;di:waypoint x="548.0" y="663.0"/&gt;
-                &lt;di:waypoint x="603.0" y="663.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-125" id="Trisotech.Visio__6__6-125"&gt;
-                &lt;di:waypoint x="96.0" y="111.0"/&gt;
-                &lt;di:waypoint x="114.0" y="111.0"/&gt;
-                &lt;di:waypoint x="145.0" y="111.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-430" id="Trisotech.Visio__6__6-430"&gt;
-                &lt;di:waypoint x="600.0" y="200.0"/&gt;
-                &lt;di:waypoint x="618.0" y="200.0"/&gt;
-                &lt;di:waypoint x="618.0" y="252.0"/&gt;
-                &lt;di:waypoint x="576.0" y="252.0"/&gt;
-                &lt;di:waypoint x="549.0" y="252.0"/&gt;
-                &lt;di:waypoint x="360.0" y="252.0"/&gt;
-                &lt;di:waypoint x="360.0" y="111.0"/&gt;
-                &lt;di:waypoint x="378.0" y="111.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-642" id="Trisotech.Visio__6__6-642"&gt;
-                &lt;di:waypoint x="545.0" y="234.0"/&gt;
-                &lt;di:waypoint x="545.0" y="324.0"/&gt;
-                &lt;di:waypoint x="234.0" y="324.0"/&gt;
-                &lt;di:waypoint x="234.0" y="404.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-424" id="Trisotech.Visio__6__6-424"&gt;
-                &lt;di:waypoint x="399.0" y="132.0"/&gt;
-                &lt;di:waypoint x="399.0" y="200.0"/&gt;
-                &lt;di:waypoint x="448.0" y="200.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-638" messageVisibleKind="initiating" id="Trisotech.Visio__6__6-638"&gt;
-                &lt;di:waypoint x="306.0" y="145.0"/&gt;
-                &lt;di:waypoint x="306.0" y="252.0"/&gt;
-                &lt;di:waypoint x="94.0" y="252.0"/&gt;
-                &lt;di:waypoint x="94.0" y="405.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-426" id="Trisotech.Visio__6__6-426"&gt;
-                &lt;di:waypoint x="480.0" y="200.0"/&gt;
-                &lt;di:waypoint x="498.0" y="200.0"/&gt;
-                &lt;di:waypoint x="517.0" y="200.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-693" id="Trisotech.Visio__6__6-693"&gt;
-                &lt;di:waypoint x="161.0" y="441.0"/&gt;
-                &lt;di:waypoint x="161.0" y="556.0"/&gt;
-                &lt;di:waypoint x="252.0" y="555.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-178" id="Trisotech.Visio__6__6-178"&gt;
-                &lt;di:waypoint x="228.0" y="111.0"/&gt;
-                &lt;di:waypoint x="265.0" y="111.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-746" id="Trisotech.Visio__6__6-746"&gt;
-                &lt;di:waypoint x="370.0" y="420.0"/&gt;
-                &lt;di:waypoint x="386.0" y="420.0"/&gt;
-                &lt;di:waypoint x="386.0" y="474.0"/&gt;
-                &lt;di:waypoint x="191.0" y="474.0"/&gt;
-                &lt;di:waypoint x="191.0" y="420.0"/&gt;
-                &lt;di:waypoint x="218.0" y="420.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-            &lt;bpmndi:BPMNEdge bpmnElement="_6-434" id="Trisotech.Visio__6__6-434"&gt;
-                &lt;di:waypoint x="810.0" y="111.0"/&gt;
-                &lt;di:waypoint x="834.0" y="111.0"/&gt;
-                &lt;bpmndi:BPMNLabel/&gt;
-            &lt;/bpmndi:BPMNEdge&gt;
-        &lt;/bpmndi:BPMNPlane&gt;
-    &lt;/bpmndi:BPMNDiagram&gt;
-&lt;/semantic:definitions&gt;</pre>
+<img src="./images/bpmn.svg" alt="Diagram" width="1056" height="709">
 </div>
 </div>
 </div>
@@ -1871,17 +1326,50 @@ drawings and illustrations for documents, web pages, and other uses.</p>
 </div>
 <div class="sect2">
 <h3 id="_internal_diagram_source_14"><a class="anchor" href="#_internal_diagram_source_14"></a>14.1. Internal diagram source</h3>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/mermaid-internal-example-diagram.svg" alt="mermaid internal example diagram" width="310" height="454">
+<pre>Failed to generate image: mmdc failed:
+SyntaxError: No number after minus sign in JSON at position 121
+    at JSON.parse (&lt;anonymous&gt;)
+    at cli (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:180:59)
+    at file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/cli.js:6:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)
+
+
+flowchart TD
+    A[Christmas] --&gt;|Get money| B(Go shopping)
+    B --&gt; C{Let me think}
+    C --&gt;|One| D[Laptop]
+    C --&gt;|Two| E[iPhone]
+    C --&gt;|Three| F[fa:fa-car Car]</pre>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_external_diagram_source_file_14"><a class="anchor" href="#_external_diagram_source_file_14"></a>14.2. External diagram source file</h3>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="./images/mermaid.svg" alt="Diagram" width="840" height="563">
+<pre>Failed to generate image: mmdc failed:
+SyntaxError: No number after minus sign in JSON at position 121
+    at JSON.parse (&lt;anonymous&gt;)
+    at cli (file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/index.js:180:59)
+    at file:///usr/local/share/.config/yarn/global/node_modules/@mermaid-js/mermaid-cli/src/cli.js:6:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)
+
+
+sequenceDiagram
+    Alice -&gt;&gt; Bob: Hello Bob, how are you?
+    Bob--&gt;&gt;John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long&lt;br/&gt;long time, so long&lt;br/&gt;that the text does&lt;br/&gt;not fit on a row.
+
+    Bob--&gt;Alice: Checking with John...
+    Alice-&gt;John: Yes... John, how are you?</pre>
 </div>
 </div>
 </div>
@@ -2452,8 +1940,8 @@ The <code>umlet</code> backend currently does not support internal diagram sourc
 </div>
 <div id="footer">
 <div id="footer-text">
-version: 4191defd<br>
-4191defd - 2024-09-14 08:47:34 UTC
+version: 454ebbaa<br>
+454ebbaa - 2024-09-15 12:18:59 UTC
 </div>
 </div>
 </body>
