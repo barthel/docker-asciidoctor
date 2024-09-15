@@ -73,7 +73,7 @@ RUN curl -S -s -o ${TMPDIR}/umlet.zip https://www.umlet.com/download/umlet_${uml
 # 'Node.js' packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install mermaid-cli - @see: https://github.com/mermaid-js/mermaid-cli
-ARG mermaid_version="10.9.1"
+ARG mermaid_version="11.1.1"
 # Install mscgenjs-cli - @see: https://github.com/mscgenjs/mscgenjs-cli
 ARG mscgen_version="6.0.0"
 # Install bpmn-js-cmd - @see: https://github.com/gtudan/bpmn-js-cmd
@@ -224,16 +224,22 @@ RUN apk --no-cache add \
 # https://github.com/barthel/docker-asciidoctor/issues/2
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-#    && echo "Install mscgen-cli@${mscgen_version}" \
-#    && yarn global add \
-#        "mscgenjs-cli@${mscgen_version}" \
-#    && yarn install --no-lockfile \
-#    && mv /usr/local/bin/mscgen_js /usr/local/bin/mscgen_js.node \
-#    && rm -f /usr/local/bin/mscgen_js
-#
-#    && echo -e "#!/bin/sh\n/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/puppeteer-config.json \${@}" > /usr/local/bin/mscgen_js \
-#    && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
-#    && chmod +x /usr/local/bin/mscgen* \
+# && yarn config set ignore-engines true --global \
+# && echo "Install mscgen-cli@${mscgen_version}" \
+# && yarn global add \
+#     "mscgenjs-cli@${mscgen_version}" \
+# && yarn install --no-lockfile \
+# && yarn config set ignore-engines false --global \
+# && echo "\tmscgen" \
+# && mv /usr/local/bin/mscgen_js /usr/local/bin/mscgen_js.node \
+# && rm -f /usr/local/bin/mscgen_js \
+# && { \
+#     echo '#!/bin/sh'; \
+#     echo ''; \
+#     echo '/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/puppeteer-config.json ${@}'; \
+# } > /usr/local/bin/mscgen_js \
+# && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
+# && chmod +x /usr/local/bin/mscgen* \
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
