@@ -109,6 +109,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-browser"
 ENV CHROMIUM_PATH="/usr/bin/chromium-browser"
 ENV PUPPETEER_ARGS='"--no-sandbox", "--allow-insecure-localhost", "--disable-gpu", "--disable-setuid-sandbox"'
+ENV PUPPETEER_DEBUG=${PUPPETEER_DEBUG:-true}
 
 RUN cat <<EOF > /usr/local/puppeteer-config.json
 {
@@ -117,7 +118,7 @@ RUN cat <<EOF > /usr/local/puppeteer-config.json
     "headless": "new",
     "ignoreHTTPSErrors": true,
     "args": [${PUPPETEER_ARGS}],
-    "dumpio": true,
+    "dumpio": ${PUPPETEER_DEBUG},
     "executablePath": "${CHROMIUM_PATH}"
 }
 EOF
@@ -215,10 +216,10 @@ RUN apk --no-cache add \
     && echo "\tbpmn-js" \
     && _bpmn=$(readlink -f /usr/local/bin/bpmn-js) \
     && sed -i "s|args: \['--no-sandbox'\],|args: \[${PUPPETEER_ARGS}\],|" "${_bpmn}" \
-    && sed -i "/args:.*,/a\\            dumpio: true," "${_bpmn}" \
-    && sed -i "/dumpio: true,/a\\            headless: \"new\"," "${_bpmn}" \
-    && sed -i "/dumpio: true,/a\\            product: \"${PUPPETEER_PRODUCT}\"," "${_bpmn}" \
-    && sed -i "/dumpio: true,/a\\            skipDownload: ${PUPPETEER_SKIP_DOWNLOAD}," "${_bpmn}"
+    && sed -i "/args:.*,/a\\            dumpio: process.env.PUPPETEER_DEBUG === 'true'," "${_bpmn}" \
+    && sed -i "/dumpio:.*,/a\\            headless: \"new\"," "${_bpmn}" \
+    && sed -i "/dumpio:.*,/a\\            product: \"${PUPPETEER_PRODUCT}\"," "${_bpmn}" \
+    && sed -i "/dumpio:.*,/a\\            skipDownload: ${PUPPETEER_SKIP_DOWNLOAD}," "${_bpmn}"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # mscgenjs-cli is not compatible with node anymore
 # https://github.com/barthel/docker-asciidoctor/issues/2
