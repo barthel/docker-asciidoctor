@@ -79,7 +79,7 @@ ARG mscgen_version="6.0.0"
 # Install bpmn-js-cmd - @see: https://github.com/gtudan/bpmn-js-cmd
 ARG bpmn_js_cmd_version="0.4.0"
 # Install bytefield-svg - @see: https://github.com/Deep-Symmetry/bytefield-svg
-ARG bytefield_version="1.8.0"
+ARG bytefield_version="1.10.0"
 # Install nomnoml - @see: https://github.com/skanaar/nomnoml
 ARG nomnoml_version="1.5.3"
 # Install state-machine-cat (smcat) - @see: https://github.com/sverweij/state-machine-cat/
