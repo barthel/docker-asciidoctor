@@ -111,5 +111,14 @@ docker run --rm \
 
 Docker Hub: https://hub.docker.com/r/uwebarthel/asciidoctor
 
+## Building
+
+```bash
+docker build \
+  --build-arg CONTAINER_INFORMATION="docker.io/uwebarthel/asciidoctor:latest ($(git rev-parse --short HEAD))" \
+  --tag uwebarthel/asciidoctor:latest \
+  --tag docker.io/uwebarthel/asciidoctor:latest \
+  .
+```
 ---
 <sup>[1]</sup> provided by original Asciidoctor Docker Image

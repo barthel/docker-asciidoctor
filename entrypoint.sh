@@ -1,5 +1,12 @@
 #!/bin/sh
-# busybox
+# busybox - ash
+
+trap 'echo "${0} finished"; exit' QUIT TERM EXIT
+
+echo ""
+# CONTAINER_INFORMATION will export by Dockerfile
+echo "${CONTAINER_INFORMATION}"
+echo ""
 
 # The document version and the actual/publishing date.
 PROJECT_VERSION=${PROJECT_VERSION:-"LATEST"}

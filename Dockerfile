@@ -7,24 +7,28 @@ ARG alpine_version=3.20
 FROM alpine:${alpine_version} AS make-builder
 
 RUN apk add --no-cache \
-        build-base \
-        make \
-        bison \
-        git \
-    && git clone --depth 1 https://gitlab.com/aplevich/dpic.git /dpic \
-    && cd /dpic \
-    && make PREFIX=local installdpic \
-    && git clone --depth 1 -b "master" https://github.com/drhsqlite/pikchr.git /pikchr \
-    && cd /pikchr \
-    && make pikchr
+build-base \
+make \
+bison \
+git \
+&& git clone --depth 1 https://gitlab.com/aplevich/dpic.git /dpic \
+&& cd /dpic \
+&& make PREFIX=local installdpic \
+&& git clone --depth 1 -b "master" https://github.com/drhsqlite/pikchr.git /pikchr \
+&& cd /pikchr \
+&& make pikchr
 
 # =========================================
 
 FROM asciidoctor/docker-asciidoctor:${ASCIIDOCTOR_BASE_TAG} AS asciidoctor-builder
+ARG CONTAINER_INFORMATION
+LABEL MAINTAINERS="barthel <barthel@users.noreply.github.com>"
+LABEL CONTAINER_INFORMATION="${CONTAINER_INFORMATION}"
 
+ENV CONTAINER_INFORMATION="${CONTAINER_INFORMATION}"
 ARG TARGETARCH
 # Print the architecture
-RUN echo "Building for architecture: $TARGETARCH"
+RUN echo "Building for architecture: ${TARGETARCH}"
 
 ENV TMPDIR="/tmp"
 
@@ -91,8 +95,8 @@ ARG vega_version="5.30.0"
 # Install vega-lite - @see: https://github.com/vega/vega-lite
 ARG vega_lite_version="5.21.0"
 # Install WaveDrom - @see: https://github.com/wavedrom/wavedrom, https://github.com/wavedrom/cli
-ARG wavedrom_version="3.2.0"
-ARG wavedrom_cli_version="3.1.1"
+ARG wavedrom_version="3.5.0"
+ARG wavedrom_cli_version="3.2.0"
 # Install inliner - @see: https://github.com/barthel/inliner
 ARG inliner_version="1.14.0"
 # Puppeteer version and Chromium version are related

@@ -84,6 +84,7 @@ jobs:
               ${TAG} \
               --build-arg CIRCLE_TAG=${CIRCLE_TAG:-latest} \
               --build-arg ASCIIDOCTOR_BASE_TAG=${ASCIIDOCTOR_BASE_TAG} \
+              --build-arg CONTAINER_INFORMATION="${TAG_NAME}:${CIRCLE_TAG:-latest} (${CIRCLE_SHA1})" \
               --build-arg BUILDKIT_MULTI_PLATFORM=1 \
               --no-cache \
               --progress=plain \
