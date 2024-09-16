@@ -10,7 +10,7 @@
 	[db]-&gt;[rum]
 	[Pirate]-&gt; *[rum]</desc>
 	<g font='12pt Helvetica, Arial, sans-serif' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' stroke-width='1.0' text-align='left'>
-		<g font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' stroke='#33322E' stroke-linecap='round' stroke-linejoin='round' stroke-width='3.0' transform='translate(0.5, 0.5)'>
+		<g font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' stroke='#33322E' stroke-linecap='round' stroke-linejoin='round' stroke-width='3.0'>
 			<g fill='#ffffff' stroke='transparent'>
 				<rect height='403.0' stroke='none' width='261.3' x='0.0' y='0.0'/>
 			</g>
@@ -50,9 +50,9 @@
 									<path d='M73.2 57.7 L78.5 57.7 L83.8 57.7 L78.5 71.0 Z' data-name='Pirate'/>
 									<g data-name='a'>
 										<g data-name='a' fill='#fdf6e3' stroke='#33322E'>
-											<rect data-name='a' height='31.0' width='26.0' x='33.0' y='0.0'/>
+											<rect data-name='a' height='31.0' width='26.0' x='32.8' y='0.0'/>
 										</g>
-										<g data-name='a' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(33, 0)'>
+										<g data-name='a' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(32.75, 0)'>
 											<g data-name='a' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 												<text data-name='a' stroke='none' text-anchor='middle' x='5.0' y='13.5'>a</text>
 												
@@ -87,9 +87,9 @@
 					</g>
 					<g data-name='Marauder'>
 						<g data-name='Marauder' fill='#eee8d5' stroke='#33322E'>
-							<rect data-name='Marauder' height='31.0' width='92.0' x='8.0' y='8.0'/>
+							<rect data-name='Marauder' height='31.0' width='92.0' x='7.5' y='8.0'/>
 						</g>
-						<g data-name='Marauder' font-family='Helvetica' font-size='12pt' font-style='italic' font-weight='normal' transform='translate(8, 8)'>
+						<g data-name='Marauder' font-family='Helvetica' font-size='12pt' font-style='italic' font-weight='normal' transform='translate(7.5, 8)'>
 							<g data-name='Marauder' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='Marauder' stroke='none' text-anchor='middle' x='38.0' y='13.5'>Marauder</text>
 								
@@ -109,13 +109,13 @@
 					</g>
 					<g data-name='db'>
 						<g data-name='db' fill='#eee8d5' stroke='#33322E'>
-							<rect data-name='db' height='35.0' stroke='none' width='36.0' x='164.0' y='8.0'/>
-							<path d='M164.0 8.0 L164.0 39.0' data-name='db' fill='none'/>
-							<path d='M200.0 8.0 L200.0 39.0' data-name='db' fill='none'/>
+							<rect data-name='db' height='31.0' stroke='none' width='36.0' x='164.3' y='8.0'/>
+							<path d='M164.3 8.0 L164.3 39.0' data-name='db' fill='none'/>
+							<path d='M200.3 8.0 L200.3 39.0' data-name='db' fill='none'/>
 							<ellipse cx='182.3' cy='8.0' data-name='db' rx='18.0' ry='6.0'/>
 							<path d='M200.3 39.0 L200.2 39.3 L200.2 39.6 L200.0 39.9 L199.9 40.2 L199.7 40.5 L199.5 40.8 L199.2 41.1 L198.8 41.3 L198.5 41.6 L198.1 41.9 L197.6 42.1 L197.1 42.4 L196.6 42.6 L196.0 42.9 L195.4 43.1 L194.8 43.3 L194.2 43.5 L193.5 43.7 L192.8 43.9 L192.0 44.0 L191.2 44.2 L190.5 44.3 L189.7 44.5 L188.8 44.6 L188.0 44.7 L187.1 44.8 L186.3 44.8 L185.4 44.9 L184.5 45.0 L183.6 45.0 L182.7 45.0 L181.8 45.0 L180.9 45.0 L180.0 45.0 L179.1 44.9 L178.2 44.8 L177.4 44.8 L176.5 44.7 L175.7 44.6 L174.8 44.5 L174.0 44.3 L173.2 44.2 L172.5 44.0 L171.7 43.9 L171.0 43.7 L170.3 43.5 L169.7 43.3 L169.1 43.1 L168.5 42.9 L167.9 42.6 L167.4 42.4 L166.9 42.1 L166.4 41.9 L166.0 41.6 L165.7 41.3 L165.3 41.1 L165.0 40.8 L164.8 40.5 L164.6 40.2 L164.5 39.9 L164.3 39.6 L164.3 39.3 L164.3 39.0' data-name='db'/>
 						</g>
-						<g data-name='db' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(164, 12)'>
+						<g data-name='db' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(164.25, 12)'>
 							<g data-name='db' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='db' stroke='none' text-anchor='middle' x='10.0' y='13.5'>db</text>
 								
@@ -124,9 +124,9 @@
 					</g>
 					<g data-name='rum'>
 						<g data-name='rum' fill='#eee8d5' stroke='#33322E'>
-							<rect data-name='rum' height='31.0' width='46.0' x='159.0' y='316.0'/>
+							<rect data-name='rum' height='31.0' width='46.0' x='159.3' y='316.0'/>
 						</g>
-						<g data-name='rum' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(159, 316)'>
+						<g data-name='rum' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(159.25, 316)'>
 							<g data-name='rum' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='rum' stroke='none' text-anchor='middle' x='15.0' y='13.5'>rum</text>
 								

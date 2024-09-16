@@ -23,7 +23,7 @@
 	
 	[&lt;actor&gt;Sailor] - [&lt;usecase&gt;shiver me;timbers]</desc>
 	<g font='12pt Helvetica, Arial, sans-serif' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' stroke-width='1.0' text-align='left'>
-		<g font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' stroke='#33322E' stroke-linecap='round' stroke-linejoin='round' stroke-width='3.0' transform='translate(0.5, 0.5)'>
+		<g font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' stroke='#33322E' stroke-linecap='round' stroke-linejoin='round' stroke-width='3.0'>
 			<g fill='#ffffff' stroke='transparent'>
 				<rect height='683.0' stroke='none' width='755.8' x='0.0' y='0.0'/>
 			</g>
@@ -59,73 +59,33 @@
 					<path d='M632.3 470.8 L632.25 514 L632.25 558.8333333333334 L632.3 558.8 ' fill='none'/>
 					<path d='M626.9 552.2 L632.3 558.8 L637.6 552.2 L632.3 565.5 Z'/>
 					<path d='M457.1 55.0 L457.125 75 L457.125 199.25 L457.1 199.3 ' fill='none'/>
-					<g data-name='mischief'>
-						<g data-name='mischief' fill='#eee8d5' stroke='#33322E'>
-							<rect data-name='mischief' height='93.0' width='110.0' x='0.0' y='401.0'/>
-							<path d='M0.0 432.0 L0.0 432.0' data-name='mischief' fill='none'/>
-							<path d='M0.0 432.0 L110.0 432.0' data-name='mischief' fill='none'/>
-							<path d='M0.0 463.0 L110.0 463.0' data-name='mischief' fill='none'/>
-							<path d='M55.0 432.0 L55.0 494.0' data-name='mischief' fill='none'/>
-							<path d='M110.0 432.0 L110.0 494.0' data-name='mischief' fill='none'/>
-						</g>
-						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(0, 401)'>
-							<g data-name='mischief' fill='#33322E' text-align='center' transform='translate(8, 8)'>
-								<text data-name='mischief' stroke='none' text-anchor='middle' x='47.0' y='13.5'>mischief</text>
-								
-							</g>
-						</g>
-						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(0, 432)'>
-							<g data-name='mischief' fill='#33322E' text-align='left' transform='translate(8, 8)'>
-								<text data-name='mischief' stroke='none' x='0.0' y='13.5'>bawl</text>
-								
-							</g>
-						</g>
-						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(55, 432)'>
-							<g data-name='mischief' fill='#33322E' text-align='left' transform='translate(8, 8)'>
-								<text data-name='mischief' stroke='none' x='0.0' y='13.5'>sing</text>
-								
-							</g>
-						</g>
-						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(0, 463)'>
-							<g data-name='mischief' fill='#33322E' text-align='left' transform='translate(8, 8)'>
-								<text data-name='mischief' stroke='none' x='0.0' y='13.5'>yell</text>
-								
-							</g>
-						</g>
-						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(55, 463)'>
-							<g data-name='mischief' fill='#33322E' text-align='left' transform='translate(8, 8)'>
-								<text data-name='mischief' stroke='none' x='0.0' y='13.5'>drink</text>
-								
-							</g>
-						</g>
-					</g>
 					<g data-name='Pirate'>
 						<g data-name='Pirate' fill='#eee8d5' stroke='#33322E'>
-							<rect data-name='Pirate' height='266.0' width='258.0' x='14.0' y='95.0'/>
-							<path d='M14.0 126.0 L272.0 126.0' data-name='Pirate' fill='none'/>
-							<path d='M14.0 157.0 L272.0 157.0' data-name='Pirate' fill='none'/>
-							<path d='M14.0 203.0 L272.0 203.0' data-name='Pirate' fill='none'/>
+							<rect data-name='Pirate' height='266.0' width='258.0' x='13.6' y='95.0'/>
+							<path d='M13.6 126.0 L271.6 126.0' data-name='Pirate' fill='none'/>
+							<path d='M13.6 157.0 L271.6 157.0' data-name='Pirate' fill='none'/>
+							<path d='M13.6 203.0 L271.6 203.0' data-name='Pirate' fill='none'/>
 						</g>
-						<g data-name='Pirate' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(14, 95)'>
+						<g data-name='Pirate' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(13.5625, 95)'>
 							<g data-name='Pirate' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='Pirate' stroke='none' text-anchor='middle' x='121.0' y='13.5'>Pirate</text>
 								
 							</g>
 						</g>
-						<g data-name='Pirate' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(14, 126)'>
+						<g data-name='Pirate' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(13.5625, 126)'>
 							<g data-name='Pirate' fill='#33322E' text-align='left' transform='translate(8, 8)'>
 								<text data-name='Pirate' stroke='none' x='0.0' y='13.5'>eyeCount: Int</text>
 								
 							</g>
 						</g>
-						<g data-name='Pirate' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(14, 157)'>
+						<g data-name='Pirate' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(13.5625, 157)'>
 							<g data-name='Pirate' fill='#33322E' text-align='left' transform='translate(8, 8)'>
 								<text data-name='Pirate' stroke='none' x='0.0' y='13.5'>raid()</text>
 								<text data-name='Pirate' stroke='none' x='0.0' y='28.5'>pillage()</text>
 								
 							</g>
 						</g>
-						<g data-name='Pirate' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(14, 203)'>
+						<g data-name='Pirate' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(13.5625, 203)'>
 							<g data-name='Pirate' fill='#33322E' transform='translate(8, 8)'>
 								<g data-name='Pirate' fill='#eee8d5' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(20, 20)'>
 									<g data-name='Pirate' stroke-dasharray='6 6'>
@@ -170,36 +130,51 @@
 							</g>
 						</g>
 					</g>
-					<g data-name='rum'>
-						<g data-name='rum' fill='#eee8d5' stroke='#33322E'>
-							<rect data-name='rum' height='93.0' width='117.0' x='130.0' y='534.0'/>
-							<path d='M130.0 565.0 L247.0 565.0' data-name='rum' fill='none'/>
-							<path d='M130.0 596.0 L247.0 596.0' data-name='rum' fill='none'/>
+					<g data-name='mischief'>
+						<g data-name='mischief' fill='#eee8d5' stroke='#33322E'>
+							<rect data-name='mischief' height='93.0' width='110.0' x='0.0' y='401.0'/>
+							<path d='M0.0 432.0 L0.0 432.0' data-name='mischief' fill='none'/>
+							<path d='M0.0 432.0 L110.0 432.0' data-name='mischief' fill='none'/>
+							<path d='M0.0 463.0 L110.0 463.0' data-name='mischief' fill='none'/>
+							<path d='M55.0 432.0 L55.0 494.0' data-name='mischief' fill='none'/>
+							<path d='M110.0 432.0 L110.0 494.0' data-name='mischief' fill='none'/>
 						</g>
-						<g data-name='rum' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(130, 534)'>
-							<g data-name='rum' fill='#33322E' text-align='center' transform='translate(8, 8)'>
-								<text data-name='rum' stroke='none' text-anchor='middle' x='50.5' y='13.5'>rum</text>
+						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(0, 401)'>
+							<g data-name='mischief' fill='#33322E' text-align='center' transform='translate(8, 8)'>
+								<text data-name='mischief' stroke='none' text-anchor='middle' x='47.0' y='13.5'>mischief</text>
 								
 							</g>
 						</g>
-						<g data-name='rum' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(130, 565)'>
-							<g data-name='rum' fill='#33322E' text-align='left' transform='translate(8, 8)'>
-								<text data-name='rum' stroke='none' x='0.0' y='13.5'>tastiness: Int</text>
+						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(0, 432)'>
+							<g data-name='mischief' fill='#33322E' text-align='left' transform='translate(8, 8)'>
+								<text data-name='mischief' stroke='none' x='0.0' y='13.5'>bawl</text>
 								
 							</g>
 						</g>
-						<g data-name='rum' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(130, 596)'>
-							<g data-name='rum' fill='#33322E' text-align='left' transform='translate(8, 8)'>
-								<text data-name='rum' stroke='none' x='0.0' y='13.5'>swig()</text>
+						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(55, 432)'>
+							<g data-name='mischief' fill='#33322E' text-align='left' transform='translate(8, 8)'>
+								<text data-name='mischief' stroke='none' x='0.0' y='13.5'>sing</text>
+								
+							</g>
+						</g>
+						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(0, 463)'>
+							<g data-name='mischief' fill='#33322E' text-align='left' transform='translate(8, 8)'>
+								<text data-name='mischief' stroke='none' x='0.0' y='13.5'>yell</text>
+								
+							</g>
+						</g>
+						<g data-name='mischief' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(55, 463)'>
+							<g data-name='mischief' fill='#33322E' text-align='left' transform='translate(8, 8)'>
+								<text data-name='mischief' stroke='none' x='0.0' y='13.5'>drink</text>
 								
 							</g>
 						</g>
 					</g>
 					<g data-name='Marauder'>
 						<g data-name='Marauder' fill='#eee8d5' stroke='#33322E'>
-							<rect data-name='Marauder' height='31.0' width='92.0' x='57.0' y='12.0'/>
+							<rect data-name='Marauder' height='31.0' width='92.0' x='56.6' y='12.0'/>
 						</g>
-						<g data-name='Marauder' font-family='Helvetica' font-size='12pt' font-style='italic' font-weight='normal' transform='translate(57, 12)'>
+						<g data-name='Marauder' font-family='Helvetica' font-size='12pt' font-style='italic' font-weight='normal' transform='translate(56.5625, 12)'>
 							<g data-name='Marauder' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='Marauder' stroke='none' text-anchor='middle' x='38.0' y='13.5'>Marauder</text>
 								
@@ -208,11 +183,36 @@
 					</g>
 					<g data-name='jollyness'>
 						<g data-name='jollyness' fill='#eee8d5' stroke='#33322E'>
-							<rect data-name='jollyness' height='31.0' width='85.0' x='277.0' y='12.0'/>
+							<rect data-name='jollyness' height='31.0' width='85.0' x='276.5' y='12.0'/>
 						</g>
-						<g data-name='jollyness' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(277, 12)'>
+						<g data-name='jollyness' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(276.5, 12)'>
 							<g data-name='jollyness' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='jollyness' stroke='none' text-anchor='middle' x='34.5' y='13.5'>jollyness</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name='rum'>
+						<g data-name='rum' fill='#eee8d5' stroke='#33322E'>
+							<rect data-name='rum' height='93.0' width='117.0' x='129.8' y='534.0'/>
+							<path d='M129.8 565.0 L246.8 565.0' data-name='rum' fill='none'/>
+							<path d='M129.8 596.0 L246.8 596.0' data-name='rum' fill='none'/>
+						</g>
+						<g data-name='rum' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='bold' transform='translate(129.75, 534)'>
+							<g data-name='rum' fill='#33322E' text-align='center' transform='translate(8, 8)'>
+								<text data-name='rum' stroke='none' text-anchor='middle' x='50.5' y='13.5'>rum</text>
+								
+							</g>
+						</g>
+						<g data-name='rum' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(129.75, 565)'>
+							<g data-name='rum' fill='#33322E' text-align='left' transform='translate(8, 8)'>
+								<text data-name='rum' stroke='none' x='0.0' y='13.5'>tastiness: Int</text>
+								
+							</g>
+						</g>
+						<g data-name='rum' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(129.75, 596)'>
+							<g data-name='rum' fill='#33322E' text-align='left' transform='translate(8, 8)'>
+								<text data-name='rum' stroke='none' x='0.0' y='13.5'>swig()</text>
 								
 							</g>
 						</g>
@@ -230,14 +230,14 @@
 					</g>
 					<g data-name='st'>
 						<g data-name='st' fill='#33322E' stroke='#33322E'>
-							<circle cx='632.3' cy='28.0' data-name='st' r='12.0' stroke='none'/>
+							<circle cx='632.3' cy='27.5' data-name='st' r='12.0' stroke='none'/>
 						</g>
 					</g>
 					<g data-name='plunder'>
 						<g data-name='plunder' fill='#eee8d5' stroke='#33322E'>
-							<rect data-name='plunder' height='31.0' rx='15.5' ry='15.5' width='76.0' x='555.0' y='213.0'/>
+							<rect data-name='plunder' height='31.0' rx='15.5' ry='15.5' width='76.0' x='555.3' y='212.5'/>
 						</g>
-						<g data-name='plunder' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(555, 213)'>
+						<g data-name='plunder' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(555.25, 212.5)'>
 							<g data-name='plunder' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='plunder' stroke='none' text-anchor='middle' x='30.0' y='13.5'>plunder</text>
 								
@@ -246,9 +246,9 @@
 					</g>
 					<g data-name='more loot'>
 						<g data-name='more loot' fill='#eee8d5' stroke='#33322E'>
-							<path d='M632.3 424.0 L700.0 447.5 L632.3 470.5 L565.0 447.5 Z' data-name='more loot'/>
+							<path d='M632.3 424.3 L699.8 447.5 L632.3 470.8 L564.8 447.5 Z' data-name='more loot'/>
 						</g>
-						<g data-name='more loot' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(587.5, 431.75)'>
+						<g data-name='more loot' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(587.25, 432)'>
 							<g data-name='more loot' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='more loot' stroke='none' text-anchor='middle' x='37.0' y='13.5'>more loot</text>
 								
@@ -257,8 +257,8 @@
 					</g>
 					<g data-name='e'>
 						<g data-name='e' fill='#33322E' stroke='#33322E'>
-							<circle cx='632.3' cy='581.0' data-name='e' r='10.0'/>
-							<circle cx='632.3' cy='581.0' data-name='e' r='6.0' stroke='none'/>
+							<circle cx='632.3' cy='580.5' data-name='e' r='10.0'/>
+							<circle cx='632.3' cy='580.5' data-name='e' r='6.0' stroke='none'/>
 						</g>
 					</g>
 					<g data-name='Sailor'>
@@ -268,7 +268,7 @@
 							<path d='M453.1 20.0 L461.1 20.0' data-name='Sailor' fill='none'/>
 							<path d='M453.1 28.0 L457.1 24.0 L461.1 28.0' data-name='Sailor' fill='none'/>
 						</g>
-						<g data-name='Sailor' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(427, 24)'>
+						<g data-name='Sailor' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(426.625, 24)'>
 							<g data-name='Sailor' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='Sailor' stroke='none' text-anchor='middle' x='22.5' y='13.5'>Sailor</text>
 								
@@ -279,7 +279,7 @@
 						<g data-name='shiver me' fill='#eee8d5' stroke='#33322E'>
 							<ellipse cx='457.1' cy='228.0' data-name='shiver me' rx='58.1' ry='28.8'/>
 						</g>
-						<g data-name='shiver me' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(410.625, 204.75)'>
+						<g data-name='shiver me' font-family='Helvetica' font-size='12pt' font-style='normal' font-weight='normal' transform='translate(410.625, 205)'>
 							<g data-name='shiver me' fill='#33322E' text-align='center' transform='translate(8, 8)'>
 								<text data-name='shiver me' stroke='none' text-anchor='middle' x='38.5' y='13.5'>shiver me</text>
 								<text data-name='shiver me' stroke='none' text-anchor='middle' x='38.5' y='28.5'>timbers</text>
