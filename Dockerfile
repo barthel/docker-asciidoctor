@@ -83,7 +83,7 @@ ARG bytefield_version="1.10.0"
 # Install nomnoml - @see: https://github.com/skanaar/nomnoml
 ARG nomnoml_version="1.6.2"
 # Install state-machine-cat (smcat) - @see: https://github.com/sverweij/state-machine-cat/
-ARG smc_version="10.1.10"
+ARG smc_version="12.0.14"
 # Install vega - @see: https://github.com/vega/vega
 ARG canvas_version="2.11.0"
 ARG vega_version="5.24.0"
