@@ -55,7 +55,8 @@ RUN apk --no-cache add \
         pdf2svg@testing \
         git \
         msttcorefonts-installer \
-    && update-ms-fonts
+    && update-ms-fonts \
+    && fc-cache -f
 
 ARG umlet_version="15.1"
 # The umlet zip contains a camelcase directory :-|
@@ -97,6 +98,7 @@ ARG inliner_version="1.14.0"
 # Puppeteer version and Chromium version are related
 ARG puppeteer_version="23.3.0"
 # @see: https://pptr.dev/api/puppeteer.configuration
+ENV PUPPETEER_CONFIG_FILE="/puppeteer-config.json"
 # @see: https://github.com/puppeteer/puppeteer/issues/379#issuecomment-437688436
 # @see: https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.configuration.md
 ENV PUPPETEER_PRODUCT="chrome"
@@ -110,7 +112,9 @@ ENV CHROMIUM_PATH="/usr/bin/chromium-browser"
 ENV PUPPETEER_ARGS='"--no-sandbox", "--allow-insecure-localhost", "--disable-gpu", "--disable-setuid-sandbox"'
 ENV PUPPETEER_DEBUG=${PUPPETEER_DEBUG:-true}
 
-RUN cat <<EOF > /usr/local/puppeteer-config.json
+RUN touch ${PUPPETEER_CONFIG_FILE} \
+    && chmod ugo+rw ${PUPPETEER_CONFIG_FILE} \
+    && cat <<EOF > ${PUPPETEER_CONFIG_FILE}
 {
     "product": "${PUPPETEER_PRODUCT}",
     "skipDownload": ${PUPPETEER_SKIP_DOWNLOAD},
@@ -209,7 +213,7 @@ RUN apk --no-cache add \
     && { \
         echo '#!/bin/sh'; \
         echo ''; \
-        echo '/usr/local/bin/mmdc.node --puppeteerConfigFile /usr/local/puppeteer-config.json ${@}'; \
+        echo "/usr/local/bin/mmdc.node --puppeteerConfigFile ${PUPPETEER_CONFIG_FILE} \${@}"; \
     } > /usr/local/bin/mmdc \
     && chmod +x /usr/local/bin/mmdc \
     && echo "\tbpmn-js" \
@@ -236,7 +240,7 @@ RUN apk --no-cache add \
 # && { \
 #     echo '#!/bin/sh'; \
 #     echo ''; \
-#     echo '/usr/local/bin/mscgen_js.node --puppeteer-options /usr/local/puppeteer-config.json ${@}'; \
+#     echo "/usr/local/bin/mscgen_js.node --puppeteer-options ${PUPPETEER_CONFIG_FILE} \${@}"; \
 # } > /usr/local/bin/mscgen_js \
 # && ln -snf /usr/local/bin/mscgen_js /usr/local/bin/mscgen \
 # && chmod +x /usr/local/bin/mscgen* \
