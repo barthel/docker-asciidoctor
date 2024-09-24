@@ -11,151 +11,151 @@
 </g>
 
 <g class='node' id='node1'>
-<title>6410a3984a054825aa10cf390e8c261f</title>
+<title>42157eab45c742bdacff23bc29143162</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/compute/pod.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='170.8' y='-160.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='221.2' y='-45.75'>pod</text>
 </g>
 
 <g class='node' id='node2'>
-<title>876d97f1cde5406e84b29c385267ced4</title>
+<title>7e69099e4b564b6f8cc956a89b26378f</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/compute/sts.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='325.6' y='-306.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='376' y='-191.75'>sts</text>
 </g>
 
 <g class='edge' id='edge1'>
-<title>6410a3984a054825aa10cf390e8c261f&#45;&gt;876d97f1cde5406e84b29c385267ced4</title>
+<title>42157eab45c742bdacff23bc29143162&#45;&gt;7e69099e4b564b6f8cc956a89b26378f</title>
 <path d='M221.8,-178.25C221.8,-193.17 221.8,-204.6 221.8,-204.6 221.8,-204.6 280.91,-204.6 325.94,-204.6' fill='none' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node3'>
-<title>d77fe3bfdef34956ad0003f4ca5a8ae6</title>
+<title>ba5cf1acf49a4edc9bd7a0a09e9b7ac2</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/storage/pvc.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='480.4' y='-160.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='530.8' y='-45.75'>pvc</text>
 </g>
 
 <g class='edge' id='edge4'>
-<title>6410a3984a054825aa10cf390e8c261f&#45;&gt;d77fe3bfdef34956ad0003f4ca5a8ae6</title>
+<title>42157eab45c742bdacff23bc29143162&#45;&gt;ba5cf1acf49a4edc9bd7a0a09e9b7ac2</title>
 <path d='M271.29,-110C271.29,-110 469.01,-110 469.01,-110' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='469.01,-113.5 479.01,-110 469.01,-106.5 469.01,-113.5' stroke='#7b8894'/>
 </g>
 
 <g class='edge' id='edge2'>
-<title>876d97f1cde5406e84b29c385267ced4&#45;&gt;d77fe3bfdef34956ad0003f4ca5a8ae6</title>
+<title>7e69099e4b564b6f8cc956a89b26378f&#45;&gt;ba5cf1acf49a4edc9bd7a0a09e9b7ac2</title>
 <path d='M426.26,-204.6C471.46,-204.6 530.8,-204.6 530.8,-204.6 530.8,-204.6 530.8,-193.17 530.8,-178.25' fill='none' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node6'>
-<title>089e4da6d2bf4327abf04c30acd000ca</title>
+<title>27bd2d5bee4c4b5d97a7fbad976e7b85</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/storage/pvc.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='480.4' y='-340.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='530.8' y='-225.75'>pvc</text>
 </g>
 
 <g class='edge' id='edge6'>
-<title>876d97f1cde5406e84b29c385267ced4&#45;&gt;089e4da6d2bf4327abf04c30acd000ca</title>
+<title>7e69099e4b564b6f8cc956a89b26378f&#45;&gt;27bd2d5bee4c4b5d97a7fbad976e7b85</title>
 <path d='M426.26,-273C443.65,-273 463.14,-273 480.53,-273' fill='none' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node8'>
-<title>462274d74f0643908109139d4009ef5a</title>
+<title>933b3434939243c0b276b323e759ebe6</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/storage/pvc.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='480.4' y='-520.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='530.8' y='-405.75'>pvc</text>
 </g>
 
 <g class='edge' id='edge10'>
-<title>876d97f1cde5406e84b29c385267ced4&#45;&gt;462274d74f0643908109139d4009ef5a</title>
+<title>7e69099e4b564b6f8cc956a89b26378f&#45;&gt;933b3434939243c0b276b323e759ebe6</title>
 <path d='M393.8,-324.3C393.8,-386.93 393.8,-470 393.8,-470 393.8,-470 441.46,-470 480.56,-470' fill='none' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node9'>
-<title>2cc0b3b9566f47c7a8f047fe5eacddc7</title>
+<title>28e314ad25564dc68ef7f9f925813b7c</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/storage/pv.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='635.2' y='-340.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='685.6' y='-225.75'>pv</text>
 </g>
 
 <g class='edge' id='edge13'>
-<title>d77fe3bfdef34956ad0003f4ca5a8ae6&#45;&gt;2cc0b3b9566f47c7a8f047fe5eacddc7</title>
+<title>ba5cf1acf49a4edc9bd7a0a09e9b7ac2&#45;&gt;28e314ad25564dc68ef7f9f925813b7c</title>
 <path d='M592.64,-110C592.64,-110 685.8,-110 685.8,-110 685.8,-110 685.8,-170.77 685.8,-221.69' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='592.64,-106.5 582.64,-110 592.64,-113.5 592.64,-106.5' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node4'>
-<title>f93cc5a3906143e2ba5c119c36f0c42e</title>
+<title>52588e777d2f4dd98d2a919480eeef5b</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/network/svc.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='16' y='-340.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='66.4' y='-225.75'>svc</text>
 </g>
 
 <g class='edge' id='edge3'>
-<title>f93cc5a3906143e2ba5c119c36f0c42e&#45;&gt;6410a3984a054825aa10cf390e8c261f</title>
+<title>52588e777d2f4dd98d2a919480eeef5b&#45;&gt;42157eab45c742bdacff23bc29143162</title>
 <path d='M66.8,-221.69C66.8,-170.77 66.8,-110 66.8,-110 66.8,-110 159.56,-110 159.56,-110' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='159.56,-113.5 169.56,-110 159.56,-106.5 159.56,-113.5' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node5'>
-<title>b39f8fae5f9a4e86ad4fd0a758e3704e</title>
+<title>b138434ef0354e17a1596ab21c74252e</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/compute/pod.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='170.8' y='-340.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='221.2' y='-225.75'>pod</text>
 </g>
 
 <g class='edge' id='edge7'>
-<title>f93cc5a3906143e2ba5c119c36f0c42e&#45;&gt;b39f8fae5f9a4e86ad4fd0a758e3704e</title>
+<title>52588e777d2f4dd98d2a919480eeef5b&#45;&gt;b138434ef0354e17a1596ab21c74252e</title>
 <path d='M116.66,-290C116.66,-290 159.41,-290 159.41,-290' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='159.41,-293.5 169.41,-290 159.41,-286.5 159.41,-293.5' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node7'>
-<title>0b4510d2cd5943b8915ff389d2185654</title>
+<title>ea2e25e6bb8f454aac35b908f7209460</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/compute/pod.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='170.8' y='-520.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='221.2' y='-405.75'>pod</text>
 </g>
 
 <g class='edge' id='edge11'>
-<title>f93cc5a3906143e2ba5c119c36f0c42e&#45;&gt;0b4510d2cd5943b8915ff389d2185654</title>
+<title>52588e777d2f4dd98d2a919480eeef5b&#45;&gt;ea2e25e6bb8f454aac35b908f7209460</title>
 <path d='M66.8,-358.31C66.8,-409.23 66.8,-470 66.8,-470 66.8,-470 159.56,-470 159.56,-470' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='159.56,-473.5 169.56,-470 159.56,-466.5 159.56,-473.5' stroke='#7b8894'/>
 </g>
 
 <g class='edge' id='edge5'>
-<title>b39f8fae5f9a4e86ad4fd0a758e3704e&#45;&gt;876d97f1cde5406e84b29c385267ced4</title>
+<title>b138434ef0354e17a1596ab21c74252e&#45;&gt;7e69099e4b564b6f8cc956a89b26378f</title>
 <path d='M271.46,-273C288.85,-273 308.34,-273 325.73,-273' fill='none' stroke='#7b8894'/>
 </g>
 
 <g class='edge' id='edge8'>
-<title>b39f8fae5f9a4e86ad4fd0a758e3704e&#45;&gt;089e4da6d2bf4327abf04c30acd000ca</title>
+<title>b138434ef0354e17a1596ab21c74252e&#45;&gt;27bd2d5bee4c4b5d97a7fbad976e7b85</title>
 <path d='M271.29,-341.4C271.29,-341.4 469.01,-341.4 469.01,-341.4' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='469.01,-344.9 479.01,-341.4 469.01,-337.9 469.01,-344.9' stroke='#7b8894'/>
 </g>
 
 <g class='edge' id='edge14'>
-<title>089e4da6d2bf4327abf04c30acd000ca&#45;&gt;2cc0b3b9566f47c7a8f047fe5eacddc7</title>
+<title>27bd2d5bee4c4b5d97a7fbad976e7b85&#45;&gt;28e314ad25564dc68ef7f9f925813b7c</title>
 <path d='M592.57,-290C592.57,-290 635.33,-290 635.33,-290' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='592.57,-286.5 582.57,-290 592.57,-293.5 592.57,-286.5' stroke='#7b8894'/>
 </g>
 
 <g class='edge' id='edge9'>
-<title>0b4510d2cd5943b8915ff389d2185654&#45;&gt;876d97f1cde5406e84b29c385267ced4</title>
+<title>ea2e25e6bb8f454aac35b908f7209460&#45;&gt;7e69099e4b564b6f8cc956a89b26378f</title>
 <path d='M271.24,-435.8C310.94,-435.8 359.8,-435.8 359.8,-435.8 359.8,-435.8 359.8,-375.1 359.8,-324.23' fill='none' stroke='#7b8894'/>
 </g>
 
 <g class='edge' id='edge12'>
-<title>0b4510d2cd5943b8915ff389d2185654&#45;&gt;462274d74f0643908109139d4009ef5a</title>
+<title>ea2e25e6bb8f454aac35b908f7209460&#45;&gt;933b3434939243c0b276b323e759ebe6</title>
 <path d='M271.29,-504.2C271.29,-504.2 469.01,-504.2 469.01,-504.2' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='469.01,-507.7 479.01,-504.2 469.01,-500.7 469.01,-507.7' stroke='#7b8894'/>
 </g>
 
 <g class='edge' id='edge15'>
-<title>462274d74f0643908109139d4009ef5a&#45;&gt;2cc0b3b9566f47c7a8f047fe5eacddc7</title>
+<title>933b3434939243c0b276b323e759ebe6&#45;&gt;28e314ad25564dc68ef7f9f925813b7c</title>
 <path d='M592.64,-470C592.64,-470 685.8,-470 685.8,-470 685.8,-470 685.8,-409.23 685.8,-358.31' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='592.64,-466.5 582.64,-470 592.64,-473.5 592.64,-466.5' stroke='#7b8894'/>
 </g>
 
 <g class='node' id='node10'>
-<title>8e454496ee1844f8b4c78043e70cf3ac</title>
+<title>3109adaa75e748cbad11f5d72628106d</title>
 <image height='100.8px' xlink:href='/usr/lib/python3.12/site-packages/resources/k8s/storage/sc.png' preserveAspectRatio='xMinYMin meet' width='100.8px' x='790' y='-340.4'/>
 <text fill='#2d3436' font-family='Sans-Serif' font-size='13.00' text-anchor='middle' x='840.4' y='-225.75'>sc</text>
 </g>
 
 <g class='edge' id='edge16'>
-<title>2cc0b3b9566f47c7a8f047fe5eacddc7&#45;&gt;8e454496ee1844f8b4c78043e70cf3ac</title>
+<title>28e314ad25564dc68ef7f9f925813b7c&#45;&gt;3109adaa75e748cbad11f5d72628106d</title>
 <path d='M747.37,-290C747.37,-290 790.13,-290 790.13,-290' fill='none' stroke='#7b8894'/>
 <polygon fill='#7b8894' points='747.37,-286.5 737.37,-290 747.37,-293.5 747.37,-286.5' stroke='#7b8894'/>
 </g>
