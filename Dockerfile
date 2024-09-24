@@ -27,7 +27,18 @@ LABEL MAINTAINERS="barthel <barthel@users.noreply.github.com>"
 LABEL maintainers="barthel <barthel@users.noreply.github.com>"
 LABEL CONTAINER_INFORMATION="${CONTAINER_INFORMATION}"
 
-ENV CONTAINER_INFORMATION="${CONTAINER_INFORMATION} - (${TARGETARCH})"
+# Set ENV variable to the value of the ARG parameter and add TARGETARCH
+# This ensures that the ARG value is used and not an ENV that may have been overwritten by the base container.
+RUN export CONTAINER_INFORMATION="${CONTAINER_INFORMATION} - (${TARGETARCH})" && \
+    echo $CONTAINER_INFORMATION > /tmp/container_info && \
+    echo "CONTAINER_INFORMATION=${CONTAINER_INFORMATION}" > /tmp/envs
+
+# Load the ENV variable from the temporary file to make it available in the container
+ENV CONTAINER_INFORMATION="$(cat /tmp/container_info)"
+
+# Optional: Entferne die temporäre Datei, wenn nicht mehr benötigt
+RUN rm /tmp/container_info /tmp/envs
+
 # Print the architecture
 RUN echo "Building for architecture: ${TARGETARCH}"
 
