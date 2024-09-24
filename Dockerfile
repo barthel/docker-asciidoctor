@@ -21,12 +21,13 @@ git \
 # =========================================
 
 FROM asciidoctor/docker-asciidoctor:${ASCIIDOCTOR_BASE_TAG} AS asciidoctor-builder
+ARG TARGETARCH
 ARG CONTAINER_INFORMATION
 LABEL MAINTAINERS="barthel <barthel@users.noreply.github.com>"
+LABEL maintainers="barthel <barthel@users.noreply.github.com>"
 LABEL CONTAINER_INFORMATION="${CONTAINER_INFORMATION}"
 
-ENV CONTAINER_INFORMATION="${CONTAINER_INFORMATION}"
-ARG TARGETARCH
+ENV CONTAINER_INFORMATION="${CONTAINER_INFORMATION} - (${TARGETARCH})"
 # Print the architecture
 RUN echo "Building for architecture: ${TARGETARCH}"
 
