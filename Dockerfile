@@ -1,4 +1,5 @@
 ARG ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
+ARG ASCIIDOCTOR_BASE_IMAGE=${ASCIIDOCTOR_BASE_IMAGE:-"docker.io/asciidoctor/docker-asciidoctor"}
 ARG alpine_version=3.20
 
 # =========================================
@@ -20,24 +21,26 @@ git \
 
 # =========================================
 
-FROM asciidoctor/docker-asciidoctor:${ASCIIDOCTOR_BASE_TAG} AS asciidoctor-builder
+FROM ${ASCIIDOCTOR_BASE_IMAGE}:${ASCIIDOCTOR_BASE_TAG} AS asciidoctor-builder
+ARG ASCIIDOCTOR_BASE_TAG
+ARG ASCIIDOCTOR_BASE_IMAGE
 ARG TARGETARCH
 ARG CONTAINER_INFORMATION
+ARG _container_information="${CONTAINER_INFORMATION} - (${TARGETARCH}) based on ${ASCIIDOCTOR_BASE_IMAGE}:${ASCIIDOCTOR_BASE_TAG}"
 LABEL MAINTAINERS="barthel <barthel@users.noreply.github.com>"
 LABEL maintainers="barthel <barthel@users.noreply.github.com>"
-LABEL CONTAINER_INFORMATION="${CONTAINER_INFORMATION}"
+LABEL CONTAINER_INFORMATION="${_container_information}"
+
+ARG CONTAINER_INFO_FILE="/container_info"
+ENV CONTAINER_INFO_FILE=${CONTAINER_INFO_FILE}
 
 # Set ENV variable to the value of the ARG parameter and add TARGETARCH
 # This ensures that the ARG value is used and not an ENV that may have been overwritten by the base container.
-RUN export CONTAINER_INFORMATION="${CONTAINER_INFORMATION} - (${TARGETARCH})" && \
-    echo $CONTAINER_INFORMATION > /tmp/container_info && \
-    echo "CONTAINER_INFORMATION=${CONTAINER_INFORMATION}" > /tmp/envs
+RUN echo ${_container_information} > ${CONTAINER_INFO_FILE} \
+    && chmod ugo+rw ${CONTAINER_INFO_FILE}
 
 # Load the ENV variable from the temporary file to make it available in the container
-ENV CONTAINER_INFORMATION="$(cat /tmp/container_info)"
-
-# Optional: Entferne die temporäre Datei, wenn nicht mehr benötigt
-RUN rm /tmp/container_info /tmp/envs
+ENV CONTAINER_INFORMATION="${_container_information}"
 
 # Print the architecture
 RUN echo "Building for architecture: ${TARGETARCH}"
@@ -62,13 +65,10 @@ RUN cat /etc/alpine-release \
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install imagemagick for meme - @see: https://asciidoctor.org/docs/asciidoctor-diagram/#meme
 # Install svgbob - @see: https://github.com/ivanceras/svgbob
-# Install tikz (texlive, pdf2svg) - @see: https://github.com/pgf-tikz/pgf
 # install MS core font package (non free fonts) - @see: https://wiki.alpinelinux.org/wiki/Fonts#Non-free_fonts
 RUN apk --no-cache add \
         imagemagick \
         svgbob@testing \
-        texlive texmf-dist-latex texmf-dist-latexextra texmf-dist-lang \
-        pdf2svg@testing \
         git \
         msttcorefonts-installer \
     && update-ms-fonts \

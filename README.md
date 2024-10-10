@@ -2,7 +2,7 @@
 
 The goal of this project is to build a multi-platform (arm64, amd64) Docker image based on the original [Asciidoctor Docker image](https://github.com/asciidoctor/docker-asciidoctor) and adding all extra diagram tools supported by [Asciidoctor Diagram](https://docs.asciidoctor.org/diagram-extension/latest/).
 
-An overview of all supported diagram types, generated as HTML and as PDF, can be found here: https://barthel.github.io/docker-asciidoctor/
+An overview of all supported diagram types, generated as HTML and as PDF, can be found here: <https://barthel.github.io/docker-asciidoctor/>
 
 ## ⚠️ Note
 
@@ -38,18 +38,19 @@ The following additional diagram tools are installed:
 * [svgbob](https://github.com/ivanceras/svgbob)
 * [symbolator](https://github.com/hdl/symbolator) uses fork, because of incompatible python setup (2to3)
 * [syntrax](https://kevinpt.github.io/syntrax)
-* [tikz](https://github.com/pgf-tikz/pgf)
+* [tikz](https://github.com/pgf-tikz/pgf)<sup>[1]</sup>
 * [umlet](https://www.umlet.com)
 * [vega](https://vega.github.io/vega) and [vega-lite](https://vega.github.io/vega-lite)
 * [wavedrom](https://wavedrom.com/)
 
 Additional non-diagram tools:
+
 * [htmlark](https://github.com/BitLooter/htmlark)  
   > Embed images, CSS, and JavaScript into an HTML file. Through the magic of data URIs, HTMLArk can save these external dependencies inline right in the HTML. \
-  > &mdash;David Powell, https://github.com/BitLooter/htmlark
-* [inliner](https://github.com/barthel/inliner) fork of https://github.com/remy/inliner
+  > &mdash;David Powell, <https://github.com/BitLooter/htmlark>
+* [inliner](https://github.com/barthel/inliner) fork of <https://github.com/remy/inliner>
   > Turns your web page to a single HTML file with everything inlined - perfect for appcache manifests on mobile devices that you want to reduce those http requests.
-  > &mdash;Remy Sharp, https://github.com/remy/inliner
+  > &mdash;Remy Sharp, <https://github.com/remy/inliner>
 * [asciidoctor-extensions](https://github.com/asciidoctor/asciidoctor-extensions-lab) available in `/usr/local/asciidoctor-extensions` and could be used like: `asciidoctor -r /usr/local/asciidoctor-extensions/lib/glob-include-processor.rb ...` \
   ⚠ Please do not use this code in production. The code is untested.
 * [asciidoctor-multipage](https://github.com/owenh000/asciidoctor-multipage)
@@ -68,6 +69,7 @@ The following diagram tools are not installed because there is no executable fil
 ## Usage
 
 Generate HTML document:
+
 ```bash
 docker run --rm \
   -v $(pwd)/src/doc:/documents/ \
@@ -83,6 +85,7 @@ docker run --rm \
 ```
 
 Generate inlined HTML document via `inliner` based on generated HTML document:
+
 ```bash
 docker run --rm -it \
   -v $(pwd)/dist:/dist \
@@ -96,6 +99,7 @@ docker run --rm -it \
 ```
 
 Generate PDF document:
+
 ```bash
 docker run --rm \
   -v $(pwd)/src/doc:/documents/ \
@@ -120,5 +124,6 @@ docker build \
   --tag docker.io/uwebarthel/asciidoctor:latest \
   .
 ```
+
 ---
 <sup>[1]</sup> provided by original Asciidoctor Docker Image
