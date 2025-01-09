@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='734pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 951.20 733.61' width='951pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
-<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(14.4 719.21)'>
-<polygon fill='white' points='-14.4,14.4 -14.4,-719.21 936.8,-719.21 936.8,14.4 -14.4,14.4' stroke='none'/>
-<text font-family='Times,serif' font-size='20.00' text-anchor='start' x='8' y='-681.81'>nfldb Entity&#45;Relationship diagram (condensed)</text>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='734pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 951.20 733.64' width='951pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(14.4 719.24)'>
+<polygon fill='white' points='-14.4,14.4 -14.4,-719.24 936.8,-719.24 936.8,14.4 -14.4,14.4' stroke='none'/>
+<text font-family='Times,serif' font-size='20.00' text-anchor='start' x='8' y='-681.84'>nfldb Entity&#45;Relationship diagram (condensed)</text>
 
 <g class='node' id='node1'>
 <title>player</title>
@@ -141,13 +141,13 @@
 
 <g class='edge' id='edge7'>
 <title>game&#45;&#45;play_player</title>
-<path d='M188.46,-171.68C286.11,-183.41 440.48,-202.11 573.99,-219 576.77,-219.35 579.59,-219.71 582.44,-220.07' fill='none' stroke='black'/>
-<polyline fill='none' points='179.77,-170.64 184.24,-171.18' stroke='black'/>
-<polygon fill='black' points='184.6,-175.75 185.67,-166.82 187.46,-167.03 186.39,-175.97 184.6,-175.75' stroke='black'/>
-<polyline fill='none' points='184.24,-171.18 188.71,-171.72' stroke='black'/>
-<polygon fill='black' points='582.36,-220.06 590.77,-225.23 587.16,-220.68 590.96,-221.17 590.96,-221.17 590.96,-221.17 587.16,-220.68 591.8,-217.19 582.36,-220.06' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='567.19' y='-205.57'>0..N</text>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='190.79' y='-177.66'>1</text>
+<path d='M188.51,-171.12C286.2,-182.36 440.59,-200.54 573.99,-218 576.77,-218.36 579.6,-218.74 582.45,-219.12' fill='none' stroke='black'/>
+<polyline fill='none' points='179.82,-170.12 184.29,-170.63' stroke='black'/>
+<polygon fill='black' points='184.67,-175.21 185.7,-166.26 187.48,-166.47 186.46,-175.41 184.67,-175.21' stroke='black'/>
+<polyline fill='none' points='184.29,-170.63 188.76,-171.15' stroke='black'/>
+<polygon fill='black' points='582.38,-219.11 590.76,-224.33 587.17,-219.76 590.97,-220.27 590.97,-220.27 590.97,-220.27 587.17,-219.76 591.84,-216.3 582.38,-219.11' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='567.28' y='-204.59'>0..N</text>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='190.89' y='-177.06'>1</text>
 </g>
 
 <g class='node' id='node5'>
@@ -222,12 +222,12 @@
 
 <g class='edge' id='edge8'>
 <title>drive&#45;&#45;team</title>
-<path d='M314.24,-514.19C330.24,-564.43 358.04,-620.85 405.66,-651 461.74,-686.5 493.87,-676.86 554.99,-651 683.98,-596.43 778.43,-451.98 822.19,-373.15' fill='none' stroke='black'/>
+<path d='M314.24,-514.19C330.24,-564.43 358.04,-620.85 405.66,-651 461.74,-686.5 493.9,-676.94 554.99,-651 683.91,-596.27 778.39,-451.88 822.18,-373.11' fill='none' stroke='black'/>
 <polygon fill='black' points='314.22,-514.14 315.45,-504.35 312.8,-509.52 311.68,-505.86 311.68,-505.86 311.68,-505.86 312.8,-509.52 307.71,-506.73 314.22,-514.14' stroke='black'/>
-<polyline fill='none' points='826.27,-365.73 824.1,-369.68' stroke='black'/>
-<polygon fill='black' points='819.73,-368.3 827.61,-372.63 826.75,-374.21 818.86,-369.88 819.73,-368.3' stroke='black'/>
-<polyline fill='none' points='824.1,-369.68 821.94,-373.62' stroke='black'/>
-<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='807.56' y='-370.24'>1</text>
+<polyline fill='none' points='826.25,-365.7 824.09,-369.64' stroke='black'/>
+<polygon fill='black' points='819.71,-368.26 827.59,-372.6 826.73,-374.17 818.84,-369.84 819.71,-368.26' stroke='black'/>
+<polyline fill='none' points='824.09,-369.64 821.92,-373.58' stroke='black'/>
+<text font-family='Times,serif' font-size='12.00' text-anchor='start' x='807.54' y='-370.2'>1</text>
 <text font-family='Times,serif' font-size='12.00' text-anchor='start' x='296.35' y='-518.34'>0..N</text>
 </g>
 

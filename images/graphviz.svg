@@ -64,7 +64,7 @@
 <title>TX&#45;&gt;T</title>
 <path d='M268.79,-91.74C260.37,-82.31 249.11,-69.72 238.7,-58.08' fill='none' stroke='black'/>
 <polygon fill='black' points='241.6,-56.08 232.33,-50.96 236.39,-60.75 241.6,-56.08' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='256.38' y='-61.2'>0</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='255.82' y='-61.2'>0</text>
 </g>
 
 <g class='edge' id='edge13'>
@@ -104,14 +104,14 @@
 <title>PR&#45;&gt;P</title>
 <path d='M382.54,-89.82C378.72,-81.28 373.92,-70.54 369.35,-60.33' fill='none' stroke='black'/>
 <polygon fill='black' points='372.62,-59.07 365.35,-51.37 366.23,-61.93 372.62,-59.07' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='379.38' y='-61.2'>0</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='378.6' y='-61.2'>0</text>
 </g>
 
 <g class='edge' id='edge14'>
 <title>PR&#45;&gt;R</title>
 <path d='M397.46,-89.82C401.28,-81.28 406.08,-70.54 410.65,-60.33' fill='none' stroke='black'/>
 <polygon fill='black' points='413.77,-61.93 414.65,-51.37 407.38,-59.07 413.77,-61.93' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='415.38' y='-61.2'>1</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='414.6' y='-61.2'>1</text>
 </g>
 
 <g class='node' id='node10'>
@@ -151,7 +151,7 @@
 <title>ML&#45;&gt;L</title>
 <path d='M511.21,-91.74C519.63,-82.31 530.89,-69.72 541.3,-58.08' fill='none' stroke='black'/>
 <polygon fill='black' points='543.61,-60.75 547.67,-50.96 538.4,-56.08 543.61,-60.75' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='543.38' y='-61.2'>1</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='543.82' y='-61.2'>1</text>
 </g>
 
 <g class='node' id='node13'>
@@ -180,7 +180,7 @@
 <title>13&#45;&gt;5</title>
 <path d='M242.1,-316.56C238.22,-309.39 233.58,-300.81 229.24,-292.8' fill='none' stroke='black'/>
 <polygon fill='black' points='232.36,-291.21 224.52,-284.08 226.2,-294.54 232.36,-291.21' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='241.38' y='-294.7'>0</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='240.66' y='-294.7'>0</text>
 </g>
 
 <g class='node' id='node18'>
@@ -193,7 +193,7 @@
 <title>13&#45;&gt;8</title>
 <path d='M261.9,-317.24C267.23,-309.54 273.77,-300.09 279.75,-291.44' fill='none' stroke='black'/>
 <polygon fill='black' points='282.51,-293.61 285.32,-283.39 276.75,-289.62 282.51,-293.61' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='283.38' y='-294.7'>1</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='282.85' y='-294.7'>1</text>
 </g>
 
 <g class='node' id='node16'>
@@ -206,7 +206,7 @@
 <title>5&#45;&gt;2</title>
 <path d='M197.06,-251.7C181.13,-240.33 157.62,-223.55 139.35,-210.52' fill='none' stroke='black'/>
 <polygon fill='black' points='141.49,-207.74 131.31,-204.78 137.42,-213.44 141.49,-207.74' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='182.38' y='-226.2'>0</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='182.12' y='-226.2'>0</text>
 </g>
 
 <g class='node' id='node17'>
@@ -226,7 +226,7 @@
 <title>2&#45;&gt;A</title>
 <path d='M96.8,-174.61C86.62,-164.96 72.81,-151.88 60.16,-139.9' fill='none' stroke='black'/>
 <polygon fill='black' points='62.83,-137.61 53.16,-133.27 58.01,-142.69 62.83,-137.61' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='81.38' y='-143.7'>0</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='80.49' y='-143.7'>0</text>
 </g>
 
 <g class='edge' id='edge10'>
@@ -240,14 +240,14 @@
 <title>3&#45;&gt;DOT</title>
 <path d='M212.67,-171.93C211.53,-163.64 210.13,-153.35 208.78,-143.49' fill='none' stroke='black'/>
 <polygon fill='black' points='212.27,-143.2 207.45,-133.76 205.34,-144.15 212.27,-143.2' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='214.38' y='-143.7'>0</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='213.86' y='-143.7'>0</text>
 </g>
 
 <g class='edge' id='edge12'>
 <title>3&#45;&gt;TX</title>
 <path d='M227.6,-173.86C237.27,-162.24 250.81,-145.97 261.96,-132.57' fill='none' stroke='black'/>
 <polygon fill='black' points='264.55,-134.94 268.26,-125.01 259.17,-130.46 264.55,-134.94' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='258.38' y='-143.7'>1</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='257.88' y='-143.7'>1</text>
 </g>
 
 <g class='edge' id='edge18'>
@@ -267,7 +267,7 @@
 <title>8&#45;&gt;4</title>
 <path d='M314.06,-251.02C328.08,-239.93 348.18,-224.05 364.18,-211.4' fill='none' stroke='black'/>
 <polygon fill='black' points='366.19,-214.28 371.86,-205.33 361.85,-208.79 366.19,-214.28' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='353.38' y='-226.2'>0</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='352.44' y='-226.2'>0</text>
 </g>
 
 <g class='edge' id='edge7'>
@@ -281,7 +281,7 @@
 <title>4&#45;&gt;ML</title>
 <path d='M407.35,-176.07C424.57,-163.23 451.2,-143.38 471.15,-128.52' fill='none' stroke='black'/>
 <polygon fill='black' points='473.19,-131.36 479.12,-122.57 469.01,-125.74 473.19,-131.36' stroke='black'/>
-<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='457.38' y='-143.7'>1</text>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='457.05' y='-143.7'>1</text>
 </g>
 </g>
 </svg>

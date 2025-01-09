@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='452pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 333.38 451.60' width='333pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg height='452pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 333.32 451.60' width='333pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
 <g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(4 447.6)'>
 <title>state transitions</title>
-<polygon fill='white' points='-4,4 -4,-447.6 329.38,-447.6 329.38,4 -4,4' stroke='none'/>
+<polygon fill='white' points='-4,4 -4,-447.6 329.32,-447.6 329.32,4 -4,4' stroke='none'/>
 
 <g class='node state initial' id='node1'>
 <title>initial</title>
@@ -53,14 +53,14 @@
 <title>doing&#45;&gt;review</title>
 <path d='M80.25,-298.33C60.73,-292.61 40.94,-282.75 29.12,-265.8 26.52,-262.06 26.01,-258.4 26.99,-254.91' fill='none' stroke='black'/>
 <polygon fill='black' points='29.75,-257.07 32.3,-246.79 23.9,-253.24 29.75,-257.07' stroke='black'/>
-<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='29.62' y='-256.3'>functionality built &#160;&#160;</text>
+<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='29.12' y='-256.3'>functionality built &#160;&#160;</text>
 </g>
 
 <g class='edge transition' id='edge4'>
 <title>review&#45;&gt;doing</title>
 <path d='M104.85,-245.49C107.64,-248.13 110.29,-250.91 112.62,-253.8 115.2,-256.99 117.61,-260.47 119.84,-264.08' fill='none' stroke='black'/>
 <polygon fill='black' points='116.62,-265.5 124.59,-272.49 122.72,-262.06 116.62,-265.5' stroke='black'/>
-<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='121.62' y='-256.3'>[code quality not ok] &#160;&#160;</text>
+<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='120.78' y='-256.3'>[code quality not ok] &#160;&#160;</text>
 </g>
 
 <g class='node state regular' id='node5'>
@@ -81,15 +81,15 @@
 <title>review&#45;&gt;QA</title>
 <path d='M89.51,-199.57C91.28,-196.81 93.02,-194.01 94.62,-191.3 98.79,-184.27 103.05,-176.52 106.88,-169.3' fill='none' stroke='black'/>
 <polygon fill='black' points='109.91,-171.05 111.42,-160.57 103.7,-167.82 109.91,-171.05' stroke='black'/>
-<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='108.62' y='-181.8'>[code has minor issues]/ &#160;&#160;</text>
-<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='108.62' y='-169.8'>create tech debt item &#160;&#160;</text>
+<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='107.88' y='-181.8'>[code has minor issues]/ &#160;&#160;</text>
+<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='107.88' y='-169.8'>create tech debt item &#160;&#160;</text>
 </g>
 
 <g class='edge transition' id='edge7'>
 <title>QA&#45;&gt;doing</title>
-<path d='M148.37,-144.69C177.25,-147.95 219.65,-154.76 229.62,-167.3 256.92,-201.6 249.36,-229.61 224.62,-265.8 219.78,-272.89 213.36,-278.76 206.19,-283.62' fill='none' stroke='black'/>
-<polygon fill='black' points='204.86,-280.34 198.08,-288.47 208.46,-286.34 204.86,-280.34' stroke='black'/>
-<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='246.62' y='-219.05'>[not acceptable] &#160;&#160;</text>
+<path d='M148.37,-144.69C177.25,-147.95 219.65,-154.76 229.62,-167.3 256.93,-201.62 248.53,-229.7 223.62,-265.8 219.03,-272.46 213.04,-278.05 206.36,-282.74' fill='none' stroke='black'/>
+<polygon fill='black' points='204.84,-279.56 198.17,-287.8 208.52,-285.52 204.84,-279.56' stroke='black'/>
+<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='246.57' y='-219.05'>[not acceptable] &#160;&#160;</text>
 </g>
 
 <g class='node state regular' id='node6'>
@@ -103,15 +103,15 @@
 <title>QA&#45;&gt;done</title>
 <path d='M92.69,-137.25C78.35,-134.18 62.04,-127.89 53.12,-115.05 47.04,-106.29 47.04,-99.81 53.12,-91.05 59.81,-81.42 70.66,-75.48 81.71,-71.81' fill='none' stroke='black'/>
 <polygon fill='black' points='82.49,-75.22 91.23,-69.24 80.67,-68.47 82.49,-75.22' stroke='black'/>
-<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='53.62' y='-105.55'>[ok but issue(s) found]/ &#160;&#160;</text>
-<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='53.62' y='-93.55'>create bug(s) &#160;&#160;</text>
+<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='53.12' y='-105.55'>[ok but issue(s) found]/ &#160;&#160;</text>
+<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='53.12' y='-93.55'>create bug(s) &#160;&#160;</text>
 </g>
 
 <g class='edge transition' id='edge9'>
 <title>QA&#45;&gt;done</title>
 <path d='M148.32,-129.65C154.42,-125.99 160.1,-121.2 163.62,-115.05 168.93,-105.8 168.93,-100.3 163.62,-91.05 161.97,-88.17 159.84,-85.58 157.42,-83.28' fill='none' stroke='black'/>
 <polygon fill='black' points='159.63,-80.56 149.54,-77.35 155.43,-86.16 159.63,-80.56' stroke='black'/>
-<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='167.62' y='-99.55'>[okie dokie] &#160;&#160;</text>
+<text font-family='Helvetica,sans-Serif' font-size='10.00' text-anchor='start' x='167.61' y='-99.55'>[okie dokie] &#160;&#160;</text>
 </g>
 
 <g class='node state final' id='node7'>
