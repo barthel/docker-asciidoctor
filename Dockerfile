@@ -274,13 +274,14 @@ RUN apk add --no-cache --virtual .rubymakedepends \
       libxml2-dev \
       libxslt-dev \
       ruby-dev \
+      ruby-nokogiri \
     && gem install --no-document \
         asciidoctor-multipage \
         asciidoctor-lists \
-    && apk del -r --no-cache .rubymakedepends \
+    && apk del -r --no-cache .rubymakedepends
     # @see: https://github.com/asciidoctor/docker-asciidoctor/issues/430
     # @see: https://github.com/asciidoctor/docker-asciidoctor/blob/d16e85e04c46ed02414565aa26b67a809f4c64c1/Dockerfile#L139
-    && if [ "$TARGETARCH" = "arm64" ]; then gem uninstall nokogiri -v '> 1.14'; fi
+    # && if [ "$TARGETARCH" = "arm64" ]; then gem uninstall nokogiri -v '> 1.14'; fi
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 'Python' packages
