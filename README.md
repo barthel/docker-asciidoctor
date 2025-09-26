@@ -68,6 +68,22 @@ The following diagram tools are not installed because there is no executable fil
 
 ## Usage
 
+Use `info` or `container_info` to retrieve information about the container itself, such as its name, version, and information about the Asciidoctor base container.
+
+```bash
+docker run --rm \
+  docker.io/uwebarthel/asciidoctor:latest \
+  info
+```
+
+Use `version` to retrieve the installed Asciidoctor version and the version information of the installed Asciidoctor tools.
+
+```bash
+docker run --rm \
+  docker.io/uwebarthel/asciidoctor:latest \
+  version
+```
+
 Generate HTML document:
 
 ```bash

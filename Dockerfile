@@ -126,7 +126,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-browser"
 ENV CHROMIUM_PATH="/usr/bin/chromium-browser"
 ENV PUPPETEER_ARGS='"--no-sandbox", "--allow-insecure-localhost", "--disable-gpu", "--disable-setuid-sandbox"'
-ENV PUPPETEER_DEBUG=${PUPPETEER_DEBUG:-true}
+ENV PUPPETEER_DEBUG=${PUPPETEER_DEBUG:-false}
 
 RUN touch ${PUPPETEER_CONFIG_FILE} \
     && chmod ugo+rw ${PUPPETEER_CONFIG_FILE} \
@@ -361,6 +361,16 @@ RUN apk add --no-cache \
 # !!! Please do not use this code in production. !!!
 RUN git clone --depth 1 https://github.com/asciidoctor/asciidoctor-extensions-lab.git /usr/local/asciidoctor-extensions
 
-COPY ./entrypoint.sh /entrypoint.sh
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Container provisioning
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+COPY --chmod=0775 ./entrypoint.sh /entrypoint.sh
+COPY --chmod=0775 ./container_info.sh /container_info.sh
+COPY --chmod=0775 ./version.sh /version.sh
+
+RUN ln -s -f /container_info.sh /usr/sbin/container_info
+RUN ln -s -f /container_info.sh /usr/sbin/info
+RUN ln -s -f /version.sh /usr/sbin/version
 
 ENTRYPOINT [ "/bin/sh", "/entrypoint.sh" ]
