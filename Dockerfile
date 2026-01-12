@@ -298,7 +298,6 @@ RUN apk add --no-cache  \
         python3 \
         py3-pillow \
         py3-setuptools \
-        py3-typed-ast \
         py3-gobject3 \
         py3-cairo \
         py3-cairosvg \
@@ -331,7 +330,6 @@ RUN apk add --no-cache \
         python3 \
         py3-pillow \
         py3-setuptools \
-        py3-typed-ast \
         py3-gobject3 \
         py3-cairo \
         py3-cairosvg \
