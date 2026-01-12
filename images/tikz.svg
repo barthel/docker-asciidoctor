@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg height='131.009' preserveAspectRatio='xMidYMid meet' viewBox='0 0 234.002 131.009' width='234.002' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<svg height='131.009pt' preserveAspectRatio='xMidYMid meet' viewBox='0 0 234.002 131.009' width='234.002pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
 <defs>
 <g>
 <g id='glyph-0-0'>
@@ -117,15 +117,15 @@
 <use xlink:href='#glyph-0-2' x='202.052' y='47.748'/>
 </g>
 <g fill='rgb(0%, 0%, 0%)' fill-opacity='1'>
-<use xlink:href='#glyph-3-0' x='204.935' y='47.748'/>
-<use xlink:href='#glyph-3-1' x='211.521491' y='47.748'/>
+<use xlink:href='#glyph-3-0' x='204.934785' y='47.748'/>
+<use xlink:href='#glyph-3-1' x='211.521276' y='47.748'/>
 </g>
 <g fill='rgb(0%, 0%, 0%)' fill-opacity='1'>
 <use xlink:href='#glyph-0-2' x='214.978' y='95.937'/>
 </g>
 <g fill='rgb(0%, 0%, 0%)' fill-opacity='1'>
-<use xlink:href='#glyph-3-0' x='217.861' y='95.937'/>
-<use xlink:href='#glyph-3-2' x='224.447491' y='95.937'/>
+<use xlink:href='#glyph-3-0' x='217.860785' y='95.937'/>
+<use xlink:href='#glyph-3-2' x='224.447276' y='95.937'/>
 </g>
 <g fill='rgb(0%, 0%, 0%)' fill-opacity='1'>
 <use xlink:href='#glyph-0-3' x='146.964' y='83.455'/>
@@ -134,8 +134,8 @@
 <use xlink:href='#glyph-0-3' x='182.634' y='85.241'/>
 </g>
 <g fill='rgb(0%, 0%, 0%)' fill-opacity='1'>
-<use xlink:href='#glyph-3-3' x='186.519' y='85.241'/>
-<use xlink:href='#glyph-3-2' x='193.105491' y='85.241'/>
+<use xlink:href='#glyph-3-3' x='186.521018' y='85.241'/>
+<use xlink:href='#glyph-3-2' x='193.107508' y='85.241'/>
 </g>
 <path d='M 96.834437 7.524719 C 100.221156 10.071594 101.385219 15.704406 99.428187 20.110656 C 97.471156 24.516906 93.135219 26.024719 89.744594 23.48175 C 86.357875 20.938781 85.193812 15.305969 87.150844 10.899719 C 87.775844 9.497375 88.670375 8.333312 89.381312 7.802062 ' fill='none' stroke='rgb(0%, 0%, 0%)' stroke-linecap='butt' stroke-linejoin='round' stroke-miterlimit='10' stroke-opacity='1' stroke-width='0.3985' transform='matrix(1, 0, 0, -1, 73.439, 96.138)'/>
 <path d='M -1.195099 1.595589 C -1.096502 0.995596 0.000638581 0.0997609 0.299111 0.00139806 C -0.0000904858 -0.101027 -1.095984 -0.996651 -1.195051 -1.59357 ' fill='none' stroke='rgb(0%, 0%, 0%)' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-opacity='1' stroke-width='0.31879' transform='matrix(0.79982, 0.60019, 0.60019, -0.79982, 162.81852, 88.33722)'/>
