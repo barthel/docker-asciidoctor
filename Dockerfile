@@ -64,10 +64,12 @@ RUN cat /etc/alpine-release \
 # 'Native' apk packages
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Install imagemagick for meme - @see: https://asciidoctor.org/docs/asciidoctor-diagram/#meme
+# Install graphicsmagick for optimised PNG, GIF - @see: http://www.graphicsmagick.org/
 # Install svgbob - @see: https://github.com/ivanceras/svgbob
 # install MS core font package (non free fonts) - @see: https://wiki.alpinelinux.org/wiki/Fonts#Non-free_fonts
 RUN apk --no-cache add \
         imagemagick \
+        graphicsmagick \
         svgbob@testing \
         git \
         msttcorefonts-installer \
@@ -274,10 +276,12 @@ RUN apk add --no-cache --virtual .rubymakedepends \
       libxml2-dev \
       libxslt-dev \
       ruby-dev \
+      graphicsmagick-dev \
       ruby-nokogiri \
     && gem install --no-document \
         asciidoctor-multipage \
         asciidoctor-lists \
+        prawn-gmagick \
     && apk del -r --no-cache .rubymakedepends
     # @see: https://github.com/asciidoctor/docker-asciidoctor/issues/430
     # @see: https://github.com/asciidoctor/docker-asciidoctor/blob/d16e85e04c46ed02414565aa26b67a809f4c64c1/Dockerfile#L139
