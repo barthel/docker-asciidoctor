@@ -1,6 +1,6 @@
 ARG ASCIIDOCTOR_BASE_TAG=${CIRCLE_TAG:-latest}
 ARG ASCIIDOCTOR_BASE_IMAGE=${ASCIIDOCTOR_BASE_IMAGE:-"docker.io/asciidoctor/docker-asciidoctor"}
-ARG alpine_version=3.23.2
+ARG alpine_version=3.23.3
 
 # =========================================
 # Build dpic- @see: https://gitlab.com/aplevich/dpic
