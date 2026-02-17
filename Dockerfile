@@ -271,6 +271,7 @@ RUN apk --no-cache add \
 # (Re)Install nogokiri - @see: https://nokogiri.org/tutorials/installing_nokogiri.html#other-installation-scenarios
 # Install asciidoctor-multipage - @see: https://github.com/owenh000/asciidoctor-multipage
 # Install asciidoctor-lists - @see: https://github.com/Alwinator/asciidoctor-lists
+# Install asciidoctor-diagram-jsyntrax - @see: https://github.com/atp-mipt/jsyntrax
 RUN apk add --no-cache --virtual .rubymakedepends \
       build-base \
       libxml2-dev \
@@ -281,6 +282,7 @@ RUN apk add --no-cache --virtual .rubymakedepends \
     && gem install --no-document \
         asciidoctor-multipage \
         asciidoctor-lists \
+        asciidoctor-diagram-jsyntrax \
         prawn-gmagick \
     && apk del -r --no-cache .rubymakedepends
     # @see: https://github.com/asciidoctor/docker-asciidoctor/issues/430
@@ -326,33 +328,6 @@ RUN apk add --no-cache  \
         "html5lib==${html5lib_version}" \
         "htmlark==${htmlark_version}" \
     && apk del -r --no-cache .pythonmakedepends
-# Install syntrax - @see: https://github.com/kevinpt/syntrax.git (requires manually fix incompatible setup 2to3)
-# The setup command 'use_2to3' is not supported anymore by setuptools - @see: https://github.com/pypa/setuptools/issues/2775
-# The 'collections' import has changed with python 3.10 and must be adapted - @see: https://github.com/python/cpython/issues/89934
-RUN apk add --no-cache \
-        git \
-        python3 \
-        py3-pillow \
-        py3-setuptools \
-        py3-gobject3 \
-        py3-cairo \
-        py3-cairosvg \
-    && apk add --no-cache --virtual .pythonsyntraxdepends \
-        build-base \
-        freetype-dev \
-        python3-dev \
-        py3-gobject3-dev \
-        py3-cairo-dev \
-        py3-pip \
-    && git clone --depth 1 https://github.com/kevinpt/syntrax.git ${TMPDIR}/syntrax \
-    && sed -i 's|use_2to3 = True,||' ${TMPDIR}/syntrax/setup.py \
-    && 2to3 --no-diffs -p -e -W -n -w ${TMPDIR}/syntrax \
-    && sed -i 's|import collections|import collections.abc|' ${TMPDIR}/syntrax/syntrax.py \
-    && sed -i 's|collections.Sequence|collections.abc.Sequence|g' ${TMPDIR}/syntrax/syntrax.py \
-    && pip3 install --no-cache-dir --break-system-packages \
-        ${TMPDIR}/syntrax \
-    && rm -rf ${TMPDIR}/syntrax \
-    && apk del -r --no-cache .pythonsyntraxdepends
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Asciidoc extensions

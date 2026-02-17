@@ -14,6 +14,7 @@ Unfortunately, it is not possible to provide **`armv7`** version greater than [1
 
 The following additional diagram tools are installed:
 
+* [asciidoctor-diagram-jsyntrax](https://github.com/atp-mipt/jsyntrax)
 * [ASCIIToSVG](https://github.com/asciitosvg/asciitosvg)<sup>[1]</sup>
 * [barby](https://github.com/toretore/barby)<sup>[1]</sup>
 * [blockdiag/blockdiag](https://github.com/blockdiag/blockdiag)<sup>[1]</sup>
@@ -37,7 +38,6 @@ The following additional diagram tools are installed:
 * [state-machine-cat (smcat)](https://github.com/sverweij/state-machine-cat/)
 * [svgbob](https://github.com/ivanceras/svgbob)
 * [symbolator](https://github.com/hdl/symbolator) uses fork, because of incompatible python setup (2to3)
-* [syntrax](https://kevinpt.github.io/syntrax)
 * [tikz](https://github.com/pgf-tikz/pgf)<sup>[1]</sup>
 * [umlet](https://www.umlet.com)
 * [vega](https://vega.github.io/vega) and [vega-lite](https://vega.github.io/vega-lite)
@@ -67,6 +67,8 @@ The following diagram tools are not installed because there is no executable fil
 * [erd](https://github.com/BurntSushi/erd) was replaced by [erd-go](https://github.com/kaishuu0123/erd-go/)
 * [mscgen](http://www.mcternan.me.uk/mscgen/) (has been replaced by [mscgen_js](https://github.com/mscgenjs/mscgenjs-cli), but is currently not maintained)
 * [shaape](https://github.com/christiangoltz/shaape)
+* [syntrax](https://kevinpt.github.io/syntrax) was replaced by [asciidoctor-diagram-jsyntrax](https://github.com/atp-mipt/jsyntrax)
+
 
 ## Usage
 

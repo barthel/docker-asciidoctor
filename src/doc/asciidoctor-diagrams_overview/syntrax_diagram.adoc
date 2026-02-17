@@ -23,4 +23,4 @@ indentstack(10,
 
 === External diagram source file
 
-syntrax::{imagesdir}/asciidoctor-diagrams_overview/uml/syntrax.vhdl[format="svg"]
+syntrax::{imagesdir}/asciidoctor-diagrams_overview/uml/syntrax.spec[format="svg"]
