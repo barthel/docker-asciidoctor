@@ -209,9 +209,26 @@ RUN apk --no-cache add \
     && echo "Install inliner@${inliner_version}" \
     && yarn global add "inliner@https://github.com/barthel/inliner" \
     \
+    # Rebuild canvas to ensure correct binaries
+    && npm rebuild --global canvas \
+    \
+    # Clean up Node.js packages: remove tests, docs, and build artifacts
+    && echo "Cleaning up Node.js packages..." \
+    && find /usr/local/lib/node_modules -type d -name "test" -prune -exec rm -rf {} + \
+    && find /usr/local/lib/node_modules -type d -name "tests" -prune -exec rm -rf {} + \
+    && find /usr/local/lib/node_modules -type d -name "docs" -prune -exec rm -rf {} + \
+    && find /usr/local/lib/node_modules -type d -name "example" -prune -exec rm -rf {} + \
+    && find /usr/local/lib/node_modules -type d -name "examples" -prune -exec rm -rf {} + \
+    && find /usr/local/lib/node_modules -type f -name "*.md" -not -name "README.md" -delete \
+    && find /usr/local/lib/node_modules -type f -name "*.map" -delete \
+    && find /usr/local/lib/node_modules -type f -name "*.ts" -not -name "*.d.ts" -delete \
+    && find /usr/local/lib/node_modules/canvas -name "*.o" -delete \
+    && find /usr/local/lib/node_modules/canvas -name "*.a" -delete \
+    \
     # Clean up caches and temporary files to reduce image size
     && yarn cache clean \
     && npm cache clean --force \
+    && rm -rf /root/.npm /root/.node-gyp \
     && rm -rf ${TMPDIR}/yarn* ${TMPDIR}/npm* \
     && apk del .nodejsyarndepends \
     \
