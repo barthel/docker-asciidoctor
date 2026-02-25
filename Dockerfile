@@ -8,16 +8,20 @@ ARG alpine_version=3.23.3
 FROM alpine:${alpine_version} AS make-builder
 
 RUN apk add --no-cache \
-build-base \
-make \
-bison \
-git \
-&& git clone --depth 1 https://gitlab.com/aplevich/dpic.git /dpic \
-&& cd /dpic \
-&& make PREFIX=local installdpic \
-&& git clone --depth 1 -b "master" https://github.com/drhsqlite/pikchr.git /pikchr \
-&& cd /pikchr \
-&& make pikchr
+        build-base \
+        make \
+        bison \
+        git \
+    \
+    # Build dpic from source
+    && git clone --depth 1 https://gitlab.com/aplevich/dpic.git /dpic \
+    && cd /dpic \
+    && make PREFIX=local installdpic \
+    \
+    # Build pikchr from source
+    && git clone --depth 1 -b "master" https://github.com/drhsqlite/pikchr.git /pikchr \
+    && cd /pikchr \
+    && make pikchr
 
 # =========================================
 
@@ -76,6 +80,7 @@ RUN apk --no-cache add \
     && update-ms-fonts \
     && fc-cache -f
 
+# Install Umlet UML tool
 ARG umlet_version="15.1"
 # The umlet zip contains a camelcase directory :-|
 ENV UMLET_HOME="${UMLET_HOME:-/usr/local/Umlet}"
@@ -125,8 +130,8 @@ ENV PUPPETEER_SKIP_DOWNLOAD="true"
 ENV PUPPETEER_CHROME_SKIP_DOWNLOAD="true"
 # backward compatibility
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
-ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-browser"
-ENV CHROMIUM_PATH="/usr/bin/chromium-browser"
+ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-headless-shell"
+ENV CHROMIUM_PATH="/usr/bin/chromium-headless-shell"
 ENV PUPPETEER_ARGS='"--no-sandbox", "--allow-insecure-localhost", "--disable-gpu", "--disable-setuid-sandbox"'
 ENV PUPPETEER_DEBUG=${PUPPETEER_DEBUG:-false}
 
@@ -149,13 +154,13 @@ EOF
 # @see: https://superuser.com/a/1058665
 # @see: https://github.com/puppeteer/puppeteer/blob/master/docs/troubleshooting.md#running-on-alpine
 # !!!
-# Split into several `yarn add` and `yarn install` steps because of
+# Split into several `yarn add` steps because of
 # 'There appears to be trouble with your network connection. Retrying…' issue in Circle CI
 # !!!
 # Most of the devel dependencies are required by canvas
 RUN apk --no-cache add \
         nodejs \
-        chromium \
+        chromium-headless-shell \
         nss \
         freetype \
         harfbuzz \
@@ -170,6 +175,8 @@ RUN apk --no-cache add \
         giflib-dev \
         yarn  \
         npm \
+    \
+    # Configure yarn for optimal installation
     && yarn config set network-timeout 3600000 --global\
     && yarn config set non-interactive --global \
     && yarn config set production --global \
@@ -177,53 +184,38 @@ RUN apk --no-cache add \
     && yarn config set silent --global \
     && yarn config set no-lockfile --global \
     && yarn config set no-progress --global \
+    \
+    # Install Node.js packages
     && echo "Install puppeteer@${puppeteer_version}" \
-    && yarn global add \
-        "puppeteer@${puppeteer_version}" \
-    && yarn install --no-lockfile \
+    && yarn global add "puppeteer@${puppeteer_version}" \
     && echo "Install mermaid-cli@${mermaid_version}" \
-    && yarn global add \
-        "@mermaid-js/mermaid-cli@${mermaid_version}" \
-    && yarn install --no-lockfile \
+    && yarn global add "@mermaid-js/mermaid-cli@${mermaid_version}" \
     && echo "Install bpmn-js-cmd@${bpmn_js_cmd_version}" \
-    && yarn global add \
-        "bpmn-js-cmd@${bpmn_js_cmd_version}" \
-    && yarn install --no-lockfile \
+    && yarn global add "bpmn-js-cmd@${bpmn_js_cmd_version}" \
     && echo "Install bytefield-svg@${bytefield_version}" \
-    && yarn global add \
-        "bytefield-svg@${bytefield_version}" \
-    && yarn install --no-lockfile \
+    && yarn global add "bytefield-svg@${bytefield_version}" \
     && echo "Install nomnoml@${nomnoml_version}" \
-    && yarn global add \
-        "nomnoml@${nomnoml_version}" \
-    && yarn install --no-lockfile \
+    && yarn global add "nomnoml@${nomnoml_version}" \
     && echo "Install state-machine-cat@${smc_version}" \
-    && yarn global add \
-        "state-machine-cat@${smc_version}" \
-    && yarn install --no-lockfile \
+    && yarn global add "state-machine-cat@${smc_version}" \
     && echo "Install canvas@${canvas_version}" \
-    && npm install --global --build-from-source \
-        "canvas@${canvas_version}" \
-    && echo "Install vage/vega-cli@${vega_version}" \
-    && yarn global add \
-        "vega@${vega_version}" \
-        "vega-cli@${vega_version}" \
-    && yarn install --no-lockfile \
+    && npm install --global --build-from-source "canvas@${canvas_version}" \
+    && echo "Install vega/vega-cli@${vega_version}" \
+    && yarn global add "vega@${vega_version}" "vega-cli@${vega_version}" \
     && echo "Install vega-lite@${vega_lite_version}" \
-    && yarn global add \
-        "vega-lite@${vega_lite_version}" \
-    && yarn install --no-lockfile \
+    && yarn global add "vega-lite@${vega_lite_version}" \
     && echo "Install wavedrom@${wavedrom_version}, wavedrom-cli@${wavedrom_cli_version}" \
-    && yarn global add \
-        "wavedrom@${wavedrom_version}" \
-        "wavedrom-cli@${wavedrom_cli_version}" \
-    && yarn install --no-lockfile \
+    && yarn global add "wavedrom@${wavedrom_version}" "wavedrom-cli@${wavedrom_cli_version}" \
     && echo "Install inliner@${inliner_version}" \
-    && yarn global add \
-        "inliner@https://github.com/barthel/inliner" \
-    && yarn install --no-lockfile \
-    && rm -rf ${TMPDIR}/yarn* \
+    && yarn global add "inliner@https://github.com/barthel/inliner" \
+    \
+    # Clean up caches and temporary files to reduce image size
+    && yarn cache clean \
+    && npm cache clean --force \
+    && rm -rf ${TMPDIR}/yarn* ${TMPDIR}/npm* \
     && apk del .nodejsyarndepends \
+    \
+    # Adapt executables for Puppeteer configuration
     && echo "Adapt executable:" \
     && echo "\tmmdc" \
     && mv /usr/local/bin/mmdc /usr/local/bin/mmdc.node \
@@ -284,6 +276,8 @@ RUN apk add --no-cache --virtual .rubymakedepends \
         asciidoctor-lists \
         asciidoctor-diagram-jsyntrax \
         prawn-gmagick \
+    \
+    # Clean up build dependencies to reduce image size
     && apk del -r --no-cache .rubymakedepends
     # @see: https://github.com/asciidoctor/docker-asciidoctor/issues/430
     # @see: https://github.com/asciidoctor/docker-asciidoctor/blob/d16e85e04c46ed02414565aa26b67a809f4c64c1/Dockerfile#L139
@@ -319,6 +313,8 @@ RUN apk add --no-cache  \
         py3-gobject3-dev \
         py3-cairo-dev \
         py3-pip \
+    \
+    # Install Python packages
     && pip3 install --no-cache-dir --break-system-packages \
         https://github.com/hdl/pyhdlparser/tarball/master \
         https://github.com/hdl/symbolator/tarball/master \
@@ -327,6 +323,8 @@ RUN apk add --no-cache  \
         "requests==${requests_version}" \
         "html5lib==${html5lib_version}" \
         "htmlark==${htmlark_version}" \
+    \
+    # Clean up build dependencies to reduce image size
     && apk del -r --no-cache .pythonmakedepends
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -336,7 +334,8 @@ RUN apk add --no-cache  \
 # @see: https://docs.asciidoctor.org/asciidoctor/latest/extensions/
 # @see: https://github.com/asciidoctor/asciidoctor-extensions-lab
 # !!! Please do not use this code in production. !!!
-RUN git clone --depth 1 https://github.com/asciidoctor/asciidoctor-extensions-lab.git /usr/local/asciidoctor-extensions
+RUN git clone --depth 1 https://github.com/asciidoctor/asciidoctor-extensions-lab.git /usr/local/asciidoctor-extensions \
+    && rm -rf /usr/local/asciidoctor-extensions/.git
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Container provisioning
