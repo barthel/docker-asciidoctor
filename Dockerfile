@@ -341,6 +341,14 @@ RUN apk add --no-cache  \
         "html5lib==${html5lib_version}" \
         "htmlark==${htmlark_version}" \
     \
+    # Clean up Python packages: remove caches and test files
+    && echo "Cleaning up Python packages..." \
+    && find /usr/lib/python3* -type d -name "__pycache__" -prune -exec rm -rf {} + \
+    && find /usr/lib/python3* -type d -name "tests" -prune -exec rm -rf {} + \
+    && find /usr/lib/python3* -type d -name "test" -prune -exec rm -rf {} + \
+    && find /usr/lib/python3* -type f -name "*.pyc" -delete \
+    && find /usr/lib/python3* -type f -name "*.pyo" -delete \
+    \
     # Clean up build dependencies to reduce image size
     && apk del -r --no-cache .pythonmakedepends
 
