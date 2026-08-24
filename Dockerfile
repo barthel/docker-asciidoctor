@@ -213,22 +213,26 @@ RUN apk --no-cache add \
     && npm rebuild --global canvas \
     \
     # Clean up Node.js packages: remove tests, docs, and build artifacts
+    # (yarn is configured with --pnp, so global packages actually live under
+    # /usr/local/share/.config/yarn/global/node_modules, not /usr/local/lib/node_modules)
     && echo "Cleaning up Node.js packages..." \
-    && find /usr/local/lib/node_modules -type d -name "test" -prune -exec rm -rf {} + \
-    && find /usr/local/lib/node_modules -type d -name "tests" -prune -exec rm -rf {} + \
-    && find /usr/local/lib/node_modules -type d -name "docs" -prune -exec rm -rf {} + \
-    && find /usr/local/lib/node_modules -type d -name "example" -prune -exec rm -rf {} + \
-    && find /usr/local/lib/node_modules -type d -name "examples" -prune -exec rm -rf {} + \
-    && find /usr/local/lib/node_modules -type f -name "*.md" -not -name "README.md" -delete \
-    && find /usr/local/lib/node_modules -type f -name "*.map" -delete \
-    && find /usr/local/lib/node_modules -type f -name "*.ts" -not -name "*.d.ts" -delete \
-    && find /usr/local/lib/node_modules/canvas -name "*.o" -delete \
-    && find /usr/local/lib/node_modules/canvas -name "*.a" -delete \
+    && for _node_modules_dir in /usr/local/lib/node_modules /usr/local/share/.config/yarn/global/node_modules; do \
+        find "${_node_modules_dir}" -type d -name "test" -prune -exec rm -rf {} + \
+        && find "${_node_modules_dir}" -type d -name "tests" -prune -exec rm -rf {} + \
+        && find "${_node_modules_dir}" -type d -name "docs" -prune -exec rm -rf {} + \
+        && find "${_node_modules_dir}" -type d -name "example" -prune -exec rm -rf {} + \
+        && find "${_node_modules_dir}" -type d -name "examples" -prune -exec rm -rf {} + \
+        && find "${_node_modules_dir}" -type f -name "*.md" -not -name "README.md" -delete \
+        && find "${_node_modules_dir}" -type f -name "*.map" -delete \
+        && find "${_node_modules_dir}" -type f -name "*.ts" -not -name "*.d.ts" -delete \
+        && find "${_node_modules_dir}/canvas" -name "*.o" -delete \
+        && find "${_node_modules_dir}/canvas" -name "*.a" -delete \
+    ; done \
     \
     # Clean up caches and temporary files to reduce image size
     && yarn cache clean \
     && npm cache clean --force \
-    && rm -rf /root/.npm /root/.node-gyp \
+    && rm -rf /root/.cache/node-gyp \
     && rm -rf ${TMPDIR}/yarn* ${TMPDIR}/npm* \
     && apk del .nodejsyarndepends \
     \
