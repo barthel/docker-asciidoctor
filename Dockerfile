@@ -219,7 +219,8 @@ RUN apk --no-cache add \
     && for _node_modules_dir in /usr/local/lib/node_modules /usr/local/share/.config/yarn/global/node_modules; do \
         find "${_node_modules_dir}" -type d -name "test" -prune -exec rm -rf {} + \
         && find "${_node_modules_dir}" -type d -name "tests" -prune -exec rm -rf {} + \
-        && find "${_node_modules_dir}" -type d -name "docs" -prune -exec rm -rf {} + \
+        # inliner reads docs/usage.txt at runtime (cli/index.js) - keep it
+        && find "${_node_modules_dir}" -type d -name "docs" -not -path "*/inliner/*" -prune -exec rm -rf {} + \
         && find "${_node_modules_dir}" -type d -name "example" -prune -exec rm -rf {} + \
         && find "${_node_modules_dir}" -type d -name "examples" -prune -exec rm -rf {} + \
         && find "${_node_modules_dir}" -type f -name "*.md" -not -name "README.md" -delete \
